@@ -1,14 +1,8 @@
 # Liste-UNR-de-France
-Je suis en train d'essayer de faire une "version site" de la liste des UNRs.
+C'est la version site de la liste des UNRs accessible sous ce lien : https://docs.google.com/spreadsheets/d/1ClyK6KtsZHDJrHY8uc-1Iri3Yq4F6RX3vP4u56S7D8Y/edit#gid=0.
 
-Avantages dès le court terme :
+Futures améliorations :
 - ajout d'un petit sommaire en haut de la page, avec des liens pour accéder plus vite à ce qu'on veut
 - ajout d'une barre verticale sur le côté pour accéder plus vite aux catégories
-- mise en forme plus propre pour voir les nouveaux ajouts
-- accessibilité pour tout le monde (il y avait quelques problèmes de droits de partage pour certaines personnes)
-
-Avantages à long terme :
-- possibilité de filtrer les UNRs (officiels WCA ou pas, cubiques ou pas, blind ou pas, uniquement singles ou certaines moyennes, etc)
-
-Inconvénients :
-- aucun, puisqu'on pourra faire ici tout ce qu'on pouvait faire avant, et même plus !
+- section propre pour voir les nouveaux ajouts
+- filtres (officiels WCA ou pas, cubiques ou pas, blind ou pas, uniquement singles ou certaines moyennes, etc)
