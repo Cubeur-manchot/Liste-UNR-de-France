@@ -6,13 +6,36 @@ function footer()
 function commentaires()
 {
 	var commentaires = document.getElementsByClassName('commentaire');
+	var nb_commentaires = commentaires.length;
 	var contenu = '';
-	var html = '';
-	for (var commentaire in commentaires) {
+	for (var i = 0; i < nb_commentaires; i++) {
+		var commentaire = commentaires[i];
 		contenu = commentaire.innerHTML;
 		if (contenu != '') {
-			html = '<div class="commentaire2">' + contenu + '</div>'
-			commentaire.innerHTML = html;
+			commentaire.style.border = '1px solid black';
+		}
+	}
+}
+
+function liens_discussions_videos()
+{
+	var tds = document.getElementsByTagName('td');
+	var ntds = tds.length;
+	for (var i = 0; i < ntds; i++) {
+		var td = tds[i];
+		if (td.className != 'nom_epreuve') {
+			var html = '<div class="temps">' + td.getElementsByClassName('temps')[0].innerHTML + '</div>';
+			html += '<div class="nom">' + td.getElementsByClassName('nom')[0].innerHTML + '</div>';
+			var lien_video = td.getElementsByClassName('lien_video')[0].href;
+			var lien_discussion = td.getElementsByClassName('lien_discussion')[0].href
+			if (lien_video.substr(-1,1) != '#') { 
+				html = '<a href="' + lien_video + '" class="lien_video" target="_blank" title="Youtube">' + html + '</a>';
+			} else {
+				if (lien_discussion.substr(-1,1) != '#') { 
+					html = '<a href="' + lien_discussion + '" class="lien_discussion" target="_blank" title="Discussion">' + html + '</a>';
+				}
+			}
+			td.innerHTML = html;
 		}
 	}
 }

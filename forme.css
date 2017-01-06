@@ -1,38 +1,5 @@
 /*____________ GÉNÉRAL ____________*/
 
-nav
-{
-	position: fixed;
-	display: inline-block;
-	width: 200px;
-	left: 15px;
-	top: 15px;
-	padding: 0px;
-	color: black;
-	font-size: 14px;
-}
-nav section
-{
-	border-radius: 4px;
-	overflow: hidden;
-	border: 1px solid #868686;
-	margin-bottom: 15px;
-}
-nav .en-tete
-{
-	display: block;
-	margin: 0px;
-	background-color: rgb(160,0,30);
-	text-align: center;
-	color: white;
-	text-shadow: black 1px 1px 2px;
-	text-decoration: none;
-}
-nav ul { list-style-type: none; margin: 0px; padding: 0px; }
-nav li { margin: 3px 10px -1px 10px; border-bottom: 1px dotted #868686; font-size: 12px; }
-nav a { display: block; text-decoration: none; color: blue; }
-nav a:hover { color: red; }
-
 body { margin: 0px; padding: 0px; background-color: #DDF2FE; }
 section { display: inline-block; margin: 30px; padding: 0px; }
 h1
@@ -65,141 +32,26 @@ footer
 	font-size: 9px;
 }
 
-/*____________ ALGOS ____________*/
-
-.liste_cas_simple { text-align: center; }
-.liste_cas_simple .cas
-{
-	display: inline-block;
-	width: 150px;
-	height: 238px;
-	margin: 5px;
-	border: 1px solid black;
-	padding: 0px;
-	list-style: none;
-	vertical-align: top;
-}
-.liste_cas_simple .cas .nom
-{
-	display: inline-block;
-	width: 150px;
-	height: 38px;
-	margin: 0px 0px 0px 0px;
-	background-color: grey;
-	text-align: center;
-	border-bottom: 1px solid black;
-	top: 50%
-}
-.liste_cas_simple .cas img
-{
-	display: inline-block;
-	width: 150px;
-	height: 150px;
-	margin: 0px 0px 0px 0px;
-	background-image: url("images/image_introuvable.png");
-}
-.liste_cas_simple .cas .algo
-{
-	display: inline-block;
-	margin: -5px 0px 0px 0px;
-	width: 118px;
-	border: none;
-	border-top: 1px solid black;
-	font-size: 12px;
-	padding: 5px 0px 0px 32px;
-	text-align: left;
-}
-.liste_cas_simple .cas .bouton_animation
-{
-	display: inline-block;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	margin-top: 153px;
-	margin-left: -144px;
-	border: 1px dotted grey;
-	border-radius: 3px;
-	background-color: #cfcfcf;
-}
-
-.liste_cas_multiple { text-align: center; }
-.liste_cas_multiple .cas
-{
-	display: inline-block;
-	width: 486px;
-	height: 150px;
-	margin: 5px;
-	border: 1px solid black;
-	padding: 0px;
-	list-style: none;
-	vertical-align: top;
-	text-align: left;
-}
-.liste_cas_multiple .cas .nom
-{
-	display: inline-block;
-	width: 326px;
-	height: 20px;
-	margin: 0px 0px 0px 150px;
-	padding: 5px 5px 3px 5px;
-	background-color: rgb(180,180,180);
-	text-align: center;
-	top: 50%
-}
-.liste_cas_multiple .cas img
-{
-	position: absolute;
-	width: 150px;
-	height: 150px;
-	border-right: 1px solid black;
-	background-image: url("images/image_introuvable.png");
-}
-.liste_cas_multiple .cas .algo
-{
-	display: inline-block;
-	width: 300px;
-	height: 20px;
-	margin: 0px 0px -5px 0px;
-	padding: 5px 5px 0px 5px;
-	vertical-align: top;
-	border-bottom: 1px dotted grey;
-	font-size: 12px;
-	text-align: left;
-}
-.liste_cas_multiple .cas .bouton
-{
-	display: inline-block;
-	width: 24px;
-	height: 24px;
-	margin: 0px 0px -5px 150px;
-	border: 1px solid black;
-	background-image: linear-gradient(#CFCFCF, #CFCFCF);
-	border-radius: 3px;
-}
-.liste_cas_multiple .cas .bouton:hover
-{
-	background-image: linear-gradient(#AFAFAF, #E5E5E5);
-}
-
 /*____________ TABLEAU DES RECORDS ____________*/
 
 table
 {
 	border: 1px solid black;
-	border-radius: 7px 7px 3px 3px;
-	overflow: hidden;
 	border-collapse: collapse;
 	box-shadow: 3px 3px 2px grey;
 	font-size: 12px;
-	margin: 10px;
+	font-family: "Verdana";
+	margin: 10px auto 10px auto;
 	padding: 0px;
 }
 td
 {
 	border: 1px solid black;
 	background-color: #F3F3F3;
-	padding: 1px 5px 1px 5px;
+	padding: 5px 5px 5px 5px;
 	text-align: center;
+	width: 130px;
+	height: 30px;
 }
 th
 {
@@ -208,13 +60,20 @@ th
 	height: 20px;
 	text-align: center;
 }
+td a
+{
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: black;
+}
+.nom_epreuve
+{
+	width: 200px;
+}
 .commentaire
 {
 	display: none;
-}
-.commentaire2
-{
-	border: 1px solid black;
 	background-color: #DDDDDD;
 	padding: 0px 5px 0px 5px;
 	border-radius: 3px;
@@ -223,4 +82,11 @@ td:hover > .commentaire
 {
 	display: inline-block;
 	position: absolute;
+	z-index: 10;
+}
+a:hover > .commentaire
+{
+	display: inline-block;
+	position: absolute;
+	z-index: 10;
 }
