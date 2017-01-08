@@ -10,14 +10,17 @@ function script_UNR()
 	for (var i = 0; i < ntds; i++) {
 		var td = tds[i];
 		if (td.className != 'nom_epreuve') {
-			var html = '<div class="temps">' + td.getElementsByClassName('temps')[0].innerHTML + '</div>';
-			html += '<div class="nom">' + td.getElementsByClassName('nom')[0].innerHTML + '</div>';
-			var commentaire = td.getElementsByClassName('commentaire')[0].innerHTML;
+			var divs = td.getElementsByTagName('div');
+			var temps = divs[0].innerHTML;
+			var nom = divs[1].innerHTML;
+			var commentaire = divs[2].innerHTML;
+			var html = '<div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>';
 			if (commentaire != '') {
 				html += '<div class="commentaire">' + commentaire + '</div>';
 			}
-			var lien_video = td.getElementsByClassName('lien_video')[0].href;
-			var lien_discussion = td.getElementsByClassName('lien_discussion')[0].href;
+			var as = td.getElementsByTagName('a');
+			var lien_discussion = as[0].href;
+			var lien_video = as[1].href;
 			if (lien_video.substr(-1,1) != '#') { 
 				html = '<a href="' + lien_video + '" class="lien_video" target="_blank" title="Youtube">' + html + '</a>';
 			} else {
