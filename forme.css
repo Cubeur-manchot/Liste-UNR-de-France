@@ -2,9 +2,11 @@
 
 body { margin: 0px; padding: 0px; background-color: #DDF2FE; }
 section { display: inline-block; margin: 30px; padding: 0px; }
+section section { margin: 20px; }
+section section section { margin: 10px; }
 h1
 {
-	margin-top: 15px;
+	margin-top: -15px;
 	text-align: center;
 	color: black;
 	font-size: 50px;
@@ -47,11 +49,15 @@ td
 {
 	border: 1px solid black;
 	background-color: #F3F3F3;
+	background-repeat: no-repeat;
 	padding: 5px 5px 5px 5px;
 	text-align: center;
 	width: 130px;
 	height: 30px;
 }
+.avec_video:hover { background-image: url("logo_youtube.png"); }
+/*.avec_discussion:hover { background-image: url(".png"); }*/
+.avec_video_et_discussion:hover { background-image: url("logo_youtube.png"); }
 th
 {
 	border: 1px solid black;
@@ -85,4 +91,10 @@ a:hover > .commentaire
 	display: inline-block;
 	position: absolute;
 	z-index: 10;
+}
+.lien_video:hover
+{
+	background-image: url("logo_youtube.png");
+	width: 100%;
+	height: 100%;
 }
