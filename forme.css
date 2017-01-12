@@ -56,7 +56,7 @@ td
 	height: 30px;
 }
 .avec_video:hover { background-image: url("logo_youtube.png"); }
-/*.avec_discussion:hover { background-image: url(".png"); }*/
+.avec_discussion:hover { background-image: url("logo_discussion.png"); }
 .avec_video_et_discussion:hover { background-image: url("logo_youtube.png"); }
 th
 {
