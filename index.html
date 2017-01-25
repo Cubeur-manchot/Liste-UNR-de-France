@@ -3,43 +3,25 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Liste UNR de France</title>
-		<link href="forme.css" type="text/css" rel="stylesheet" media="all">
+		<link href="forme_unr.css" type="text/css" rel="stylesheet" media="all">
 		<script src="script_unr.js" type="text/javascript"></script>
 	</head>
 	<body>
-	<!----------------------
+	<!-----------------------------------
 	          TO DO :
-	- mise en forme plan de page
-	- filtre WCA / non WCA
-	- filtre par tableau
+	- mise en forme plan de page + filtre WCA/Non_WCA + filtre par tableau
 	- filtre par single/mo3/avg
 	- palmarès en comptant le nombre d'UNRs
-	- logo discussion
 	- choix du lien discussion / vidéo quand on a les deux
-	----------------------->
-	<section>
-		<h1>Liste UNR de France</h1>
-		<p>Dernière mise à jour : 20/01/2017.</p>
-		<ul id="plan">
-			<li>
-				<a href="#officiels_wca">Officiels WCA</a>
-				<ul><a href="#NxN_wca">Cubes NxN</a></ul>
-				<ul><a href="#blind_wca">Blind</a></ul>
-				<ul><a href="#autres_wca">Autres WCA</a></ul>
-			</li>
-			<li>
-				<a href="#non_officiels_wca">Non Officiels WCA</a>
-				<ul><a href="#NxN_non_wca">Cubes NxN</a></ul>
-				<ul><a href="#relais_non_wca">Relais</a></ul>
-				<ul><a href="#team_non_wca">Team events</a></ul>
-				<ul><a href="#blind_non_wca">Blind</a></ul>
-				<ul><a href="#challenge_wca">Challenge WCA</a></ul>
-				<ul><a href="#autres_non_wca">Autres Non WCA</a></ul>
-			</li>
-		</ul>
-		<section id="officiels_wca">
-			<h2>Épreuves officielles WCA</h2>
-			<h3 id="NxN_wca">Cubes NxNxN</h3>
+	------------------------------------>
+	<h1>Liste UNR de France</h1>
+	<p>Dernière mise à jour : 25/01/2017 (ajout du plan de page).</p>
+	<div id="plan" onclick="plan_de_page();">Plan de Page</div>
+	<div id="filtrer" onclick="filtrer();">Filtrer</div>
+	<section id="officiels_wca" class="partie">
+		<h2>Épreuves officielles WCA</h2>
+		<section id="NxN_wca" class="sous_partie">
+			<h3>Cubes NxNxN</h3>
 			<table>
 				<tr>
 					<th>Épreuve</th>
@@ -321,7 +303,9 @@
 					</td>
 				</tr>
 			</table>
-			<h3 id="blind_wca">Blind</h3>
+		</section>
+		<section id="blind_wca" class="sous_partie">
+			<h3>Blind</h3>
 			<table>
 				<tr>
 					<th>Épreuve</th>
@@ -513,7 +497,9 @@
 					</td>
 				</tr>
 			</table>
-			<h3 id="autres_wca">Autres WCA</h3>
+		</section>
+		<section id="autres_wca" class="sous_partie">
+			<h3>Autres WCA</h3>
 			<table>
 				<tr>
 					<th>Épreuve</th>
@@ -886,9 +872,11 @@
 				</tr>
 			</table>
 		</section>
-		<section id="non_officiels_wca">
-			<h2>Épreuves non officielles</h2>
-			<h3 id="NxN_non_wca">Cubes NxNxN</h3>
+	</section>
+	<section id="non_officiels_wca" class="partie">
+		<h2>Épreuves non officielles</h2>
+		<section id="NxN_non_wca" class="sous_partie">
+			<h3>Cubes NxNxN</h3>
 			<table>
 				<tr>
 					<th>Épreuve</th>
@@ -1125,7 +1113,158 @@
 					</td>
 				</tr>
 			</table>
-			<h3 id="relais_non_wca">Relais</h3>
+		</section>
+		<section id="dodecaedres_non_wca" class="sous_partie">
+			<h3>Dodécaèdres</h3>
+			<table>
+				<tr>
+					<th>Épreuve</th>
+					<th>Single</th>
+					<th>Mo3</th>
+					<th>Avg5</th>
+					<th>Avg12</th>
+					<th>Avg50</th>
+					<th>Avg100</th>
+				</tr>
+				<tr>
+					<td class="nom_epreuve">Kilominx</td>
+					<td>
+						<div class="temps">16.52</div>
+						<div class="nom">Alan Goasdoué</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion"></div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">18.70</div>
+						<div class="nom">Alan Goasdoué</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion"></div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">19.80</div>
+						<div class="nom">Alan Goasdoué</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion"></div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">21.5x</div>
+						<div class="nom">Alan Goasdoué</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion"></div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">22.2x</div>
+						<div class="nom">Alan Goasdoué</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion"></div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">22.5x</div>
+						<div class="nom">Alan Goasdoué</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion"></div>
+						<div class="lien_video"></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="nom_epreuve">Masterkilominx</td>
+					<td>
+						<div class="temps">4:4x.xx</div>
+						<div class="nom">Axel Brisse</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion">https://forum.francocube.com/viewtopic.php?f=6&t=12025&p=261240#p261205</div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">5:39.35</div>
+						<div class="nom">Alan Goasdoué</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion">https://forum.francocube.com/viewtopic.php?f=6&t=12025&p=261240#p261203</div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">5:39.35</div>
+						<div class="nom">Alan Goasdoué</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion">https://forum.francocube.com/viewtopic.php?f=6&t=12025&p=261240#p261203</div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">x</div>
+						<div class="nom"></div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion"></div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">x</div>
+						<div class="nom"></div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion"></div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">x</div>
+						<div class="nom"></div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion"></div>
+						<div class="lien_video"></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="nom_epreuve">Gigaminx</td>
+					<td>
+						<div class="temps">7:58.29</div>
+						<div class="nom">Matthieu Aubert</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion">http://forum.francocube.com/viewtopic.php?f=6&t=5780&p=258743#p258743</div>
+						<div class="lien_video">https://www.youtube.com/watch?v=Z_7uJitsHb0</div>
+					</td>
+					<td>
+						<div class="temps">8:17.64</div>
+						<div class="nom">Matthieu Aubert</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion">http://forum.francocube.com/viewtopic.php?f=6&t=5780&p=258743#p258743</div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">8:24.20</div>
+						<div class="nom">Matthieu Aubert</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion">http://forum.francocube.com/viewtopic.php?f=6&t=5780&p=258743#p258743</div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">8:35.34</div>
+						<div class="nom">Matthieu Aubert</div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion">http://forum.francocube.com/viewtopic.php?f=6&t=5780&p=258743#p258743</div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">x</div>
+						<div class="nom"></div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion"></div>
+						<div class="lien_video"></div>
+					</td>
+					<td>
+						<div class="temps">x</div>
+						<div class="nom"></div>
+						<div class="commentaire"></div>
+						<div class="lien_discussion"></div>
+						<div class="lien_video"></div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section id="relais_non_wca" class="sous_partie">
+			<h3>Relais</h3>
 			<table>
 				<tr>
 					<th>Épreuve</th>
@@ -1362,7 +1501,9 @@
 					</td>
 				</tr>
 			</table>
-			<h3 id="team_non_wca">Team</h3>
+		</section>
+		<section id="team_non_wca" class="sous_partie">
+			<h3>Team</h3>
 			<table>
 				<tr>
 					<th>Épreuve</th>
@@ -1599,7 +1740,9 @@
 					</td>
 				</tr>
 			</table>
-			<h3 id="blind_non_wca">Blind</h3>
+		</section>
+		<section id="blind_non_wca" class="sous_partie">
+			<h3>Blind</h3>
 			<table>
 				<tr>
 					<th>Épreuve</th>
@@ -1701,7 +1844,9 @@
 					</td>
 				</tr>
 			</table>
-			<h3 id="challenge_wca">Challenge WCA</h3>
+		</section>
+		<section id="challenge_wca" class="sous_partie">
+			<h3>Challenge WCA</h3>
 			<table>
 				<tr>
 					<th>Épreuve</th>
@@ -1848,7 +1993,9 @@
 					</td>
 				</tr>
 			</table>
-			<h3 id="autres_non_wca">Autres non WCA</h3>
+		</section>
+		<section id="autres_non_wca" class="sous_partie">
+			<h3>Autres non WCA</h3>
 			<table>
 				<tr>
 					<th>Épreuve</th>
@@ -2022,141 +2169,6 @@
 						<div class="nom"></div>
 						<div class="commentaire"></div>
 						<div class="lien_discussion"></div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">x</div>
-						<div class="nom"></div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion"></div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">x</div>
-						<div class="nom"></div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion"></div>
-						<div class="lien_video"></div>
-					</td>
-				</tr>
-				<tr>
-					<td class="nom_epreuve">Kilominx</td>
-					<td>
-						<div class="temps">16.52</div>
-						<div class="nom">Alan Goasdoué</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion"></div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">18.70</div>
-						<div class="nom">Alan Goasdoué</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion"></div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">19.80</div>
-						<div class="nom">Alan Goasdoué</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion"></div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">21.5x</div>
-						<div class="nom">Alan Goasdoué</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion"></div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">22.2x</div>
-						<div class="nom">Alan Goasdoué</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion"></div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">22.5x</div>
-						<div class="nom">Alan Goasdoué</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion"></div>
-						<div class="lien_video"></div>
-					</td>
-				</tr>
-				<tr>
-					<td class="nom_epreuve">Masterkilominx</td>
-					<td>
-						<div class="temps">4:4x.xx</div>
-						<div class="nom">Axel Brisse</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion">https://forum.francocube.com/viewtopic.php?f=6&t=12025&p=261240#p261205</div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">5:39.35</div>
-						<div class="nom">Alan Goasdoué</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion">https://forum.francocube.com/viewtopic.php?f=6&t=12025&p=261240#p261203</div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">5:39.35</div>
-						<div class="nom">Alan Goasdoué</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion">https://forum.francocube.com/viewtopic.php?f=6&t=12025&p=261240#p261203</div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">x</div>
-						<div class="nom"></div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion"></div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">x</div>
-						<div class="nom"></div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion"></div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">x</div>
-						<div class="nom"></div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion"></div>
-						<div class="lien_video"></div>
-					</td>
-				</tr>
-				<tr>
-					<td class="nom_epreuve">Gigaminx</td>
-					<td>
-						<div class="temps">7:58.29</div>
-						<div class="nom">Matthieu Aubert</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion">http://forum.francocube.com/viewtopic.php?f=6&t=5780&p=258743#p258743</div>
-						<div class="lien_video">https://www.youtube.com/watch?v=Z_7uJitsHb0</div>
-					</td>
-					<td>
-						<div class="temps">8:17.64</div>
-						<div class="nom">Matthieu Aubert</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion">http://forum.francocube.com/viewtopic.php?f=6&t=5780&p=258743#p258743</div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">8:24.20</div>
-						<div class="nom">Matthieu Aubert</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion">http://forum.francocube.com/viewtopic.php?f=6&t=5780&p=258743#p258743</div>
-						<div class="lien_video"></div>
-					</td>
-					<td>
-						<div class="temps">8:35.34</div>
-						<div class="nom">Matthieu Aubert</div>
-						<div class="commentaire"></div>
-						<div class="lien_discussion">http://forum.francocube.com/viewtopic.php?f=6&t=5780&p=258743#p258743</div>
 						<div class="lien_video"></div>
 					</td>
 					<td>
@@ -2356,8 +2368,8 @@
 				</tr>
 			</table>
 		</section>
-		<script>script_UNR();</script>
 	</section>
+	<script>script_UNR();</script>
 	<script>footer();</script>
 	</body>
 </html>
