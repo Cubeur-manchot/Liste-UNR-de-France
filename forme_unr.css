@@ -6,7 +6,7 @@ section section { display: block; margin: 10px 0px 10px 0px; }
 .partie { display: block; }
 h1
 {
-	margin-top: -15px;
+	margin-top: 15px;
 	text-align: center;
 	color: black;
 	font-size: 50px;
@@ -129,19 +129,19 @@ a:hover > .commentaire
 {
 	display: inline-block;
 	vertical-align: top;
-	margin: 0px;
-	padding: 0px;
+	margin: 0px 0px 0px 0px;
+	padding: 10px;
 }
 .plan_partie_titre
 {
 	display: inline-block;
 	vertical-align: middle;
-	margin: 10px 0px 0px 0px;
+	margin: 10px 0px 10px 10px;
 }
 .plan_sous_partie
 {
 	display: inline-block;
-	margin: 0px;
+	margin: 3px 0px 0px 15px;
 	padding: 0px;
 }
 .plan_sous_partie_titre
@@ -163,6 +163,7 @@ a:hover > .commentaire
 	background-color: rgb(180,180,180);
 	cursor: pointer;
 }
+.plan_partie > .plan_bouton_externe { vertical-align: middle; }
 .plan_bouton_interne
 {
 	display: inline-block;
