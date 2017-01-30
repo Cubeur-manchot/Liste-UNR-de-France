@@ -151,7 +151,7 @@ function afficher_cacher_bouton_filtrer(i) {
 function palmares() {
 	var html = '<h2>Palmarès du nombre d\'UNRs</h2>';
 	var noms = document.getElementsByClassName('nom');
-	alert(noms.length);
+	
 	var palmares = document.getElementById('palmares');
 	palmares.innerHTML = html;
 }
