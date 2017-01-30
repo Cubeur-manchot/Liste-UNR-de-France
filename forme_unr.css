@@ -13,14 +13,7 @@ h1
 	text-shadow: grey 2px 2px 2px;
 	font-style : italic;
 }
-p
-{
-	margin-left: 3px;
-	font-size: 1em;
-	text-align: justify;
-	margin-top: 3px;
-	margin-bottom: 3px;
-}
+p { margin: 3px; font-size: 1em; text-align: justify; }
 
 footer
 {
@@ -60,115 +53,75 @@ td
 .avec_video_et_discussion:hover { background-image: url("logo_youtube.png"); }
 th
 {
-	border: 1px solid black;
-	background-color: #FFA000;
 	height: 20px;
 	text-align: center;
+	background-color: rgb(255,150,0);
+	border: 1px solid black;
 }
 td a
 {
 	width: 100%;
 	height: 100%;
-	text-decoration: none;
 	color: black;
+	text-decoration: none;
 }
-.nom_epreuve
-{
-	width: 200px;
-}
+.nom_epreuve { width: 200px; }
 .commentaire
 {
 	display: none;
-	position: relative;
 	transform: translate(20px,-43px);
-	background-color: #DDDDDD;
-	padding: 0px 5px 0px 5px;
+	padding: 2px 5px 2px 5px;
+	background-color: rgb(220,220,220);
+	border: 1px solid grey;
 	border-radius: 3px;
-	border: 1px solid grey;
 }
-a:hover > .commentaire
-{
-	display: inline-block;
-	position: absolute;
-	z-index: 10;
-}
-.lien_video:hover
-{
-	background-image: url("logo_youtube.png");
-	width: 100%;
-	height: 100%;
-}
+a:hover > .commentaire { display: inline-block; position: absolute; z-index: 10; }
 
-/*____________ PLAN DE PAGE ____________*/
-#plan, #plan_cache
-{
-	display: inline-block;
-	vertical-align: top;
-	margin: 10px;
-	padding: 5px;
-	border: 1px solid black;
-	border-radius: 5px;
-	background-color: rgb(100,200,100);
-	cursor: pointer;
-}
-#plan div, #plan_cache div
-{
-	display: none;
-}
-#plan_ouvert
-{
-	display: inline-block;
-	vertical-align: top;
-	margin: 10px;
-	padding: 5px;
-	border: 1px solid grey;
-	border-radius: 10px;
-	background-color: rgb(200,255,200);
-}
-.plan_partie
-{
-	display: inline-block;
-	vertical-align: top;
-	margin: 0px 0px 0px 0px;
-	padding: 10px;
-}
-.plan_partie_titre
+/*____________ PLAN DE PAGE ET FILTRER ____________*/
+.ouvert, .ferme { display: inline-block; vertical-align: top; margin: 10px; padding: 5px; }
+.ferme { text-align: center; width: 120px; height: 30px; border: 1px solid black; border-radius: 5px; cursor: pointer; }
+
+#plan, #plan_cache { background-color: rgb(100,200,100); }
+#filtrer, #filtrer_cache { background-color: rgb(220,80,80); }
+
+#plan_cache div, #filtrer_cache div { display: none; }
+
+.ouvert { border: 1px solid grey; border-radius: 10px; }
+#plan_ouvert { background-color: rgb(200,255,200); }
+#filtrer_ouvert { background-color: rgb(255,150,150); }
+
+.ferme .intitule { display: inline-block; }
+.ouvert .intitule, .ferme .intitule { text-shadow: white 1px 1px 1px; font-size: 18px; }
+
+.plan_partie, .filtrer_partie { display: inline-block; vertical-align: top; margin: 0px; padding: 10px; }
+.filtrer_partie { text-align: center; }
+
+.plan_partie_titre { display: inline-block; vertical-align: middle; margin: 10px; }
+.plan_sous_partie { display: inline-block; margin: 3px 0px 0px 15px; padding: 0px; }
+.plan_sous_partie_titre { display: inline-block; vertical-align: middle; margin: 0px 0px 0px 10px; }
+
+.filtrer_average { display: block; vertical-align: middle; margin: 10px 0px 10px 10px; }
+
+.bouton_externe
 {
 	display: inline-block;
 	vertical-align: middle;
-	margin: 10px 0px 10px 10px;
-}
-.plan_sous_partie
-{
-	display: inline-block;
-	margin: 3px 0px 0px 15px;
-	padding: 0px;
-}
-.plan_sous_partie_titre
-{
-	vertical-align: middle;
-	display: inline-block;
-	margin: 0px 0px 0px 10px;
-}
-.plan_bouton_externe
-{
-	vertical-align: middle;
-	display: inline-block;
+	text-align: left;
 	width: 35px;
 	height: 14px;
-	border-radius: 50px;
-	border: 1px solid rgb(100,100,100);
 	margin: 0px 0px 0px 10px;
 	padding: 0px;
 	background-color: rgb(180,180,180);
+	border: 1px solid rgb(100,100,100);
+	border-radius: 50px;
 	cursor: pointer;
 }
-.plan_partie > .plan_bouton_externe { vertical-align: middle; }
-.plan_bouton_interne
+.plan_partie > .bouton_externe { vertical-align: middle; }
+.bouton_interne
 {
 	display: inline-block;
 	position: relative;
-	top: -1px;
+	transform: translate(0px,-2px);
 	width: 12px;
 	height: 12px;
 	border-radius: 50px;
@@ -176,16 +129,4 @@ a:hover > .commentaire
 	margin: 0px;
 	background-color: rgb(100,255,100);
 	transition: all 0.5s;
-}
-
-#filtrer
-{
-	display: inline-block;
-	vertical-align: top;
-	margin: 10px;
-	padding: 5px;
-	border: 1px solid black;
-	background-color: rgb(80,80,255);
-	border-radius: 5px;
-	cursor: pointer;
 }
