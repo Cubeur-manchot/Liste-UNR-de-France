@@ -149,9 +149,64 @@ function afficher_cacher_bouton_filtrer(i) {
 }
 
 function palmares() {
-	var html = '<h2>Palmarès du nombre d\'UNRs</h2>';
-	var noms = document.getElementsByClassName('nom');
-	
 	var palmares = document.getElementById('palmares');
+	var html = '';
+	var i = 0;
+	var j = 0;
+	var count = 0;
+	var valeur_courante = '';
+	var indice_meilleur = 0;
+	var rang = 0;
+	var suffixe_rang = '';
+	var noms_balises = document.getElementsByClassName('nom');
+	var noms_normaux = new Array();
+	var noms_reduits = new Array();
+	var n_normaux = noms_balises.length;
+	var n_reduits = 0;
+	var pourcentage = 0;
+	var cumule = 0;
+	var pourcentage_string = '';
+	var total = 0;
+	var support = ['',0];
+	for (i=0; i<n_normaux; i++) { /* comptage du total d'UNRs et transfert vers noms_normaux */
+		noms_normaux[i] = noms_balises[i].innerHTML;
+		if (noms_normaux[i] != '') total++;
+	}
+	noms_normaux.sort(); /* tri alphabétique */
+	i=0;
+	for (j=0; j<n_normaux; j++) {
+		valeur_courante = noms_normaux[j];
+		count = 0;
+		while (valeur_courante == noms_normaux[j] && j < n_normaux) { /* comptage par nom */
+			count++;
+			j++;
+		}
+		noms_reduits[i] = [valeur_courante,count];
+		j--;
+		i++;
+	}
+	n_reduits = i;
+	html = '<h2>Palmarès du nombre d\'UNRs</h2><table><tr><th>Personne (' + n_reduits + ')</th><th>Nombre d\'UNRs (' + total + ')</th><th>Classement</th><th>Pourcentage des UNRs</th></tr>';
+	for (i=0; i<n_reduits; i++) { /* tri bulle */
+		indice_meilleur = i;
+		for (j=i+1; j<n_reduits; j++) {
+			if (noms_reduits[j][1] > noms_reduits[indice_meilleur][1]) {
+				indice_meilleur = j;
+			}
+		}
+		support = noms_reduits[i];
+		noms_reduits[i] = noms_reduits[indice_meilleur];
+		noms_reduits[indice_meilleur] = support;
+		if (i == 0 || noms_reduits[i][1] != noms_reduits[i-1][1]) {
+			rang = i;
+		}
+		pourcentage = 100 * noms_reduits[i][1] / total;
+		cumule += pourcentage;
+		pourcentage_string = pourcentage + '';
+		pourcentage_string = pourcentage_string.substring(0,4);
+		if (i == 1) suffixe_rang = 'er'; else suffixe_rang = 'ème';
+		if (i !=0) html += '<tr><td>' + noms_reduits[i][0] + '</td><td>' + noms_reduits[i][1] + '</td><td>' + rang + suffixe_rang + '</td><td>' + pourcentage_string + '%</td></tr>';
+	}
+	html += '</table>';
 	palmares.innerHTML = html;
 }
