@@ -25,14 +25,15 @@ function script_UNR()
 					td.className = 'sans_lien';
 				} else {
 					html = '<a href="' + lien_discussion + '" class="lien_discussion" target="_blank" title="Discussion">' + html + '</a>';
-					td.className = 'avec_discussion'
+					td.className = 'avec_discussion';
 				}
 			} else {
-				html = '<a href="' + lien_video + '" class="lien_video" target="_blank" title="Youtube">' + html + '</a>';
 				if (lien_discussion == '') {
 					td.className = 'avec_video';
+				html = '<a href="' + lien_video + '" class="lien_video" target="_blank" title="Youtube">' + html + '</a>';
 				} else {
 					td.className = 'avec_video_et_discussion';
+				html = '<a href="' + lien_video + '" class="lien_video" target="_blank" title="Youtube"></a><a href="' + lien_discussion + '" class="lien_discussion" target="_blank" title="Discussion"></a>' + html;
 				}
 			}
 			td.innerHTML = html;
