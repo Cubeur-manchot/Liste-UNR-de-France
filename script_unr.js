@@ -41,6 +41,7 @@ function script_UNR()
 	}
 	document.getElementById('plan').innerHTML = '<p class="intitule">' + document.getElementById('plan').innerHTML + '</p>';
 	document.getElementById('filtrer').innerHTML = '<p class="intitule">' + document.getElementById('filtrer').innerHTML + '</p>';
+	document.getElementById('compact_off').innerHTML = '<p class="intitule">' + document.getElementById('compact_off').innerHTML + '</p>';
 }
 
 function plan_de_page() {
@@ -210,4 +211,16 @@ function palmares() {
 	}
 	html += '</table>';
 	palmares.innerHTML = html;
+}
+
+function compact() {
+	var compact_off = document.getElementById('compact_off');
+	var compact_on = document.getElementById('compact_on');
+	if (compact_off != undefined) {
+		compact_off.innerHTML = '<p class="intitule">Mode Normal</p>';
+		compact_off.id = 'compact_on';
+	} else {
+		compact_on.innerHTML = '<p class="intitule">Mode Compact</p>';
+		compact_on.id = 'compact_off';
+	}
 }

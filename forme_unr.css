@@ -102,14 +102,17 @@ a:hover > .commentaire { display: inline-block; position: absolute; z-index: 10;
 .ouvert, .ferme { display: inline-block; vertical-align: top; margin: 10px; padding: 5px; }
 .ferme { text-align: center; width: 120px; height: 30px; border: 1px solid black; border-radius: 5px; cursor: pointer; }
 
+
 #plan, #plan_cache { background-color: rgb(100,200,100); }
 #filtrer, #filtrer_cache { background-color: rgb(220,80,80); }
+#compact_off { background-color: rgb(100,100,200); }
 
 #plan_cache div, #filtrer_cache div { display: none; }
 
 .ouvert { border: 1px solid grey; border-radius: 10px; }
 #plan_ouvert { background-color: rgb(200,255,200); }
 #filtrer_ouvert { background-color: rgb(255,150,150); }
+#compact_on { background-color: rgb(150,150,200); }
 
 .ferme .intitule { display: inline-block; }
 .ouvert .intitule, .ferme .intitule { text-shadow: white 1px 1px 1px; font-size: 18px; }
