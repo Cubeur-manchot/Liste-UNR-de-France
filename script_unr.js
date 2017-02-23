@@ -41,38 +41,6 @@ function change_compact()
 	make_plan(xml_plan);
 }
 
-function make_plan(xml_plan)
-{
-	var bouton_compact_on = document.getElementById('bouton_compact_on');
-	if (bouton_compact_on != undefined) {
-		var compact = true;
-		var string_compact = ' style="display: block; padding: 5px; margin: 0px;"';
-	} else {
-		var compact = false;
-		var string_compact = ' style="display: inline-block; padding: 5px;"';
-	}
-	var html_plan = '';
-	var plan_de_page = document.getElementById('plan_de_page');
-	var sections = xml_plan.getElementsByTagName('section');
-	var n_sections = sections.length;
-	for (var i=0; i<n_sections; i++) {
-		var section = sections[i];
-		var nom_section = section.getAttribute('nom');
-		var id_section = to_id(nom_section);
-		html_plan += '<div class="plan_partie"' + string_compact + '><div class="bouton_externe" onclick="afficher_cacher_bouton_plan(' + i + ',-1);"><div class="bouton_interne"></div></div><a href="' + id_section + '" class="plan_partie_titre">' + nom_section + '</a><br/>';
-		var subsections = section.getElementsByTagName('subsection');
-		var n_subsections = subsections.length;
-		for (var j=0; j<n_subsections; j++) {
-			var subsection = subsections[j];
-			var nom_subsection = subsection.getAttribute('nom');
-			var id_subsection = to_id(nom_subsection);
-			html_plan += '<div class="plan_sous_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_plan(' + i + ',' + j + ')"><div class="bouton_interne"></div></div><a href="' + id_subsection + '" class="plan_sous_partie_titre">' + nom_subsection + '</a></div><br/>';
-		}
-	html_plan += '</div>';
-	}
-	plan_de_page.innerHTML = html_plan;
-}
-
 function afficher_cacher_plan()
 {
 	var plan_de_page = document.getElementById('plan_de_page');
@@ -102,6 +70,97 @@ function afficher_cacher_bouton_plan(i,j) {
 	plan_de_page();
 }
 
+function afficher_cacher_bouton_filtrer(i) {
+	var avg_table = new Array('single','mo3','avg5','avg12','avg50','avg100');
+	var avg = avg_table[i-1];
+	var balises = document.getElementsByClassName(avg);
+	var n_balises = balises.length;
+	var balise_0 = balises[0];
+	var bouton_interne = document.getElementById('filtrer').getElementsByClassName('bouton_interne')[i-1];
+	if (balise_0.style.display != 'none') { /* on masque */
+		for (var i=0; i<n_balises; i++) {
+			balises[i].style.display = 'none';
+		}
+		bouton_interne.style.background = 'rgb(255,100,100)';
+		bouton_interne.style.transform = 'translate(22px,-2px)';
+	} else { /* on affiche */
+		for (var i=0; i<n_balises; i++) {
+			balises[i].style.display = '';
+		}
+		bouton_interne.style.background = 'rgb(100,255,100)';
+		bouton_interne.style.transform = 'translate(0px,-2px)';
+	}
+	/*
+	var lignes = document.getElementsByTagName('tr');
+	var nlignes = lignes.length;
+	var tds = document.getElementsByTagName('td');
+	var ntds = tds.length;
+	var ths = document.getElementsByTagName('th');
+	var nths = ths.length;
+	var bouton_interne = document.getElementById('filtrer').getElementsByClassName('bouton_interne')[i-1];
+	if (lignes[0].getElementsByTagName('th')[i].style.display != 'none') {
+		for (var j=0; j*7<ntds-1; j++) {
+			tds[7*j+i].style.display = 'none';
+		}
+		for (var j=0; j*7<nths-1; j++) {
+			ths[7*j+i].style.display = 'none';
+		}
+		bouton_interne.style.background = 'rgb(255,100,100)';
+		bouton_interne.style.transform = 'translate(22px,-2px)';
+	} else {
+		for (var j=0; j*7<ntds-1; j++) {
+			tds[7*j+i].style.display = '';
+		}
+		for (var j=0; j*7<nths-1; j++) {
+			ths[7*j+i].style.display = '';
+		}
+		bouton_interne.style.background = 'rgb(100,255,100)';
+		bouton_interne.style.transform = 'translate(0px,-2px)';
+	}
+	filtrer();*/
+}
+
+function make_plan(xml_plan)
+{
+	var bouton_compact_on = document.getElementById('bouton_compact_on');
+	if (bouton_compact_on != undefined) {
+		var compact = true;
+		var string_compact_1 = ' style="display: inline-block; width: 130px; padding: 5px; margin: 0px;"';
+		var string_compact_2 = '<br/>';
+	} else {
+		var compact = false;
+		var string_compact_1 = ' style="display: inline-block; text-align: left; padding: 5px;"';
+		var string_compact_2 = '';
+	}
+	var html_plan = '<div id="filtrer">';
+	html_plan += '<div class="filtrer_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(1)"><div class="bouton_interne"></div></div><br/><div class="filtrer_average">Single</div></div>';
+	html_plan += '<div class="filtrer_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(2)"><div class="bouton_interne"></div></div><br/><div class="filtrer_average">Mo3</div></div>';
+	html_plan += '<div class="filtrer_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(3)"><div class="bouton_interne"></div></div><br/><div class="filtrer_average">Avg5</div></div>';
+	html_plan += '<div class="filtrer_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(4)"><div class="bouton_interne"></div></div><br/><div class="filtrer_average">Avg12</div></div>';
+	html_plan += '<div class="filtrer_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(5)"><div class="bouton_interne"></div></div><br/><div class="filtrer_average">Avg50</div></div>';
+	html_plan += '<div class="filtrer_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(6)"><div class="bouton_interne"></div></div><br/><div class="filtrer_average">Avg100</div></div>';
+	html_plan += '</div>';
+	var plan_de_page = document.getElementById('plan_de_page');
+	var sections = xml_plan.getElementsByTagName('section');
+	var n_sections = sections.length;
+	for (var i=0; i<n_sections; i++) {
+		var section = sections[i];
+		var nom_section = section.getAttribute('nom');
+		var id_section = to_id(nom_section);
+		var subsections = section.getElementsByTagName('subsection');
+		var n_subsections = subsections.length;
+		html_plan += '<div class="plan_partie"' + string_compact_1 + '><div class="bouton_externe" onclick="afficher_cacher_bouton_plan(' + i + ',-1);"><div class="bouton_interne"></div></div>' + string_compact_2 + '<a href="' + id_section + '" class="plan_partie_titre">' + nom_section + '</a><br/>';
+		for (var j=0; j<n_subsections; j++) {
+			var subsection = subsections[j];
+			var nom_subsection = subsection.getAttribute('nom');
+			var id_subsection = to_id(nom_subsection);
+			html_plan += '<div class="plan_sous_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_plan(' + i + ',' + j + ')"><div class="bouton_interne"></div></div><a href="' + id_subsection + '" class="plan_sous_partie_titre">' + nom_subsection + '</a></div><br/>';
+		}
+	html_plan += '</div>';
+	}
+	plan_de_page.innerHTML = html_plan;
+}
+
 function make_string(balise_record)
 {
 	var html_records = '';
@@ -110,6 +169,7 @@ function make_string(balise_record)
 	var commentaire = balise_record.getElementsByTagName('commentaire')[0].innerHTML;
 	var lien_discussion = balise_record.getElementsByTagName('lien_discussion')[0].innerHTML;
 	var lien_video = balise_record.getElementsByTagName('lien_video')[0].innerHTML;
+	var avg = balise_record.tagName;
 	if (commentaire != '') {
 		var balise_commentaire = '<div class="commentaire">' + commentaire + '</div>';
 	} else {
@@ -117,15 +177,15 @@ function make_string(balise_record)
 	}
 	if (lien_discussion != '') {
 		if (lien_video != '') {
-			html_records += '<td class="avec_video_et_discussion"><a class="lien_video" href="' + lien_video + '" target="_blank" title="Youtube"></a><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Discussion"></a><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
+			html_records += '<td class="' + avg + ' avec_video_et_discussion"><a class="lien_video" href="' + lien_video + '" target="_blank" title="Youtube"></a><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Discussion"></a><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
 		} else {
-			html_records += '<td class="avec_discussion"><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Discussion"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+			html_records += '<td class="' + avg + ' avec_discussion"><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Discussion"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
 		}
 	} else {
 		if (lien_video != '') {
-			html_records += '<td class="avec_video"><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Youtube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+			html_records += '<td class="' + avg + ' avec_video"><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Youtube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
 		} else {
-			html_records += '<td class="sans_lien"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
+			html_records += '<td class="' + avg + ' sans_lien"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
 		}
 	}
 	return (html_records);
@@ -149,7 +209,7 @@ function make_records(xml_plan, xml_records)
 		for (var j=0; j<n_subsections; j++) {
 			var subsection = subsections[j];
 			var nom_subsection = subsection.getAttribute('nom');
-			html_records += '<section id="' + to_id(nom_subsection) + '" class="sous_partie"><h3>' + nom_subsection + '</h3><table><tr><th>Épreuve</th><th>Single</th><th>Mo3</th><th>Avg5</th><th>Avg12</th><th>Avg50</th><th>Avg100</th></tr>';
+			html_records += '<section id="' + to_id(nom_subsection) + '" class="sous_partie"><h3>' + nom_subsection + '</h3><table><tr><th>Épreuve</th><th class="single">Single</th><th class="mo3">Mo3</th><th class="avg5">Avg5</th><th class="avg12">Avg12</th><th class="avg50">Avg50</th><th class="avg100">Avg100</th></tr>';
 			var events = subsection.getElementsByTagName('event');
 			var n_events = events.length;
 			for (var k=0; k<n_events; k++) {
@@ -171,7 +231,7 @@ function make_records(xml_plan, xml_records)
 			html_records += '</table></section>';
 		}
 		if (n_subsections == 0) {
-			html_records += '<table><tr><th>Épreuve</th><th>Single</th><th>Mo3</th><th>Avg5</th><th>Avg12</th><th>Avg50</th><th>Avg100</th></tr>';
+			html_records += '<table><tr><th>Épreuve</th><th class="single">Single</th><th class="mo3">Mo3</th><th class="avg5">Avg5</th><th class="avg12">Avg12</th><th class="avg50">Avg50</th><th class="avg100">Avg100</th></tr>';
 			var events = section.getElementsByTagName('event');
 			var n_events = events.length;
 			for (var k=0; k<n_events; k++) {

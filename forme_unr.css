@@ -121,17 +121,20 @@ a:hover > .commentaire { display: inline-block; position: absolute; z-index: 10;
 	padding: 0px;
 	border: 1px solid grey;
 	border-radius: 10px;
+	width: 425px;
+	text-align: center;
 	background-color: rgb(200,255,200);
 }
 
-.plan_partie, .filtrer_partie { vertical-align: top; margin: 0px; padding: 5px; }
-.filtrer_partie { text-align: center; }
+.plan_partie { vertical-align: top; margin: 0px; padding: 5px; }
 
 .plan_partie_titre { display: inline-block; vertical-align: middle; margin: 0px 10px 10px 10px; }
-.plan_sous_partie { display: inline-block; margin: 3px 0px 0px 15px; padding: 0px; }
+.plan_sous_partie { display: inline-block; text-align: center; margin: 3px 0px 0px 15px; padding: 0px; }
 .plan_sous_partie_titre { display: inline-block; vertical-align: middle; margin: 0px 0px 0px 10px; }
 
-.filtrer_average { display: block; vertical-align: middle; margin: 10px 0px 10px 10px; }
+#filtrer { border-bottom: 1px solid rgb(170,170,170); text-align: center; }
+.filtrer_partie { display: inline-block; margin: 5px 5px 0px 5px; }
+.filtrer_average { display: inline-block; vertical-align: middle; margin: 5px; }
 
 .bouton_externe
 {
