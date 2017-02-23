@@ -149,12 +149,12 @@ function make_plan(xml_plan)
 		var id_section = to_id(nom_section);
 		var subsections = section.getElementsByTagName('subsection');
 		var n_subsections = subsections.length;
-		html_plan += '<div class="plan_partie"' + string_compact_1 + '><div class="bouton_externe" onclick="afficher_cacher_bouton_plan(' + i + ',-1);"><div class="bouton_interne"></div></div>' + string_compact_2 + '<a href="' + id_section + '" class="plan_partie_titre">' + nom_section + '</a><br/>';
+		html_plan += '<div class="plan_partie"' + string_compact_1 + '><div class="bouton_externe" onclick="afficher_cacher_bouton_plan(' + i + ',-1);"><div class="bouton_interne"></div></div>' + string_compact_2 + '<a href="#' + id_section + '" class="plan_partie_titre">' + nom_section + '</a><br/>';
 		for (var j=0; j<n_subsections; j++) {
 			var subsection = subsections[j];
 			var nom_subsection = subsection.getAttribute('nom');
 			var id_subsection = to_id(nom_subsection);
-			html_plan += '<div class="plan_sous_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_plan(' + i + ',' + j + ')"><div class="bouton_interne"></div></div><a href="' + id_subsection + '" class="plan_sous_partie_titre">' + nom_subsection + '</a></div><br/>';
+			html_plan += '<div class="plan_sous_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_plan(' + i + ',' + j + ')"><div class="bouton_interne"></div></div><a href="#' + id_subsection + '" class="plan_sous_partie_titre">' + nom_subsection + '</a></div><br/>';
 		}
 	html_plan += '</div>';
 	}
@@ -177,13 +177,13 @@ function make_string(balise_record)
 	}
 	if (lien_discussion != '') {
 		if (lien_video != '') {
-			html_records += '<td class="' + avg + ' avec_video_et_discussion"><a class="lien_video" href="' + lien_video + '" target="_blank" title="Youtube"></a><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Discussion"></a><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
+			html_records += '<td class="' + avg + ' avec_video_et_discussion"><a class="lien_video" href="#' + lien_video + '" target="_blank" title="Youtube"></a><a class="lien_discussion" href="#' + lien_discussion + '" target="_blank" title="Discussion"></a><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
 		} else {
-			html_records += '<td class="' + avg + ' avec_discussion"><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Discussion"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+			html_records += '<td class="' + avg + ' avec_discussion"><a class="lien_discussion" href="#' + lien_discussion + '" target="_blank" title="Discussion"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
 		}
 	} else {
 		if (lien_video != '') {
-			html_records += '<td class="' + avg + ' avec_video"><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Youtube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+			html_records += '<td class="' + avg + ' avec_video"><a class="lien_discussion" href="#' + lien_discussion + '" target="_blank" title="Youtube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
 		} else {
 			html_records += '<td class="' + avg + ' sans_lien"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
 		}
