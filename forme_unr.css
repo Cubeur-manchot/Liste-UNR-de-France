@@ -52,26 +52,17 @@ td
 .avec_discussion:hover { background-image: url("logo_discussion.png"); }
 .avec_video_et_discussion:hover { background-image: url("logo_youtube_discussion.png"); }
 
-.avec_video_et_discussion:hover .lien_video
+.avec_video_et_discussion:hover .lien_video, .avec_video_et_discussion:hover .lien_discussion
 {
 	position: absolute;
 	display: inline-block;
 	margin-top: 0px;
 	margin-left: 0px;
-	transform: translate(-70px,-6px);
 	width: 70px;
 	height: 40px;
 }
-.avec_video_et_discussion:hover .lien_discussion
-{
-	position: absolute;
-	display: inline-block;
-	margin-top: 0px;
-	margin-left: 0px;
-	transform: translate(0px,-6px);
-	width: 70px;
-	height: 40px;
-}
+.avec_video_et_discussion:hover .lien_video { transform: translate(-70px,-6px); }
+.avec_video_et_discussion:hover .lien_discussion { transform: translate(0px,-6px); }
 th
 {
 	height: 20px;
@@ -98,29 +89,45 @@ td a
 }
 a:hover > .commentaire { display: inline-block; position: absolute; z-index: 10; }
 
-/*____________ PLAN DE PAGE ET FILTRER ____________*/
-.ouvert, .ferme { display: inline-block; vertical-align: top; margin: 10px; padding: 5px; }
-.ferme { text-align: center; width: 120px; height: 30px; border: 1px solid black; border-radius: 5px; cursor: pointer; }
+#stock_xml { display: none; }
 
+/*____________ PLAN DE PAGE, FILTRER ET MODE COMPACT ____________*/
+#bouton_filtrer, #bouton_compact_off, #bouton_compact_on
+{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 0px 0px 15px;
+	padding: 5px;
+	text-align: center;
+	width: 200px;
+	height: 25px;
+	border: 1px solid black;
+	border-radius: 5px;
+	cursor: pointer;
+	text-shadow: white 1px 1px 1px;
+	font-size: 18px;
+	border: 1px solid black;
+}
 
-#plan, #plan_cache { background-color: rgb(100,200,100); }
-#filtrer, #filtrer_cache { background-color: rgb(220,80,80); }
-#compact_off { background-color: rgb(100,100,200); }
+#bouton_filtrer { background-color: rgb(100,200,100); }
+#bouton_compact_off { background-color: rgb(100,100,200); }
+#bouton_compact_on { background-color: rgb(150,150,200); }
 
-#plan_cache div, #filtrer_cache div { display: none; }
+#plan_de_page
+{
+/*	display: hidden;*/
+	display: inline-block;
+	margin: 15px;
+	padding: 0px;
+	border: 1px solid grey;
+	border-radius: 10px;
+	background-color: rgb(200,255,200);
+}
 
-.ouvert { border: 1px solid grey; border-radius: 10px; }
-#plan_ouvert { background-color: rgb(200,255,200); }
-#filtrer_ouvert { background-color: rgb(255,150,150); }
-#compact_on { background-color: rgb(150,150,200); }
-
-.ferme .intitule { display: inline-block; }
-.ouvert .intitule, .ferme .intitule { text-shadow: white 1px 1px 1px; font-size: 18px; }
-
-.plan_partie, .filtrer_partie { display: inline-block; vertical-align: top; margin: 0px; padding: 10px; }
+.plan_partie, .filtrer_partie { vertical-align: top; margin: 0px; padding: 5px; }
 .filtrer_partie { text-align: center; }
 
-.plan_partie_titre { display: inline-block; vertical-align: middle; margin: 10px; }
+.plan_partie_titre { display: inline-block; vertical-align: middle; margin: 0px 10px 10px 10px; }
 .plan_sous_partie { display: inline-block; margin: 3px 0px 0px 15px; padding: 0px; }
 .plan_sous_partie_titre { display: inline-block; vertical-align: middle; margin: 0px 0px 0px 10px; }
 
