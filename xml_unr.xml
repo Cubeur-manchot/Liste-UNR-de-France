@@ -1019,10 +1019,10 @@
 		</event>
 		<event nom="3x3x3 Blindfolded">
 			<single>
-				<temps>23.40</temps>
+				<temps>23.26</temps>
 				<nom>Martial Bonarek</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=1100&amp;p=258597#p258597</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=1100&amp;p=263329#p263308</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
@@ -1195,10 +1195,10 @@
 		</event>
 		<event nom="3x3x3 Multi-Blindfolded">
 			<single>
-				<temps>15/15</temps>
-				<nom>Maxime Clapié</nom>
-				<commentaire>57:42.14 [40:51.95]</commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;start=255#p257884</lien_discussion>
+				<temps>16/16</temps>
+				<nom>Arthur Garcin</nom>
+				<commentaire>51:51.29 [40:56.76]</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=263332#p263332</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
@@ -1267,16 +1267,16 @@
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
-				<temps>2.80</temps>
+				<temps>2.77</temps>
 				<nom>Jules Desjardin</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=263190#p263190</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=263293#p263293</lien_discussion>
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
 				<temps>2.85</temps>
 				<nom>Jules Desjardin</nom>
-				<commentaire></commentaire>
+				<commentaire>2 fois</commentaire>
 				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=263190#p263190</lien_discussion>
 				<lien_video></lien_video>
 			</avg100>
