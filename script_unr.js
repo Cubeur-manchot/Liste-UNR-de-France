@@ -90,34 +90,6 @@ function afficher_cacher_bouton_filtrer(i) {
 		bouton_interne.style.background = 'rgb(100,255,100)';
 		bouton_interne.style.transform = 'translate(0px,-2px)';
 	}
-	/*
-	var lignes = document.getElementsByTagName('tr');
-	var nlignes = lignes.length;
-	var tds = document.getElementsByTagName('td');
-	var ntds = tds.length;
-	var ths = document.getElementsByTagName('th');
-	var nths = ths.length;
-	var bouton_interne = document.getElementById('filtrer').getElementsByClassName('bouton_interne')[i-1];
-	if (lignes[0].getElementsByTagName('th')[i].style.display != 'none') {
-		for (var j=0; j*7<ntds-1; j++) {
-			tds[7*j+i].style.display = 'none';
-		}
-		for (var j=0; j*7<nths-1; j++) {
-			ths[7*j+i].style.display = 'none';
-		}
-		bouton_interne.style.background = 'rgb(255,100,100)';
-		bouton_interne.style.transform = 'translate(22px,-2px)';
-	} else {
-		for (var j=0; j*7<ntds-1; j++) {
-			tds[7*j+i].style.display = '';
-		}
-		for (var j=0; j*7<nths-1; j++) {
-			ths[7*j+i].style.display = '';
-		}
-		bouton_interne.style.background = 'rgb(100,255,100)';
-		bouton_interne.style.transform = 'translate(0px,-2px)';
-	}
-	filtrer();*/
 }
 
 function make_plan(xml_plan)
@@ -177,13 +149,13 @@ function make_string(balise_record)
 	}
 	if (lien_discussion != '') {
 		if (lien_video != '') {
-			html_records += '<td class="' + avg + ' avec_video_et_discussion"><a class="lien_video" href="#' + lien_video + '" target="_blank" title="Youtube"></a><a class="lien_discussion" href="#' + lien_discussion + '" target="_blank" title="Discussion"></a><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
+			html_records += '<td class="' + avg + ' avec_video_et_discussion"><a class="lien_video" href="' + lien_video + '" target="_blank" title="Youtube"></a><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Discussion"></a><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
 		} else {
-			html_records += '<td class="' + avg + ' avec_discussion"><a class="lien_discussion" href="#' + lien_discussion + '" target="_blank" title="Discussion"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+			html_records += '<td class="' + avg + ' avec_discussion"><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Discussion"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
 		}
 	} else {
 		if (lien_video != '') {
-			html_records += '<td class="' + avg + ' avec_video"><a class="lien_discussion" href="#' + lien_discussion + '" target="_blank" title="Youtube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+			html_records += '<td class="' + avg + ' avec_video"><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Youtube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
 		} else {
 			html_records += '<td class="' + avg + ' sans_lien"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
 		}
