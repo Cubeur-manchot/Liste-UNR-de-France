@@ -86,10 +86,10 @@
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
-				<temps>7.68</temps>
+				<temps>7.52</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=97&amp;p=264002#p263896</lien_discussion>
 				<lien_video></lien_video>
 			</avg100>
 		</event>
@@ -160,24 +160,24 @@
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>1:00.02</temps>
-				<nom>Alexandre Carlier</nom>
+				<temps>58.95</temps>
+				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?p&#61;259656#p259656</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=863&amp;p=263867#p263867</lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
-				<temps>1:03.15</temps>
+				<temps>1:00.47</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?p&#61;259611#p259611</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=863&amp;p=263867#p263867</lien_discussion>
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
-				<temps>x</temps>
-				<nom></nom>
+				<temps>1:01.18</temps>
+				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=863&amp;p=263867#p263867</lien_discussion>
 				<lien_video></lien_video>
 			</avg100>
 		</event>
@@ -315,10 +315,10 @@
 		</event>
 		<event nom="9x9x9">
 			<single>
-				<temps>11:27.99</temps>
+				<temps>11:25.47</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f&#61;6&amp;t&#61;12025&amp;p&#61;260881#p260881</lien_discussion>
+				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
@@ -1334,38 +1334,38 @@
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>9.80</temps>
+				<temps>7.81</temps>
 				<nom>Paul Luciw</nom>
-				<commentaire>7.11 - 11.59 - 9.51</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=1013&amp;start=1185#p263180</lien_discussion>
+				<commentaire>6,22, 8,46, 9,05</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=263900#p263900</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>10.73</temps>
+				<temps>9.18</temps>
 				<nom>Paul Luciw</nom>
-				<commentaire>10.89 (7.11) (11.59) 9.51 9.74</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=1013&amp;start=1185#p263180</lien_discussion>
+				<commentaire>(6,22), 8,46, 9,05, (12,74), 10,03</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=263900#p263900</lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>11.98</temps>
+				<temps>11.02</temps>
 				<nom>Paul Luciw</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=1013&amp;start=1185#p263180</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=263900#p263900</lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
-				<temps>13.28</temps>
+				<temps>12.46</temps>
 				<nom>Paul Luciw</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=1013&amp;start=1185#p263180</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=263900#p263900</lien_discussion>
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
-				<temps>13.97</temps>
+				<temps>13.20</temps>
 				<nom>Paul Luciw</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=1013&amp;start=1185#p263180</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=263900#p263900</lien_discussion>
 				<lien_video></lien_video>
 			</avg100>
 		</event>
