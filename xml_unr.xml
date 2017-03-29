@@ -72,10 +72,10 @@
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>6.85</temps>
+				<temps>6.80</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p&#61;262281#p262281</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=264859#p264859</lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
@@ -1328,24 +1328,24 @@
 		</event>
 		<event nom="Skewb">
 			<single>
-				<temps>0.94</temps>
-				<nom>Maxence Baudry</nom>
+				<temps>0.93</temps>
+				<nom>Gabriel Luthun</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=257321#p257321</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=264801#p264801</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>2.07</temps>
-				<nom>Léo Bailly</nom>
-				<commentaire>1.30, 3.11, 1.81</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;start=450#p264718</lien_discussion>
+				<temps>1.94</temps>
+				<nom>Gabriel Luthun</nom>
+				<commentaire>2.72, 2.12, 0.93</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=264801#p264801</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>2.24</temps>
-				<nom>Léo Bailly</nom>
-				<commentaire>(3.99), (1.30), 3.11, 1.81, 1.81</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;start=450#p264718</lien_discussion>
+				<temps>2.16</temps>
+				<nom>Gabriel Luthun</nom>
+				<commentaire>1.58, (3.21), 2.72, 2.12, (0.93)</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=264801#p264801</lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
