@@ -843,31 +843,31 @@
 		</event>
 		<event nom="Megaminx">
 			<single>
-				<temps>41.54</temps>
+				<temps>39.07</temps>
 				<nom>Juliette Sébastien</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=898&amp;start=1260#p265066</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265888#p265836</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>47.71</temps>
-				<nom>Alan Goasdoué</nom>
+				<temps>47.15</temps>
+				<nom>Juliette Sébastien</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=260998#p260919</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265888#p265788</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>48.79</temps>
+				<temps>47.61</temps>
 				<nom>Alan Goasdoué</nom>
-				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=260998#p260919</lien_discussion>
+				<commentaire>49.63, (43.85), (54.08), 45.01, 48.20</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265888#p265866</lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>50.64</temps>
+				<temps>50.37</temps>
 				<nom>Alan Goasdoué</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=260998#p260919</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265888#p265866</lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
@@ -1349,17 +1349,17 @@
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>2.68</temps>
-				<nom>Anthony Lafourcade</nom>
+				<temps>2.66</temps>
+				<nom>Maxence Baudry</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=259267&amp;sid=f508f6155dc56be15d34abf7a14fdd09#p259267</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265888#p265888</lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
-				<temps>3.00</temps>
-				<nom>Anthony Lafourcade</nom>
+				<temps>2.89</temps>
+				<nom>Maxence Baudry</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=259267&amp;sid=f508f6155dc56be15d34abf7a14fdd09#p259267</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265888#p265888</lien_discussion>
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
@@ -1393,24 +1393,24 @@
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>11.02</temps>
-				<nom>Paul Luciw</nom>
+				<temps>10.10</temps>
+				<nom>Clément Cherblanc</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=263900#p263900</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265713#p265363</lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
-				<temps>12.46</temps>
-				<nom>Paul Luciw</nom>
+				<temps>11.00</temps>
+				<nom>Clément Cherblanc</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=263900#p263900</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265713#p265363</lien_discussion>
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
-				<temps>13.20</temps>
-				<nom>Paul Luciw</nom>
+				<temps>11.50</temps>
+				<nom>Clément Cherblanc</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=263900#p263900</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265713#p265363</lien_discussion>
 				<lien_video></lien_video>
 			</avg100>
 		</event>
@@ -2039,24 +2039,24 @@
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>x</temps>
-				<nom></nom>
+				<temps>2:15.50</temps>
+				<nom>2:15.08, 2:12.22, 2:19.21</nom>
 				<commentaire></commentaire>
 				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>2:18.99</temps>
+				<temps>2:18.23</temps>
 				<nom>Nicolas Girard</nom>
-				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265234#p265234</lien_discussion>
+				<commentaire>(2:44.29), 2:20.67, 2:15.08, (2:12.22), 2:19.21</commentaire>
+				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>2:48.99</temps>
+				<temps>2:47.94</temps>
 				<nom>Nicolas Girard</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265234#p265234</lien_discussion>
+				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
