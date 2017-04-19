@@ -850,17 +850,17 @@
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>45.38</temps>
+				<temps>47.15</temps>
 				<nom>Juliette Sébastien</nom>
-				<commentaire>44.00, 46.14, 46.02</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265888#p265788</lien_discussion>
+				<commentaire>43.71, 53.73, 44.00</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265942#p265942</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>45.38</temps>
-				<nom>Juliette Sébastien</nom>
-				<commentaire>(43.71), (53.73), 44.00, 46.14, 46.02</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265888#p265866</lien_discussion>
+				<temps>47.61</temps>
+				<nom>Alan Goasdoué</nom>
+				<commentaire>49.63, (43.85), (54.08), 45.01, 48.20</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265866#p265866</lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
@@ -1944,45 +1944,45 @@
 		</event>
 		<event nom="Inequilateral Cube">
 			<single>
-				<temps>32.63</temps>
+				<temps>23.76</temps>
 				<nom>Wilfrid Py</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?t=13697#p258440</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>41.54</temps>
+				<temps>33.46</temps>
 				<nom>Wilfrid Py</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?p=258513#p258513</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>42.49</temps>
+				<temps>35.05</temps>
 				<nom>Wilfrid Py</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?p=258513#p258513</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>49.02</temps>
+				<temps>39.33</temps>
 				<nom>Wilfrid Py</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?p=258513#p258513</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
-				<temps>x</temps>
-				<nom></nom>
+				<temps>43.77</temps>
+				<nom>Wilfrid Py</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien_discussion>
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
-				<temps>x</temps>
-				<nom></nom>
+				<temps>46.95</temps>
+				<nom>Wilfrid Py</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien_discussion>
 				<lien_video></lien_video>
 			</avg100>
 		</event>
