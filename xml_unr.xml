@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-& : &amp;
-= : &#61;
--->
 <xml>
 	<records>
 		<event nom="2x2x2">
@@ -850,10 +846,10 @@
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>47.15</temps>
-				<nom>Juliette Sébastien</nom>
-				<commentaire>43.71, 53.73, 44.00</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265942#p265942</lien_discussion>
+				<temps>46.66</temps>
+				<nom>Victor Wijsman</nom>
+				<commentaire>50.79, 46.43, 42.76</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266086#p266078</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
@@ -894,17 +890,17 @@
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>5:39.35</temps>
-				<nom>Alan Goasdoué</nom>
-				<commentaire>(UWR)</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=261240#p261203</lien_discussion>
+				<temps>5:13.21</temps>
+				<nom>Matthieu Aubert</nom>
+				<commentaire>4:59.94, 5:13.08, 5:26.60 (UWR)</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266041#p266041</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>5:39.35</temps>
-				<nom>Alan Goasdoué</nom>
-				<commentaire>(UWR)</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=261240#p261203</lien_discussion>
+				<temps>5:17.50</temps>
+				<nom>Matthieu Aubert</nom>
+				<commentaire>5:12.81, 5:45.04, 4:59.94, 5:13.08, 5:26.60 (UWR)</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266041#p266041</lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
