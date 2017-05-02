@@ -311,17 +311,17 @@
 		</event>
 		<event nom="9x9x9">
 			<single>
-				<temps>11:25.47</temps>
+				<temps>11:21.73</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266468#p266468</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>12:18.60</temps>
+				<temps>11:36.12</temps>
 				<nom>Matthieu Aubert</nom>
-				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f&#61;6&amp;t&#61;10354&amp;p&#61;258258#p258258</lien_discussion>
+				<commentaire>12:01.09, 11:25.55, 11:21.73</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266468#p266468</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
@@ -619,17 +619,17 @@
 		</event>
 		<event nom="3x3x3 With Feet">
 			<single>
-				<temps>30.13</temps>
+				<temps>28.86</temps>
 				<nom>Nicolas Gertner</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;start=420#p262421</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266582#p266574</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>54.93</temps>
+				<temps>42.93</temps>
 				<nom>Nicolas Gertner</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://www.worldcubeassociation.org/results/events.php?eventId=333ft&amp;regionId=France&amp;years=&amp;show=100%2BPersons&amp;average=Average</lien_discussion>
+				<lien_discussion>cubecomps.com/live.php?cid=2156&amp;cat=14&amp;rnd=2</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
@@ -846,10 +846,10 @@
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>46.66</temps>
-				<nom>Victor Wijsman</nom>
-				<commentaire>50.79, 46.43, 42.76</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266086#p266078</lien_discussion>
+				<temps>46.59</temps>
+				<nom>Alan Goasdoué</nom>
+				<commentaire>41.47, 45.89, 52.43</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266582#p266582</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
@@ -867,17 +867,17 @@
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
-				<temps>52.65</temps>
-				<nom>Victor Wijsman</nom>
+				<temps>51.60</temps>
+				<nom>Alan Goasdoué</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266193#p266193</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266582#p266582</lien_discussion>
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
-				<temps>53.49</temps>
+				<temps>52.77</temps>
 				<nom>Alan Goasdoué</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=260998#p260919</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266582#p266582</lien_discussion>
 				<lien_video></lien_video>
 			</avg100>
 		</event>
@@ -885,21 +885,21 @@
 			<single>
 				<temps>4:49.99</temps>
 				<nom>Axel Brisse</nom>
-				<commentaire>(UWR)</commentaire>
+				<commentaire></commentaire>
 				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=261240#p261205</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
 				<temps>5:13.21</temps>
 				<nom>Matthieu Aubert</nom>
-				<commentaire>4:59.94, 5:13.08, 5:26.60 (UWR)</commentaire>
+				<commentaire>4:59.94, 5:13.08, 5:26.60 UWR</commentaire>
 				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266041#p266041</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
 				<temps>5:17.50</temps>
 				<nom>Matthieu Aubert</nom>
-				<commentaire>5:12.81, 5:45.04, 4:59.94, 5:13.08, 5:26.60 (UWR)</commentaire>
+				<commentaire>5:12.81, 5:45.04, 4:59.94, 5:13.08, 5:26.60 UWR</commentaire>
 				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266041#p266041</lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
@@ -1081,10 +1081,10 @@
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>38.91</temps>
-				<nom>Martial Bonarek</nom>
-				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=1100&amp;p=217378#p217378</lien_discussion>
+				<temps>37.39</temps>
+				<nom>Arthur Garcin</nom>
+				<commentaire>33.90, 34.02, 33.23, 38.36, 38.27, DNF (41.34), 43.20, 37.73, 40.61, 41.73, 32.97, 32.24</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266510#p266510</lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
@@ -1148,10 +1148,10 @@
 		</event>
 		<event nom="5x5x5 Blindfolded">
 			<single>
-				<temps>8:46.22</temps>
-				<nom>Robin Michaud</nom>
-				<commentaire>[3:44.94]</commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=8973&amp;p=254443#p254443</lien_discussion>
+				<temps>6:32.53</temps>
+				<nom>William Phommaha</nom>
+				<commentaire>NR</commentaire>
+				<lien_discussion>http://cubecomps.com/live.php?cid=2156&amp;cat=18&amp;rnd=1</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
