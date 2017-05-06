@@ -2242,7 +2242,6 @@
 				<event>Kilominx</event>
 				<event>Masterkilominx</event>
 				<event>Gigaminx</event>
-				<event>Teraminx</event>
 			</subsection>
 			<subsection nom="Relais">
 				<event>Relai 2x2x2 - 4x4x4</event>
@@ -2306,7 +2305,6 @@
 			<event>Megaminx</event>
 			<event>Masterkilominx</event>
 			<event>Gigaminx</event>
-			<event>Teraminx</event>
 		</section>
 		<section nom="Blindfolded">
 			<event>2x2x2 Blindfolded</event>
