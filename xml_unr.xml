@@ -311,17 +311,17 @@
 		</event>
 		<event nom="9x9x9">
 			<single>
-				<temps>11:21.73</temps>
+				<temps>11:27.86</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266468#p266468</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=267178#p267178</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>11:36.12</temps>
+				<temps>11:34.45</temps>
 				<nom>Matthieu Aubert</nom>
-				<commentaire>12:01.09, 11:25.55, 11:21.73</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266468#p266468</lien_discussion>
+				<commentaire>11:17.86, 11:23.91, 12:01.58</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=267178#p267178</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
@@ -892,14 +892,14 @@
 			<mo3>
 				<temps>5:13.21</temps>
 				<nom>Matthieu Aubert</nom>
-				<commentaire>4:59.94, 5:13.08, 5:26.60 UWR</commentaire>
+				<commentaire>4:59.94, 5:13.08, 5:26.60</commentaire>
 				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266041#p266041</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
 				<temps>5:17.50</temps>
 				<nom>Matthieu Aubert</nom>
-				<commentaire>5:12.81, 5:45.04, 4:59.94, 5:13.08, 5:26.60 UWR</commentaire>
+				<commentaire>5:12.81, 5:45.04, 4:59.94, 5:13.08, 5:26.60</commentaire>
 				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266041#p266041</lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
@@ -927,28 +927,28 @@
 		</event>
 		<event nom="Gigaminx">
 			<single>
-				<temps>7:17.85</temps>
+				<temps>7:08.86</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=261967#p261967</lien_discussion>
+				<lien_discussion>https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>7:41.96</temps>
+				<temps>7:28.50</temps>
 				<nom>Matthieu Aubert</nom>
-				<commentaire>7:46.14, 7:43.14, 7:36.60 (UWR)</commentaire>
+				<commentaire>7:37.36, 7:08.86, 7:39.28 (UWR)</commentaire>
 				<lien_discussion>https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>7:43.80</temps>
+				<temps>7:36.70</temps>
 				<nom>Matthieu Aubert</nom>
-				<commentaire>7:43.24, 7:41.88, (8:02.65), 7:46.28, (7:27.51) (UWR)</commentaire>
+				<commentaire>7:37.36, 7:08.86, 7:39.28, 8:16.91, 7:33.45 (UWR)</commentaire>
 				<lien_discussion>https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>7:59.32</temps>
+				<temps>7:56.00</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
 				<lien_discussion>https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien_discussion>
