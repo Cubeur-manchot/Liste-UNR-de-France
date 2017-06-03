@@ -1308,10 +1308,10 @@
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
-				<temps>2.61</temps>
+				<temps>2.52</temps>
 				<nom>Jules Desjardin</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266761#p266761</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=267632#p267632</lien_discussion>
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
@@ -1324,17 +1324,17 @@
 		</event>
 		<event nom="Skewb">
 			<single>
-				<temps>0.93</temps>
+				<temps>0.90</temps>
 				<nom>Gabriel Luthun</nom>
-				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=264801#p264801</lien_discussion>
+				<commentaire>B U B R' L' U' B' R' U' L'</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=267632#p267629</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>1.94</temps>
+				<temps>1.71</temps>
 				<nom>Gabriel Luthun</nom>
-				<commentaire>2.72, 2.12, 0.93</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=264801#p264801</lien_discussion>
+				<commentaire>1.95, 2.27, 0.90</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=267632#p267629</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
