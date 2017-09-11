@@ -969,51 +969,6 @@
 				<lien_video></lien_video>
 			</avg100>
 		</event>
-		<event nom="Teraminx">
-			<single>
-				<temps>25:40.52</temps>
-				<nom>Matthieu Aubert</nom>
-				<commentaire>UWR</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=14128&amp;p=264699#p264679</lien_discussion>
-				<lien_video></lien_video>
-			</single>
-			<mo3>
-				<temps>27:28.77</temps>
-				<nom>Matthieu Aubert</nom>
-				<commentaire>28:02.27, 28:43.53, 25:40.52 (UWR)</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=14128&amp;p=264699#p264679</lien_discussion>
-				<lien_video></lien_video>
-			</mo3>
-			<avg5>
-				<temps>28:04.48</temps>
-				<nom>Matthieu Aubert</nom>
-				<commentaire>
-28:37.08, 27:34.10, 28:02.27, (28:43.53), (25:40.52) (UWR)</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=14128&amp;p=264699#p264679</lien_discussion>
-				<lien_video></lien_video>
-			</avg5>
-			<avg12>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg12>
-			<avg50>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg50>
-			<avg100>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg100>
-		</event>
 		<event nom="2x2x2 Blindfolded">
 			<single>
 				<temps>2.89</temps>
