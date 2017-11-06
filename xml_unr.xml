@@ -795,31 +795,31 @@
 		</event>
 		<event nom="Kilominx">
 			<single>
-				<temps>16.03</temps>
+				<temps>15.05</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271399#p271399</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271549#p271549</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>18.70</temps>
-				<nom>Alan Goasdoué</nom>
+				<temps>17.69</temps>
+				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271549#p271549</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>19.80</temps>
-				<nom>Alan Goasdoué</nom>
+				<temps>16.65</temps>
+				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271549#p271549</lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>21.59</temps>
-				<nom>Alan Goasdoué</nom>
+				<temps>19.29</temps>
+				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271549#p271549</lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
@@ -830,10 +830,10 @@
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
-				<temps>22.59</temps>
-				<nom>Alan Goasdoué</nom>
+				<temps>21.66</temps>
+				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271549#p271549</lien_discussion>
 				<lien_video></lien_video>
 			</avg100>
 		</event>
@@ -860,10 +860,10 @@
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>44.94</temps>
-				<nom>Alan Goasdoué</nom>
+				<temps>44.86</temps>
+				<nom>Victor Wijsman</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271239#p271239</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
