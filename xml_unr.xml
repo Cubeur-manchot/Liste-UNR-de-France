@@ -795,10 +795,10 @@
 		</event>
 		<event nom="Kilominx">
 			<single>
-				<temps>13.43</temps>
+				<temps>13.34</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271549#p271549</lien_discussion>
+				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
@@ -809,40 +809,40 @@
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>16.25</temps>
+				<temps>16.07</temps>
 				<nom>Théo Paris</nom>
-				<commentaire>Counting sub-16</commentaire>
+				<commentaire>15.51, (21.98), 14.79, 17.92, (13.79)</commentaire>
 				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>17.49</temps>
+				<temps>16.82</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
 				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
-				<temps>19.21</temps>
+				<temps>18.64</temps>
 				<nom>Théo Paris</nom>
-				<commentaire></commentaire>
+				<commentaire>UWR</commentaire>
 				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
-				<temps>19.83</temps>
+				<temps>19.00</temps>
 				<nom>Théo Paris</nom>
-				<commentaire></commentaire>
+				<commentaire>UWR</commentaire>
 				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</avg100>
 		</event>
 		<event nom="Megaminx">
 			<single>
-				<temps>39.07</temps>
-				<nom>Juliette Sébastien</nom>
+				<temps>37.62</temps>
+				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265888#p265836</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272236#p272236</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
@@ -1330,10 +1330,10 @@
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>7.81</temps>
-				<nom>Paul Luciw</nom>
-				<commentaire>6,22, 8,46, 9,05</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=263900#p263900</lien_discussion>
+				<temps>7.37</temps>
+				<nom>Thibaud Ou</nom>
+				<commentaire>4.733, 9.309, 8.087</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272216#p272216</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
@@ -1358,10 +1358,10 @@
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
-				<temps>10.96</temps>
+				<temps>10.74</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271969#p271969</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272216#p272216</lien_discussion>
 				<lien_video></lien_video>
 			</avg100>
 		</event>
@@ -1719,10 +1719,10 @@
 		</event>
 		<event nom="Mini-Guilford Duo">
 			<single>
-				<temps>2:18.80</temps>
-				<nom>Louis Fertier + Victor Wijsman</nom>
+				<temps>1:59.99</temps>
+				<nom>Clément Cherblanc + Juliette Sébastien</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271420#p271420</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272183#p272183</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
