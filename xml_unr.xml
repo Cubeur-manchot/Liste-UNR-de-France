@@ -795,23 +795,23 @@
 		</event>
 		<event nom="Kilominx">
 			<single>
-				<temps>13.34</temps>
+				<temps>12.51</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
 				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>15.41</temps>
+				<temps>15.29</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
 				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>16.07</temps>
+				<temps>15.64</temps>
 				<nom>Théo Paris</nom>
-				<commentaire>15.51, (21.98), 14.79, 17.92, (13.79)</commentaire>
+				<commentaire></commentaire>
 				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
@@ -823,7 +823,7 @@
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
-				<temps>18.64</temps>
+				<temps>18.34</temps>
 				<nom>Théo Paris</nom>
 				<commentaire>UWR</commentaire>
 				<lien_discussion></lien_discussion>
