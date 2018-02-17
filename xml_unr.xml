@@ -795,10 +795,10 @@
 		</event>
 		<event nom="Kilominx">
 			<single>
-				<temps>12.36</temps>
+				<temps>11.29</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272739</lien_discussion>
+				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
@@ -809,31 +809,31 @@
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>15.64</temps>
+				<temps>15.26</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
 				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>16.39</temps>
+				<temps>15.93</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272739</lien_discussion>
+				<lien_discussion>UWR</lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
-				<temps>17.89</temps>
+				<temps>17.31</temps>
 				<nom>Théo Paris</nom>
 				<commentaire>UWR</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272739</lien_discussion>
+				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
-				<temps>18.96</temps>
+				<temps>17.63</temps>
 				<nom>Théo Paris</nom>
 				<commentaire>UWR</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272739</lien_discussion>
+				<lien_discussion></lien_discussion>
 				<lien_video></lien_video>
 			</avg100>
 		</event>
