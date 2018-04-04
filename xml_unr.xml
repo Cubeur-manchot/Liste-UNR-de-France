@@ -839,45 +839,45 @@
 		</event>
 		<event nom="Megaminx">
 			<single>
-				<temps>37.62</temps>
+				<temps>35.10</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272236#p272236</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273386#p273386</lien_discussion>
 				<lien_video></lien_video>
 			</single>
 			<mo3>
-				<temps>41.25</temps>
-				<nom>Alan Goasdoué</nom>
-				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271239#p271239</lien_discussion>
+				<temps>39.71</temps>
+				<nom>Théo Paris</nom>
+				<commentaire>36.81, 42.25, 40.08</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273386#p273386</lien_discussion>
 				<lien_video></lien_video>
 			</mo3>
 			<avg5>
-				<temps>42.78</temps>
-				<nom>Alan Goasdoué</nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
+				<temps>41.39</temps>
+				<nom>Théo Paris</nom>
+				<commentaire>36.81, 42.25, 40.08, 48.75, 41.85</commentaire>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273386#p273386</lien_discussion>
 				<lien_video></lien_video>
 			</avg5>
 			<avg12>
-				<temps>44.86</temps>
-				<nom>Victor Wijsman</nom>
+				<temps>42.78</temps>
+				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273386#p273386</lien_discussion>
 				<lien_video></lien_video>
 			</avg12>
 			<avg50>
-				<temps>46.72</temps>
-				<nom>Victor Wijsman</nom>
+				<temps>45.11</temps>
+				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273386#p273386</lien_discussion>
 				<lien_video></lien_video>
 			</avg50>
 			<avg100>
-				<temps>48.09</temps>
-				<nom>Victor Wijsman</nom>
+				<temps>46.16</temps>
+				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien_discussion>
+				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273386#p273386</lien_discussion>
 				<lien_video></lien_video>
 			</avg100>
 		</event>
