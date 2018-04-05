@@ -705,94 +705,6 @@
 				<lien_video></lien_video>
 			</avg100>
 		</event>
-		<event nom="4x4x4 Fewest Moves">
-			<single>
-				<temps>75</temps>
-				<nom>Julien Cadiry</nom>
-				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12356&amp;start=60#p248377</lien_discussion>
-				<lien_video></lien_video>
-			</single>
-			<mo3>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</mo3>
-			<avg5>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg5>
-			<avg12>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg12>
-			<avg50>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg50>
-			<avg100>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg100>
-		</event>
-		<event nom="5x5x5 Fewest Moves">
-			<single>
-				<temps>143</temps>
-				<nom>Matthieu Aubert</nom>
-				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12356&amp;p=247220#p247172</lien_discussion>
-				<lien_video></lien_video>
-			</single>
-			<mo3>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</mo3>
-			<avg5>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg5>
-			<avg12>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg12>
-			<avg50>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg50>
-			<avg100>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg100>
-		</event>
 		<event nom="Kilominx">
 			<single>
 				<temps>11.29</temps>
@@ -2087,8 +1999,6 @@
 			<subsection nom="Autres Non WCA">
 				<event>3x3x3 One-Handed While Juggling</event>
 				<event>4x4x4 One-Handed</event>
-				<event>4x4x4 Fewest Moves</event>
-				<event>5x5x5 Fewest Moves</event>
 				<event>Mirror Blocks</event>
 				<event>Inequilateral Cube</event>
 				<event>Carbon Cube</event>
@@ -2110,13 +2020,12 @@
 			<event>11x11x11</event>
 			<event>13x13x13</event>
 		</section>
-		<section nom="OH, FM, Feet">
+		<section nom="OH, Feet, FM">
 			<event>3x3x3 One-Handed</event>
 			<event>3x3x3 One-Handed While Juggling</event>
 			<event>4x4x4 One-Handed</event>
 			<event>3x3x3 With Feet</event>
-			<event>4x4x4 Fewest Moves</event>
-			<event>5x5x5 Fewest Moves</event>
+			<event>3x3x3 Fewest Moves</event>
 		</section>
 		<section nom="Dodécaèdres">
 			<event>Kilominx</event>
