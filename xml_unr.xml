@@ -2025,138 +2025,6 @@
 				<lien_video></lien_video>
 			</avg100>
 		</event>
-		<event nom="Challenge WCA Complet">
-			<single>
-				<temps>2477</temps>
-				<nom>Clément Cherblanc</nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</single>
-			<mo3>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</mo3>
-			<avg5>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg5>
-			<avg12>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg12>
-			<avg50>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg50>
-			<avg100>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg100>
-		</event>
-		<event nom="Challenge WCA NxNxN">
-			<single>
-				<temps>1229</temps>
-				<nom>Clément Cherblanc</nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</single>
-			<mo3>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</mo3>
-			<avg5>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg5>
-			<avg12>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg12>
-			<avg50>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg50>
-			<avg100>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg100>
-		</event>
-		<event nom="Challenge WCA 3x3x3">
-			<single>
-				<temps>686</temps>
-				<nom>Mayron Blain</nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</single>
-			<mo3>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</mo3>
-			<avg5>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg5>
-			<avg12>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg12>
-			<avg50>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg50>
-			<avg100>
-				<temps>x</temps>
-				<nom></nom>
-				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
-			</avg100>
-		</event>
 	</records>
 	<plan_normal>
 		<section nom="Officiels WCA">
@@ -2215,11 +2083,6 @@
 			<subsection nom="Blindfolded">
 				<event>2x2x2 Blindfolded</event>
 				<event>6x6x6 Blindfolded</event>
-			</subsection>
-			<subsection nom="Challenge WCA">
-				<event>Challenge WCA Complet</event>
-				<event>Challenge WCA NxNxN</event>
-				<event>Challenge WCA 3x3x3</event>
 			</subsection>
 			<subsection nom="Autres Non WCA">
 				<event>3x3x3 One-Handed While Juggling</event>
@@ -2294,11 +2157,6 @@
 			<event>Inequilateral Cube</event>
 			<event>Carbon Cube</event>
 			<event>Ghost Cube</event>
-		</section>
-		<section nom="Challenge WCA">
-			<event>Challenge WCA Complet</event>
-			<event>Challenge WCA NxNxN</event>
-			<event>Challenge WCA 3x3x3</event>
 		</section>
 	</plan_compact>
 </xml>
