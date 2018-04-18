@@ -15,28 +15,28 @@
 				<lien type=""></lien>
 			</mo3>
 			<avg5>
-				<temps>0.901</temps>
+				<temps>0.90</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire>(1.100), 0.817, (0.718), 0.829, 1.057</commentaire>
-				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=261452#p261452</lien>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing</lien>
 			</avg5>
 			<avg12>
-				<temps>1.318</temps>
+				<temps>1.31</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire>1.201, 1.749, 1.201, 1.100, 0.817, (0.718), 0.829, 1.057, 1.515, 1.100, 2.749, 2.61</commentaire>
-				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=261452#p261452</lien>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing</lien>
 			</avg12>
 			<avg50>
 				<temps>1.57</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire></commentaire>
-				<lien type=""></lien>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing</lien>
 			</avg50>
 			<avg100>
 				<temps>1.60</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire></commentaire>
-				<lien type=""></lien>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing</lien>
 			</avg100>
 		</event>
 		<event nom="3x3x3">
@@ -1039,31 +1039,31 @@
 				<temps>6.96</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire>8.754, 6.056, 6.068</commentaire>
-				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=272792#p272792</lien>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing</lien>
 			</mo3>
 			<avg5>
 				<temps>7.36</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire>7.263, (15.786), 8.754, (6.056), 6.068</commentaire>
-				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=272792#p272792</lien>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing</lien>
 			</avg5>
 			<avg12>
-				<temps>7.936</temps>
+				<temps>7.93</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire></commentaire>
-				<lien type=""></lien>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing</lien>
 			</avg12>
 			<avg50>
-				<temps>8.776</temps>
+				<temps>8.77</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire></commentaire>
-				<lien type="francocube"></lien>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing</lien>
 			</avg50>
 			<avg100>
-				<temps>8.948</temps>
+				<temps>8.94</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire></commentaire>
-				<lien type="francocube"></lien>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing</lien>
 			</avg100>
 		</event>
 		<event nom="Clock">
