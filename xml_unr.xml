@@ -6,43 +6,37 @@
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</single>
 			<mo3>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>0.901</temps>
-				<nom>Diego Fraile</nom>
+				<nom>Thibaud Ou</nom>
 				<commentaire>(1.100), 0.817, (0.718), 0.829, 1.057</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=261452#p261452</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=261452#p261452</lien>
 			</avg5>
 			<avg12>
 				<temps>1.318</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire>1.201, 1.749, 1.201, 1.100, 0.817, (0.718), 0.829, 1.057, 1.515, 1.100, 2.749, 2.61</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=261452#p261452</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=261452#p261452</lien>
 			</avg12>
 			<avg50>
-				<temps>1.68</temps>
-				<nom>Nicolas Gertner</nom>
+				<temps>1.57</temps>
+				<nom>Thibaud Ou</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?p&#61;258342#p258235</lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>1.60</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="3x3x3">
@@ -50,43 +44,37 @@
 				<temps>3.28</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire>D2 F R D2 F D R U2 F' B2 D F2 U L2 B2 U2 B2 D L2 U2</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273206#p273206</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273206#p273206</lien>
 			</single>
 			<mo3>
 				<temps>5.77</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire>4.40, 5.93, 6.99</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p&#61;261586#p261586</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p&#61;261586#p261586</lien>
 			</mo3>
 			<avg5>
 				<temps>5.90</temps>
 				<nom>Juliette Sébastien</nom>
 				<commentaire>5.75, (5.00), (7.43), 5.94, 6.00</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=264087#p264086</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=264087#p264086</lien>
 			</avg5>
 			<avg12>
 				<temps>6.80</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=264859#p264859</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=264859#p264859</lien>
 			</avg12>
 			<avg50>
 				<temps>7.36</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=264195#p264195</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=264195#p264195</lien>
 			</avg50>
 			<avg100>
 				<temps>7.49</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=264195#p264195</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=264195#p264195</lien>
 			</avg100>
 		</event>
 		<event nom="4x4x4">
@@ -94,43 +82,37 @@
 				<temps>21.53</temps>
 				<nom>Nathan Prigent</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</single>
 			<mo3>
 				<temps>25.60</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=268812#p268812</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=268812#p268812</lien>
 			</mo3>
 			<avg5>
 				<temps>26.35</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire>26.16, (25.63), (33.01), 27.02, 25.88</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266940#p266940</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=266940#p266940</lien>
 			</avg5>
 			<avg12>
 				<temps>27.90</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=268812#p268812</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=268812#p268812</lien>
 			</avg12>
 			<avg50>
 				<temps>29.57</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=268812#p268812</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=268812#p268812</lien>
 			</avg50>
 			<avg100>
 				<temps>30.23</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=268812#p268812</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=268812#p268812</lien>
 			</avg100>
 		</event>
 		<event nom="5x5x5">
@@ -138,43 +120,37 @@
 				<temps>46.18</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f&#61;6&amp;t&#61;12025&amp;pamp;&#61;260419#p260413</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/viewtopic.php?f&#61;6&amp;t&#61;12025&amp;pamp;&#61;260419#p260413</lien>
 			</single>
 			<mo3>
 				<temps>53.23</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire>46.49, 54.84, 58.36</commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f&#61;6&amp;t&#61;12025&amp;p&#61;260419#p260413</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/viewtopic.php?f&#61;6&amp;t&#61;12025&amp;p&#61;260419#p260413</lien>
 			</mo3>
 			<avg5>
 				<temps>53.01</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271023#p271023</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271023#p271023</lien>
 			</avg5>
 			<avg12>
 				<temps>55.54</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271023#p271023</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271023#p271023</lien>
 			</avg12>
 			<avg50>
 				<temps>59.68</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271023#p271023</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271023#p271023</lien>
 			</avg50>
 			<avg100>
 				<temps>1:01.18</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=863&amp;p=263867#p263867</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?f=6&amp;t=863&amp;p=263867#p263867</lien>
 			</avg100>
 		</event>
 		<event nom="6x6x6">
@@ -182,43 +158,37 @@
 				<temps>1:36.14</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=3346&amp;p=264620#p264620</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?f=6&amp;t=3346&amp;p=264620#p264620</lien>
 			</single>
 			<mo3>
 				<temps>1:41.15</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271499#p271499</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271499#p271499</lien>
 			</mo3>
 			<avg5>
 				<temps>1:42.33</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271499#p271499</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271499#p271499</lien>
 			</avg5>
 			<avg12>
 				<temps>1:45.52</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271499#p271499</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271499#p271499</lien>
 			</avg12>
 			<avg50>
 				<temps>1:49.39</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271499#p271499</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271499#p271499</lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="7x7x7">
@@ -226,43 +196,37 @@
 				<temps>2:18.40</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271969#p271965</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271969#p271965</lien>
 			</single>
 			<mo3>
 				<temps>2:27.94</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272694#p272694</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=272694#p272694</lien>
 			</mo3>
 			<avg5>
 				<temps>2:34.23</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271441#p271441</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271441#p271441</lien>
 			</avg5>
 			<avg12>
 				<temps>2:38.80</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271441#p271441</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271441#p271441</lien>
 			</avg12>
 			<avg50>
 				<temps>2:43.91</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271441#p271441</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271441#p271441</lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="8x8x8">
@@ -270,43 +234,37 @@
 				<temps>6:54.15</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</single>
 			<mo3>
 				<temps>7:01.06</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</mo3>
 			<avg5>
 				<temps>7:08.11</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</avg5>
 			<avg12>
 				<temps>8:08.93</temps>
 				<nom>Axel Brisse</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;start=435#p263539</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;start=435#p263539</lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="9x9x9">
@@ -314,43 +272,38 @@
 				<temps>10:52.10</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=270523#p270523</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
+				
 			</single>
 			<mo3>
 				<temps>11:02.65</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire>10:53.61, 11:15.88, 10:58.45</commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</mo3>
 			<avg5>
 				<temps>12:18.60</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f&#61;6&amp;t&#61;10354&amp;p&#61;258258#p258258</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</avg5>
 			<avg12>
 				<temps>12:29.30</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f&#61;6&amp;t&#61;10354&amp;p&#61;258258#p258258</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="10x10x10">
@@ -358,43 +311,37 @@
 				<temps>19:48.52</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</single>
 			<mo3>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="11x11x11">
@@ -402,43 +349,37 @@
 				<temps>26:52.86</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</single>
 			<mo3>
 				<temps>27:15.63</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire>27:06.66, 26:52.86, 27:46.37</commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="13x13x13">
@@ -446,43 +387,37 @@
 				<temps>46:42.99</temps>
 				<nom>Clément Cherblanc</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</single>
 			<mo3>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="3x3x3 One-Handed">
@@ -490,87 +425,75 @@
 				<temps>5.71</temps>
 				<nom>Juliette Sébastien</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=260319&amp;sid=af69b17f51a86237caf0c7716879e8dc#p260319</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=260319&amp;sid=af69b17f51a86237caf0c7716879e8dc#p260319</lien>
 			</single>
 			<mo3>
 				<temps>8.37</temps>
 				<nom>Juliette Sébastien</nom>
 				<commentaire>7.14, 11.16, 6.80</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273394#p273394</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273394#p273394</lien>
 			</mo3>
 			<avg5>
 				<temps>8.75</temps>
 				<nom>Juliette Sébastien</nom>
 				<commentaire>8.45, 8.47, 9.34, (10.28), (8.22)</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273394#p273394</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273394#p273394</lien>
 			</avg5>
 			<avg12>
 				<temps>9.88</temps>
 				<nom>Juliette Sébastien</nom>
 				<commentaire>(8.52), 9.60, 10.49, 9.47, 8.62, 8.77, 11.46, 10.11, (14.34), 11.31, 9.68, 9.30</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273394#p273394</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273394#p273394</lien>
 			</avg12>
 			<avg50>
 				<temps>10.65</temps>
 				<nom>Juliette Sébastien</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273394#p273394</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273394#p273394</lien>
 			</avg50>
 			<avg100>
 				<temps>10.84</temps>
 				<nom>Juliette Sébastien</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273394#p273394</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273394#p273394</lien>
 			</avg100>
 		</event>
 		<event nom="4x4x4 One-Handed">
 			<single>
 				<temps>1:00.44</temps>
 				<nom>Axel Brisse</nom>
-				<commentaire>Seum</commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<commentaire></commentaire>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing</lien>
 			</single>
 			<mo3>
 				<temps>1:10.67</temps>
 				<nom>Axel Brisse</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing</lien>
 			</mo3>
 			<avg5>
 				<temps>1:14.26</temps>
 				<nom>Axel Brisse</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing</lien>
 			</avg5>
 			<avg12>
 				<temps>1:18.90</temps>
 				<nom>Axel Brisse</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing</lien>
 			</avg12>
 			<avg50>
 				<temps>1:25.02</temps>
 				<nom>Axel Brisse</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing</lien>
 			</avg50>
 			<avg100>
 				<temps>1:28.45</temps>
 				<nom>Axel Brisse</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing</lien>
 			</avg100>
 		</event>
 		<event nom="3x3x3 With Feet">
@@ -578,43 +501,37 @@
 				<temps>28.86</temps>
 				<nom>Nicolas Gertner</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266582#p266574</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=266582#p266574</lien>
 			</single>
 			<mo3>
 				<temps>42.93</temps>
 				<nom>Nicolas Gertner</nom>
 				<commentaire></commentaire>
-				<lien_discussion>cubecomps.com/live.php?cid=2156&amp;cat=14&amp;rnd=2</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">cubecomps.com/live.php?cid=2156&amp;cat=14&amp;rnd=2</lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="3x3x3 Fewest Moves">
@@ -622,43 +539,37 @@
 				<temps>16</temps>
 				<nom>Émilien Fabre</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=259633&amp;sid=95fe9ba23c5548f0910f76ae49d4084d#p259633</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=259633&amp;sid=95fe9ba23c5548f0910f76ae49d4084d#p259633</lien>
 			</single>
 			<mo3>
 				<temps>22.33</temps>
 				<nom>Émilien Fabre</nom>
 				<commentaire>24, 20, 23</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272827#p272827</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=272827#p272827</lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Kilominx">
@@ -666,43 +577,37 @@
 				<temps>11.29</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</single>
 			<mo3>
 				<temps>15.02</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272739</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=272754#p272739</lien>
 			</mo3>
 			<avg5>
 				<temps>15.26</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>15.93</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>UWR</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">UWR</lien>
 			</avg12>
 			<avg50>
 				<temps>17.31</temps>
 				<nom>Théo Paris</nom>
 				<commentaire>UWR</commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>17.63</temps>
 				<nom>Théo Paris</nom>
 				<commentaire>UWR</commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Megaminx">
@@ -710,43 +615,37 @@
 				<temps>35.10</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273386#p273386</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273386#p273386</lien>
 			</single>
 			<mo3>
 				<temps>39.50</temps>
 				<nom>Théo Paris</nom>
 				<commentaire>37.855, 42.147, 38.502</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273418#p273418</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273418#p273418</lien>
 			</mo3>
 			<avg5>
 				<temps>39.632</temps>
 				<nom>Théo Paris</nom>
 				<commentaire>38.248, (43.728), (37.855), 42.147, 38.502</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273418#p273418</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273418#p273418</lien>
 			</avg5>
 			<avg12>
 				<temps>41.804</temps>
 				<nom>Théo Paris</nom>
 				<commentaire>41.967, 41.050, 44.277, 41.721, 44.064, 38.248, 43.728, 37.855, 42.147, 38.502, 47.734, 42.336</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273418#p273418</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273418#p273418</lien>
 			</avg12>
 			<avg50>
 				<temps>44.069</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273418#p273418</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273418#p273418</lien>
 			</avg50>
 			<avg100>
 				<temps>46.16</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273386#p273386</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273386#p273386</lien>
 			</avg100>
 		</event>
 		<event nom="Masterkilominx">
@@ -754,43 +653,37 @@
 				<temps>4:21.23</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</single>
 			<mo3>
 				<temps>4:49.11</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266041#p266041</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</mo3>
 			<avg5>
 				<temps>4:58.54</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=266041#p266041</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Gigaminx">
@@ -798,43 +691,37 @@
 				<temps>7:08.86</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</single>
 			<mo3>
 				<temps>7:28.50</temps>
 				<nom>Matthieu Aubert</nom>
-				<commentaire>7:37.36, 7:08.86, 7:39.28 (UWR)</commentaire>
-				<lien_discussion>https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien_discussion>
-				<lien_video></lien_video>
+				<commentaire>7:37.36, 7:08.86, 7:39.28</commentaire>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</mo3>
 			<avg5>
 				<temps>7:36.70</temps>
 				<nom>Matthieu Aubert</nom>
-				<commentaire>7:37.36, 7:08.86, 7:39.28, 8:16.91, 7:33.45 (UWR)</commentaire>
-				<lien_discussion>https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien_discussion>
-				<lien_video></lien_video>
+				<commentaire>7:37.36, 7:08.86, 7:39.28, 8:16.91, 7:33.45</commentaire>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</avg5>
 			<avg12>
 				<temps>7:56.00</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="2x2x2 Blindfolded">
@@ -842,43 +729,37 @@
 				<temps>2.89</temps>
 				<nom>Diego Fraile</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=269795#p269795</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=269795#p269795</lien>
 			</single>
 			<mo3>
 				<temps>3.98</temps>
 				<nom>Diego Fraile</nom>
 				<commentaire>3.06, 5.49, 3.40</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=269795#p269795</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=269795#p269795</lien>
 			</mo3>
 			<avg5>
 				<temps>4.73</temps>
 				<nom>Diego Fraile</nom>
 				<commentaire>(9.75), (3.06), 5.49, 3.40, 5.29</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=269795#p269795</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=269795#p269795</lien>
 			</avg5>
 			<avg12>
 				<temps>6.66</temps>
 				<nom>Diego Fraile</nom>
 				<commentaire>(12.72), 7.52, 8.06, 9.75, (3.06), 5.49, 3.40, 5.29, 5.79, 7.77, 7.71, 5.78</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=269795#p269795</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=269795#p269795</lien>
 			</avg12>
 			<avg50>
 				<temps>8.37</temps>
 				<nom>Diego Fraile</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=269795#p269795</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=269795#p269795</lien>
 			</avg50>
 			<avg100>
 				<temps>8.97</temps>
 				<nom>Diego Fraile</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=269795#p269795</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=269795#p269795</lien>
 			</avg100>
 		</event>
 		<event nom="3x3x3 Blindfolded">
@@ -886,131 +767,113 @@
 				<temps>18.50</temps>
 				<nom>Arthur Garcin</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272720#p272720</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=272720#p272720</lien>
 			</single>
 			<mo3>
 				<temps>24.50</temps>
 				<nom>Arthur Garcin</nom>
 				<commentaire>24.29, 29.40, 19.80</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271958#p271958</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271958#p271958</lien>
 			</mo3>
 			<avg5>
 				<temps>26.19</temps>
 				<nom>Arthur Garcin</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271958#p271958</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271958#p271958</lien>
 			</avg5>
 			<avg12>
 				<temps>27.77</temps>
 				<nom>Arthur Garcin</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>37.54</temps>
 				<nom>Arthur Garcin</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272754</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=272754#p272754</lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="4x4x4 Blindfolded">
 			<single>
 				<temps>2:45.28</temps>
 				<nom>William Phommaha</nom>
-				<commentaire>NR</commentaire>
-				<lien_discussion>https://www.worldcubeassociation.org/results/events.php?eventId=444bf&amp;regionId=France&amp;years=&amp;show=100%2BPersons&amp;single=Single</lien_discussion>
-				<lien_video></lien_video>
+				<commentaire></commentaire>
+				<lien type="wca">https://www.worldcubeassociation.org/results/events.php?eventId=444bf&amp;regionId=France&amp;years=&amp;show=100%2BPersons&amp;single=Single</lien>
 			</single>
 			<mo3>
 				<temps>3:50.99</temps>
 				<nom>Arthur Garcin</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271958#p271958</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271958#p271958</lien>
 			</mo3>
 			<avg5>
 				<temps>3:57.99</temps>
 				<nom>Arthur Garcin</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271958#p271958</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271958#p271958</lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="5x5x5 Blindfolded">
 			<single>
 				<temps>6:32.53</temps>
 				<nom>William Phommaha</nom>
-				<commentaire>NR</commentaire>
-				<lien_discussion>http://cubecomps.com/live.php?cid=2156&amp;cat=18&amp;rnd=1</lien_discussion>
-				<lien_video></lien_video>
+				<commentaire></commentaire>
+				<lien type="wca">http://cubecomps.com/live.php?cid=2156&amp;cat=18&amp;rnd=1</lien>
 			</single>
 			<mo3>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="6x6x6 Blindfolded">
@@ -1018,87 +881,75 @@
 				<temps>24:37.78</temps>
 				<nom>Robin Michaud</nom>
 				<commentaire>[9:49.71]</commentaire>
-				<lien_discussion>http://forum.francocube.com/topic12025-75.html#p235486</lien_discussion>
-				<lien_video>https://www.youtube.com/watch?v=DAvLv_4SQkU</lien_video>
+				<lien type="youtube">https://www.youtube.com/watch?v=DAvLv_4SQkU</lien>
 			</single>
 			<mo3>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="3x3x3 Multi-Blindfolded">
 			<single>
 				<temps>19/19</temps>
 				<nom>Maxime Clapié</nom>
-				<commentaire>57.52 (NR)</commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<commentaire>57.52</commentaire>
+				<lien type="wca">https://www.worldcubeassociation.org/results/events.php?eventId=333mbf&amp;regionId=France&amp;years=&amp;show=100%2BPersons&amp;single=Single</lien>
 			</single>
 			<mo3>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Pyraminx">
@@ -1106,43 +957,37 @@
 				<temps>0.94</temps>
 				<nom>Jules Desjardin</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=264159#p264161</lien_discussion>
-				<lien_video>https://www.youtube.com/watch?v=V1R_-UqBGGg&amp;feature=youtu.be</lien_video>
+				<lien type="youtube">https://www.youtube.com/watch?v=V1R_-UqBGGg&amp;feature=youtu.be</lien>
 			</single>
 			<mo3>
 				<temps>1.79</temps>
 				<nom>Jules Desjardin</nom>
 				<commentaire>2.06, 1.79, 1.52</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=268807#p268807</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=268807#p268807</lien>
 			</mo3>
 			<avg5>
 				<temps>1.79</temps>
 				<nom>Jules Desjardin</nom>
 				<commentaire>2.06, 1.79, 1.52, (2.69), (1.23)</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=268807#p268807</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=268807#p268807</lien>
 			</avg5>
 			<avg12>
 				<temps>2.09</temps>
 				<nom>Jules Desjardin</nom>
 				<commentaire>(1.25), 2.00, 2.59, 1.68, 2.45, 1.65, (4.59), 2.06, 1.58, 2.68, 2.07, 2.33</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271257#p271257</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271257#p271257</lien>
 			</avg12>
 			<avg50>
 				<temps>2.52</temps>
 				<nom>Jules Desjardin</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=267632#p267632</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=267632#p267632</lien>
 			</avg50>
 			<avg100>
 				<temps>2.61</temps>
 				<nom>Jules Desjardin</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=269618#p269618</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=269618#p269618</lien>
 			</avg100>
 		</event>
 		<event nom="Skewb">
@@ -1150,43 +995,37 @@
 				<temps>0.90</temps>
 				<nom>Gabriel Luthun</nom>
 				<commentaire>B U B R' L' U' B' R' U' L'</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=267632#p267629</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=267632#p267629</lien>
 			</single>
 			<mo3>
 				<temps>1.71</temps>
 				<nom>Gabriel Luthun</nom>
 				<commentaire>1.95, 2.27, 0.90</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=267632#p267629</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=267632#p267629</lien>
 			</mo3>
 			<avg5>
 				<temps>1.97</temps>
 				<nom>Léo Bailly</nom>
 				<commentaire> 2.05, 2.11, 1.74, (3.17), (1.52)</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=267392#p267392</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=267392#p267392</lien>
 			</avg5>
 			<avg12>
 				<temps>2.24</temps>
 				<nom>Léo Bailly</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271267#p271267</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271267#p271267</lien>
 			</avg12>
 			<avg50>
 				<temps>2.61</temps>
 				<nom>Léo Bailly</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271267#p271267</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271267#p271267</lien>
 			</avg50>
 			<avg100>
 				<temps>2.73</temps>
 				<nom>Léo Bailly</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271267#p271267</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271267#p271267</lien>
 			</avg100>
 		</event>
 		<event nom="Square-1">
@@ -1194,43 +1033,37 @@
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</single>
 			<mo3>
 				<temps>6.96</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire>8.754, 6.056, 6.068</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272792#p272792</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=272792#p272792</lien>
 			</mo3>
 			<avg5>
 				<temps>7.36</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire>7.263, (15.786), 8.754, (6.056), 6.068</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272792#p272792</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=272792#p272792</lien>
 			</avg5>
 			<avg12>
-				<temps>8.90</temps>
+				<temps>8.054</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272745</lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
-				<temps>9.50</temps>
+				<temps>8.977</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272745</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube"></lien>
 			</avg50>
 			<avg100>
-				<temps>9.63</temps>
+				<temps>9.297</temps>
 				<nom>Thibaud Ou</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272745</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube"></lien>
 			</avg100>
 		</event>
 		<event nom="Clock">
@@ -1238,43 +1071,37 @@
 				<temps>3.55</temps>
 				<nom>Pierre Bouvier</nom>
 				<commentaire>57:42.14 [40:51.95]</commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?p=259413#p259413</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/viewtopic.php?p=259413#p259413</lien>
 			</single>
 			<mo3>
 				<temps>5.12</temps>
 				<nom>Pierre Bouvier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?p=259413#p259413</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/viewtopic.php?p=259413#p259413</lien>
 			</mo3>
 			<avg5>
 				<temps>5.31</temps>
 				<nom>Pierre Bouvier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/topic3229-165.html#p192141</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/topic3229-165.html#p192141</lien>
 			</avg5>
 			<avg12>
 				<temps>5.72</temps>
 				<nom>Pierre Bouvier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/topic3229-165.html#p192141</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/topic3229-165.html#p192141</lien>
 			</avg12>
 			<avg50>
 				<temps>6.09</temps>
 				<nom>Pierre Bouvier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=263652#p263652</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=263652#p263652</lien>
 			</avg50>
 			<avg100>
 				<temps>6.37</temps>
 				<nom>Pierre Bouvier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=263652#p263652</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=263652#p263652</lien>
 			</avg100>
 		</event>
 		<event nom="Relai 2x2x2 - 4x4x4">
@@ -1282,43 +1109,37 @@
 				<temps>36.55</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273206#p273206</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273206#p273206</lien>
 			</single>
 			<mo3>
 				<temps>47.33</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;start=255</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;start=255</lien>
 			</mo3>
 			<avg5>
 				<temps>42.27</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273206#p273206</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273206#p273206</lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Relai 2x2x2 - 5x5x5">
@@ -1326,43 +1147,37 @@
 				<temps>1:39.27</temps>
 				<nom>Alexandre Carlier</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=273206#p273206</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273206#p273206</lien>
 			</single>
 			<mo3>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Relai 2x2x2 - 6x6x6">
@@ -1370,43 +1185,37 @@
 				<temps>4:18.93</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=258194&amp;sid=854492997babff85a6673b82e738510d#p258194</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/viewtopic.php?f=6&amp;t=12025&amp;p=258194&amp;sid=854492997babff85a6673b82e738510d#p258194</lien>
 			</single>
 			<mo3>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Relai 2x2x2 - 7x7x7">
@@ -1414,43 +1223,37 @@
 				<temps>5:59.04</temps>
 				<nom>Abdelhak Kaddour</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272367#p272367</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=272367#p272367</lien>
 			</single>
 			<mo3>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Relai Minx (mega + pyra + skewb)">
@@ -1458,43 +1261,37 @@
 				<temps>55.81</temps>
 				<nom>Victor Wijsman</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien>
 			</single>
 			<mo3>
 				<temps>58.98</temps>
 				<nom>Victor Wijsman</nom>
 				<commentaire>55.81, 1:02.10, 59.03</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien>
 			</mo3>
 			<avg5>
 				<temps>1:00.12</temps>
 				<nom>Victor Wijsman</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien>
 			</avg5>
 			<avg12>
 				<temps>1:00.93</temps>
 				<nom>Victor Wijsman</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien>
 			</avg12>
 			<avg50>
 				<temps>1:07.33</temps>
 				<nom>Victor Wijsman</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271418#p271418</lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Team BLD">
@@ -1502,43 +1299,37 @@
 				<temps>22.97</temps>
 				<nom>Antoine Piau + Hippolyte Moreau</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/topic4124-30.html#p175339</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/topic4124-30.html#p175339</lien>
 			</single>
 			<mo3>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>27.83</temps>
 				<nom>Antoine Piau + Hippolyte Moreau</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/topic4124-30.html#p175339</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/topic4124-30.html#p175339</lien>
 			</avg5>
 			<avg12>
 				<temps>30.86</temps>
 				<nom>Antoine Piau + Hippolyte Moreau</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/topic4124-30.html#p175339</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">http://forum.francocube.com/topic4124-30.html#p175339</lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Mini-Guilford Solo">
@@ -1546,43 +1337,37 @@
 				<temps>4:19.99</temps>
 				<nom>Clément Cherblanc</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271969#p271900</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271969#p271900</lien>
 			</single>
 			<mo3>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Mini-Guilford Duo">
@@ -1590,43 +1375,37 @@
 				<temps>1:59.99</temps>
 				<nom>Clément Cherblanc + Juliette Sébastien</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272183#p272183</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=272183#p272183</lien>
 			</single>
 			<mo3>
 				<temps>2:23.63</temps>
 				<nom>Louis Fertier + Victor Wijsman</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271420#p271420</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271420#p271420</lien>
 			</mo3>
 			<avg5>
 				<temps>2:25.69</temps>
 				<nom>Louis Fertier + Victor Wijsman</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271420#p271420</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271420#p271420</lien>
 			</avg5>
 			<avg12>
 				<temps>2:28.24</temps>
 				<nom>Louis Fertier + Victor Wijsman</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=271420#p271420</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271420#p271420</lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Factory Solve Quatuor">
@@ -1634,43 +1413,37 @@
 				<temps>15.99</temps>
 				<nom>A. Carlier + S. Blanchard + V. Hoffman + V. Colin</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</single>
 			<mo3>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Team Solve Duo">
@@ -1678,43 +1451,37 @@
 				<temps>7.91</temps>
 				<nom>Juliette Sébastien + Roderic Blazy</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265623#p265623</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=265623#p265623</lien>
 			</single>
 			<mo3>
 				<temps>10.01</temps>
 				<nom>Juliette Sébastien + Nicolas Gertner</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
 				<temps>10.49</temps>
 				<nom>Juliette Sébastien + Nicolas Gertner</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
 				<temps>10.97</temps>
 				<nom>Juliette Sébastien + Nicolas Gertner</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg12>
 			<avg50>
 				<temps>11.75</temps>
 				<nom>Juliette Sébastien + Nicolas Gertner</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>12.64</temps>
 				<nom>Juliette Sébastien + Nicolas Gertner</nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 		<event nom="Mirror Blocks">
@@ -1722,43 +1489,37 @@
 				<temps>18.70</temps>
 				<nom>Axel Brisse</nom>
 				<commentaire></commentaire>
-				<lien_discussion>http://forum.francocube.com/viewtopic.php?p=259877#p259877</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing</lien>
 			</single>
 			<mo3>
 				<temps>24.13</temps>
 				<nom>Axel Brisse</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272755</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing</lien>
 			</mo3>
 			<avg5>
 				<temps>25.64</temps>
 				<nom>Axel Brisse</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272755</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing</lien>
 			</avg5>
 			<avg12>
 				<temps>26.81</temps>
 				<nom>Axel Brisse</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272755</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing</lien>
 			</avg12>
 			<avg50>
 				<temps>28.32</temps>
 				<nom>Axel Brisse</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272755</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing</lien>
 			</avg50>
 			<avg100>
 				<temps>28.81</temps>
 				<nom>Axel Brisse</nom>
-				<commentaire>@Axel : désolé j'avais zapé tes UNR !</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=272754#p272755</lien_discussion>
-				<lien_video></lien_video>
+				<commentaire></commentaire>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing</lien>
 			</avg100>
 		</event>
 		<event nom="Inequilateral Cube">
@@ -1766,43 +1527,37 @@
 				<temps>23.76</temps>
 				<nom>Wilfrid Py</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien>
 			</single>
 			<mo3>
 				<temps>33.46</temps>
 				<nom>Wilfrid Py</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien>
 			</mo3>
 			<avg5>
 				<temps>35.05</temps>
 				<nom>Wilfrid Py</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien>
 			</avg5>
 			<avg12>
 				<temps>39.33</temps>
 				<nom>Wilfrid Py</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien>
 			</avg12>
 			<avg50>
 				<temps>43.77</temps>
 				<nom>Wilfrid Py</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien>
 			</avg50>
 			<avg100>
 				<temps>46.95</temps>
 				<nom>Wilfrid Py</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=265434#p265434</lien>
 			</avg100>
 		</event>
 		<event nom="Ghost Cube">
@@ -1810,43 +1565,37 @@
 				<temps>1:54.81</temps>
 				<nom>Nicolas Girard</nom>
 				<commentaire>1:52.81 + 2</commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265328#p265328</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=265328#p265328</lien>
 			</single>
 			<mo3>
 				<temps>2:13.53</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265328#p265328</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=265328#p265328</lien>
 			</mo3>
 			<avg5>
 				<temps>2:09.45</temps>
 				<nom>Nicolas Girard</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265328#p265328</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=265328#p265328</lien>
 			</avg5>
 			<avg12>
 				<temps>2:29.46</temps>
 				<nom>Nicolas Girard</nom>
 				<commentaire></commentaire>
-				<lien_discussion>https://forum.francocube.com/viewtopic.php?p=265328#p265328</lien_discussion>
-				<lien_video></lien_video>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=265328#p265328</lien>
 			</avg12>
 			<avg50>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg50>
 			<avg100>
 				<temps>x</temps>
 				<nom></nom>
 				<commentaire></commentaire>
-				<lien_discussion></lien_discussion>
-				<lien_video></lien_video>
+				<lien type=""></lien>
 			</avg100>
 		</event>
 	</records>

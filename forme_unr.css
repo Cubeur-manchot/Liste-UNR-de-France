@@ -48,21 +48,11 @@ td
 	min-width: 130px;
 	height: 30px;
 }
-.avec_video:hover { background-image: url("logo_youtube.png"); }
-.avec_discussion:hover { background-image: url("logo_discussion.png"); }
-.avec_video_et_discussion:hover { background-image: url("logo_youtube_discussion.png"); }
+.avec_francocube:hover { background-image: url("logo_francocube.png"); }
+.avec_youtube:hover { background-image: url("logo_youtube.png"); }
+.avec_pb_sheet:hover { background-image: url("logo_pb_sheet.png"); }
+.avec_wca:hover { background-image: url("logo_wca.png"); }
 
-.avec_video_et_discussion:hover .lien_video, .avec_video_et_discussion:hover .lien_discussion
-{
-	position: absolute;
-	display: inline-block;
-	margin-top: 0px;
-	margin-left: 0px;
-	width: 70px;
-	height: 40px;
-}
-.avec_video_et_discussion:hover .lien_video { transform: translate(-70px,-6px); }
-.avec_video_et_discussion:hover .lien_discussion { transform: translate(0px,-6px); }
 th
 {
 	height: 20px;

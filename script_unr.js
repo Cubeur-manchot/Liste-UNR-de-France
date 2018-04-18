@@ -139,26 +139,27 @@ function make_string(balise_record)
 	var temps = balise_record.getElementsByTagName('temps')[0].innerHTML;
 	var nom = balise_record.getElementsByTagName('nom')[0].innerHTML;
 	var commentaire = balise_record.getElementsByTagName('commentaire')[0].innerHTML;
-	var lien_discussion = balise_record.getElementsByTagName('lien_discussion')[0].innerHTML;
-	var lien_video = balise_record.getElementsByTagName('lien_video')[0].innerHTML;
+	var lien = balise_record.getElementsByTagName('lien')[0];
+	var lien_contenu = lien.innerHTML;
+	var lien_type = lien.getAttribute('type');
 	var avg = balise_record.tagName;
 	if (commentaire != '') {
 		var balise_commentaire = '<div class="commentaire">' + commentaire + '</div>';
 	} else {
 		var balise_commentaire = '';
 	}
-	if (lien_discussion != '') {
-		if (lien_video != '') {
-			html_records += '<td class="' + avg + ' avec_video_et_discussion"><a class="lien_video" href="' + lien_video + '" target="_blank" title="Youtube"></a><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Discussion"></a><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
-		} else {
-			html_records += '<td class="' + avg + ' avec_discussion"><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Discussion"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+	if (lien_contenu != '') {
+		if (lien_type == 'francocube') {
+			html_records += '<td class="' + avg + ' avec_francocube"><a class="lien_francocube" href="' + lien_contenu + '" target="_blank" title="Discussion Francocube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+		} else if (lien_type == 'youtube') {
+			html_records += '<td class="' + avg + ' avec_youtube"><a class="lien_youtube" href="' + lien_contenu + '" target="_blank" title="Vidéo Youtube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+		} else if (lien_type == 'pb_sheet') {
+			html_records += '<td class="' + avg + ' avec_pb_sheet"><a class="lien_pb_sheet" href="' + lien_contenu + '" target="_blank" title="Feuille de PB"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+		} else if (lien_type == 'wca') {
+			html_records += '<td class="' + avg + ' avec_wca"><a class="lien_wca" href="' + lien_contenu + '" target="_blank" title="Lien WCA"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
 		}
 	} else {
-		if (lien_video != '') {
-			html_records += '<td class="' + avg + ' avec_video"><a class="lien_discussion" href="' + lien_discussion + '" target="_blank" title="Youtube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
-		} else {
-			html_records += '<td class="' + avg + ' sans_lien"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
-		}
+		html_records += '<td class="' + avg + ' avec_discussion"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
 	}
 	return (html_records);
 }
