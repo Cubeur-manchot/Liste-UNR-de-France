@@ -612,9 +612,9 @@
 		</event>
 		<event nom="Megaminx">
 			<single>
-				<temps>34.53</temps>
+				<temps>32.21</temps>
 				<nom>Théo Paris</nom>
-				<commentaire></commentaire>
+				<commentaire>Full steps</commentaire>
 				<lien type=""></lien>
 			</single>
 			<mo3>
@@ -624,13 +624,13 @@
 				<lien type=""></lien>
 			</mo3>
 			<avg5>
-				<temps>38.58</temps>
+				<temps>37.99</temps>
 				<nom>Théo Paris</nom>
-				<commentaire></commentaire>
+				<commentaire>42.78, 37.87, 36.26, 38.69, 37.42</commentaire>
 				<lien type=""></lien>
 			</avg5>
 			<avg12>
-				<temps>40.26</temps>
+				<temps>40.15</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
 				<lien type=""></lien>
