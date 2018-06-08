@@ -914,6 +914,44 @@
 				<lien type=""></lien>
 			</avg100>
 		</event>
+		<event nom="7x7x7 Blindfolded">
+			<single>
+				<temps>3:11:35.00</temps>
+				<nom>Wilfrid Py</nom>
+				<commentaire>[1:36:00]</commentaire>
+				<lien type="youtube">https://www.youtube.com/watch?v=aHVpI2Yq6Ic</lien>
+			</single>
+			<mo3>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</mo3>
+			<avg5>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</avg5>
+			<avg12>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</avg12>
+			<avg50>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</avg50>
+			<avg100>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</avg100>
+		</event>
 		<event nom="3x3x3 Multi-Blindfolded">
 			<single>
 				<temps>19/19</temps>
@@ -1656,6 +1694,7 @@
 			<subsection nom="Blindfolded">
 				<event>2x2x2 Blindfolded</event>
 				<event>6x6x6 Blindfolded</event>
+				<event>7x7x7 Blindfolded</event>
 			</subsection>
 			<subsection nom="Autres Non WCA">
 				<event>4x4x4 One-Handed</event>
@@ -1697,6 +1736,7 @@
 			<event>4x4x4 Blindfolded</event>
 			<event>5x5x5 Blindfolded</event>
 			<event>6x6x6 Blindfolded</event>
+			<event>7x7x7 Blindfolded</event>
 			<event>3x3x3 Multi-Blindfolded</event>
 		</section>
 		<section nom="Autres WCA">
