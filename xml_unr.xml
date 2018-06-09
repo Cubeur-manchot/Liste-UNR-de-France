@@ -1771,6 +1771,7 @@
 				<event>2x2x2 Blindfolded</event>
 				<event>6x6x6 Blindfolded</event>
 				<event>7x7x7 Blindfolded</event>
+				<event>Megaminx Blindfolded</event>
 				<event>Relay 2-5 Blindfolded</event>
 			</subsection>
 			<subsection nom="Autres Non WCA">
@@ -1814,6 +1815,7 @@
 			<event>5x5x5 Blindfolded</event>
 			<event>6x6x6 Blindfolded</event>
 			<event>7x7x7 Blindfolded</event>
+			<event>Megaminx Blindfolded</event>
 			<event>Relay 2-5 Blindfolded</event>
 			<event>3x3x3 Multi-Blindfolded</event>
 		</section>
