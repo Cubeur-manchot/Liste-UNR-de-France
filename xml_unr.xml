@@ -990,6 +990,44 @@
 				<lien type=""></lien>
 			</avg100>
 		</event>
+		<event nom="Megaminx Blindfolded">
+			<single>
+				<temps>36:15.00</temps>
+				<nom>Emma Cadet</nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</single>
+			<mo3>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</mo3>
+			<avg5>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</avg5>
+			<avg12>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</avg12>
+			<avg50>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</avg50>
+			<avg100>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</avg100>
+		</event>
 		<event nom="3x3x3 Multi-Blindfolded">
 			<single>
 				<temps>19/19</temps>
