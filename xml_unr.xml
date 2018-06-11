@@ -764,22 +764,22 @@
 		</event>
 		<event nom="3x3x3 Blindfolded">
 			<single>
-				<temps>18.50</temps>
+				<temps>18.11</temps>
 				<nom>Arthur Garcin</nom>
-				<commentaire></commentaire>
-				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=272720#p272720</lien>
+				<commentaire>L2 F' R2 U2 B U2 F' D2 B' R2 B2 L B U R B U2 F' U' B' Bw2</commentaire>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273940#p273940</lien>
 			</single>
 			<mo3>
-				<temps>24.50</temps>
+				<temps>21.88</temps>
 				<nom>Arthur Garcin</nom>
-				<commentaire>24.29, 29.40, 19.80</commentaire>
-				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271958#p271958</lien>
+				<commentaire>21.86, 19.25, 24.53</commentaire>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273940#p273940</lien>
 			</mo3>
 			<avg5>
-				<temps>26.19</temps>
+				<temps>22.79</temps>
 				<nom>Arthur Garcin</nom>
-				<commentaire></commentaire>
-				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271958#p271958</lien>
+				<commentaire>22.68, 27.10, 22.41, 23.03, 22.67</commentaire>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273940#p273940</lien>
 			</avg5>
 			<avg12>
 				<temps>27.77</temps>
