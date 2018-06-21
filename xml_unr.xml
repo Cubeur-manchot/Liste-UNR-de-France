@@ -346,7 +346,7 @@
 		</event>
 		<event nom="11x11x11">
 			<single>
-				<temps>26:52.86</temps>
+				<temps>25:57.01</temps>
 				<nom>Matthieu Aubert</nom>
 				<commentaire></commentaire>
 				<lien type="pb_sheet">https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html</lien>
@@ -1092,10 +1092,10 @@
 				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271257#p271257</lien>
 			</avg12>
 			<avg50>
-				<temps>2.52</temps>
+				<temps>2.49</temps>
 				<nom>Jules Desjardin</nom>
 				<commentaire></commentaire>
-				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=267632#p267632</lien>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273992#p273992</lien>
 			</avg50>
 			<avg100>
 				<temps>2.61</temps>
@@ -1182,10 +1182,10 @@
 		</event>
 		<event nom="Clock">
 			<single>
-				<temps>3.25</temps>
-				<nom>Télian Delannoy</nom>
+				<temps>3.13</temps>
+				<nom>Gabriel Luthun</nom>
 				<commentaire></commentaire>
-				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=273840#p273840</lien>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?f=6&p=273979#p273979</lien>
 			</single>
 			<mo3>
 				<temps>5.12</temps>
