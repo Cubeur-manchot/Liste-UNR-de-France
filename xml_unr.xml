@@ -916,7 +916,7 @@
 		</event>
 		<event nom="7x7x7 Blindfolded">
 			<single>
-				<temps>3:11:35.00</temps>
+				<temps>3:11:35</temps>
 				<nom>Wilfrid Py</nom>
 				<commentaire>[1:36:00]</commentaire>
 				<lien type="youtube">https://www.youtube.com/watch?v=aHVpI2Yq6Ic</lien>
@@ -952,6 +952,44 @@
 				<lien type=""></lien>
 			</avg100>
 		</event>
+		<event nom="8x8x8 Blindfolded">
+			<single>
+				<temps>5:15:30</temps>
+				<nom>Wilfrid Py</nom>
+				<commentaire>[2:37:20]</commentaire>
+				<lien type="youtube">https://www.youtube.com/watch?v=rYMUp5gfbZ4</lien>
+			</single>
+			<mo3>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</mo3>
+			<avg5>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</avg5>
+			<avg12>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</avg12>
+			<avg50>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</avg50>
+			<avg100>
+				<temps>x</temps>
+				<nom></nom>
+				<commentaire></commentaire>
+				<lien type=""></lien>
+			</avg100>
+		</event>https://www.youtube.com/watch?v=rYMUp5gfbZ4
 		<event nom="Relay 2-5 Blindfolded">
 			<single>
 				<temps>1:26:44.75</temps>
