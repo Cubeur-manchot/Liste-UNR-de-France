@@ -1144,10 +1144,10 @@
 		</event>
 		<event nom="Skewb">
 			<single>
-				<temps>0.90</temps>
-				<nom>Gabriel Luthun</nom>
-				<commentaire>B U B R' L' U' B' R' U' L'</commentaire>
-				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=267632#p267629</lien>
+				<temps>0.70</temps>
+				<nom>Thibaud Ou</nom>
+				<commentaire>B' L R' U' R L' B L</commentaire>
+				<lien type="pb_sheet">https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing</lien>
 			</single>
 			<mo3>
 				<temps>1.71</temps>
