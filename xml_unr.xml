@@ -802,26 +802,26 @@
 		</event>
 		<event nom="4x4x4 Blindfolded">
 			<single>
-				<temps>2:45.28</temps>
+				<temps>2:00.32</temps>
 				<nom>William Phommaha</nom>
 				<commentaire></commentaire>
-				<lien type="wca">https://www.worldcubeassociation.org/results/events.php?eventId=444bf&amp;regionId=France&amp;years=&amp;show=100%2BPersons&amp;single=Single</lien>
+				<lien type=""></lien>
 			</single>
 			<mo3>
-				<temps>3:50.99</temps>
-				<nom>Arthur Garcin</nom>
+				<temps>2:28.69</temps>
+				<nom>William Phommaha</nom>
 				<commentaire></commentaire>
-				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271958#p271958</lien>
+				<lien type=""></lien>
 			</mo3>
 			<avg5>
-				<temps>3:57.99</temps>
-				<nom>Arthur Garcin</nom>
+				<temps>2:31.72</temps>
+				<nom>William Phommaha</nom>
 				<commentaire></commentaire>
-				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=271958#p271958</lien>
+				<lien type=""></lien>
 			</avg5>
 			<avg12>
-				<temps>x</temps>
-				<nom></nom>
+				<temps>3:15.62</temps>
+				<nom>William Phommaha</nom>
 				<commentaire></commentaire>
 				<lien type=""></lien>
 			</avg12>
@@ -840,26 +840,26 @@
 		</event>
 		<event nom="5x5x5 Blindfolded">
 			<single>
-				<temps>6:32.53</temps>
+				<temps>4:32.43</temps>
 				<nom>William Phommaha</nom>
 				<commentaire></commentaire>
-				<lien type="wca">http://cubecomps.com/live.php?cid=2156&amp;cat=18&amp;rnd=1</lien>
+				<lien type=""></lien>
 			</single>
 			<mo3>
-				<temps>x</temps>
-				<nom></nom>
+				<temps>5:02.13</temps>
+				<nom>William Phommaha</nom>
 				<commentaire></commentaire>
 				<lien type=""></lien>
 			</mo3>
 			<avg5>
-				<temps>x</temps>
-				<nom></nom>
+				<temps>5:15.28</temps>
+				<nom>William Phommaha</nom>
 				<commentaire></commentaire>
 				<lien type=""></lien>
 			</avg5>
 			<avg12>
-				<temps>x</temps>
-				<nom></nom>
+				<temps>6:08.83</temps>
+				<nom>William Phommaha</nom>
 				<commentaire></commentaire>
 				<lien type=""></lien>
 			</avg12>
