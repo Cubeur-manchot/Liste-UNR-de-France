@@ -612,22 +612,22 @@
 		</event>
 		<event nom="Megaminx">
 			<single>
-				<temps>31.52</temps>
+				<temps>27.86</temps>
 				<nom>Théo Paris</nom>
 				<commentaire>Full steps</commentaire>
-				<lien type="youtube">https://www.youtube.com/watch?v=aEa994egIuw</lien>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=274693#p274693</lien>
 			</single>
 			<mo3>
-				<temps>35.90</temps>
+				<temps>34.44</temps>
 				<nom>Théo Paris</nom>
-				<commentaire>36.92, 36.46, 34.31</commentaire>
-				<lien type="youtube">https://www.youtube.com/watch?v=pZ1pzJvsIOo</lien>
+				<commentaire>27.86, 38.83, 36.65</commentaire>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=274693#p274693</lien>
 			</mo3>
 			<avg5>
-				<temps>36.95</temps>
+				<temps>36.55</temps>
 				<nom>Théo Paris</nom>
-				<commentaire>(40.51), 36.92, 36.46, (34.31), 37.46</commentaire>
-				<lien type="youtube">https://www.youtube.com/watch?v=pZ1pzJvsIOo</lien>
+				<commentaire>(27.86), 38.83, 36.65, (42.43), 34.16</commentaire>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=274693#p274693</lien>
 			</avg5>
 			<avg12>
 				<temps>39.31</temps>
@@ -636,16 +636,16 @@
 				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=274574#p274574</lien>
 			</avg12>
 			<avg50>
-				<temps>42.71</temps>
+				<temps>41.21</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien type=""></lien>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=274693#p274693</lien>
 			</avg50>
 			<avg100>
-				<temps>43.19</temps>
+				<temps>41.89</temps>
 				<nom>Théo Paris</nom>
 				<commentaire></commentaire>
-				<lien type=""></lien>
+				<lien type="francocube">https://forum.francocube.com/viewtopic.php?p=274693#p274693</lien>
 			</avg100>
 		</event>
 		<event nom="Masterkilominx">
