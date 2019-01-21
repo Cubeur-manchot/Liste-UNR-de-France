@@ -1,10 +1,14 @@
 # Liste-UNR-de-France
-C'est la version site de la liste des UNRs accessible sous ce lien : https://docs.google.com/spreadsheets/d/1ClyK6KtsZHDJrHY8uc-1Iri3Yq4F6RX3vP4u56S7D8Y/edit#gid=0.
+Ceci est la liste UNR de France (UNR = Unofficial National Record), recensant les records de France réalisés non pas en compétition, mais chez soi.
+NB : Si vous battez un UNR pendant une compétition officielle, celui-ci sera également compté comme UNR, en plus d'être un NR.
 
-Futures améliorations :
-- je suis en train de chercher un moyen d'importe directement le fichier XML depuis la google sheet. Si j'y arrive, je n'aurai plus qu'à éditer la google sheet (qui sera cachée du grand public, contrairement à maintenant) et le seul display de la liste sera ce site. Comme ça l'édition sera beaucoup plus confortable pour moi, et la liste sera toute belle !
+Pour mettre à jour un UNR, contactez Cubeur-manchot :
+- soit en lui envoyant un MP sur le forum Francocube
+- soit en postant dans le topic associé sur le forum Francocube
+- soit en lui envoyant un MP sur Discord
+- soit en postant le record dans le serveur Discord des Cubeurs francophones
 
-N'hésitez pas à envoyer un MP à Cubeur-manchot :
-- si un ou plusieurs records ne sont pas à jour
-- pour toute demande d'ajout de nouveau record
-- pour toute question, réclamation ou menace de mort
+Vous pouvez aussi contacter Cubeur-manchot :
+- pour toute erreur sur un UNR
+- pour toute proposition d'ajout d'un nouvel event
+- pour toute autre question, réclamation ou menace de mort
