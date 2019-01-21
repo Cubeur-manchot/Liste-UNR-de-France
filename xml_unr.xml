@@ -1410,7 +1410,7 @@
 		</event>
 		<event nom="Relai Minx (mega + pyra + skewb)">
 			<single>
-				<temps>55.17/temps>
+				<temps>55.17</temps>
 				<nom>John Bacouël</nom>
 				<commentaire></commentaire>
 				<lien type=""></lien>
