@@ -103,9 +103,8 @@ a:hover > .commentaire { display: inline-block; position: absolute; z-index: 10;
 #bouton_compact_off { background-color: rgb(100,100,200); }
 #bouton_compact_on { background-color: rgb(150,150,200); }
 
-#plan_de_page
+#pagePlan
 {
-/*	display: hidden;*/
 	display: inline-block;
 	margin: 15px;
 	padding: 0px;
@@ -116,7 +115,7 @@ a:hover > .commentaire { display: inline-block; position: absolute; z-index: 10;
 	background-color: rgb(200,255,200);
 }
 
-.plan_partie { vertical-align: top; margin: 0px; padding: 5px; }
+.plan_partie { display: inline-block; vertical-align: top; margin: 0px; padding: 5px; }
 
 .plan_partie_titre { display: inline-block; vertical-align: middle; margin: 0px 10px 10px 10px; }
 .plan_sous_partie { display: inline-block; text-align: center; margin: 3px 0px 0px 15px; padding: 0px; }

@@ -17,8 +17,8 @@ function nouveau_script_unr()
 	var balise_xml = xml.getElementsByTagName('xml')[0];
 	var balise_xml_records = balise_xml.getElementsByTagName('records')[0];
 	var balise_plan_normal = balise_xml.getElementsByTagName('plan_normal')[0];
-	make_palmares(balise_xml_records);
-	make_plan(balise_plan_normal);
+	buildPalmares(balise_xml_records);
+	buildPlan(balise_plan_normal);
 	make_records(balise_plan_normal, balise_xml_records);
 }
 
@@ -38,125 +38,52 @@ function change_compact()
 		bouton_compact_on.innerHTML = 'Passer en Mode Compact';
 	}
 	make_records(xml_plan, balise_records);
-	make_plan(xml_plan);
-}
-
-function afficher_cacher_plan()
-{
-	var plan_de_page = document.getElementById('plan_de_page');
-	if (plan_de_page.style.display == 'none') {
-		plan_de_page.style.display = 'inline-block';
-	} else {
-		plan_de_page.style.display = 'none';
-	}
+	buildPlan(xml_plan);
 }
 
 function afficher_cacher_bouton_plan(i,j) {
-	var bouton_interne = document.getElementsByClassName('plan_partie')[i].getElementsByClassName('bouton_interne')[j+1];
 	if (j == -1) {
 		var element = document.getElementsByClassName('partie')[i];
 	} else {
 		var element = document.getElementsByClassName('partie')[i].getElementsByClassName('sous_partie')[j];
 	}
+	var innerButton = document.getElementsByClassName('plan_partie')[i].getElementsByClassName('bouton_interne')[j+1];
 	if (element.style.display == '') {
 		element.style.display = 'none';
-		bouton_interne.style.background = 'rgb(255,100,100)';
-		bouton_interne.style.transform = 'translate(22px,-2px)';
+		switchToggleButtonToOff(innerButton);
 	} else {
 		element.style.display = '';
-		bouton_interne.style.background = 'rgb(100,255,100)';
-		bouton_interne.style.transform = 'translate(0px,-2px)';
+		switchToggleButtonToOn(innerButton);
 	}
-	plan_de_page();
-}
-
-function afficher_cacher_bouton_filtrer(i) {
-	var avg_table = new Array('single','mo3','avg5','avg12','avg50','avg100');
-	var avg = avg_table[i-1];
-	var balises = document.getElementsByClassName(avg);
-	var n_balises = balises.length;
-	var balise_0 = balises[0];
-	var bouton_interne = document.getElementById('filtrer').getElementsByClassName('bouton_interne')[i-1];
-	if (balise_0.style.display != 'none') { /* on masque */
-		for (var i=0; i<n_balises; i++) {
-			balises[i].style.display = 'none';
-		}
-		bouton_interne.style.background = 'rgb(255,100,100)';
-		bouton_interne.style.transform = 'translate(22px,-2px)';
-	} else { /* on affiche */
-		for (var i=0; i<n_balises; i++) {
-			balises[i].style.display = '';
-		}
-		bouton_interne.style.background = 'rgb(100,255,100)';
-		bouton_interne.style.transform = 'translate(0px,-2px)';
-	}
-}
-
-function make_plan(xml_plan)
-{
-	var bouton_compact_on = document.getElementById('bouton_compact_on');
-	if (bouton_compact_on != undefined) {
-		var compact = true;
-		var string_compact_1 = ' style="display: inline-block; width: 130px; padding: 5px; margin: 0px;"';
-		var string_compact_2 = '<br/>';
-	} else {
-		var compact = false;
-		var string_compact_1 = ' style="display: inline-block; text-align: left; padding: 5px;"';
-		var string_compact_2 = '';
-	}
-	var html_plan = '<div id="filtrer">';
-	html_plan += '<div class="filtrer_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(1)"><div class="bouton_interne"></div></div><br/><div class="filtrer_average">Single</div></div>';
-	html_plan += '<div class="filtrer_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(2)"><div class="bouton_interne"></div></div><br/><div class="filtrer_average">Mo3</div></div>';
-	html_plan += '<div class="filtrer_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(3)"><div class="bouton_interne"></div></div><br/><div class="filtrer_average">Avg5</div></div>';
-	html_plan += '<div class="filtrer_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(4)"><div class="bouton_interne"></div></div><br/><div class="filtrer_average">Avg12</div></div>';
-	html_plan += '<div class="filtrer_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(5)"><div class="bouton_interne"></div></div><br/><div class="filtrer_average">Avg50</div></div>';
-	html_plan += '<div class="filtrer_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(6)"><div class="bouton_interne"></div></div><br/><div class="filtrer_average">Avg100</div></div>';
-	html_plan += '</div>';
-	var plan_de_page = document.getElementById('plan_de_page');
-	var sections = xml_plan.getElementsByTagName('section');
-	var n_sections = sections.length;
-	for (var i=0; i<n_sections; i++) {
-		var section = sections[i];
-		var nom_section = section.getAttribute('nom');
-		var id_section = to_id(nom_section);
-		var subsections = section.getElementsByTagName('subsection');
-		var n_subsections = subsections.length;
-		html_plan += '<div class="plan_partie"' + string_compact_1 + '><div class="bouton_externe" onclick="afficher_cacher_bouton_plan(' + i + ',-1);"><div class="bouton_interne"></div></div>' + string_compact_2 + '<a href="#' + id_section + '" class="plan_partie_titre">' + nom_section + '</a><br/>';
-		for (var j=0; j<n_subsections; j++) {
-			var subsection = subsections[j];
-			var nom_subsection = subsection.getAttribute('nom');
-			var id_subsection = to_id(nom_subsection);
-			html_plan += '<div class="plan_sous_partie"><div class="bouton_externe" onclick="afficher_cacher_bouton_plan(' + i + ',' + j + ')"><div class="bouton_interne"></div></div><a href="#' + id_subsection + '" class="plan_sous_partie_titre">' + nom_subsection + '</a></div><br/>';
-		}
-	html_plan += '</div>';
-	}
-	plan_de_page.innerHTML = html_plan;
 }
 
 function make_string(balise_record)
 {
 	var html_records = '';
-	var temps = balise_record.getElementsByTagName('temps')[0].innerHTML;
-	var nom = balise_record.getElementsByTagName('nom')[0].innerHTML;
-	var commentaire = balise_record.getElementsByTagName('commentaire')[0].innerHTML;
-	var lien = balise_record.getElementsByTagName('lien')[0];
-	var lien_contenu = lien.innerHTML;
-	var lien_type = lien.getAttribute('type');
+	var temps = balise_record.getAttribute('temps');
+	if (temps == '')
+	{
+		temps = 'x';
+	}
+	var nom = balise_record.getAttribute('nom');
+	var commentaire = balise_record.getAttribute('commentaire');
+	var lien = balise_record.getAttribute('lien');
+	var lien_type = 'francocube'; // par défaut -> à modifier en cherchant des sous-chaînes dans le lien
 	var avg = balise_record.tagName;
 	if (commentaire != '') {
 		var balise_commentaire = '<div class="commentaire">' + commentaire + '</div>';
 	} else {
 		var balise_commentaire = '';
 	}
-	if (lien_contenu != '') {
+	if (lien != '') {
 		if (lien_type == 'francocube') {
-			html_records += '<td class="' + avg + ' avec_francocube"><a class="lien_francocube" href="' + lien_contenu + '" target="_blank" title="Discussion Francocube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+			html_records += '<td class="' + avg + ' avec_francocube"><a class="lien_francocube" href="' + lien + '" target="_blank" title="Discussion Francocube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
 		} else if (lien_type == 'youtube') {
-			html_records += '<td class="' + avg + ' avec_youtube"><a class="lien_youtube" href="' + lien_contenu + '" target="_blank" title="Vidéo Youtube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+			html_records += '<td class="' + avg + ' avec_youtube"><a class="lien_youtube" href="' + lien + '" target="_blank" title="Vidéo Youtube"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
 		} else if (lien_type == 'pb_sheet') {
-			html_records += '<td class="' + avg + ' avec_pb_sheet"><a class="lien_pb_sheet" href="' + lien_contenu + '" target="_blank" title="Feuille de PB"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+			html_records += '<td class="' + avg + ' avec_pb_sheet"><a class="lien_pb_sheet" href="' + lien + '" target="_blank" title="Feuille de PB"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
 		} else if (lien_type == 'wca') {
-			html_records += '<td class="' + avg + ' avec_wca"><a class="lien_wca" href="' + lien_contenu + '" target="_blank" title="Lien WCA"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
+			html_records += '<td class="' + avg + ' avec_wca"><a class="lien_wca" href="' + lien + '" target="_blank" title="Lien WCA"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</a></td>';
 		}
 	} else {
 		html_records += '<td class="' + avg + ' avec_discussion"><div class="temps">' + temps + '</div><div class="nom">' + nom + '</div>' + balise_commentaire + '</td>';
@@ -176,13 +103,13 @@ function make_records(xml_plan, xml_records)
 	for (var i=0; i<n_sections; i++) {
 		var section = sections[i];
 		var nom_section = section.getAttribute('nom');
-		html_records += '<section id="' + to_id(nom_section) + '" class="partie"><h2>' + nom_section + '</h2>';
+		html_records += '<section id="' + sectionNameToId(nom_section) + '" class="partie"><h2>' + nom_section + '</h2>';
 		var subsections = section.getElementsByTagName('subsection');
 		var n_subsections = subsections.length;
 		for (var j=0; j<n_subsections; j++) {
 			var subsection = subsections[j];
 			var nom_subsection = subsection.getAttribute('nom');
-			html_records += '<section id="' + to_id(nom_subsection) + '" class="sous_partie"><h3>' + nom_subsection + '</h3><table><tr><th>Épreuve</th><th class="single">Single</th><th class="mo3">Mo3</th><th class="avg5">Avg5</th><th class="avg12">Avg12</th><th class="avg50">Avg50</th><th class="avg100">Avg100</th></tr>';
+			html_records += '<section id="' + sectionNameToId(nom_subsection) + '" class="sous_partie"><h3>' + nom_subsection + '</h3><table><tr><th>Épreuve</th><th class="single">Single</th><th class="mo3">Mo3</th><th class="avg5">Avg5</th><th class="avg12">Avg12</th><th class="avg50">Avg50</th><th class="avg100">Avg100</th></tr>';
 			var events = subsection.getElementsByTagName('event');
 			var n_events = events.length;
 			for (var k=0; k<n_events; k++) {
@@ -230,56 +157,213 @@ function make_records(xml_plan, xml_records)
 	zone_records.innerHTML = html_records;
 }
 
-function make_palmares(records)
+function sectionNameToId(s)
 {
-	var events = records.getElementsByTagName('event');
-	var avg = new Array('single','mo3','avg5','avg12','avg50','avg100');
-	var n_events = events.length;
-	var noms_denombre = new Array();
-	var denombre = new Array();
-	var n_noms = 0;
-	var total_denombre = 0;
-	for (var i=0; i<n_events; i++) {
-		var event = events[i];
-		for (var h=0; h<6; h++) {
-			var event_avg = event.getElementsByTagName(avg[h])[0];
-			var nom = event_avg.getElementsByTagName('nom')[0].innerHTML;
-			if (nom != '') {
-				total_denombre += 1;
-				for (var j=0; j<n_noms; j++) { /* recherche du nom actuel dans la liste des noms déjà vus */
-					if (nom == noms_denombre[j]) {
-						denombre[j] += 1;
-						while (j>0 && denombre[j]>denombre[j-1]) { /* actualisation du tri */
-							var nom_stock = noms_denombre[j];
-							var denombre_stock = denombre[j];
-							noms_denombre[j] = noms_denombre[j-1];
-							denombre[j] = denombre[j-1];
-							noms_denombre[j-1] = nom_stock;
-							denombre[j-1] = denombre_stock;
-							j -= 1;
-						}
-						j = n_noms + 1;
+	return (s.replace(' ','_').replace(' ','_').replace(' ','_'));
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+// en-dessous d'ici c'est optimisé
+
+function buildPalmares(recordsXmlTag)
+{
+	var events = recordsXmlTag.getElementsByTagName('event');//
+	var avgTypes = new Array('single','mo3','avg5','avg12','avg50','avg100');
+	
+	// count records
+	var countingArray = [];
+	for (var i = 0; i < events.length; i++) {
+		for (var h = 0; h < avgTypes.length; h++) {
+			var name = events[i].getElementsByTagName(avgTypes[h])[0].getAttribute("nom");
+			if (name == '')
+			{
+				continue;
+			}
+			for (var j = 0; j < countingArray.length; j++) {
+				if (name == countingArray[j].name) { // if the name is already in the list, count and ranking should be updated
+					var countForThisPerson = ++countingArray[j].count;
+					while (j > 0 && countingArray[j].count > countingArray[j-1].count) {
+						countingArray[j].name = countingArray[j-1].name;
+						countingArray[j].count = countingArray[j-1].count;
+						countingArray[j-1].name = name;
+						countingArray[j-1].count = countForThisPerson;
+						j--;
 					}
+					break;
 				}
-				if (j == n_noms || n_noms == 0) { /* si nom inexistant dans la liste des déjà vus, on le crée */
-					noms_denombre[n_noms] = nom;
-					denombre[n_noms] = 1;
-					n_noms += 1;
-				}
+			}
+			if (j == countingArray.length) { // if the name is not in the list, it should be added to it
+				countingArray[j] = {name: name, count: 1};
 			}
 		}
 	}
-	var html_palmares = '<h2>Palmarès du nombre d\'UNRs</h2><table><tr><th>Personne (' + n_noms + ')</th><th>Nombre d\'UNRs (' + total_denombre + ')</th><th>Pourcentage des UNRs</th></tr>'
-	var palmares = document.getElementById('palmares');
-	for (var i=0; i<n_noms; i++) { /* écriture du html du palmarès */
-		var pourcentage = ((100*denombre[i]/total_denombre)+'').substring(0,4);
-		html_palmares += '<tr><td>' + noms_denombre[i] + '</td><td>' + denombre[i] + '</td><td>' + pourcentage + '%</td></tr>';
+	var totalNbRecords = 0;
+	for (var h = 0; h < avgTypes.length; h++) {
+		totalNbRecords += recordsXmlTag.getElementsByTagName(avgTypes[h]).length;
 	}
-	html_palmares += '</table>';
-	palmares.innerHTML = html_palmares;
+	
+	// build palmares section title
+	var palmaresTitle = document.createElement("h2");
+	palmaresTitle.innerHTML = "Palmarès du nombre d'UNRs";
+	var palmaresTable = document.createElement("table");
+	
+	// build palmares table header line
+	var palmaresHeader = document.createElement("tr");
+	var palmaresHeaderPerson = document.createElement("th");
+	var palmaresHeaderUnrCount = document.createElement("th");
+	var palmaresHeaderUnrPercent = document.createElement("th");
+	var palmaresHeaderRecordsSheet = document.createElement("th");
+	palmaresHeaderPerson.innerHTML = "Personne (" + countingArray.length + ")";
+	palmaresHeaderUnrCount.innerHTML = "Nombre d'UNRs (" + totalNbRecords + ")";
+	palmaresHeaderUnrPercent.innerHTML = "Pourcentage des UNRs";
+	palmaresHeaderRecordsSheet.innerHTML = "Page des PB";
+	palmaresHeader.appendChild(palmaresHeaderPerson);
+	palmaresHeader.appendChild(palmaresHeaderUnrCount);
+	palmaresHeader.appendChild(palmaresHeaderUnrPercent);
+	palmaresHeader.appendChild(palmaresHeaderRecordsSheet);
+	palmaresTable.appendChild(palmaresHeader);
+	
+	// build rows of the palmares table
+	for (var i = 0; i < countingArray.length; i++) {
+		var count = countingArray[i].count;
+		var percent = ((100 * count / totalNbRecords) + '').substring(0,4);
+		var recordsSheetLink = "x";
+		var palmaresNewLine = document.createElement("tr");
+		palmaresNewLine.innerHTML = "<td>" + countingArray[i].name + "</td>";
+		palmaresNewLine.innerHTML += "<td>" + count + "</td>";
+		palmaresNewLine.innerHTML += "<td>" + percent + " %</td>";
+		palmaresNewLine.innerHTML += "<td>" +  recordsSheetLink + "</td>";
+		palmaresTable.appendChild(palmaresNewLine);
+	}
+	palmares.appendChild(palmaresTitle);
+	palmares.appendChild(palmaresTable);
 }
 
-function to_id(s)
+function afficher_cacher_bouton_filtrer(avgTypeIndex)
 {
-	return (s.replace(' ','_').replace(' ','_').replace(' ','_').replace(' ','_').replace(' ','_').replace(' ','_'));
+	var tagsOfThisAvgType = document.getElementsByClassName(["single", "mo3", "avg5", "avg12", "avg50", "avg100"][avgTypeIndex]);
+	var innerButton = document.getElementById('filtrer').getElementsByClassName('bouton_interne')[avgTypeIndex];
+	if (tagsOfThisAvgType[0].style.display != 'none') { // if it's displayed, it should be hidden
+		for (var i = 0; i < tagsOfThisAvgType.length; i++) {
+			tagsOfThisAvgType[i].style.display = 'none';
+		}
+		switchToggleButtonToOff(innerButton);
+	} else { // else it's hidden and it should be displayed
+		for (var i = 0; i < tagsOfThisAvgType.length; i++) {
+			tagsOfThisAvgType[i].style.display = '';
+		}
+		switchToggleButtonToOn(innerButton);
+	}
+}
+
+function toggleDisplayPlan() // toggle between 'none' and 'inline-block' display
+{
+	var pagePlan = document.getElementById('pagePlan');
+	pagePlan.style.display = (pagePlan.style.display == 'none' ? 'inline-block' : 'none');
+}
+
+function switchToggleButtonToOn(toggleButton)
+{
+	toggleButton.style.background = 'rgb(100,255,100)';
+	toggleButton.style.transform = 'translate(0px,-2px)';
+}
+
+function switchToggleButtonToOff(toggleButton)
+{
+	toggleButton.style.background = 'rgb(255,100,100)';
+	toggleButton.style.transform = 'translate(22px,-2px)';
+}
+
+function buildPlan(xml_plan)
+{
+	var avgTypes = new Array('single','mo3','avg5','avg12','avg50','avg100');
+	var pagePlan = document.getElementById('pagePlan');
+	pagePlan.innerHTML = "";
+	// add filters for single, mo3, avg5...
+	var avgTypeFilters = document.createElement("div");
+	avgTypeFilters.id = "filtrer";
+	for (var h = 0; h < avgTypes.length; h++) {
+		var avgTypeFilter = document.createElement("div");
+		avgTypeFilter.className = "filtrer_partie";
+		//avgTypeFilter.innerHTML = '<div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(' + h + ')"><div class="bouton_interne"></div></div>';
+		avgTypeFilter.innerHTML = '<div class="bouton_externe"><div class="bouton_interne"></div></div>';
+		avgTypeFilter.appendChild(document.createElement("br"));
+		var filterTitle = document.createElement("div");
+		filterTitle.className = "filtrer_average";
+		filterTitle.innerHTML = avgTypes[h];
+		avgTypeFilter.appendChild(filterTitle);
+		avgTypeFilters.appendChild(avgTypeFilter);
+	}
+	pagePlan.appendChild(avgTypeFilters);
+	
+	var compact = document.getElementById('bouton_compact_on') != undefined;
+	var sections = xml_plan.getElementsByTagName('section');
+	for (let i = 0; i < sections.length; i++) {
+		var section = sections[i];
+		var nom_section = section.getAttribute('nom');
+		var id_section = sectionNameToId(nom_section);
+		var subsections = section.getElementsByTagName('subsection');
+		var n_subsections = subsections.length;
+		
+		var plan_partie = document.createElement("div");
+		plan_partie.className = "plan_partie";
+		if(compact) {
+			plan_partie.style.width = "130px";
+		} else {
+			plan_partie.style.textAlign = "left";
+		}
+		
+		var externalButton = document.createElement("div");
+		externalButton.className = "bouton_externe";
+		var innerButton = document.createElement("div");
+		innerButton.className = "bouton_interne";
+		externalButton.appendChild(innerButton);
+		plan_partie.appendChild(externalButton);
+		
+		if (compact) {
+			plan_partie.appendChild(document.createElement("br"));
+		}
+		var sectionLink = document.createElement("a");
+		sectionLink.href = '#' + id_section;
+		sectionLink.className = "plan_partie_titre";
+		sectionLink.innerHTML = nom_section;
+		plan_partie.appendChild(sectionLink);
+		plan_partie.appendChild(document.createElement("br"));
+		
+		for (let j = 0; j < n_subsections; j++) {
+			var subsection = subsections[j];
+			var nom_subsection = subsection.getAttribute('nom');
+			var id_subsection = sectionNameToId(nom_subsection);
+			var plan_sous_partie = document.createElement("div");
+			plan_sous_partie.className = "plan_sous_partie";
+			var bouton_externe = document.createElement("div");
+			bouton_externe.className = "bouton_externe";
+			bouton_externe.onclick = function() { afficher_cacher_bouton_plan(i, j); };
+			var bouton_interne = document.createElement("div");
+			bouton_interne.className = "bouton_interne";
+			bouton_externe.appendChild(bouton_interne);
+			plan_sous_partie.appendChild(bouton_externe);
+			var subsection_link = document.createElement("a");
+			subsection_link.href = "#" + id_subsection;
+			subsection_link.className = "plan_sous_partie_titre";
+			subsection_link.innerHTML = nom_subsection;
+			plan_sous_partie.appendChild(subsection_link);
+			plan_partie.appendChild(plan_sous_partie);
+			plan_partie.appendChild(document.createElement("br"));
+		}
+		pagePlan.appendChild(plan_partie);
+		var bouton_externe = plan_partie.getElementsByClassName("bouton_externe")[0];
+		bouton_externe.onclick = function() { afficher_cacher_bouton_plan(i, -1); };
+	}
 }
