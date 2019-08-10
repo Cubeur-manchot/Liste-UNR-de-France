@@ -34,34 +34,34 @@
 			<avg100 nom="Abdelhak Kaddour" temps="1:01.18" commentaire="" lien="https://forum.francocube.com/viewtopic.php?f=6&amp;t=863&amp;p=263867#p263867"/>
 		</event>
 		<event nom="6x6x6">
-			<single nom="Abdelhak Kaddour" temps="1:36.14" commentaire="" lien="https://forum.francocube.com/viewtopic.php?f=6&amp;t=3346&amp;p=264620#p264620"/>
-			<mo3 nom="Abdelhak Kaddour" temps="1:41.15" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=271499#p271499"/>
+			<single nom="Abdelhak Kaddour" temps="1:20.99" commentaire="" lien=""/>
+			<mo3 nom="Abdelhak Kaddour" temps="1:31.99" commentaire="" lien=""/>
 			<avg5 nom="Abdelhak Kaddour" temps="1:42.33" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=271499#p271499"/>
 			<avg12 nom="Abdelhak Kaddour" temps="1:45.52" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=271499#p271499"/>
 			<avg50 nom="Abdelhak Kaddour" temps="1:49.39" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=271499#p271499"/>
 			<avg100 nom="" temps="" commentaire="" lien=""/>
 		</event>
 		<event nom="7x7x7">
-			<single nom="Abdelhak Kaddour" temps="2:18.40" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=271969#p271965"/>
-			<mo3 nom="Abdelhak Kaddour" temps="2:27.94" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=272694#p272694"/>
+			<single nom="Abdelhak Kaddour" temps="2:08.99" commentaire="" lien=""/>
+			<mo3 nom="Abdelhak Kaddour" temps="2:17.99" commentaire="" lien=""/>
 			<avg5 nom="Abdelhak Kaddour" temps="2:34.23" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=271441#p271441"/>
 			<avg12 nom="Abdelhak Kaddour" temps="2:38.80" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=271441#p271441"/>
 			<avg50 nom="Abdelhak Kaddour" temps="2:43.91" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=271441#p271441"/>
 			<avg100 nom="" temps="" commentaire="" lien=""/>
 		</event>
 		<event nom="8x8x8">
-			<single nom="Axel Brisse" temps="5:32.26" commentaire="" lien=""/>
-			<mo3 nom="Axel Brisse" temps="6:03.46" commentaire="" lien=""/>
-			<avg5 nom="Axel Brisse" temps="6:27.13" commentaire="" lien=""/>
-			<avg12 nom="Axel Brisse" temps="6:41.73" commentaire="" lien=""/>
+			<single nom="Axel Brisse" temps="5:07.22" commentaire="" lien=""/>
+			<mo3 nom="Axel Brisse" temps="5:28.95" commentaire="" lien=""/>
+			<avg5 nom="Axel Brisse" temps="5:32.60" commentaire="" lien=""/>
+			<avg12 nom="Axel Brisse" temps="5:37.68" commentaire="" lien=""/>
 			<avg50 nom="" temps="" commentaire="" lien=""/>
 			<avg100 nom="" temps="" commentaire="" lien=""/>
 		</event>
 		<event nom="9x9x9">
 			<single nom="Axel Brisse" temps="7:24.36" commentaire="" lien=""/>
-			<mo3 nom="Axel Brisse" temps="8:48.03" commentaire="" lien=""/>
-			<avg5 nom="Axel Brisse" temps="8:48.23" commentaire="" lien=""/>
-			<avg12 nom="Axel Brisse" temps="9:13.65" commentaire="" lien=""/>
+			<mo3 nom="Axel Brisse" temps="7:41.99" commentaire="" lien=""/>
+			<avg5 nom="Axel Brisse" temps="7:45.90" commentaire="" lien=""/>
+			<avg12 nom="Axel Brisse" temps="8:09.51" commentaire="" lien=""/>
 			<avg50 nom="" temps="" commentaire="" lien=""/>
 			<avg100 nom="" temps="" commentaire="" lien=""/>
 		</event>
@@ -202,7 +202,15 @@
 			<avg100 nom="" temps="" commentaire="" lien=""/>
 		</event>
 		<event nom="8x8x8 Blindfolded">
-			<single nom="Wilfrid Py" temps="5:15.30" commentaire="[2:37:20]" lien="https://www.youtube.com/watch?v=rYMUp5gfbZ4"/>
+			<single nom="Wilfrid Py" temps="5:15:30.00" commentaire="[2:37:20]" lien="https://www.youtube.com/watch?v=rYMUp5gfbZ4"/>
+			<mo3 nom="" temps="" commentaire="" lien=""/>
+			<avg5 nom="" temps="" commentaire="" lien=""/>
+			<avg12 nom="" temps="" commentaire="" lien=""/>
+			<avg50 nom="" temps="" commentaire="" lien=""/>
+			<avg100 nom="" temps="" commentaire="" lien=""/>
+		</event>
+		<event nom="9x9x9 Blindfolded">
+			<single nom="Matéo Chancerel" temps="2:41:00.00" commentaire="[1:24:00]" lien=""/>
 			<mo3 nom="" temps="" commentaire="" lien=""/>
 			<avg5 nom="" temps="" commentaire="" lien=""/>
 			<avg12 nom="" temps="" commentaire="" lien=""/>
@@ -226,7 +234,7 @@
 			<avg100 nom="" temps="" commentaire="" lien=""/>
 		</event>
 		<event nom="3x3x3 Multi-Blindfolded">
-			<single nom="Maxime Clapié" temps="19/19" commentaire="57.52" lien="https://www.worldcubeassociation.org/results/events.php?eventId=333mbf&amp;regionId=France&amp;years=&amp;show=100%2BPersons&amp;single=Single"/>
+			<single nom="Maxime Clapié" temps="22/24" commentaire="" lien=""/>
 			<mo3 nom="" temps="" commentaire="" lien=""/>
 			<avg5 nom="" temps="" commentaire="" lien=""/>
 			<avg12 nom="" temps="" commentaire="" lien=""/>
@@ -251,8 +259,8 @@
 		</event>
 		<event nom="Square-1">
 			<single nom="" temps="" commentaire="" lien=""/>
-			<mo3 nom="Thibaud Ou" temps="6.54" commentaire="" lien="https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing"/>
-			<avg5 nom="Thibaud Ou" temps="6.69" commentaire="" lien="https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing"/>
+			<mo3 nom="Thibaud Ou" temps="5.98" commentaire="" lien=""/>
+			<avg5 nom="Thibaud Ou" temps="6.33" commentaire="" lien=""/>
 			<avg12 nom="Thibaud Ou" temps="7.12" commentaire="" lien="https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing"/>
 			<avg50 nom="Thibaud Ou" temps="7.45" commentaire="" lien="https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing"/>
 			<avg100 nom="Thibaud Ou" temps="7.97" commentaire="" lien="https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing"/>
@@ -306,12 +314,12 @@
 			<avg100 nom="" temps="" commentaire="" lien=""/>
 		</event>
 		<event nom="Team BLD">
-			<single nom="Axel Brisse + Matthieu Aubert" temps="20.68" commentaire="" lien=""/>
-			<mo3 nom="Axel Brisse + Matthieu Aubert" temps="23.79" commentaire="" lien=""/>
-			<avg5 nom="Axel Brisse + Matthieu Aubert" temps="25.42" commentaire="" lien=""/>
-			<avg12 nom="Axel Brisse + Matthieu Aubert" temps="26.78" commentaire="" lien=""/>
-			<avg50 nom="Axel Brisse + Matthieu Aubert" temps="31.96" commentaire="" lien=""/>
-			<avg100 nom="Axel Brisse + Matthieu Aubert" temps="34.85" commentaire="" lien=""/>
+			<single nom="Axel Brisse + Matthieu Aubert" temps="17.13" commentaire="" lien=""/>
+			<mo3 nom="Axel Brisse + Matthieu Aubert" temps="19.53" commentaire="" lien=""/>
+			<avg5 nom="Axel Brisse + Matthieu Aubert" temps="20.59" commentaire="" lien=""/>
+			<avg12 nom="Axel Brisse + Matthieu Aubert" temps="22.87" commentaire="" lien=""/>
+			<avg50 nom="Axel Brisse + Matthieu Aubert" temps="24.71" commentaire="" lien=""/>
+			<avg100 nom="Axel Brisse + Matthieu Aubert" temps="27.37" commentaire="" lien=""/>
 		</event>
 		<event nom="Mini-Guilford Solo">
 			<single nom="Clément Cherblanc" temps="4:19.99" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=271969#p271900"/>
