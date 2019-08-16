@@ -1,3 +1,61 @@
+function getXML()
+{
+	if(window.XMLHttpRequest) {
+		var xmlhttp = new XMLHttpRequest();
+	} else {
+		var xmlhttp = new activeXObject('Microsoft.XMLHTTP');
+	}
+	xmlhttp.open('get','xml_unr.xml',false);
+	xmlhttp.send();
+	var xmlDoc = xmlhttp.responseXML;
+	return(xmlDoc);
+}
+
+function nouveau_script_unr()
+{
+	var xml = getXML();
+	var balise_xml = xml.getElementsByTagName('xml')[0];
+	var balise_xml_records = balise_xml.getElementsByTagName('records')[0];
+	var balise_plan_normal = balise_xml.getElementsByTagName('plan_normal')[0];
+	buildPalmares(balise_xml_records);
+	buildPlan(balise_plan_normal);
+	make_records(balise_plan_normal, balise_xml_records);
+}
+
+function change_compact()
+{
+	var bouton_compact_off = document.getElementById('bouton_compact_off');
+	var xml = getXML();
+	var balise_records = xml.getElementsByTagName('records')[0];
+	if (bouton_compact_off != undefined) { /* on passe en compact */
+		var xml_plan = xml.getElementsByTagName('plan_compact')[0];
+		bouton_compact_off.id = 'bouton_compact_on';
+		bouton_compact_off.innerHTML = 'Repasser en Mode Normal';
+	} else { /* on repasse en normal */
+		var bouton_compact_on = document.getElementById('bouton_compact_on');
+		var xml_plan = xml.getElementsByTagName('plan_normal')[0];
+		bouton_compact_on.id = 'bouton_compact_off';
+		bouton_compact_on.innerHTML = 'Passer en Mode Compact';
+	}
+	make_records(xml_plan, balise_records);
+	buildPlan(xml_plan);
+}
+
+function afficher_cacher_bouton_plan(i,j) {
+	if (j == -1) {
+		var element = document.getElementsByClassName('partie')[i];
+	} else {
+		var element = document.getElementsByClassName('partie')[i].getElementsByClassName('sous_partie')[j];
+	}
+	var innerButton = document.getElementsByClassName('plan_partie')[i].getElementsByClassName('bouton_interne')[j+1];
+	if (element.style.display == '') {
+		element.style.display = 'none';
+		switchToggleButtonToOff(innerButton);
+	} else {
+		element.style.display = '';
+		switchToggleButtonToOn(innerButton);
+	}
+}
 
 function make_string(balise_record)
 {
@@ -33,91 +91,70 @@ function make_string(balise_record)
 	return (html_records);
 }
 
-function buildRecords(xml_plan, xml_records)
+function make_records(xml_plan, xml_records)
 {
-	var recordsTag = document.getElementById('records');
-	recordsTag.innerHTML = '';
+	var zone_records = document.getElementById('records');
+	var html_records = '';
 	var events_records = xml_records.getElementsByTagName('event');
-	var avgTypes = new Array('single','mo3','avg5','avg12','avg50','avg100');
+	var n_events_records = events_records.length;
+	var avg = new Array('single','mo3','avg5','avg12','avg50','avg100');
 	var sections = xml_plan.getElementsByTagName('section');
-	for (var i = 0; i < sections.length; i++) {
+	var n_sections = sections.length;
+	for (var i=0; i<n_sections; i++) {
 		var section = sections[i];
 		var nom_section = section.getAttribute('nom');
-		var sectionTag = document.createElement('section');
-		sectionTag.className = "partie";
-		var sectionTitle = document.createElement('h2');
-		sectionTitle.innerHTML = nom_section;
-		sectionTag.appendChild(sectionTitle);
+		html_records += '<section id="' + sectionNameToId(nom_section) + '" class="partie"><h2>' + nom_section + '</h2>';
 		var subsections = section.getElementsByTagName('subsection');
-		if (subsections.length == 0) {
-			var html_records = '<table><tr><th>Épreuve</th><th class="single">Single</th><th class="mo3">Mo3</th><th class="avg5">Avg5</th><th class="avg12">Avg12</th><th class="avg50">Avg50</th><th class="avg100">Avg100</th></tr>';
-			var events = section.getElementsByTagName('event');
-			for (var k = 0; k < events.length; k++) {
+		var n_subsections = subsections.length;
+		for (var j=0; j<n_subsections; j++) {
+			var subsection = subsections[j];
+			var nom_subsection = subsection.getAttribute('nom');
+			html_records += '<section id="' + sectionNameToId(nom_subsection) + '" class="sous_partie"><h3>' + nom_subsection + '</h3><table><tr><th>Épreuve</th><th class="single">Single</th><th class="mo3">Mo3</th><th class="avg5">Avg5</th><th class="avg12">Avg12</th><th class="avg50">Avg50</th><th class="avg100">Avg100</th></tr>';
+			var events = subsection.getElementsByTagName('event');
+			var n_events = events.length;
+			for (var k=0; k<n_events; k++) {
 				var nom_event = events[k].innerHTML;
 				var indice_correspondant = -1;
-				for (var l=0; l < events_records.length; l++) {
+				for (var l=0; l<n_events_records; l++) {
 					if (events_records[l].getAttribute('nom') == nom_event) {
 						indice_correspondant = l;
 					}
 				}
 				var event = events_records[indice_correspondant];
 				html_records += '<tr><td class="nom_epreuve">' + nom_event + '</td>';
-				for (avgType of avgTypes) {
-					html_records += make_string(event.getElementsByTagName(avgType)[0]);
+				for (var l=0; l<6; l++) {
+					var record = event.getElementsByTagName(avg[l])[0];
+					html_records += make_string(record);
+				}
+				html_records += '</tr>';
+			}
+			html_records += '</table></section>';
+		}
+		if (n_subsections == 0) {
+			html_records += '<table><tr><th>Épreuve</th><th class="single">Single</th><th class="mo3">Mo3</th><th class="avg5">Avg5</th><th class="avg12">Avg12</th><th class="avg50">Avg50</th><th class="avg100">Avg100</th></tr>';
+			var events = section.getElementsByTagName('event');
+			var n_events = events.length;
+			for (var k=0; k<n_events; k++) {
+				var nom_event = events[k].innerHTML;
+				var indice_correspondant = -1;
+				for (var l=0; l<n_events_records; l++) {
+					if (events_records[l].getAttribute('nom') == nom_event) {
+						indice_correspondant = l;
+					}
+				}
+				var event = events_records[indice_correspondant];
+				html_records += '<tr><td class="nom_epreuve">' + nom_event + '</td>';
+				for (var l=0; l<6; l++) {
+					var record = event.getElementsByTagName(avg[l])[0];
+					html_records += make_string(record);
 				}
 				html_records += '</tr>';
 			}
 			html_records += '</table>';
-			
-			sectionTag.innerHTML += html_records;
-			recordsTag.appendChild(sectionTag);
-		} else {
-			for (var j = 0; j < subsections.length; j++) {
-				var subsection = subsections[j];
-				var nom_subsection = subsection.getAttribute('nom');
-				var subsectionTag = document.createElement('section');
-				subsectionTag.id = sectionNameToId(nom_subsection);
-				subsectionTag.className = "sous_partie";
-				var subsectionTitleTag = document.createElement('h3');
-				subsectionTitleTag.innerHTML = nom_subsection;
-				subsectionTag.appendChild(subsectionTitleTag);
-				var tableTag = document.createElement('table');
-				var trTag = document.createElement('tr');
-				var thTag = document.createElement('th');
-				thTag.innerHTML = 'Épreuve';
-				trTag.appendChild(thTag);
-				for (avgType of avgTypes) {
-					var thTagAvgType = document.createElement('th');
-					thTagAvgType.className = avgType;
-					thTagAvgType.innerHTML = avgType.charAt(0).toUpperCase() + avgType.substr(1,100);
-					trTag.appendChild(thTagAvgType);
-				}
-				tableTag.appendChild(trTag);
-				var events = subsection.getElementsByTagName('event');
-				for (var k = 0; k < events.length; k++) {
-					var nom_event = events[k].innerHTML;
-					for (var l = 0; l < events_records.length; l++) {
-						if (events_records[l].getAttribute('nom') == nom_event) {
-							var trTag = document.createElement('tr');
-							var tdTag = document.createElement('td');
-							tdTag.className = "nom_epreuve";
-							tdTag.innerHTML = nom_event;
-							trTag.appendChild(tdTag);
-							for (avgType of avgTypes) {
-								trTag.innerHTML += make_string(events_records[l].getElementsByTagName(avgType)[0]);
-							}
-							tableTag.appendChild(trTag);
-							break;
-						}
-					}
-					
-				}
-				sectionTag.appendChild(subsectionTag);
-				subsectionTag.appendChild(tableTag);
-			}
-			recordsTag.appendChild(sectionTag);
 		}
+		html_records += '</section>'
 	}
+	zone_records.innerHTML = html_records;
 }
 
 function sectionNameToId(s)
@@ -153,31 +190,21 @@ function buildPalmares(recordsXmlTag)
 			{
 				continue;
 			}
-			var listOfNamesToUpdate = [];
-			while(name.includes('+')) {
-				var indexOfPlus = name.indexOf('+');
-				listOfNamesToUpdate.push(name.substring(0,indexOfPlus - 1));
-				name = name.substring(indexOfPlus + 2,1000);
-			}
-			listOfNamesToUpdate.push(name);
-			
-			for (var name of listOfNamesToUpdate) {
-				for (var j = 0; j < countingArray.length; j++) {
-					if (name == countingArray[j].name) { // if the name is already in the list, count and ranking should be updated
-						var countForThisPerson = ++countingArray[j].count;
-						while (j > 0 && countingArray[j].count > countingArray[j-1].count) {
-							countingArray[j].name = countingArray[j-1].name;
-							countingArray[j].count = countingArray[j-1].count;
-							countingArray[j-1].name = name;
-							countingArray[j-1].count = countForThisPerson;
-							j--;
-						}
-						break;
+			for (var j = 0; j < countingArray.length; j++) {
+				if (name == countingArray[j].name) { // if the name is already in the list, count and ranking should be updated
+					var countForThisPerson = ++countingArray[j].count;
+					while (j > 0 && countingArray[j].count > countingArray[j-1].count) {
+						countingArray[j].name = countingArray[j-1].name;
+						countingArray[j].count = countingArray[j-1].count;
+						countingArray[j-1].name = name;
+						countingArray[j-1].count = countForThisPerson;
+						j--;
 					}
+					break;
 				}
-				if (j == countingArray.length) { // if the name is not in the list, it should be added to it
-					countingArray[j] = {name: name, count: 1};
-				}
+			}
+			if (j == countingArray.length) { // if the name is not in the list, it should be added to it
+				countingArray[j] = {name: name, count: 1};
 			}
 		}
 	}
@@ -322,7 +349,7 @@ function buildPlan(xml_plan)
 			plan_sous_partie.className = "plan_sous_partie";
 			var bouton_externe = document.createElement("div");
 			bouton_externe.className = "bouton_externe";
-			bouton_externe.onclick = function() { afficher_cacher_bouton_plan_sous_partie(i, j); };
+			bouton_externe.onclick = function() { afficher_cacher_bouton_plan(i, j); };
 			var bouton_interne = document.createElement("div");
 			bouton_interne.className = "bouton_interne";
 			bouton_externe.appendChild(bouton_interne);
@@ -337,85 +364,6 @@ function buildPlan(xml_plan)
 		}
 		pagePlan.appendChild(plan_partie);
 		var bouton_externe = plan_partie.getElementsByClassName("bouton_externe")[0];
-		bouton_externe.onclick = function() { afficher_cacher_bouton_plan(i); };
+		bouton_externe.onclick = function() { afficher_cacher_bouton_plan(i, -1); };
 	}
 }
-
-function afficher_cacher_bouton_plan(i) {
-	var category = document.getElementsByClassName('partie')[i];
-	var innerButton = document.getElementsByClassName('plan_partie')[i].getElementsByClassName('bouton_interne')[0];
-	toggleDisplayCategory(category, innerButton);
-}
-
-function afficher_cacher_bouton_plan_sous_partie(column, row) {
-	var subCategory = document.getElementsByClassName('partie')[column].getElementsByClassName('sous_partie')[row];
-	var innerButton = document.getElementsByClassName('plan_partie')[column].getElementsByClassName('bouton_interne')[row+1];
-	toggleDisplayCategory(subCategory, innerButton);
-}
-
-function toggleDisplayCategory(category, innerButton)
-{
-	if (category.style.display == '') {
-		category.style.display = 'none';
-		switchToggleButtonToOff(innerButton);
-	} else {
-		category.style.display = '';
-		switchToggleButtonToOn(innerButton);
-	}
-}
-
-
-/*---------------------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------------------------*/
-
-// en-dessous d'ici c'est internationalisé
-
-function getXML()
-{
-	if(window.XMLHttpRequest) {
-		var xmlhttp = new XMLHttpRequest();
-	} else {
-		var xmlhttp = new activeXObject('Microsoft.XMLHTTP');
-	}
-	xmlhttp.open('get', 'unrData.xml', false);
-	xmlhttp.send();
-	var xmlDoc = xmlhttp.responseXML;
-	return(xmlDoc);
-}
-
-function buildPage()
-{
-	var xmlDoc = getXML();
-	var xmlTag = xmlDoc.getElementsByTagName('xml')[0];
-	var xmlRecordsTag = xmlTag.getElementsByTagName('records')[0];
-	var xmlNormalPlanTag = xmlTag.getElementsByTagName('normalPlan')[0];
-	buildPalmares(xmlRecordsTag);
-	buildPlan(xmlNormalPlanTag);
-	buildRecords(xmlNormalPlanTag, xmlRecordsTag);
-}
-
-function toggleCompactMode()
-{
-	var compactModeButtonOnOffPosition = document.getElementById('bouton_compact_off');
-	var xml = getXML();
-	if (compactModeButtonOnOffPosition != undefined) { // switch to compact mode
-		var planTag = xml.getElementsByTagName('compactPlan')[0];
-		compactModeButtonOnOffPosition.id = 'bouton_compact_on';
-		compactModeButtonOnOffPosition.innerHTML = 'Repasser en Mode Normal';
-	} else { //switch back to normal mode
-		var compactModeButtonOnOnPosition = document.getElementById('bouton_compact_on');
-		var planTag = xml.getElementsByTagName('normalPlan')[0];
-		compactModeButtonOnOnPosition.id = 'bouton_compact_off';
-		compactModeButtonOnOnPosition.innerHTML = 'Passer en Mode Compact';
-	}
-	buildRecords(planTag, xml.getElementsByTagName('records')[0]);
-	buildPlan(planTag);
-}
-
