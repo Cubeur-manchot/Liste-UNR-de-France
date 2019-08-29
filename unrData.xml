@@ -306,12 +306,12 @@
 			<avg100 nom="" temps="" commentaire="" lien=""/>
 		</event>
 		<event nom="Team BLD">
-			<single nom="Axel Brisse + Matthieu Aubert" temps="20.68" commentaire="" lien=""/>
-			<mo3 nom="Axel Brisse + Matthieu Aubert" temps="23.79" commentaire="" lien=""/>
-			<avg5 nom="Axel Brisse + Matthieu Aubert" temps="25.42" commentaire="" lien=""/>
-			<avg12 nom="Axel Brisse + Matthieu Aubert" temps="26.78" commentaire="" lien=""/>
-			<avg50 nom="Axel Brisse + Matthieu Aubert" temps="31.96" commentaire="" lien=""/>
-			<avg100 nom="Axel Brisse + Matthieu Aubert" temps="34.85" commentaire="" lien=""/>
+			<single nom="Axel Brisse + Matthieu Aubert" temps="15.39" commentaire="L2 F' L2 B2 L2 U2 R2 F' L2 B' L D' B R' R D' F2 L2 F2 U2" lien=""/>
+			<mo3 nom="Axel Brisse + Matthieu Aubert" temps="19.53" commentaire="" lien=""/>
+			<avg5 nom="Axel Brisse + Matthieu Aubert" temps="20.59" commentaire="" lien=""/>
+			<avg12 nom="Axel Brisse + Matthieu Aubert" temps="22.87" commentaire="" lien=""/>
+			<avg50 nom="Axel Brisse + Matthieu Aubert" temps="24.71" commentaire="" lien=""/>
+			<avg100 nom="Axel Brisse + Matthieu Aubert" temps="25.22" commentaire="" lien=""/>
 		</event>
 		<event nom="Team Solve Duo">
 			<single nom="Juliette Sébastien + Roderic Blazy" temps="7.91" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=265623#p265623"/>
