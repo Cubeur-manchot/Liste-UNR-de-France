@@ -5,9 +5,9 @@ UNR = Unofficial National Record (records de France non officiels)
 Ceci est la liste UNR de France, recensant les records de France réalisés chez soi ou en compétition.
 
 N'hésitez pas à me contacter :
-- via un MP sur le Forum Francocube :
-- via le channel UNR sur le Forum Francocube :
-- via le Serveur Discord des Cubeurs Francophones :
+- via un MP sur le Forum Francocube : https://forum.francocube.com/ucp.php?i=pm&mode=compose&u=4736
+- via le channel UNR sur le Forum Francocube : https://forum.francocube.com/posting.php?mode=reply&f=6&t=12025
+- via le Serveur Discord des Cubeurs Francophones : https://discordapp.com/channels/329175643877015553/432811075549790239 (mentionnez moi @Cubeur-manchot dans le channel event correspondant ou dans #general_cubes)
 - via un MP sur Discord : Cubeur-manchot#7706
 - en commentant le dernier commit de ce repo GitHub
 
