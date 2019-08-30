@@ -1,44 +1,55 @@
-function buildTdFromRecordTag(recordTag)
+function createTagWithInnerHTML(tagType, tagInnerHTML)
 {
-	// build tdTag, timeDivTag, nameDivTag, commentaryDivTag
-	var tdTag = document.createElement('td');
-	tdTag.className = recordTag.tagName;
-	var timeDivTag = document.createElement('div');
-	timeDivTag.className = 'temps';
-	timeDivTag.innerHTML = (recordTag.getAttribute('temps') != '' ? recordTag.getAttribute('temps') : 'x');
-	var nameDivTag = document.createElement('div');
-	nameDivTag.className = 'nom';
-	nameDivTag.innerHTML = recordTag.getAttribute('nom');
-	if (recordTag.getAttribute('commentaire') != '') {
-		var commentaryDivTag = document.createElement('div');
-		commentaryDivTag.className = 'commentaire';
-		commentaryDivTag.innerHTML = recordTag.getAttribute('commentaire');
-	} else {
-		var commentaryDivTag = undefined;
-	}
-	
-	// build aTag if there is a link, and append tags to aTag or tdTag
-	if (recordTag.getAttribute('lien') != '') {
-		tdTag.className += ' avec_francocube';
-		var aTag = document.createElement('a');
-		aTag.className = "lien_francocube";
-		aTag.href = recordTag.getAttribute('lien');
-		aTag.target = "_blank";
-		aTag.title = "Discussion Francocube";
-		aTag.appendChild(timeDivTag);
-		aTag.appendChild(nameDivTag);
-		if (commentaryDivTag != undefined) {
-			aTag.appendChild(commentaryDivTag);
-		}
-		tdTag.appendChild(aTag);
-	} else {
-		tdTag.appendChild(timeDivTag);
-		tdTag.appendChild(nameDivTag);
-		if (commentaryDivTag != undefined) {
-			tdTag.appendChild(commentaryDivTag);
-		}
-	}
-	return (tdTag);
+	var tag = document.createElement(tagType);
+	tag.innerHTML = tagInnerHTML;
+	return(tag);
+}
+
+function createTagWithClassName(tagType, tagClassName)
+{
+	var tag = document.createElement(tagType);
+	tag.className = tagClassName;
+	return(tag);
+}
+
+function createTagWithIdAndClassName(tagType, tagId, tagClassName)
+{
+	var tag = document.createElement(tagType);
+	tag.id = tagId;
+	tag.className = tagClassName;
+	return(tag);
+}
+
+function createTagWithClassNameHrefTitleTarget(tagType, tagClassName, tagHref, tagTitle, tagTarget)
+{
+	var tag = document.createElement(tagType);
+	tag.className = tagClassName;
+	tag.href = tagHref;
+	tag.title = tagTitle;
+	tag.target = tagTarget;
+	return(tag);
+}
+
+function createTagWithClassNameHrefInnerHTML(tagType, tagClassName, tagHref, tagInnerHTML)
+{
+	var tag = document.createElement(tagType);
+	tag.className = tagClassName;
+	tag.href = tagHref;
+	tag.innerHTML = tagInnerHTML;
+	return(tag);
+}
+
+function createTagWithClassNameAndInnerHTML(tagType, tagClassName, tagInnerHTML)
+{
+	var tag = document.createElement(tagType);
+	tag.className = tagClassName;
+	tag.innerHTML = tagInnerHTML;
+	return(tag);
+}
+
+function createSimpleTag(tagType)
+{
+	return(document.createElement(tagType));
 }
 
 function buildTableFromSection(sectionTag, recordsXMLTag)
@@ -46,14 +57,9 @@ function buildTableFromSection(sectionTag, recordsXMLTag)
 	var tableTag = document.createElement('table');
 	// build header row
 	var trTag = document.createElement('tr');
-	var thTag = document.createElement('th');
-	thTag.innerHTML = 'Épreuve';
-	trTag.appendChild(thTag);
+	trTag.appendChild(createTagWithInnerHTML('th', 'Épreuve'));
 	for (avgType of window.avgTypes) {
-		var avgTypeThTag = document.createElement('th');
-		avgTypeThTag.className = avgType;
-		avgTypeThTag.innerHTML = avgType.charAt(0).toUpperCase() + avgType.substr(1,100);
-		trTag.appendChild(avgTypeThTag);
+		trTag.appendChild(createTagWithClassNameAndInnerHTML('th', avgType, avgType.charAt(0).toUpperCase() + avgType.substr(1,100)));
 	}
 	tableTag.appendChild(trTag);
 	
@@ -63,12 +69,28 @@ function buildTableFromSection(sectionTag, recordsXMLTag)
 		for (var recordEvent of recordsXMLTag.querySelectorAll('event')) {
 			if (recordEvent.getAttribute('nom') == eventName) {
 				var trTag = document.createElement('tr');
-				var tdTag = document.createElement('td');
-				tdTag.className = "nom_epreuve";
-				tdTag.innerHTML = eventName;
-				trTag.appendChild(tdTag);
+				trTag.appendChild(createTagWithClassNameAndInnerHTML('td', 'nom_epreuve', eventName));
 				for (avgType of window.avgTypes) {
-					trTag.appendChild(buildTdFromRecordTag(recordEvent.querySelector(avgType)));
+					var recordTag = recordEvent.querySelector(avgType);
+					var tdTag = createTagWithClassName('td', recordTag.tagName);
+					// build aTag if there is a link, and append tags to aTag or tdTag
+					if (recordTag.getAttribute('lien') != '') {
+						tdTag.className += ' avec_francocube';
+						var aTag = createTagWithClassNameHrefTitleTarget('a', 'lien_francocube', recordTag.getAttribute('lien'), 'Discussion Francocube', '_blank');
+						aTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'temps', (recordTag.getAttribute('temps') != '' ? recordTag.getAttribute('temps') : 'x')));
+						aTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'nom', recordTag.getAttribute('nom')));
+						if (recordTag.getAttribute('commentaire') != '') {
+							aTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'commentaire', recordTag.getAttribute('commentaire')));
+						}
+						tdTag.appendChild(aTag);
+					} else {
+						tdTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'temps', (recordTag.getAttribute('temps') != '' ? recordTag.getAttribute('temps') : 'x')));
+						tdTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'nom', recordTag.getAttribute('nom')));
+						if (recordTag.getAttribute('commentaire') != '') {
+							tdTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'commentaire', recordTag.getAttribute('commentaire')));
+						}
+					}
+					trTag.appendChild(tdTag);
 				}
 				tableTag.appendChild(trTag);
 			}
@@ -82,12 +104,8 @@ function buildRecords(xml_plan, xml_records)
 	var recordsTag = document.querySelector('#records');
 	recordsTag.innerHTML = '';
 	for (var section of xml_plan.querySelectorAll('section')) {
-		var sectionTag = document.createElement('section');
-		sectionTag.id = sectionNameToId(section.getAttribute('nom'));
-		sectionTag.className = "partie";
-		var sectionTitle = document.createElement('h2');
-		sectionTitle.innerHTML = section.getAttribute('nom');
-		sectionTag.appendChild(sectionTitle);
+		var sectionTag = createTagWithIdAndClassName('section', sectionNameToId(section.getAttribute('nom')), 'partie');
+		sectionTag.appendChild(createTagWithInnerHTML('h2', section.getAttribute('nom')));
 		var subsections = section.querySelectorAll('subsection');
 		if (subsections.length == 0) { // compact mode : no subsection
 			var tableTag = buildTableFromSection(section, xml_records);
@@ -95,12 +113,8 @@ function buildRecords(xml_plan, xml_records)
 			recordsTag.appendChild(sectionTag);
 		} else { // normal mode : some subsections in each section
 			for (var subsection of subsections) {
-				var subsectionTag = document.createElement('section');
-				subsectionTag.id = sectionNameToId(subsection.getAttribute('nom'));
-				subsectionTag.className = "sous_partie";
-				var subsectionTitleTag = document.createElement('h3');
-				subsectionTitleTag.innerHTML = subsection.getAttribute('nom');
-				subsectionTag.appendChild(subsectionTitleTag);
+				var subsectionTag = createTagWithIdAndClassName('section', sectionNameToId(subsection.getAttribute('nom')), 'sous_partie');
+				subsectionTag.appendChild(createTagWithInnerHTML('h3', subsection.getAttribute('nom')));
 				var tableTag = buildTableFromSection(subsection, xml_records);
 				subsectionTag.appendChild(tableTag);
 				sectionTag.appendChild(subsectionTag);
@@ -161,40 +175,27 @@ function buildPalmares(recordsXmlTag)
 		totalNbRecords += recordsXmlTag.querySelectorAll(avgType).length;
 	}
 	
-	// build palmares section title
-	var palmaresTitle = document.createElement("h2");
-	palmaresTitle.innerHTML = "Palmarès du nombre d'UNRs";
+	palmares.appendChild(createTagWithInnerHTML('h2', 'Palmarès du nombre d\'UNRs'));
 	var palmaresTable = document.createElement("table");
 	
 	// build palmares table header line
 	var palmaresHeader = document.createElement("tr");
-	var palmaresHeaderPerson = document.createElement("th");
-	var palmaresHeaderUnrCount = document.createElement("th");
-	var palmaresHeaderUnrPercent = document.createElement("th");
-	var palmaresHeaderRecordsSheet = document.createElement("th");
-	palmaresHeaderPerson.innerHTML = "Personne (" + countingArray.length + ")";
-	palmaresHeaderUnrCount.innerHTML = "Nombre d'UNRs (" + totalNbRecords + ")";
-	palmaresHeaderUnrPercent.innerHTML = "Pourcentage des UNRs";
-	palmaresHeaderRecordsSheet.innerHTML = "Page des PB";
-	palmaresHeader.appendChild(palmaresHeaderPerson);
-	palmaresHeader.appendChild(palmaresHeaderUnrCount);
-	palmaresHeader.appendChild(palmaresHeaderUnrPercent);
-	palmaresHeader.appendChild(palmaresHeaderRecordsSheet);
+	palmaresHeader.appendChild(createTagWithInnerHTML('th', 'Personne (' + countingArray.length + ')'));
+	palmaresHeader.appendChild(createTagWithInnerHTML('th', 'Nombre d\'UNRs (' + totalNbRecords + ')'));
+	palmaresHeader.appendChild(createTagWithInnerHTML('th', 'Pourcentage des UNRs'));
+	palmaresHeader.appendChild(createTagWithInnerHTML('th', 'Page des PB'));
 	palmaresTable.appendChild(palmaresHeader);
 	
 	// build rows of the palmares table
 	for (var i = 0; i < countingArray.length; i++) { // un for...in à faire ?
-		var count = countingArray[i].count;
-		var percent = ((100 * count / totalNbRecords) + '').substring(0,4);
-		var recordsSheetLink = "x";
-		var palmaresNewLine = document.createElement("tr");
-		palmaresNewLine.innerHTML = "<td>" + countingArray[i].name + "</td>";
-		palmaresNewLine.innerHTML += "<td>" + count + "</td>";
-		palmaresNewLine.innerHTML += "<td>" + percent + " %</td>";
-		palmaresNewLine.innerHTML += "<td>" +  recordsSheetLink + "</td>";
-		palmaresTable.appendChild(palmaresNewLine);
+		var recordsSheetLink = "x"; // will be intelligent in the future
+		var palmaresLine = document.createElement("tr");
+		palmaresLine.appendChild(createTagWithInnerHTML('td', countingArray[i].name));
+		palmaresLine.appendChild(createTagWithInnerHTML('td', countingArray[i].count));
+		palmaresLine.appendChild(createTagWithInnerHTML('td', ((100 * countingArray[i].count / totalNbRecords) + '').substring(0,4) + ' %'));
+		palmaresLine.appendChild(createTagWithInnerHTML('td', recordsSheetLink));
+		palmaresTable.appendChild(palmaresLine);
 	}
-	palmares.appendChild(palmaresTitle);
 	palmares.appendChild(palmaresTable);
 }
 
@@ -247,10 +248,7 @@ function buildPlan(xmlPlan)
 		//avgTypeFilter.innerHTML = '<div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(' + h + ')"><div class="bouton_interne"></div></div>';
 		avgTypeFilter.innerHTML = '<div class="bouton_externe"><div class="bouton_interne"></div></div>';
 		avgTypeFilter.appendChild(document.createElement('br'));
-		var filterTitle = document.createElement('div');
-		filterTitle.className = 'filtrer_average';
-		filterTitle.innerHTML = avgType;
-		avgTypeFilter.appendChild(filterTitle);
+		avgTypeFilter.appendChild(createTagWithClassNameAndInnerHTML('div', 'filtrer_average', avgType));
 		avgTypeFilters.appendChild(avgTypeFilter);
 	}
 	pagePlan.appendChild(avgTypeFilters);
@@ -262,47 +260,31 @@ function buildPlan(xmlPlan)
 		var nom_section = section.getAttribute('nom');
 		var subsections = section.querySelectorAll('subsection');
 		
-		var plan_partie = document.createElement("div");
-		plan_partie.className = "plan_partie";
+		var plan_partie = createTagWithClassName('div', 'plan_partie');
 		if(compact) {
 			plan_partie.style.width = "130px";
 		} else {
 			plan_partie.style.textAlign = "left";
 		}
 		
-		var externalButton = document.createElement("div");
-		externalButton.className = "bouton_externe";
-		var innerButton = document.createElement("div");
-		innerButton.className = "bouton_interne";
-		externalButton.appendChild(innerButton);
+		var externalButton = createTagWithClassName('div', 'bouton_externe');
+		externalButton.appendChild(createTagWithClassName('div', 'bouton_interne'));
 		plan_partie.appendChild(externalButton);
 		
 		if (compact) {
 			plan_partie.appendChild(document.createElement("br"));
 		}
-		var sectionLink = document.createElement("a");
-		sectionLink.href = '#' + sectionNameToId(nom_section);
-		sectionLink.className = "plan_partie_titre";
-		sectionLink.innerHTML = nom_section;
-		plan_partie.appendChild(sectionLink);
+		plan_partie.appendChild(createTagWithClassNameHrefInnerHTML('a', 'plan_partie_titre', '#' + sectionNameToId(nom_section), nom_section));
 		plan_partie.appendChild(document.createElement("br"));
 		
 		for (let j = 0; j < subsections.length; j++) {
 			var subsection = subsections[j];
-			var plan_sous_partie = document.createElement("div");
-			plan_sous_partie.className = "plan_sous_partie";
-			var bouton_externe = document.createElement("div");
-			bouton_externe.className = "bouton_externe";
-			bouton_externe.onclick = function() { afficher_cacher_bouton_plan_sous_partie(i, j); };
-			var bouton_interne = document.createElement("div");
-			bouton_interne.className = "bouton_interne";
-			bouton_externe.appendChild(bouton_interne);
-			plan_sous_partie.appendChild(bouton_externe);
-			var subsection_link = document.createElement("a");
-			subsection_link.href = "#" + sectionNameToId(subsection.getAttribute('nom'));
-			subsection_link.className = "plan_sous_partie_titre";
-			subsection_link.innerHTML = subsection.getAttribute('nom');
-			plan_sous_partie.appendChild(subsection_link);
+			var plan_sous_partie = createTagWithClassName('div', 'plan_sous_partie');
+			var externalButton = createTagWithClassName('div', 'bouton_externe');
+			externalButton.appendChild(createTagWithClassName('div', 'bouton_interne'));
+			externalButton.onclick = function() { afficher_cacher_bouton_plan_sous_partie(i, j); };
+			plan_sous_partie.appendChild(externalButton);
+			plan_sous_partie.appendChild(createTagWithClassNameHrefInnerHTML('a', 'plan_sous_partie_titre', '#' + sectionNameToId(subsection.getAttribute('nom')), subsection.getAttribute('nom')));
 			plan_partie.appendChild(plan_sous_partie);
 			plan_partie.appendChild(document.createElement("br"));
 		}
@@ -350,7 +332,7 @@ function getXML()
 
 function buildPage()
 {
-	window.avgTypes = new Array('single','mo3','avg5','avg12','avg50','avg100');
+	window.avgTypes = ['single','mo3','avg5','avg12','avg50','avg100'];
 	var xmlDoc = getXML();
 	var xmlTag = xmlDoc.querySelectorAll('xml')[0];
 	var xmlRecordsTag = xmlTag.querySelectorAll('records')[0];
