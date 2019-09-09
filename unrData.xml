@@ -259,8 +259,8 @@
 		</event>
 		<event nom="Clock">
 			<single nom="Gabriel Luthun" temps="3.13" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=273979#p273979"/>
-			<mo3 nom="Gabriel Luthun" temps="4.63" commentaire="3.53, 5.80, 4.56" lien="https://forum.francocube.com/viewtopic.php?p=274977#p274977"/>
-			<avg5 nom="Gabriel Luthun" temps="4.91" commentaire="4.61, (6.887), 5.92, (4.01), 4.20" lien="https://forum.francocube.com/viewtopic.php?p=274980#p274980"/>
+			<mo3 nom="Virgile Perrot" temps="4.56" commentaire="" lien=""/>
+			<avg5 nom="Virgile Perrot" temps="4.82" commentaire="" lien=""/>
 			<avg12 nom="Gabriel Luthun" temps="5.40" commentaire="5.06, (7.39), 4.55, 5.79, 5.72, 5.09, 6.28, 5.52, 5.05, (4.43), 4.98, 5.97" lien="https://forum.francocube.com/viewtopic.php?p=274445#p274445"/>
 			<avg50 nom="Gabriel Luthun" temps="5.91" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=274980#p274980"/>
 			<avg100 nom="Gabriel Luthun" temps="6.36" commentaire="" lien="https://forum.francocube.com/viewtopic.php?p=274980#p274980"/>
