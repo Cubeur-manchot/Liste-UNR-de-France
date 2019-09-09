@@ -235,11 +235,11 @@
 		</event>
 		<event nom="Pyraminx">
 			<single nom="Jules Desjardin" temps="0.94" commentaire="" lien="https://www.youtube.com/watch?v=V1R_-UqBGGg&amp;feature=youtu.be"/>
-			<mo3 nom="Jules Desjardin" temps="1.68" commentaire="1.49, 1.70, 1.85" lien="https://forum.francocube.com/viewtopic.php?p=273643#p273643"/>
-			<avg5 nom="Jules Desjardin" temps="1.73" commentaire="(2.68), 1.63, 1.76, 1.79, (1.53)" lien="https://forum.francocube.com/viewtopic.php?p=273742#p273742"/>
+			<mo3 nom="Diego Alfonso" temps="1.35" commentaire="1.21, 1.36, 1.48" lien=""/>
+			<avg5 nom="Diego Alfonso" temps="1.40" commentaire="1.06, (0.93), 4.11, 1.30, 1.86" lien=""/>
 			<avg12 nom="Jules Desjardin" temps="2.09" commentaire="(1.25), 2.00, 2.59, 1.68, 2.45, 1.65, (4.59), 2.06, 1.58, 2.68, 2.07, 2.33" lien="https://forum.francocube.com/viewtopic.php?p=271257#p271257"/>
-			<avg50 nom="Jules Desjardin" temps="2.49" commentaire="" lien=""/>
-			<avg100 nom="Jules Desjardin" temps="2.61" commentaire="" lien=""/>
+			<avg50 nom="Diego Alfonso" temps="2.29" commentaire="" lien=""/>
+			<avg100 nom="Diego Alfonso" temps="2.40" commentaire="" lien=""/>
 		</event>
 		<event nom="Skewb">
 			<single nom="Thibaud Ou" temps="0.70" commentaire="B' L R' U' R L' B L" lien="https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit?usp=sharing"/>
