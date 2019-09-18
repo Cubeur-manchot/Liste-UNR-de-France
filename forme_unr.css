@@ -77,7 +77,7 @@ td a
 	border: 1px solid grey;
 	border-radius: 3px;
 }
-td:hover > .commentaire { display: inline-block; position: absolute; z-index: 10; }
+td:hover > .commentaire, a:hover > .commentaire { display: inline-block; position: absolute; z-index: 10; }
 
 #stock_xml { display: none; }
 
