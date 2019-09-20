@@ -1,10 +1,20 @@
-function createTagWithInnerHTML(tagType, tagInnerHTML)
+//'use strict'
+
+  /***************************/
+ /*          UTILS          */
+/***************************/
+
+function createTag(tagType)
 {
-	var tag = document.createElement(tagType);
-	tag.innerHTML = tagInnerHTML;
-	return(tag);
+	return (document.createElement(tagType));
 }
 
+function createTagWithId(tagType, tagId)
+{
+	var tag = document.createElement(tagType);
+	tag.id = tagId;
+	return(tag);
+}
 function createTagWithClassName(tagType, tagClassName)
 {
 	var tag = document.createElement(tagType);
@@ -12,11 +22,36 @@ function createTagWithClassName(tagType, tagClassName)
 	return(tag);
 }
 
+function createTagWithInnerHTML(tagType, tagInnerHTML)
+{
+	var tag = document.createElement(tagType);
+	tag.innerHTML = tagInnerHTML;
+	return(tag);
+}
+
+
 function createTagWithIdAndClassName(tagType, tagId, tagClassName)
 {
 	var tag = document.createElement(tagType);
 	tag.id = tagId;
 	tag.className = tagClassName;
+	return(tag);
+}
+
+function createTagWithClassNameAndInnerHTML(tagType, tagClassName, tagInnerHTML)
+{
+	var tag = document.createElement(tagType);
+	tag.className = tagClassName;
+	tag.innerHTML = tagInnerHTML;
+	return(tag);
+}
+
+function createTagWithClassNameHrefInnerHTML(tagType, tagClassName, tagHref, tagInnerHTML)
+{
+	var tag = document.createElement(tagType);
+	tag.className = tagClassName;
+	tag.href = tagHref;
+	tag.innerHTML = tagInnerHTML;
 	return(tag);
 }
 
@@ -30,33 +65,204 @@ function createTagWithClassNameHrefTitleTarget(tagType, tagClassName, tagHref, t
 	return(tag);
 }
 
-function createTagWithClassNameHrefInnerHTML(tagType, tagClassName, tagHref, tagInnerHTML)
+  /***************************/
+ /*     TOGGLE DISPLAY      */
+/***************************/
+
+function toggleCompactMode() // toggle between compact and normal mode
 {
-	var tag = document.createElement(tagType);
-	tag.className = tagClassName;
-	tag.href = tagHref;
-	tag.innerHTML = tagInnerHTML;
-	return(tag);
+	var compactModeButtonOnOffPosition = document.querySelector('#offCompactButton');
+	var xml = window.unrXmlData;
+	if (compactModeButtonOnOffPosition != undefined) { // switch to compact mode
+		var planTag = xml.querySelector('compactPlan');
+		compactModeButtonOnOffPosition.id = 'onCompactButton';
+		compactModeButtonOnOffPosition.innerHTML = 'Repasser en Mode Normal';
+	} else { //switch back to normal mode
+		var compactModeButtonOnOnPosition = document.querySelector('#onCompactButton');
+		var planTag = xml.querySelector('normalPlan');
+		compactModeButtonOnOnPosition.id = 'offCompactButton';
+		compactModeButtonOnOnPosition.innerHTML = 'Passer en Mode Compact';
+	}
+	buildRecords(planTag, xml.querySelector('records'));
+	buildPlan(planTag);
 }
 
-function createTagWithClassNameAndInnerHTML(tagType, tagClassName, tagInnerHTML)
+function toggleDisplayPlan() // toggle between 'none' and 'inline-block' display for #pagePlan box
 {
-	var tag = document.createElement(tagType);
-	tag.className = tagClassName;
-	tag.innerHTML = tagInnerHTML;
-	return(tag);
+	var pagePlan = document.querySelector('#pagePlan');
+	pagePlan.style.display = (pagePlan.style.display == 'none' ? 'inline-block' : 'none');
 }
 
-function createSimpleTag(tagType)
+function toggleDisplayAvgType(avgTypeIndex) // toggle between 'none' and default display for selected avgType
 {
-	return(document.createElement(tagType));
+	var tagsOfThisAvgType = document.querySelectorAll('.' + window.avgTypes[avgTypeIndex]);
+	var innerButton = document.querySelector('#filters').querySelectorAll('.innerButton')[avgTypeIndex];
+	if (tagsOfThisAvgType[0].style.display != 'none') { // if it's displayed, it should be hidden
+		tagsOfThisAvgType.forEach(function(tagToHide) { tagToHide.style.display = 'none'; }); // hide each tag in tagsOfThisAvgType
+		switchToggleButtonToOff(innerButton);
+	} else { // else it's hidden and it should be displayed
+		tagsOfThisAvgType.forEach(function(tagToHide) { tagToHide.style.display = ''; }); // show each tag in tagsOfThisAvgType
+		switchToggleButtonToOn(innerButton);
+	}
+}
+
+function toggleDisplaySection(sectionIndex) {
+	var section = document.querySelectorAll('.recordsSection')[sectionIndex];
+	var innerButton = document.querySelectorAll('.sectionPlan')[sectionIndex].querySelector('.innerButton');
+	toggleDisplaySectionOrSubsection(section, innerButton);
+}
+
+function toggleDisplaySubsection(sectionIndex, subsectionIndex) {
+	var subSection = document.querySelectorAll('.recordsSection')[sectionIndex].querySelectorAll('.recordsSubsection')[subsectionIndex];
+	var innerFilterButton = document.querySelectorAll('.sectionPlan')[sectionIndex].querySelectorAll('.innerButton')[subsectionIndex + 1];
+	toggleDisplaySectionOrSubsection(subSection, innerFilterButton);
+}
+
+function toggleDisplaySectionOrSubsection(sectionOrSubsection, innerButton) // toggle between 'none' and default display for selected section/subsection
+{
+	if (sectionOrSubsection.style.display == '') {
+		sectionOrSubsection.style.display = 'none';
+		switchToggleButtonToOff(innerButton);
+	} else {
+		sectionOrSubsection.style.display = '';
+		switchToggleButtonToOn(innerButton);
+	}
+}
+
+function switchToggleButtonToOn(toggleButton) // switch button from off to on position
+{
+	toggleButton.style.background = 'rgb(100,255,100)';
+	toggleButton.style.transform = 'translate(0px,-4px)';
+}
+
+function switchToggleButtonToOff(toggleButton) // switch button from on to off position
+{
+	toggleButton.style.background = 'rgb(255,100,100)';
+	toggleButton.style.transform = 'translate(22px,-4px)';
+}
+
+  /***************************/
+ /*      BUILDING PAGE      */
+/***************************/
+
+function buildPage()
+{
+	init();
+	buildPlan(window.unrXmlData.querySelector('normalPlan'));
+	buildRecords(window.unrXmlData.querySelector('normalPlan'), window.unrXmlData.querySelector('records'));
+	buildPalmares(window.unrXmlData.querySelector('records'));
+}
+
+function init()
+{
+	// initialize records avgTypes
+	window.avgTypes = ['single','mo3','avg5','avg12','avg50','avg100'];
+	
+	// initialize records data
+	if(window.XMLHttpRequest) {
+		var xmlhttp = new XMLHttpRequest();
+	} else {
+		var xmlhttp = new activeXObject('Microsoft.XMLHTTP');
+	}
+	xmlhttp.open('get', 'unrData.xml', false);
+	xmlhttp.send();
+	var xmlDoc = xmlhttp.responseXML;
+	window.unrXmlData = xmlDoc.querySelector('xml');
+}
+
+
+/*
+TO DOUX buildPlan :
+- trouver comment accéder au this pour
+- ne plus mettre de paramètre i ou j dans les toggle display des buttons
+- pouvoir transformer le for en for of
+- rajouter l'id de la section dans l'id de la subsection (faire un id composé)
+- uniformiser le toggle display des sections et subsections en cherchant l'id qui sera unique
+- créer une méthode à part pour créer un bouton et l'appeler 2 fois (1 fois pour le plan section et 1 fois pour le plan subsection)
+*/
+function buildPlan(xmlPlan)
+{
+	var pagePlan = document.querySelector('#pagePlan');
+	pagePlan.innerHTML = '';
+	var compact = document.querySelector('#onCompactButton') != undefined;
+	
+	// add filters for single, mo3, avg5...
+	var avgTypeFilters = createTagWithId('div', 'filters');
+	for (let avgTypeIndex in window.avgTypes) {
+		var avgTypeFilter = createTagWithClassName('div', 'avgTypeFilter');
+		var externalButton = createTagWithClassName('div', 'externalButton');
+		externalButton.appendChild(createTagWithClassName('div', 'innerButton'));
+		externalButton.onclick = function() { toggleDisplayAvgType(avgTypeIndex); };
+		avgTypeFilter.appendChild(externalButton);
+		avgTypeFilter.appendChild(createTag('br'));
+		avgTypeFilter.appendChild(createTagWithClassNameAndInnerHTML('div', 'avgTypeFilterName', window.avgTypes[avgTypeIndex]));
+		avgTypeFilters.appendChild(avgTypeFilter);
+	}
+	pagePlan.appendChild(avgTypeFilters);
+	
+	// add filter for each section
+	var sections = xmlPlan.querySelectorAll('section');
+	for (let i = 0; i < sections.length; i++) {
+	//for (var i in sections) {
+		var section = sections[i];
+		var sectionPlan = createTagWithClassName('div', 'sectionPlan');
+		var externalButton = createTagWithClassName('div', 'externalButton');
+		externalButton.appendChild(createTagWithClassName('div', 'innerButton'));
+		externalButton.onclick = function() { toggleDisplaySection(i); };
+		sectionPlan.appendChild(externalButton);
+		if (compact) {
+			sectionPlan.style.width = '130px';
+			sectionPlan.appendChild(createTag('br'));
+		} else {
+			sectionPlan.style.textAlign = 'left';
+		}
+		sectionPlan.appendChild(createTagWithClassNameHrefInnerHTML('a', 'sectionPlanTitle', '#' + sectionNameToId(section.getAttribute('nom')), section.getAttribute('nom')));
+		sectionPlan.appendChild(createTag('br'));
+		
+		// add filter for each subsection
+		var subsections = section.querySelectorAll('subsection');
+		for (let j = 0; j < subsections.length; j++) {
+			var subsection = subsections[j];
+			var subsectionPlan = createTagWithClassName('div', 'subsectionPlan');
+			var externalButton = createTagWithClassName('div', 'externalButton');
+			externalButton.appendChild(createTagWithClassName('div', 'innerButton'));
+			externalButton.onclick = function() { toggleDisplaySubsection(i, j); };
+			subsectionPlan.appendChild(externalButton);
+			subsectionPlan.appendChild(createTagWithClassNameHrefInnerHTML('a', 'subsectionPlanTitle', '#' + sectionNameToId(subsection.getAttribute('nom')), subsection.getAttribute('nom')));
+			sectionPlan.appendChild(subsectionPlan);
+			sectionPlan.appendChild(createTag('br'));
+		}
+		pagePlan.appendChild(sectionPlan);
+	}
+}
+
+function buildRecords(xmlPlan, xmlRecords)
+{
+	var recordsTag = document.querySelector('#records');
+	recordsTag.innerHTML = '';
+	for (var section of xmlPlan.querySelectorAll('section')) {
+		var sectionTag = createTagWithIdAndClassName('section', sectionNameToId(section.getAttribute('nom')), 'recordsSection');
+		sectionTag.appendChild(createTagWithInnerHTML('h2', section.getAttribute('nom')));
+		if (section.querySelector('subsection') == undefined) { // compact mode : no subsection
+			sectionTag.appendChild(buildTableFromSection(section, xmlRecords));
+		} else { // normal mode : some subsections in each section
+			for (var subsection of section.querySelectorAll('subsection')) {
+				var subsectionTag = createTagWithIdAndClassName('section', sectionNameToId(subsection.getAttribute('nom')), 'recordsSubsection');
+				subsectionTag.appendChild(createTagWithInnerHTML('h3', subsection.getAttribute('nom')));
+				subsectionTag.appendChild(buildTableFromSection(subsection, xmlRecords));
+				sectionTag.appendChild(subsectionTag);
+			}
+		}
+		recordsTag.appendChild(sectionTag);
+	}
 }
 
 function buildTableFromSection(sectionTag, recordsXMLTag)
 {
-	var tableTag = document.createElement('table');
+	var tableTag = createTag('table');
+	
 	// build header row
-	var trTag = document.createElement('tr');
+	var trTag = createTag('tr');
 	trTag.appendChild(createTagWithInnerHTML('th', 'Épreuve'));
 	for (avgType of window.avgTypes) {
 		trTag.appendChild(createTagWithClassNameAndInnerHTML('th', avgType, avgType.charAt(0).toUpperCase() + avgType.substr(1,100)));
@@ -67,69 +273,38 @@ function buildTableFromSection(sectionTag, recordsXMLTag)
 	for (var planEvent of sectionTag.querySelectorAll('event')) {
 		var eventName = planEvent.innerHTML;
 		for (var recordEvent of recordsXMLTag.querySelectorAll('event')) {
-			if (recordEvent.getAttribute('nom') == eventName) {
-				var trTag = document.createElement('tr');
-				trTag.appendChild(createTagWithClassNameAndInnerHTML('td', 'nom_epreuve', eventName));
-				for (avgType of window.avgTypes) {
-					var recordTag = recordEvent.querySelector(avgType);
-					var tdTag = createTagWithClassName('td', recordTag.tagName);
-					// build aTag if there is a link, and append tags to aTag or tdTag
-					if (recordTag.getAttribute('lien') != '') {
-						tdTag.className += ' avec_francocube';
-						var aTag = createTagWithClassNameHrefTitleTarget('a', 'lien_francocube', recordTag.getAttribute('lien'), 'Discussion Francocube', '_blank');
-						aTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'temps', (recordTag.getAttribute('temps') != '' ? recordTag.getAttribute('temps') : 'x')));
-						aTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'nom', recordTag.getAttribute('nom')));
-						if (recordTag.getAttribute('commentaire') != '') {
-							aTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'commentaire', recordTag.getAttribute('commentaire')));
-						}
-						tdTag.appendChild(aTag);
-					} else {
-						tdTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'temps', (recordTag.getAttribute('temps') != '' ? recordTag.getAttribute('temps') : 'x')));
-						tdTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'nom', recordTag.getAttribute('nom')));
-						if (recordTag.getAttribute('commentaire') != '') {
-							tdTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'commentaire', recordTag.getAttribute('commentaire')));
-						}
-					}
-					trTag.appendChild(tdTag);
-				}
-				tableTag.appendChild(trTag);
+			if (recordEvent.getAttribute('nom') != eventName) {
+				continue;
 			}
+			var trTag = createTag('tr');
+			trTag.appendChild(createTagWithClassNameAndInnerHTML('td', 'eventName', eventName));
+			for (avgType of window.avgTypes) {
+				var recordTag = recordEvent.querySelector(avgType);
+				var tdTag = createTagWithClassName('td', recordTag.tagName);
+				// build aTag if there is a link, and append tags to aTag or tdTag
+				if (recordTag.getAttribute('lien') != '') {
+					tdTag.className += ' avec_francocube';
+					var aTag = createTagWithClassNameHrefTitleTarget('a', 'lien_francocube', recordTag.getAttribute('lien'), 'Discussion Francocube', '_blank');
+					aTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'temps', (recordTag.getAttribute('temps') != '' ? recordTag.getAttribute('temps') : 'x')));
+					aTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'nom', recordTag.getAttribute('nom')));
+					if (recordTag.getAttribute('commentaire') != '') {
+						aTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'commentaire', recordTag.getAttribute('commentaire')));
+					}
+					tdTag.appendChild(aTag);
+				} else {
+					tdTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'temps', (recordTag.getAttribute('temps') != '' ? recordTag.getAttribute('temps') : 'x')));
+					tdTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'nom', recordTag.getAttribute('nom')));
+					if (recordTag.getAttribute('commentaire') != '') {
+						tdTag.appendChild(createTagWithClassNameAndInnerHTML('div', 'commentaire', recordTag.getAttribute('commentaire')));
+					}
+				}
+				trTag.appendChild(tdTag);
+			}
+			tableTag.appendChild(trTag);
+			break;
 		}
 	}
 	return (tableTag);
-}
-
-function buildRecords(xml_plan, xml_records)
-{
-	var recordsTag = document.querySelector('#records');
-	recordsTag.innerHTML = '';
-	for (var section of xml_plan.querySelectorAll('section')) {
-		var sectionTag = createTagWithIdAndClassName('section', sectionNameToId(section.getAttribute('nom')), 'partie');
-		sectionTag.appendChild(createTagWithInnerHTML('h2', section.getAttribute('nom')));
-		var subsections = section.querySelectorAll('subsection');
-		if (subsections.length == 0) { // compact mode : no subsection
-			var tableTag = buildTableFromSection(section, xml_records);
-			sectionTag.appendChild(tableTag);
-			recordsTag.appendChild(sectionTag);
-		} else { // normal mode : some subsections in each section
-			for (var subsection of subsections) {
-				var subsectionTag = createTagWithIdAndClassName('section', sectionNameToId(subsection.getAttribute('nom')), 'sous_partie');
-				subsectionTag.appendChild(createTagWithInnerHTML('h3', subsection.getAttribute('nom')));
-				var tableTag = buildTableFromSection(subsection, xml_records);
-				subsectionTag.appendChild(tableTag);
-				sectionTag.appendChild(subsectionTag);
-			}
-			recordsTag.appendChild(sectionTag);
-		}
-	}
-}
-
-function sectionNameToId(s)
-{
-	while(s.includes(' ')) {
-		s = s.replace(' ','_');
-	}
-	return(s);
 }
 
 function buildPalmares(recordsXmlTag)
@@ -176,10 +351,10 @@ function buildPalmares(recordsXmlTag)
 	}
 	
 	palmares.appendChild(createTagWithInnerHTML('h2', 'Palmarès du nombre d\'UNRs'));
-	var palmaresTable = document.createElement("table");
+	var palmaresTable = createTag('table');
 	
 	// build palmares table header line
-	var palmaresHeader = document.createElement("tr");
+	var palmaresHeader = createTag('tr');
 	palmaresHeader.appendChild(createTagWithInnerHTML('th', 'Personne (' + countingArray.length + ')'));
 	palmaresHeader.appendChild(createTagWithInnerHTML('th', 'Nombre d\'UNRs (' + totalNbRecords + ')'));
 	palmaresHeader.appendChild(createTagWithInnerHTML('th', 'Pourcentage des UNRs'));
@@ -187,176 +362,23 @@ function buildPalmares(recordsXmlTag)
 	palmaresTable.appendChild(palmaresHeader);
 	
 	// build rows of the palmares table
-	for (var i = 0; i < countingArray.length; i++) { // un for...in à faire ?
-		var recordsSheetLink = "x"; // will be intelligent in the future
-		var palmaresLine = document.createElement("tr");
-		palmaresLine.appendChild(createTagWithInnerHTML('td', countingArray[i].name));
-		palmaresLine.appendChild(createTagWithInnerHTML('td', countingArray[i].count));
-		palmaresLine.appendChild(createTagWithInnerHTML('td', ((100 * countingArray[i].count / totalNbRecords) + '').substring(0,4) + ' %'));
+	//for (var i = 0; i < countingArray.length; i++) { // un for...in à faire ?
+	for (var palmaresRowIndex in countingArray) {
+		var recordsSheetLink = 'x'; // will be intelligent in the future
+		var palmaresLine = createTag('tr');
+		palmaresLine.appendChild(createTagWithInnerHTML('td', countingArray[palmaresRowIndex].name));
+		palmaresLine.appendChild(createTagWithInnerHTML('td', countingArray[palmaresRowIndex].count));
+		palmaresLine.appendChild(createTagWithInnerHTML('td', ((100 * countingArray[palmaresRowIndex].count / totalNbRecords) + '').substring(0,4) + ' %'));
 		palmaresLine.appendChild(createTagWithInnerHTML('td', recordsSheetLink));
 		palmaresTable.appendChild(palmaresLine);
 	}
 	palmares.appendChild(palmaresTable);
 }
 
-function afficher_cacher_bouton_filtrer(avgTypeIndex)
+function sectionNameToId(s)
 {
-	var tagsOfThisAvgType = document.querySelector('.' + window.avgTypes[avgTypeIndex]);
-	var innerButton = document.querySelector('#filtrer').querySelectorAll('.bouton_interne')[avgTypeIndex];
-	if (tagsOfThisAvgType[0].style.display != 'none') { // if it's displayed, it should be hidden
-		for (var tagToHide of tagsOfThisAvgType) { // forEach ?
-			tagToHide.style.display = 'none';
-		}
-		switchToggleButtonToOff(innerButton);
-	} else { // else it's hidden and it should be displayed
-		for (var tagToDisplay of tagsOfThisAvgType) { // forEach ?
-			tagToDisplay.style.display = '';
-		}
-		switchToggleButtonToOn(innerButton);
+	while(s.includes(' ')) {
+		s = s.replace(' ','_');
 	}
+	return(s);
 }
-
-function toggleDisplayPlan() // toggle between 'none' and 'inline-block' display
-{
-	var pagePlan = document.querySelector('#pagePlan');
-	pagePlan.style.display = (pagePlan.style.display == 'none' ? 'inline-block' : 'none');
-}
-
-function switchToggleButtonToOn(toggleButton)
-{
-	toggleButton.style.background = 'rgb(100,255,100)';
-	toggleButton.style.transform = 'translate(0px,-2px)';
-}
-
-function switchToggleButtonToOff(toggleButton)
-{
-	toggleButton.style.background = 'rgb(255,100,100)';
-	toggleButton.style.transform = 'translate(22px,-2px)';
-}
-
-function buildPlan(xmlPlan)
-{
-	var pagePlan = document.querySelector('#pagePlan');
-	pagePlan.innerHTML = '';
-	// add filters for single, mo3, avg5...
-	var avgTypeFilters = document.createElement('div');
-	avgTypeFilters.id = "filtrer";
-	for (var avgType of window.avgTypes) {
-		var avgTypeFilter = document.createElement('div');
-		avgTypeFilter.className = 'filtrer_partie';
-		//////////////////////////////////// ALERTE ! /////////// NE PAS SUPPRIMER LE COMMENTAIRE JUSTE EN-DESSOUS ////////// BOUTON A REBRANCHER ///////////
-		//avgTypeFilter.innerHTML = '<div class="bouton_externe" onclick="afficher_cacher_bouton_filtrer(' + h + ')"><div class="bouton_interne"></div></div>';
-		avgTypeFilter.innerHTML = '<div class="bouton_externe"><div class="bouton_interne"></div></div>';
-		avgTypeFilter.appendChild(document.createElement('br'));
-		avgTypeFilter.appendChild(createTagWithClassNameAndInnerHTML('div', 'filtrer_average', avgType));
-		avgTypeFilters.appendChild(avgTypeFilter);
-	}
-	pagePlan.appendChild(avgTypeFilters);
-	
-	var compact = document.querySelector('#bouton_compact_on') != undefined;
-	var sections = xmlPlan.querySelectorAll('section');
-	for (let i = 0; i < sections.length; i++) {
-		var section = sections[i];
-		var nom_section = section.getAttribute('nom');
-		var subsections = section.querySelectorAll('subsection');
-		
-		var plan_partie = createTagWithClassName('div', 'plan_partie');
-		if(compact) {
-			plan_partie.style.width = "130px";
-		} else {
-			plan_partie.style.textAlign = "left";
-		}
-		
-		var externalButton = createTagWithClassName('div', 'bouton_externe');
-		externalButton.appendChild(createTagWithClassName('div', 'bouton_interne'));
-		plan_partie.appendChild(externalButton);
-		
-		if (compact) {
-			plan_partie.appendChild(document.createElement("br"));
-		}
-		plan_partie.appendChild(createTagWithClassNameHrefInnerHTML('a', 'plan_partie_titre', '#' + sectionNameToId(nom_section), nom_section));
-		plan_partie.appendChild(document.createElement("br"));
-		
-		for (let j = 0; j < subsections.length; j++) {
-			var subsection = subsections[j];
-			var plan_sous_partie = createTagWithClassName('div', 'plan_sous_partie');
-			var externalButton = createTagWithClassName('div', 'bouton_externe');
-			externalButton.appendChild(createTagWithClassName('div', 'bouton_interne'));
-			externalButton.onclick = function() { afficher_cacher_bouton_plan_sous_partie(i, j); };
-			plan_sous_partie.appendChild(externalButton);
-			plan_sous_partie.appendChild(createTagWithClassNameHrefInnerHTML('a', 'plan_sous_partie_titre', '#' + sectionNameToId(subsection.getAttribute('nom')), subsection.getAttribute('nom')));
-			plan_partie.appendChild(plan_sous_partie);
-			plan_partie.appendChild(document.createElement("br"));
-		}
-		pagePlan.appendChild(plan_partie);
-		var bouton_externe = plan_partie.querySelector('.bouton_externe');
-		bouton_externe.onclick = function() { afficher_cacher_bouton_plan(i); };
-	}
-}
-
-function afficher_cacher_bouton_plan(i) {
-	var category = document.querySelectorAll('.partie')[i];
-	var innerButton = document.querySelectorAll('.plan_partie')[i].querySelector('.bouton_interne');
-	toggleDisplayCategory(category, innerButton);
-}
-
-function afficher_cacher_bouton_plan_sous_partie(column, row) {
-	var subCategory = document.querySelectorAll('.partie')[column].querySelectorAll('.sous_partie')[row];
-	var innerButton = document.querySelectorAll('.plan_partie')[column].querySelectorAll('.bouton_interne')[row+1];
-	toggleDisplayCategory(subCategory, innerButton);
-}
-
-function toggleDisplayCategory(category, innerButton)
-{
-	if (category.style.display == '') {
-		category.style.display = 'none';
-		switchToggleButtonToOff(innerButton);
-	} else {
-		category.style.display = '';
-		switchToggleButtonToOn(innerButton);
-	}
-}
-
-function getXML()
-{
-	if(window.XMLHttpRequest) {
-		var xmlhttp = new XMLHttpRequest();
-	} else {
-		var xmlhttp = new activeXObject('Microsoft.XMLHTTP');
-	}
-	xmlhttp.open('get', 'unrData.xml', false);
-	xmlhttp.send();
-	var xmlDoc = xmlhttp.responseXML;
-	return(xmlDoc);
-}
-
-function buildPage()
-{
-	window.avgTypes = ['single','mo3','avg5','avg12','avg50','avg100'];
-	var xmlDoc = getXML();
-	var xmlTag = xmlDoc.querySelectorAll('xml')[0];
-	var xmlRecordsTag = xmlTag.querySelectorAll('records')[0];
-	var xmlNormalPlanTag = xmlTag.querySelectorAll('normalPlan')[0];
-	buildPalmares(xmlRecordsTag);
-	buildPlan(xmlNormalPlanTag);
-	buildRecords(xmlNormalPlanTag, xmlRecordsTag);
-}
-
-function toggleCompactMode()
-{
-	var compactModeButtonOnOffPosition = document.querySelector('#bouton_compact_off');
-	var xml = getXML();
-	if (compactModeButtonOnOffPosition != undefined) { // switch to compact mode
-		var planTag = xml.querySelectorAll('compactPlan')[0];
-		compactModeButtonOnOffPosition.id = 'bouton_compact_on';
-		compactModeButtonOnOffPosition.innerHTML = 'Repasser en Mode Normal';
-	} else { //switch back to normal mode
-		var compactModeButtonOnOnPosition = document.querySelector('#bouton_compact_on');
-		var planTag = xml.querySelectorAll('normalPlan')[0];
-		compactModeButtonOnOnPosition.id = 'bouton_compact_off';
-		compactModeButtonOnOnPosition.innerHTML = 'Passer en Mode Compact';
-	}
-	buildRecords(planTag, xml.querySelectorAll('records')[0]);
-	buildPlan(planTag);
-}
-

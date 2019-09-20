@@ -2,8 +2,8 @@
 
 body { margin: 0px; padding: 0px; background-color: #DDF2FE; }
 section { display: block; margin: 30px; padding: 0px; }
-section section { display: block; margin: 10px 0px 10px 0px; }
-.partie { display: block; }
+.recordsSubsection { display: block; margin: 10px 0px 10px 0px; }
+.recordsSection { display: block; }
 h1
 {
 	margin-top: 15px;
@@ -67,7 +67,7 @@ td a
 	color: black;
 	text-decoration: none;
 }
-.nom_epreuve { width: 200px; }
+.eventName { min-width: 150px; }
 .commentaire
 {
 	display: none;
@@ -77,12 +77,12 @@ td a
 	border: 1px solid grey;
 	border-radius: 3px;
 }
-td:hover > .commentaire, a:hover > .commentaire { display: inline-block; position: absolute; z-index: 10; }
+a:hover > .commentaire, td:hover > .commentaire { display: inline-block; position: absolute; z-index: 10; }
 
 #stock_xml { display: none; }
 
 /*____________ PLAN DE PAGE, FILTRER ET MODE COMPACT ____________*/
-#bouton_filtrer, #bouton_compact_off, #bouton_compact_on
+#bouton_filtrer, #offCompactButton, #onCompactButton
 {
 	display: inline-block;
 	vertical-align: top;
@@ -100,8 +100,8 @@ td:hover > .commentaire, a:hover > .commentaire { display: inline-block; positio
 }
 
 #bouton_filtrer { background-color: rgb(100,200,100); }
-#bouton_compact_off { background-color: rgb(100,100,200); }
-#bouton_compact_on { background-color: rgb(150,150,200); }
+#offCompactButton { background-color: rgb(100,100,200); }
+#onCompactButton { background-color: rgb(150,150,200); }
 
 #pagePlan
 {
@@ -115,17 +115,17 @@ td:hover > .commentaire, a:hover > .commentaire { display: inline-block; positio
 	background-color: rgb(200,255,200);
 }
 
-.plan_partie { display: inline-block; vertical-align: top; margin: 0px; padding: 5px; }
+.sectionPlan { display: inline-block; vertical-align: top; margin: 0px; padding: 5px; }
+.sectionPlanTitle { display: inline-block; vertical-align: top; margin: 0px 10px 10px 10px; }
 
-.plan_partie_titre { display: inline-block; vertical-align: middle; margin: 0px 10px 10px 10px; }
-.plan_sous_partie { display: inline-block; text-align: center; margin: 3px 0px 0px 15px; padding: 0px; }
-.plan_sous_partie_titre { display: inline-block; vertical-align: middle; margin: 0px 0px 0px 10px; }
+.subsectionPlan { display: inline-block; text-align: center; margin: 3px 0px 0px 15px; padding: 0px; }
+.subsectionPlanTitle { display: inline-block; vertical-align: middle; margin: 0px 0px 0px 10px; }
 
-#filtrer { border-bottom: 1px solid rgb(170,170,170); text-align: center; }
-.filtrer_partie { display: inline-block; margin: 5px 5px 0px 5px; }
-.filtrer_average { display: inline-block; vertical-align: middle; margin: 5px; }
+#filters { border-bottom: 1px solid rgb(170,170,170); text-align: center; }
+.avgTypeFilter { display: inline-block; margin: 5px 5px 0px 5px; }
+.avgTypeFilterName { display: inline-block; vertical-align: middle; margin: 5px; }
 
-.bouton_externe
+.externalButton
 {
 	display: inline-block;
 	vertical-align: middle;
@@ -139,12 +139,13 @@ td:hover > .commentaire, a:hover > .commentaire { display: inline-block; positio
 	border-radius: 50px;
 	cursor: pointer;
 }
-.plan_partie > .bouton_externe { vertical-align: middle; }
-.bouton_interne
+.sectionPlan > .externalButton { vertical-align: middle; }
+.innerButton
 {
 	display: inline-block;
+	vertical-align: middle;
 	position: relative;
-	transform: translate(0px,-2px);
+	transform: translate(0px,-4px);
 	width: 12px;
 	height: 12px;
 	border-radius: 50px;
