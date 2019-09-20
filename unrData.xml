@@ -209,6 +209,14 @@
 			<avg50 nom="" temps="" commentaire="" lien=""/>
 			<avg100 nom="" temps="" commentaire="" lien=""/>
 		</event>
+		<event nom="9x9x9 Blindfolded">
+			<single nom="Matteo Chancerel" temps="2:41:00.00" commentaire="[1:24:00.00]" lien="https://youtu.be/IBJ4KsB8gqY"/>
+			<mo3 nom="" temps="" commentaire="" lien=""/>
+			<avg5 nom="" temps="" commentaire="" lien=""/>
+			<avg12 nom="" temps="" commentaire="" lien=""/>
+			<avg50 nom="" temps="" commentaire="" lien=""/>
+			<avg100 nom="" temps="" commentaire="" lien=""/>
+		</event>
 		<event nom="Relay 2-5 Blindfolded">
 			<single nom="William Phommaha" temps="13:21.05" commentaire="[7:20.12]" lien=""/>
 			<mo3 nom="" temps="" commentaire="" lien=""/>
@@ -408,6 +416,7 @@
 				<event>6x6x6 Blindfolded</event>
 				<event>7x7x7 Blindfolded</event>
 				<event>8x8x8 Blindfolded</event>
+				<event>9x9x9 Blindfolded</event>
 				<event>Megaminx Blindfolded</event>
 				<event>Relay 2-5 Blindfolded</event>
 			</subsection>
@@ -453,6 +462,7 @@
 			<event>6x6x6 Blindfolded</event>
 			<event>7x7x7 Blindfolded</event>
 			<event>8x8x8 Blindfolded</event>
+			<event>9x9x9 Blindfolded</event>
 			<event>Megaminx Blindfolded</event>
 			<event>Relay 2-5 Blindfolded</event>
 			<event>3x3x3 Multi-Blindfolded</event>
