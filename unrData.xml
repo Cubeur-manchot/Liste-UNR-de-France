@@ -346,6 +346,12 @@
 			<avg100 nom="" temps="" commentaire="" lien=""/>
 		</event>
 	</records>
+	<pbSheets>
+		<pbSheet name="Alaric Pouchain" link="https://docs.google.com/spreadsheets/d/1-4Ov6rK6aF7wZilGR_2QcByZFJinsywi60El_YPXTwE/edit#gid=0"/>
+		<pbSheet name="Axel Brisse" link="https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing"/>
+		<pbSheet name="Matthieu Aubert" link="https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html"/>
+		<pbSheet name="Thibaud Ou" link="https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit#gid=0"/>
+	</pbSheets>
 	<normalPlan>
 		<section nom="Officiels WCA">
 			<subsection nom="Cubes NxNxN">
