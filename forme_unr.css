@@ -68,7 +68,7 @@ td a
 	text-decoration: none;
 }
 .eventName { min-width: 150px; }
-.commentaire
+.commentary
 {
 	display: none;
 	transform: translate(20px,-43px);
@@ -77,7 +77,7 @@ td a
 	border: 1px solid grey;
 	border-radius: 3px;
 }
-a:hover > .commentaire, td:hover > .commentaire { display: inline-block; position: absolute; z-index: 10; }
+a:hover > .commentary, td:hover > .commentary { display: inline-block; position: absolute; z-index: 10; }
 
 #stock_xml { display: none; }
 
