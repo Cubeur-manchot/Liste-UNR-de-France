@@ -26,10 +26,9 @@ function createTagWithClassName(tagType, tagClassName)
 function createTagWithInnerHTML(tagType, tagInnerHTML)
 {
 	let tag = document.createElement(tagType);
-	tag.innerHTML = tagInnerHTML;
+	tag.textContent = tagInnerHTML;
 	return tag;
 }
-
 
 function createTagWithIdAndClassName(tagType, tagId, tagClassName)
 {
@@ -43,7 +42,7 @@ function createTagWithClassNameAndInnerHTML(tagType, tagClassName, tagInnerHTML)
 {
 	let tag = document.createElement(tagType);
 	tag.className = tagClassName;
-	tag.innerHTML = tagInnerHTML;
+	tag.textContent = tagInnerHTML;
 	return tag;
 }
 
@@ -52,17 +51,7 @@ function createTagWithClassNameHrefInnerHTML(tagType, tagClassName, tagHref, tag
 	let tag = document.createElement(tagType);
 	tag.className = tagClassName;
 	tag.href = tagHref;
-	tag.innerHTML = tagInnerHTML;
-	return tag;
-}
-
-function createTagWithClassNameHrefTitleTarget(tagType, tagClassName, tagHref, tagTitle, tagTarget)
-{
-	let tag = document.createElement(tagType);
-	tag.className = tagClassName;
-	tag.href = tagHref;
-	tag.title = tagTitle;
-	tag.target = tagTarget;
+	tag.textContent = tagInnerHTML;
 	return tag;
 }
 
@@ -80,12 +69,12 @@ function toggleCompactMode() // toggle between compact and normal mode
 	//if (compactModeButtonOnOnPosition === null) { // switch to compact mode
 		planTag = xml.querySelector("compactPlan");
 		compactModeButtonOnOffPosition.id = "onCompactButton";
-		compactModeButtonOnOffPosition.innerHTML = "Repasser en Mode Normal";
+		compactModeButtonOnOffPosition.textContent = "Repasser en Mode Normal";
 	} else { //switch back to normal mode
 		compactModeButtonOnOnPosition = document.querySelector("#onCompactButton");
 		planTag = xml.querySelector("normalPlan");
 		compactModeButtonOnOnPosition.id = "offCompactButton";
-		compactModeButtonOnOnPosition.innerHTML = "Passer en Mode Compact";
+		compactModeButtonOnOnPosition.textContent = "Passer en Mode Compact";
 	}
 	buildRecords(planTag, xml.querySelector("records"));
 	buildPlan(planTag);
@@ -103,7 +92,7 @@ function toggleDisplayPlan() // toggle between 'none' and 'inline-block' display
 
 function toggleDisplayAvgType(externalButton) // toggle between 'none' and default display for selected avgType
 {
-	let tagsOfThisAvgType = document.querySelectorAll("." + externalButton.parentNode.querySelector(".avgTypeFilterName").innerHTML);
+	let tagsOfThisAvgType = document.querySelectorAll("." + externalButton.parentNode.querySelector(".avgTypeFilterName").textContent);
 	if (tagsOfThisAvgType[0].style.display === "none") { // else it's hidden and it should be displayed
 		// show each tag in tagsOfThisAvgType
 		tagsOfThisAvgType.forEach(function (tagToHide) { tagToHide.style.display = ""; });
@@ -117,7 +106,7 @@ function toggleDisplayAvgType(externalButton) // toggle between 'none' and defau
 
 function toggleDisplaySectionOrSubsection(externalButton)
 {
-	let sectionOrSubsection = document.querySelector("#" + sectionNameToId(externalButton.parentNode.querySelector("a").innerHTML));
+	let sectionOrSubsection = document.querySelector("#" + sectionNameToId(externalButton.parentNode.querySelector("a").textContent));
 	if (sectionOrSubsection.style.display === "") {
 		sectionOrSubsection.style.display = "none";
 		switchToggleButtonToOff(externalButton.querySelector(".innerButton"));
@@ -149,7 +138,7 @@ function buildPage()
 	buildPlan(window.unrXmlData.querySelector("normalPlan"));
 	document.querySelector("#pagePlan").style.display = "none";
 	buildRecords(window.unrXmlData.querySelector("normalPlan"), window.unrXmlData.querySelector("records"));
-	buildPalmares(window.unrXmlData.querySelector("records"));
+	buildPalmaresSection(window.countingArray);
 }
 
 function init()
@@ -171,22 +160,115 @@ function init()
 
 	// initialize records avgTypes
 	window.avgTypes = ["single","mo3","avg5","avg12","avg50","avg100"];
+
+	// store xml content in window.recordDataBase
+	storeInDataBase();
+
+	// count records for palmares section
+	countRecords(window.unrXmlData.querySelector("records"));
+}
+
+function storeInDataBase()
+{
+	let recordsXmlTag, recordEvent, avgType, recordXmlTag, dataBaseObject, eventName, compactPlanSectionName, normalPlanSectionAndSubsectionName, normalPlanSubsectionName, normalPlanSectionName;
+	window.recordDataBase = [];
+	recordsXmlTag = window.unrXmlData.querySelector("records");
+	for (recordEvent of recordsXmlTag.querySelectorAll("event")) {
+		eventName = recordEvent.getAttribute("eventName");
+		compactPlanSectionName = findCompactPlanSectionNameFromEventName(eventName);
+		normalPlanSectionAndSubsectionName = findNormalPlanSectionAndSubsectionFromEventName(eventName);
+		normalPlanSectionName = normalPlanSectionAndSubsectionName.sectionName;
+		normalPlanSubsectionName = normalPlanSectionAndSubsectionName.subsectionName;
+		for (avgType of window.avgTypes) {
+			recordXmlTag = recordEvent.querySelector(avgType);
+			dataBaseObject = {};
+			dataBaseObject.eventName = eventName;
+			dataBaseObject.avgType = avgType;
+			dataBaseObject.name = recordXmlTag.getAttribute("name");
+			dataBaseObject.time = recordXmlTag.getAttribute("time");
+			if (recordXmlTag.getAttribute("memoTimeList") === null) {
+				dataBaseObject.memoTimeList = "";
+			} else {
+				dataBaseObject.memoTimeList = listToArray(recordXmlTag.getAttribute("memoTimeList"));
+			}
+			dataBaseObject.timeList = listToArray(recordXmlTag.getAttribute("name"));
+			dataBaseObject.scrambleList = listToArray(recordXmlTag.getAttribute("name"));
+			dataBaseObject.date = dateOfString(recordXmlTag.getAttribute("date"));
+			dataBaseObject.youtubeLink = recordXmlTag.getAttribute("youtubeLink");
+			dataBaseObject.francocubeLink = recordXmlTag.getAttribute("francocubeLink");
+			dataBaseObject.compactPlanSection = compactPlanSectionName;
+			dataBaseObject.normalPlanSection = normalPlanSectionName;
+			dataBaseObject.normalPlanSubsection = normalPlanSubsectionName;
+			window.recordDataBase.push(dataBaseObject);
+		}
+	}
+}
+
+function dateOfString(dateString) // build a Date object from a string of the form yyyy-mm-dd
+{
+	return new Date(dateString.substring(0, 4), dateString.substring(5, 7), dateString.substring(8, 10));
+}
+
+function findCompactPlanSectionNameFromEventName(eventName)
+{
+	let section, eventTag;
+	for (section of window.unrXmlData.querySelector("compactPlan").querySelectorAll("section")) {
+		for (eventTag of section.querySelectorAll("event")) {
+			if (eventTag.textContent === eventName) {
+				return section.getAttribute("sectionName");
+			}
+		}
+	}
+	return null;
+}
+
+function findNormalPlanSectionAndSubsectionFromEventName(eventName)
+{
+	let section, subsection, eventTag;
+	for (section of window.unrXmlData.querySelector("normalPlan").querySelectorAll("section")) {
+		for (subsection of section.querySelectorAll("subsection")) {
+			for (eventTag of subsection.querySelectorAll("event")) {
+				if (eventTag.textContent === eventName) {
+					return {sectionName: section.getAttribute("sectionName"), subsectionName: subsection.getAttribute("subsectionName")};
+				}
+			}
+		}
+	}
+	return null;
+}
+
+function listToArray(inputListString) // convert a string of the form "a, b, c" to an array of the form ["a", "b", "c"]
+{
+	let indexOfComma;
+	let outputArray = [];
+	let listString = inputListString;
+	if (listString === "") { // if the list is empty, return an empty array
+		return outputArray;
+	}
+	while (listString.includes(", ")) // else there are at least 1 element, we cut at every ", "
+	{
+		indexOfComma = listString.indexOf(", ");
+		outputArray.push(listString.substring(0, indexOfComma));
+		listString = listString.substring(indexOfComma + 2, 1000);
+	}
+	outputArray.push(listString);
+	return outputArray;
 }
 
 function buildPlan(xmlPlan)
 {
+	let compact, section, sectionName, sectionPlan, sectionExternalButton, subsection, subsectionName, subsectionPlan, subsectionExternalButton;
 	let pagePlan = document.querySelector("#pagePlan");
-	pagePlan.innerHTML = "";
-	
+	pagePlan.textContent = "";
+
 	// add filters for single, mo3, avg5...
 	pagePlan.appendChild(buildAvgTypeFilters());
-	
+
 	// add filter for each section
-	let sections = xmlPlan.querySelectorAll("section");
-	let compact = document.querySelector("#onCompactButton") !== null;
-	for (let section of sections) {
-		let sectionPlan = createTagWithClassName("div", "sectionPlan");
-		let sectionExternalButton = createTagWithClassName("div", "externalButton");
+	compact = document.querySelector("#onCompactButton") !== null;
+	for (section of xmlPlan.querySelectorAll("section")) {
+		sectionPlan = createTagWithClassName("div", "sectionPlan");
+		sectionExternalButton = createTagWithClassName("div", "externalButton");
 		sectionExternalButton.appendChild(createTagWithClassName("div", "innerButton"));
 		sectionExternalButton.onclick = function() { toggleDisplaySectionOrSubsection(this); };
 		sectionPlan.appendChild(sectionExternalButton);
@@ -196,18 +278,19 @@ function buildPlan(xmlPlan)
 		} else {
 			sectionPlan.style.textAlign = "left";
 		}
-		sectionPlan.appendChild(createTagWithClassNameHrefInnerHTML("a", "sectionPlanTitle", "#" + sectionNameToId(section.getAttribute("nom")), section.getAttribute("nom")));
+		sectionName = section.getAttribute("sectionName");
+		sectionPlan.appendChild(createTagWithClassNameHrefInnerHTML("a", "sectionPlanTitle", "#" + sectionNameToId(sectionName), sectionName));
 		sectionPlan.appendChild(createTag("br"));
-		
+
 		// add filter for each subsection
-		let subsections = section.querySelectorAll("subsection");
-		for (let subsection of subsections) {
-			let subsectionPlan = createTagWithClassName("div", "subsectionPlan");
-			let externalButton = createTagWithClassName("div", "externalButton");
-			externalButton.appendChild(createTagWithClassName("div", "innerButton"));
-			externalButton.onclick = function() { toggleDisplaySectionOrSubsection(this); };
-			subsectionPlan.appendChild(externalButton);
-			subsectionPlan.appendChild(createTagWithClassNameHrefInnerHTML("a", "subsectionPlanTitle", "#" + sectionNameToId(subsection.getAttribute("nom")), subsection.getAttribute("nom")));
+		for (subsection of section.querySelectorAll("subsection")) {
+			subsectionPlan = createTagWithClassName("div", "subsectionPlan");
+			subsectionExternalButton = createTagWithClassName("div", "externalButton");
+			subsectionExternalButton.appendChild(createTagWithClassName("div", "innerButton"));
+			subsectionExternalButton.onclick = function() { toggleDisplaySectionOrSubsection(this); };
+			subsectionPlan.appendChild(subsectionExternalButton);
+			subsectionName = subsection.getAttribute("subsectionName");
+			subsectionPlan.appendChild(createTagWithClassNameHrefInnerHTML("a", "subsectionPlanTitle", "#" + sectionNameToId(subsectionName), subsectionName));
 			sectionPlan.appendChild(subsectionPlan);
 			sectionPlan.appendChild(createTag("br"));
 		}
@@ -236,16 +319,16 @@ function buildRecords(xmlPlan, xmlRecords)
 {
 	let section, sectionTag, subsection, subsectionTag;
 	let recordsTag = document.querySelector("#records");
-	recordsTag.innerHTML = "";
+	recordsTag.textContent = "";
 	for (section of xmlPlan.querySelectorAll("section")) {
-		sectionTag = createTagWithIdAndClassName("section", sectionNameToId(section.getAttribute("nom")), "recordsSection");
-		sectionTag.appendChild(createTagWithInnerHTML("h2", section.getAttribute("nom")));
+		sectionTag = createTagWithIdAndClassName("section", sectionNameToId(section.getAttribute("sectionName")), "recordsSection");
+		sectionTag.appendChild(createTagWithInnerHTML("h2", section.getAttribute("sectionName")));
 		if (section.querySelector("subsection") === null) { // compact mode : no subsection
 			sectionTag.appendChild(buildTableFromSection(section, xmlRecords));
 		} else { // normal mode : some subsections in each section
 			for (subsection of section.querySelectorAll("subsection")) {
-				subsectionTag = createTagWithIdAndClassName("section", sectionNameToId(subsection.getAttribute("nom")), "recordsSubsection");
-				subsectionTag.appendChild(createTagWithInnerHTML("h3", subsection.getAttribute("nom")));
+				subsectionTag = createTagWithIdAndClassName("section", sectionNameToId(subsection.getAttribute("subsectionName")), "recordsSubsection");
+				subsectionTag.appendChild(createTagWithInnerHTML("h3", subsection.getAttribute("subsectionName")));
 				subsectionTag.appendChild(buildTableFromSection(subsection, xmlRecords));
 				sectionTag.appendChild(subsectionTag);
 			}
@@ -256,7 +339,7 @@ function buildRecords(xmlPlan, xmlRecords)
 
 function buildTableFromSection(sectionTag, recordsXMLTag)
 {
-	let planEvent, trTag, avgType, recordEvent, recordTag, tdTag;
+	let planEvent, trTag, avgType, recordEvent, recordTag, tdTag, time;
 	let tableTag = createTag("table");
 	
 	// build header row
@@ -269,90 +352,129 @@ function buildTableFromSection(sectionTag, recordsXMLTag)
 	
 	// build normal rows : for each event in sectionTag, look for the corresponding event in recordsXMLTag
 	for (planEvent of sectionTag.querySelectorAll("event")) {
-		for (recordEvent of recordsXMLTag.querySelectorAll("event")) {
-			if (recordEvent.getAttribute("nom") !== planEvent.innerHTML) {
-				continue;
+		recordEvent = findEventRecordXMLTag(planEvent.textContent, recordsXMLTag);
+		trTag = createTag("tr");
+		trTag.appendChild(createTagWithClassNameAndInnerHTML("td", "eventName", planEvent.textContent));
+		for (avgType of window.avgTypes) {
+			recordTag = recordEvent.querySelector(avgType);
+			tdTag = createTagWithClassName("td", recordTag.tagName);
+			time = recordTag.getAttribute("time");
+			if (time === "") {
+				time = "x";
 			}
-			trTag = createTag("tr");
-			trTag.appendChild(createTagWithClassNameAndInnerHTML("td", "eventName", planEvent.innerHTML));
-			for (avgType of window.avgTypes) {
-				recordTag = recordEvent.querySelector(avgType);
-				tdTag = createTagWithClassName("td", recordTag.tagName);
-				tdTag.appendChild(createTagWithClassNameAndInnerHTML("div", "temps", recordTag.getAttribute("temps") !== "" ? recordTag.getAttribute("temps") : "x"));
-				tdTag.appendChild(createTagWithClassNameAndInnerHTML("div", "nom", recordTag.getAttribute("nom")));
-				if (recordTag.getAttribute("commentary") !== "") {
-					tdTag.appendChild(createTagWithClassNameAndInnerHTML("div", "commentary", recordTag.getAttribute("commentary")));
-				}
-				trTag.appendChild(tdTag);
+			tdTag.appendChild(createTagWithClassNameAndInnerHTML("div", "time", time));
+			tdTag.appendChild(createTagWithClassNameAndInnerHTML("div", "name", recordTag.getAttribute("name")));
+			if (recordTag.getAttribute("timeList") !== "") {
+				tdTag.appendChild(createTagWithClassNameAndInnerHTML("div", "commentary", recordTag.getAttribute("timeList")));
 			}
-			tableTag.appendChild(trTag);
-			break;
+			trTag.appendChild(tdTag);
 		}
+		tableTag.appendChild(trTag);
 	}
 	return tableTag;
 }
 
-function buildPalmares(recordsXmlTag)
+function findEventRecordXMLTag(eventNameToSearch, recordsXMLTag)
 {
-	let avgType, recordEvent, name, listOfNamesToUpdate, indexOfPlus, countForThisPerson, totalNbRecords, palmaresHeader, palmaresTable, palmaresLine, countingArrayRow;
-	// count records
-	let countingArray = [];
-	let palmares = document.querySelector("#palmares");
+	let recordEvent;
+	for (recordEvent of recordsXMLTag.querySelectorAll("event")) {
+		if (recordEvent.getAttribute("eventName") === eventNameToSearch) {
+			return recordEvent;
+		}
+	}
+	return null;
+}
+
+function countRecords(recordsXmlTag)
+{
+	let avgType, recordEvent, name, listOfNamesToAdd;
+	window.countingArray = [];
 	for (recordEvent of recordsXmlTag.querySelectorAll("event")) {
 		for (avgType of window.avgTypes) {
-			name = recordEvent.querySelectorAll(avgType)[0].getAttribute("nom");
-			if (name === "") {
-				continue;
-			}
-			listOfNamesToUpdate = [];
-			while(name.includes("+")) {
-				indexOfPlus = name.indexOf("+");
-				listOfNamesToUpdate.push(name.substring(0,indexOfPlus - 1));
-				name = name.substring(indexOfPlus + 2,1000);
-			}
-			listOfNamesToUpdate.push(name);
-
-			// à couper et mettre dans une fonction à part
-			for (name of listOfNamesToUpdate) {
-				for (var j = 0; j < countingArray.length; j++) { // un for...in à faire ?
-					if (name === countingArray[j].name) { // if the name is already in the list, count and ranking should be updated
-						countForThisPerson = ++countingArray[j].count;
-						while (j > 0 && countingArray[j].count > countingArray[j-1].count) {
-							countingArray[j].name = countingArray[j-1].name;
-							countingArray[j].count = countingArray[j-1].count;
-							countingArray[j-1].name = name;
-							countingArray[j-1].count = countForThisPerson;
-							j--;
-						}
-						break;
-					}
-				}
-				if (j === countingArray.length) { // if the name is not in the list, it should be added to it
-					countingArray[j] = {name: name, count: 1};
-				}
+			name = recordEvent.querySelector(avgType).getAttribute("name");
+			if (name !== "") {
+				listOfNamesToAdd = listOfNamesToUpdateFromNameString(name);
+				addNamesInCountingArray(window.countingArray, listOfNamesToAdd);
 			}
 		}
 	}
-	totalNbRecords = 0;
-	for (avgType of window.avgTypes) {
-		totalNbRecords += recordsXmlTag.querySelectorAll(avgType).length;
+}
+
+function listOfNamesToUpdateFromNameString(inputName)
+{
+	let indexOfPlus;
+	let name = inputName;
+	let listOfNamesToUpdate = [];
+	while(name.includes(" + ")) {
+		indexOfPlus = name.indexOf(" + ");
+		listOfNamesToUpdate.push(name.substring(0, indexOfPlus));
+		name = name.substring(indexOfPlus + 3, 1000);
 	}
+	listOfNamesToUpdate.push(name);
+	return listOfNamesToUpdate;
+}
+
+function addNamesInCountingArray(countingArray, listOfNamesToUpdate)
+{
+	let name, count, countingArrayIndex;
+	for (name of listOfNamesToUpdate) {
+		countingArrayIndex = findIndexInCountingArray(countingArray, name);
+		if (countingArrayIndex === -1) { // if the name is not in the list, it should be added to it
+			countingArray.push({name: name, count: 1});
+		} else { // if the name is already in the list, count and ranking should be updated
+			countingArray[countingArrayIndex].count++;
+			count = countingArray[countingArrayIndex].count;
+			while (countingArrayIndex > 0 && countingArray[countingArrayIndex].count > countingArray[countingArrayIndex-1].count) {
+				countingArray[countingArrayIndex].name = countingArray[countingArrayIndex-1].name;
+				countingArray[countingArrayIndex].count = countingArray[countingArrayIndex-1].count;
+				countingArray[countingArrayIndex-1].name = name;
+				countingArray[countingArrayIndex-1].count = count;
+				countingArrayIndex--;
+			}
+		}
+	}
+}
+
+function findIndexInCountingArray(countingArray, name)
+{
+	let countingArrayElement;
+	for (countingArrayElement of countingArray) {
+		if (countingArrayElement.name === name) {
+			return countingArray.indexOf(countingArrayElement);
+		}
+	}
+	return -1;
+}
+
+function buildPalmaresSection(countingArray)
+{
+	let palmaresTable, palmaresHeader, palmaresLine, countingArrayElement, totalNbRecords;
+	let palmares = document.querySelector("#palmares");
+	palmares.textContent = "";
+
+	// count records
+	totalNbRecords = 0;
+	for (countingArrayElement of countingArray) {
+		totalNbRecords += countingArrayElement.count;
+	}
+
+	// build header and table tag
 	palmares.appendChild(createTagWithInnerHTML("h2", "Palmarès du nombre d'UNRs"));
 	palmaresTable = createTag("table");
-	
+
 	// build palmares table header line
 	palmaresHeader = createTag("tr");
 	palmaresHeader.appendChild(createTagWithInnerHTML("th", "Personne (" + countingArray.length + ")"));
 	palmaresHeader.appendChild(createTagWithInnerHTML("th", "Nombre d'UNRs (" + totalNbRecords + ")"));
 	palmaresHeader.appendChild(createTagWithInnerHTML("th", "Pourcentage des UNRs"));
 	palmaresTable.appendChild(palmaresHeader);
-	
+
 	// build rows of the palmares table
-	for (countingArrayRow of countingArray) {
+	for (countingArrayElement of countingArray) {
 		palmaresLine = createTag("tr");
-		palmaresLine.appendChild(createTagWithInnerHTML("td", countingArrayRow.name));
-		palmaresLine.appendChild(createTagWithInnerHTML("td", countingArrayRow.count));
-		palmaresLine.appendChild(createTagWithInnerHTML("td", (100 * countingArrayRow.count / totalNbRecords + "").substring(0,4) + " %"));
+		palmaresLine.appendChild(createTagWithInnerHTML("td", countingArrayElement.name));
+		palmaresLine.appendChild(createTagWithInnerHTML("td", countingArrayElement.count));
+		palmaresLine.appendChild(createTagWithInnerHTML("td", (100 * countingArrayElement.count / totalNbRecords + "").substring(0,4) + " %"));
 		palmaresTable.appendChild(palmaresLine);
 	}
 	palmares.appendChild(palmaresTable);
@@ -361,10 +483,10 @@ function buildPalmares(recordsXmlTag)
 function sectionNameToId(name)
 {
 	let id = name;
-	while(id.includes(" ")) {
+	while (id.includes(" ")) {
 		id = id.replace(" ", "_");
 	}
-	while(id.includes(",")) {
+	while (id.includes(",")) {
 		id = id.replace(",", "");
 	}
 	return id;
