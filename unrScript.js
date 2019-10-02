@@ -76,7 +76,7 @@ function toggleCompactMode() // toggle between compact and normal mode
 		compactModeButtonOnOnPosition.id = "offCompactButton";
 		compactModeButtonOnOnPosition.textContent = "Passer en Mode Compact";
 	}
-	buildRecords(planTag, xml.querySelector("records"));
+	buildRecords(planTag);
 	buildPlan(planTag);
 }
 
@@ -137,7 +137,7 @@ function buildPage()
 	init();
 	buildPlan(window.unrXmlData.querySelector("normalPlan"));
 	document.querySelector("#pagePlan").style.display = "none";
-	buildRecords(window.unrXmlData.querySelector("normalPlan"), window.unrXmlData.querySelector("records"));
+	buildRecords(window.unrXmlData.querySelector("normalPlan"));
 	buildPalmaresSection(window.countingArray);
 }
 
@@ -165,7 +165,7 @@ function init()
 	storeInDataBase();
 
 	// count records for palmares section
-	countRecords(window.unrXmlData.querySelector("records"));
+	countRecords(window.recordDataBase);
 }
 
 function storeInDataBase()
@@ -191,7 +191,7 @@ function storeInDataBase()
 			} else {
 				dataBaseObject.memoTimeList = listToArray(recordXmlTag.getAttribute("memoTimeList"));
 			}
-			dataBaseObject.timeList = listToArray(recordXmlTag.getAttribute("name"));
+			dataBaseObject.timeList = listToArray(recordXmlTag.getAttribute("timeList"));
 			dataBaseObject.scrambleList = listToArray(recordXmlTag.getAttribute("name"));
 			dataBaseObject.date = dateOfString(recordXmlTag.getAttribute("date"));
 			dataBaseObject.youtubeLink = recordXmlTag.getAttribute("youtubeLink");
@@ -315,7 +315,7 @@ function buildAvgTypeFilters()
 	return avgTypeFilters;
 }
 
-function buildRecords(xmlPlan, xmlRecords)
+function buildRecords(xmlPlan)
 {
 	let section, sectionTag, subsection, subsectionTag;
 	let recordsTag = document.querySelector("#records");
@@ -324,12 +324,12 @@ function buildRecords(xmlPlan, xmlRecords)
 		sectionTag = createTagWithIdAndClassName("section", sectionNameToId(section.getAttribute("sectionName")), "recordsSection");
 		sectionTag.appendChild(createTagWithInnerHTML("h2", section.getAttribute("sectionName")));
 		if (section.querySelector("subsection") === null) { // compact mode : no subsection
-			sectionTag.appendChild(buildTableFromSection(section, xmlRecords));
+			sectionTag.appendChild(buildTableFromSection(section));
 		} else { // normal mode : some subsections in each section
 			for (subsection of section.querySelectorAll("subsection")) {
 				subsectionTag = createTagWithIdAndClassName("section", sectionNameToId(subsection.getAttribute("subsectionName")), "recordsSubsection");
 				subsectionTag.appendChild(createTagWithInnerHTML("h3", subsection.getAttribute("subsectionName")));
-				subsectionTag.appendChild(buildTableFromSection(subsection, xmlRecords));
+				subsectionTag.appendChild(buildTableFromSection(subsection));
 				sectionTag.appendChild(subsectionTag);
 			}
 		}
@@ -337,11 +337,11 @@ function buildRecords(xmlPlan, xmlRecords)
 	}
 }
 
-function buildTableFromSection(sectionTag, recordsXMLTag)
+function buildTableFromSection(sectionTag)
 {
-	let planEvent, trTag, avgType, recordEvent, recordTag, tdTag, time;
+	let planEvent, trTag, avgType, recordObject, tdTag, time;
 	let tableTag = createTag("table");
-	
+
 	// build header row
 	trTag = createTag("tr");
 	trTag.appendChild(createTagWithInnerHTML("th", "Épreuve"));
@@ -349,23 +349,22 @@ function buildTableFromSection(sectionTag, recordsXMLTag)
 		trTag.appendChild(createTagWithClassNameAndInnerHTML("th", avgType, avgType.charAt(0).toUpperCase() + avgType.substr(1,100)));
 	}
 	tableTag.appendChild(trTag);
-	
+
 	// build normal rows : for each event in sectionTag, look for the corresponding event in recordsXMLTag
 	for (planEvent of sectionTag.querySelectorAll("event")) {
-		recordEvent = findEventRecordXMLTag(planEvent.textContent, recordsXMLTag);
 		trTag = createTag("tr");
 		trTag.appendChild(createTagWithClassNameAndInnerHTML("td", "eventName", planEvent.textContent));
 		for (avgType of window.avgTypes) {
-			recordTag = recordEvent.querySelector(avgType);
-			tdTag = createTagWithClassName("td", recordTag.tagName);
-			time = recordTag.getAttribute("time");
+			recordObject = findEventRecordXMLTag(planEvent.textContent, avgType);
+			tdTag = createTagWithClassName("td", avgType);
+			time = recordObject.time;
 			if (time === "") {
 				time = "x";
 			}
 			tdTag.appendChild(createTagWithClassNameAndInnerHTML("div", "time", time));
-			tdTag.appendChild(createTagWithClassNameAndInnerHTML("div", "name", recordTag.getAttribute("name")));
-			if (recordTag.getAttribute("timeList") !== "") {
-				tdTag.appendChild(createTagWithClassNameAndInnerHTML("div", "commentary", recordTag.getAttribute("timeList")));
+			tdTag.appendChild(createTagWithClassNameAndInnerHTML("div", "name", recordObject.name));
+			if (recordObject.timeList.length !== 0) {
+				tdTag.appendChild(createTagWithClassNameAndInnerHTML("div", "commentary", recordObject.timeList));
 			}
 			trTag.appendChild(tdTag);
 		}
@@ -374,28 +373,26 @@ function buildTableFromSection(sectionTag, recordsXMLTag)
 	return tableTag;
 }
 
-function findEventRecordXMLTag(eventNameToSearch, recordsXMLTag)
+
+function findEventRecordXMLTag(eventName, avgType)
 {
-	let recordEvent;
-	for (recordEvent of recordsXMLTag.querySelectorAll("event")) {
-		if (recordEvent.getAttribute("eventName") === eventNameToSearch) {
-			return recordEvent;
+	let dataBaseObject;
+	for (dataBaseObject of window.recordDataBase) {
+		if (dataBaseObject.eventName === eventName && dataBaseObject.avgType === avgType) {
+			return dataBaseObject;
 		}
 	}
 	return null;
 }
-
-function countRecords(recordsXmlTag)
+function countRecords(recordDataBase)
 {
-	let avgType, recordEvent, name, listOfNamesToAdd;
+	let dataBaseObject, name, listOfNamesToAdd;
 	window.countingArray = [];
-	for (recordEvent of recordsXmlTag.querySelectorAll("event")) {
-		for (avgType of window.avgTypes) {
-			name = recordEvent.querySelector(avgType).getAttribute("name");
-			if (name !== "") {
-				listOfNamesToAdd = listOfNamesToUpdateFromNameString(name);
-				addNamesInCountingArray(window.countingArray, listOfNamesToAdd);
-			}
+	for (dataBaseObject of recordDataBase) {
+		name = dataBaseObject.name;
+		if (name !== "") {
+			listOfNamesToAdd = listOfNamesToUpdateFromNameString(name);
+			addNamesInCountingArray(window.countingArray, listOfNamesToAdd);
 		}
 	}
 }
