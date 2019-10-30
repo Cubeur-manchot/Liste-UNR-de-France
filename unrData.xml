@@ -4,64 +4,64 @@
 		<event eventName="2x2x2">
 			<single name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<mo3 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg5 name="Alaric Pouchain" time="0.80" timeList="0.71, (1.60), 0.82, 0.87, (0.68)" scrambleList="" date="2019-10-08" youtubeLink="" francocubeLink=""/>
+			<avg5 name="Alaric Pouchain" time="0.80" timeList="0.71, (1.60), 0.82, 0.87, (0.68)" scrambleList="F2 R' U' R2 U' F2 U R' F, R' U2 F' U2 R2 F R2 U' R2, F R' F2 R U2 R U' R' U', U2 R' F2 R' U' F U R2 U', F R F U' R' F2 U' F2 U'" date="2019-10-08" youtubeLink="" francocubeLink=""/>
 			<avg12 name="Alaric Pouchain" time="1.09" timeList="1.08, 1.21, 1.09, (1.57), 1.12, (0.74), 1.09, 1.12, 1.20, 1.07, 0.85, 1.11" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg50 name="Anaël Champion" time="1.34" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg100 name="Alaric Pouchain" time="1.39" timeList="" scrambleList="" date="2019-10-02" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="3x3x3">
-			<single name="Alexandre Carlier" time="3.28" timeList="" scrambleList="D2 F R D2 F D R U2 F' B2 D F2 U L2 B2 U2 B2 D L2 U2" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273206#p273206"/>
-			<mo3 name="Alexandre Carlier" time="5.40" timeList="5.63, 5.61, 4.97" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=275085#p275085"/>
-			<avg5 name="Alexandre Carlier" time="5.80" timeList="(6.90), 6.17, 5.63, 5.61, (4.97)" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=275085#p275085"/>
-			<avg12 name="Alexandre Carlier" time="6.55" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=275085#p275085"/>
-			<avg50 name="Alexandre Carlier" time="7.36" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=264195#p264195"/>
-			<avg100 name="Alexandre Carlier" time="7.49" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=264195#p264195"/>
+			<single name="Alexandre Carlier" time="3.28" timeList="" scrambleList="D2 F R D2 F D R U2 F' B2 D F2 U L2 B2 U2 B2 D L2 U2" date="2018-03-18" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273206#p273206"/>
+			<mo3 name="Alexandre Carlier" time="5.40" timeList="5.63, 5.61, 4.97" scrambleList="" date="2019-05-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=275085#p275085"/>
+			<avg5 name="Alexandre Carlier" time="5.80" timeList="(6.90), 6.17, 5.63, 5.61, (4.97)" scrambleList="" date="2019-05-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=275085#p275085"/>
+			<avg12 name="Alexandre Carlier" time="6.55" timeList="" scrambleList="" date="2019-05-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=275085#p275085"/>
+			<avg50 name="Alexandre Carlier" time="7.36" timeList="" scrambleList="" date="2017-03-18" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=264195#p264195"/>
+			<avg100 name="Alexandre Carlier" time="7.49" timeList="" scrambleList="" date="2017-03-18" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=264195#p264195"/>
 		</event>
 		<event eventName="4x4x4">
 			<single name="Nathan Prigent" time="21.53" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<mo3 name="Alexandre Carlier" time="25.60" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=268812#p268812"/>
-			<avg5 name="Alexandre Carlier" time="26.35" timeList="26.16, (25.63), (33.01), 27.02, 25.88" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=266940#p266940"/>
-			<avg12 name="Alexandre Carlier" time="27.90" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=268812#p268812"/>
-			<avg50 name="Alexandre Carlier" time="29.57" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=268812#p268812"/>
-			<avg100 name="Alexandre Carlier" time="30.23" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=268812#p268812"/>
+			<avg5 name="Alexandre Carlier" time="26.35" timeList="26.16, (25.63), (33.01), 27.02, 25.88" scrambleList="" date="2017-05-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=266940#p266940"/>
+			<avg12 name="Alexandre Carlier" time="27.90" timeList="" scrambleList="" date="2017-07-04" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=268812#p268812"/>
+			<avg50 name="Alexandre Carlier" time="29.57" timeList="" scrambleList="" date="2017-07-04" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=268812#p268812"/>
+			<avg100 name="Alexandre Carlier" time="30.23" timeList="" scrambleList="" date="2017-07-04" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=268812#p268812"/>
 		</event>
 		<event eventName="5x5x5">
-			<single name="Alexandre Carlier" time="46.16" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="http://forum.francocube.com/viewtopic.php?p=p260413#p260413"/>
-			<mo3 name="Alexandre Carlier" time="53.23" timeList="46.49, 54.84, 58.36" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="http://forum.francocube.com/viewtopic.php?p=p260413#p260413"/>
-			<avg5 name="Alexandre Carlier" time="53.01" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271023#p271023"/>
-			<avg12 name="Abdelhak Kaddour" time="55.54" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271023#p271023"/>
-			<avg50 name="Alexandre Carlier" time="59.68" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271023#p271023"/>
-			<avg100 name="Abdelhak Kaddour" time="1:01.18" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=263867#p263867"/>
+			<single name="Alexandre Carlier" time="46.16" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
+			<mo3 name="Abdelhak Kaddour" time="50.08" timeList="47.97, 50.08" scrambleList="" date="2019-08-10" youtubeLink="" francocubeLink=""/>
+			<avg5 name="Abdelhak Kaddour" time="52.53" timeList="55.33, (56.25), 52.20, (47.97), 50.07" scrambleList="" date="2019-08-10" youtubeLink="" francocubeLink=""/>
+			<avg12 name="Abdelhak Kaddour" time="55.54" timeList="" scrambleList="" date="2017-09-21" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271023#p271023"/>
+			<avg50 name="Alexandre Carlier" time="59.68" timeList="" scrambleList="" date="2017-09-21" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271023#p271023"/>
+			<avg100 name="Abdelhak Kaddour" time="1:01.18" timeList="" scrambleList="" date="2017-03-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=263867#p263867"/>
 		</event>
 		<event eventName="6x6x6">
-			<single name="Abdelhak Kaddour" time="1:36.14" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=264620#p264620"/>
-			<mo3 name="Abdelhak Kaddour" time="1:41.15" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271499#p271499"/>
-			<avg5 name="Abdelhak Kaddour" time="1:42.33" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271499#p271499"/>
-			<avg12 name="Abdelhak Kaddour" time="1:45.52" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271499#p271499"/>
-			<avg50 name="Abdelhak Kaddour" time="1:49.39" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271499#p271499"/>
+			<single name="Abdelhak Kaddour" time="1:20.99" timeList="" scrambleList="" date="2019-07-16" youtubeLink="" francocubeLink=""/>
+			<mo3 name="Abdelhak Kaddour" time="1:31.99" timeList="" scrambleList="" date="2019-07-16" youtubeLink="" francocubeLink=""/>
+			<avg5 name="Abdelhak Kaddour" time="1:42.33" timeList="" scrambleList="" date="2017-10-30" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271499#p271499"/>
+			<avg12 name="Abdelhak Kaddour" time="1:45.52" timeList="" scrambleList="" date="2017-10-30" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271499#p271499"/>
+			<avg50 name="Abdelhak Kaddour" time="1:49.39" timeList="" scrambleList="" date="2017-10-30" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271499#p271499"/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="7x7x7">
-			<single name="Abdelhak Kaddour" time="2:18.40" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271969#p271965"/>
-			<mo3 name="Abdelhak Kaddour" time="2:27.94" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=272694#p272694"/>
-			<avg5 name="Abdelhak Kaddour" time="2:34.23" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271441#p271441"/>
-			<avg12 name="Abdelhak Kaddour" time="2:38.80" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271441#p271441"/>
-			<avg50 name="Abdelhak Kaddour" time="2:43.91" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271441#p271441"/>
+			<single name="Abdelhak Kaddour" time="2:08.99" timeList="" scrambleList="" date="2019-07-16" youtubeLink="" francocubeLink=""/>
+			<mo3 name="Abdelhak Kaddour" time="2:17.99" timeList="" scrambleList="" date="2019-07-16" youtubeLink="" francocubeLink=""/>
+			<avg5 name="Abdelhak Kaddour" time="2:34.23" timeList="" scrambleList="" date="2017-10-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271441#p271441"/>
+			<avg12 name="Abdelhak Kaddour" time="2:38.80" timeList="" scrambleList="" date="2017-10-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271441#p271441"/>
+			<avg50 name="Abdelhak Kaddour" time="2:43.91" timeList="" scrambleList="" date="2017-10-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271441#p271441"/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="8x8x8">
-			<single name="Axel Brisse" time="5:32.26" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<mo3 name="Axel Brisse" time="6:03.46" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg5 name="Axel Brisse" time="6:27.13" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg12 name="Axel Brisse" time="6:41.73" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
+			<single name="Axel Brisse" time="5:07.22" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
+			<mo3 name="Axel Brisse" time="5:28.95" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
+			<avg5 name="Axel Brisse" time="5:32.60" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
+			<avg12 name="Axel Brisse" time="5:37.68" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
 			<avg50 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="9x9x9">
-			<single name="Axel Brisse" time="7:24.36" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<mo3 name="Axel Brisse" time="8:48.03" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg5 name="Axel Brisse" time="8:48.23" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg12 name="Axel Brisse" time="9:13.65" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
+			<single name="Axel Brisse" time="7:24.36" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
+			<mo3 name="Axel Brisse" time="7:41.99" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
+			<avg5 name="Axel Brisse" time="7:45.90" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
+			<avg12 name="Axel Brisse" time="8:09.51" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
 			<avg50 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
@@ -90,12 +90,12 @@
 			<avg100 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="3x3x3 One-Handed">
-			<single name="Juliette Sébastien" time="5.71" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="http://forum.francocube.com/viewtopic.php?p=260319#p260319"/>
-			<mo3 name="Juliette Sébastien" time="8.37" timeList="7.14, 11.16, 6.80" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273394#p273394"/>
-			<avg5 name="Juliette Sébastien" time="8.75" timeList="8.45, 8.47, 9.34, (10.28), (8.22)" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273394#p273394"/>
-			<avg12 name="Juliette Sébastien" time="9.88" timeList="(8.52), 9.60, 10.49, 9.47, 8.62, 8.77, 11.46, 10.11, (14.34), 11.31, 9.68, 9.30" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273394#p273394"/>
-			<avg50 name="Juliette Sébastien" time="10.65" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273394#p273394"/>
-			<avg100 name="Juliette Sébastien" time="10.84" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273394#p273394"/>
+			<single name="Juliette Sébastien" time="5.71" timeList="" scrambleList="" date="2016-12-17" youtubeLink="" francocubeLink="http://forum.francocube.com/viewtopic.php?p=260319#p260319"/>
+			<mo3 name="Juliette Sébastien" time="8.37" timeList="7.14, 11.16, 6.80" scrambleList="" date="2018-04-05" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273394#p273394"/>
+			<avg5 name="Juliette Sébastien" time="8.75" timeList="8.45, 8.47, 9.34, (10.28), (8.22)" scrambleList="" date="2018-04-05" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273394#p273394"/>
+			<avg12 name="Juliette Sébastien" time="9.88" timeList="(8.52), 9.60, 10.49, 9.47, 8.62, 8.77, 11.46, 10.11, (14.34), 11.31, 9.68, 9.30" scrambleList="" date="2018-04-05" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273394#p273394"/>
+			<avg50 name="Juliette Sébastien" time="10.65" timeList="" scrambleList="" date="2018-04-05" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273394#p273394"/>
+			<avg100 name="Juliette Sébastien" time="10.84" timeList="" scrambleList="" date="2018-04-05" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273394#p273394"/>
 		</event>
 		<event eventName="4x4x4 One-Handed">
 			<single name="Axel Brisse" time="58.42" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
@@ -114,7 +114,7 @@
 			<avg100 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="3x3x3 Fewest Moves">
-			<single name="Émilien Fabre" time="16" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="http://forum.francocube.com/viewtopic.php?p=259633#p259633"/>
+			<single name="Émilien Fabre" time="16" timeList="" scrambleList="" date="2016-11-22" youtubeLink="" francocubeLink="http://forum.francocube.com/viewtopic.php?p=259632#p259632"/>
 			<mo3 name="Alaric Pouchain" time="22" timeList="23, 21, 22" scrambleList="" date="2019-10-02" youtubeLink="" francocubeLink=""/>
 			<avg5 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg12 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
@@ -130,7 +130,7 @@
 			<avg100 name="Théo Paris" time="17.63" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Megaminx">
-			<single name="Théo Paris" time="27.86" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=274693#p274693"/>
+			<single name="Théo Paris" time="27.86" timeList="" scrambleList="" date="2018-12-30" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=274693#p274693"/>
 			<mo3 name="Théo Paris" time="33.95" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg5 name="Théo Paris" time="33.42" timeList="33.30, (31.55), (43.35), 33.82, 33.14" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg12 name="Théo Paris" time="35.67" timeList="32.49, 40.06, 38.67, 36.38, 36.08, 35.73, 37.00, 33.30, (31.55), (43.35), 33.82, 33.14" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
@@ -163,10 +163,10 @@
 		</event>
 		<event eventName="3x3x3 Blindfolded">
 			<single name="Arthur Garcin" time="16.41" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<mo3 name="Arthur Garcin" time="21.88" memoTimeList="" timeList="21.86, 19.25, 24.53" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273940#p273940"/>
-			<avg5 name="Arthur Garcin" time="22.79" memoTimeList="" timeList="22.68, (27.10), (22.41), 23.03, 22.67" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273940#p273940"/>
+			<mo3 name="Arthur Garcin" time="21.88" memoTimeList="" timeList="21.86, 19.25, 24.53" scrambleList="" date="2018-06-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273940#p273940"/>
+			<avg5 name="Arthur Garcin" time="22.79" memoTimeList="" timeList="22.68, (27.10), (22.41), 23.03, 22.67" scrambleList="" date="2018-06-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273940#p273940"/>
 			<avg12 name="Arthur Garcin" time="26.07" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg50 name="Arthur Garcin" time="37.54" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=272754#p272754"/>
+			<avg50 name="Arthur Garcin" time="37.54" memoTimeList="" timeList="" scrambleList="" date="2018-02-08" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=272754#p272754"/>
 			<avg100 name="" time="" timeList="" memoTimeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="4x4x4 Blindfolded">
@@ -202,7 +202,7 @@
 			<avg100 name="" time="" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="8x8x8 Blindfolded">
-			<single name="Wilfrid Py" time="5:15.30" memoTimeList="[2:37:20]" timeList="" scrambleList="" date="2019-09-27" youtubeLink="https://www.youtube.com/watch?v=rYMUp5gfbZ4" francocubeLink=""/>
+			<single name="Wilfrid Py" time="5:15.30" memoTimeList="[2:37:20]" timeList="" scrambleList="" date="2018-09-21" youtubeLink="https://www.youtube.com/watch?v=rYMUp5gfbZ4" francocubeLink=""/>
 			<mo3 name="" time="" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg5 name="" time="" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg12 name="" time="" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
@@ -210,7 +210,7 @@
 			<avg100 name="" time="" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="9x9x9 Blindfolded">
-			<single name="Matteo Chancerel" time="2:41:00.00" memoTimeList="[1:24:00.00]" timeList="" scrambleList="" date="2019-09-27" youtubeLink="https://youtu.be/IBJ4KsB8gqY" francocubeLink=""/>
+			<single name="Matteo Chancerel" time="2:41:00.00" memoTimeList="[1:24:00.00]" timeList="" scrambleList="" date="2019-07-15" youtubeLink="https://youtu.be/IBJ4KsB8gqY" francocubeLink=""/>
 			<mo3 name="" time="" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg5 name="" time="" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg12 name="" time="" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
@@ -251,30 +251,30 @@
 		</event>
 		<event eventName="Skewb">
 			<single name="Thibaud Ou" time="0.70" timeList="" scrambleList="B' L R' U' R L' B L" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<mo3 name="Gabriel Luthun" time="1.71" timeList="1.95, 2.27, 0.90" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=267632#p267629"/>
-			<avg5 name="Léo Bailly" time="1.97" timeList="2.05, 2.11, 1.74, (3.17), (1.52)" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=267392#p267392"/>
-			<avg12 name="Léo Bailly" time="2.24" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271267#p271267"/>
-			<avg50 name="Léo Bailly" time="2.61" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271267#p271267"/>
-			<avg100 name="Léo Bailly" time="2.73" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271267#p271267"/>
+			<mo3 name="Gabriel Luthun" time="1.71" timeList="1.95, 2.27, 0.90" scrambleList="" date="2017-06-02" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=267632#p267629"/>
+			<avg5 name="Léo Bailly" time="1.97" timeList="2.05, 2.11, 1.74, (3.17), (1.52)" scrambleList="" date="2017-05-26" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=267392#p267392"/>
+			<avg12 name="Léo Bailly" time="2.24" timeList="" scrambleList="" date="2017-10-10" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271267#p271267"/>
+			<avg50 name="Léo Bailly" time="2.61" timeList="" scrambleList="" date="2017-10-10" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271267#p271267"/>
+			<avg100 name="Léo Bailly" time="2.73" timeList="" scrambleList="" date="2017-10-10" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271267#p271267"/>
 		</event>
 		<event eventName="Square-1">
 			<single name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<mo3 name="Thibaud Ou" time="6.54" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg5 name="Thibaud Ou" time="6.69" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg12 name="Thibaud Ou" time="7.12" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
+			<mo3 name="Thibaud Ou" time="5.96" timeList="6.44, 5.47, 5.98" scrambleList="" date="2019-10-28" youtubeLink="" francocubeLink=""/>
+			<avg5 name="Thibaud Ou" time="6.23" timeList="5.47, 5.98, 7.24, (8.02), (5.44)" scrambleList="" date="2019-10-28" youtubeLink="" francocubeLink=""/>
+			<avg12 name="Thibaud Ou" time="6.90" timeList="7.62, 7.16, 6.91, 6.44, 5.47, 5.98, 7.24, (8.02), (5.44), 8.36, 6.96, 7.20" scrambleList="" date="2019-10-28" youtubeLink="" francocubeLink=""/>
 			<avg50 name="Thibaud Ou" time="7.45" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg100 name="Thibaud Ou" time="7.97" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Clock">
-			<single name="Gabriel Luthun" time="3.13" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273979#p273979"/>
+			<single name="Gabriel Luthun" time="3.13" timeList="" scrambleList="" date="2018-06-18" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273979#p273979"/>
 			<mo3 name="Virgile Perrot" time="4.25" timeList="3.48, 4.73, 4.53" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg5 name="Virgile Perrot" time="4.70" timeList="(7.00), 4.85, (3.48), 4.73, 4.53" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg12 name="Gabriel Luthun" time="5.40" timeList="5.06, (7.39), 4.55, 5.79, 5.72, 5.09, 6.28, 5.52, 5.05, (4.43), 4.98, 5.97" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=274445#p274445"/>
-			<avg50 name="Gabriel Luthun" time="5.91" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=274980#p274980"/>
-			<avg100 name="Gabriel Luthun" time="6.36" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=274980#p274980"/>
+			<avg5 name="Virgile Perrot" time="4.68" timeList="(4.36), 5.19, (6.29), 4.49, 4.36" scrambleList="" date="2019-10-29" youtubeLink="" francocubeLink=""/>
+			<avg12 name="Virgile Perrot" time="5.40" timeList="4.91, (4.36), 5.19, 6.29, 4.49, 4.36, 6.68, (7.26), 4.94, 6.74, 5.21, 4.87" scrambleList="" date="2019-10-29" youtubeLink="" francocubeLink=""/>
+			<avg50 name="Virgile Perrot" time="5.90" timeList="" scrambleList="" date="2019-10-29" youtubeLink="" francocubeLink=""/>
+			<avg100 name="Virgile Perrot" time="6.13" timeList="" scrambleList="" date="2019-10-29" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Relai 2x2x2 - 5x5x5">
-			<single name="Alexandre Carlier" time="1:39.27" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273206#p273206"/>
+			<single name="Alexandre Carlier" time="1:39.27" timeList="" scrambleList="" date="2018-03-18" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273206#p273206"/>
 			<mo3 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg5 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg12 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
@@ -282,7 +282,7 @@
 			<avg100 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Relai 2x2x2 - 7x7x7">
-			<single name="Abdelhak Kaddour" time="5:59.04" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=272367#p272367"/>
+			<single name="Abdelhak Kaddour" time="5:59.04" timeList="" scrambleList="" date="2018-01-13" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=272367#p272367"/>
 			<mo3 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg5 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg12 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
@@ -291,14 +291,14 @@
 		</event>
 		<event eventName="Relai Minx (mega + pyra + skewb)">
 			<single name="John Bacouël" time="55.17" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<mo3 name="Victor Wijsman" time="58.98" timeList="55.81, 1:02.10, 59.03" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271418#p271418"/>
-			<avg5 name="Victor Wijsman" time="1:00.12" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271418#p271418"/>
-			<avg12 name="Victor Wijsman" time="1:00.93" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271418#p271418"/>
-			<avg50 name="Victor Wijsman" time="1:07.33" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271418#p271418"/>
+			<mo3 name="Victor Wijsman" time="58.98" timeList="55.81, 1:02.10, 59.03" scrambleList="" date="2017-10-26" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271418#p271418"/>
+			<avg5 name="Victor Wijsman" time="1:00.12" timeList="" scrambleList="" date="2017-10-26" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271418#p271418"/>
+			<avg12 name="Victor Wijsman" time="1:00.93" timeList="" scrambleList="" date="2017-10-26" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271418#p271418"/>
+			<avg50 name="Victor Wijsman" time="1:07.33" timeList="" scrambleList="" date="2017-10-26" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271418#p271418"/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Mini-Guilford Solo">
-			<single name="Clément Cherblanc" time="4:19.99" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271969#p271900"/>
+			<single name="Clément Cherblanc" time="4:19.99" timeList="" scrambleList="" date="2017-12-04" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271969#p271900"/>
 			<mo3 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg5 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg12 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
@@ -306,10 +306,10 @@
 			<avg100 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Mini-Guilford Duo">
-			<single name="Clément Cherblanc + Lucas Déglise" time="1:52.53" timeList="" scrambleList="" date="2019-09-27" youtubeLink="https://www.youtube.com/watch?v=7jgfZIpjr3A" francocubeLink=""/>
-			<mo3 name="Louis Fertier + Victor Wijsman" time="2:23.63" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271420#p271420"/>
-			<avg5 name="Louis Fertier + Victor Wijsman" time="2:25.69" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271420#p271420"/>
-			<avg12 name="Louis Fertier + Victor Wijsman" time="2:28.24" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271420#p271420"/>
+			<single name="Clément Cherblanc + Lucas Déglise" time="1:52.53" timeList="" scrambleList="" date="2019-05-06" youtubeLink="https://www.youtube.com/watch?v=7jgfZIpjr3A" francocubeLink=""/>
+			<mo3 name="Louis Fertier + Victor Wijsman" time="2:23.63" timeList="" scrambleList="" date="2017-10-26" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271420#p271420"/>
+			<avg5 name="Louis Fertier + Victor Wijsman" time="2:25.69" timeList="" scrambleList="" date="2017-10-26" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271420#p271420"/>
+			<avg12 name="Louis Fertier + Victor Wijsman" time="2:28.24" timeList="" scrambleList="" date="2017-10-26" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271420#p271420"/>
 			<avg50 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
@@ -322,7 +322,7 @@
 			<avg100 name="Axel Brisse + Matthieu Aubert" time="24.97" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Team Solve Duo">
-			<single name="Juliette Sébastien + Roderic Blazy" time="7.91" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265623#p265623"/>
+			<single name="Juliette Sébastien + Roderic Blazy" time="7.91" timeList="" scrambleList="" date="2017-04-12" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265623#p265623"/>
 			<mo3 name="Juliette Sébastien + Nicolas Gertner" time="10.01" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg5 name="Juliette Sébastien + Nicolas Gertner" time="10.49" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg12 name="Juliette Sébastien + Nicolas Gertner" time="10.97" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
@@ -338,29 +338,52 @@
 			<avg100 name="Axel Brisse" time="28.81" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Inequilateral Cube">
-			<single name="Wilfrid Py" time="23.76" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265434#p265434"/>
-			<mo3 name="Wilfrid Py" time="33.46" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265434#p265434"/>
-			<avg5 name="Wilfrid Py" time="35.05" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265434#p265434"/>
-			<avg12 name="Wilfrid Py" time="39.33" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265434#p265434"/>
-			<avg50 name="Wilfrid Py" time="43.77" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265434#p265434"/>
-			<avg100 name="Wilfrid Py" time="46.95" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265434#p265434"/>
+			<single name="Wilfrid Py" time="23.76" timeList="" scrambleList="" date="2017-04-08" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265434#p265434"/>
+			<mo3 name="Wilfrid Py" time="33.46" timeList="" scrambleList="" date="2017-04-08" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265434#p265434"/>
+			<avg5 name="Wilfrid Py" time="35.05" timeList="" scrambleList="" date="2017-04-08" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265434#p265434"/>
+			<avg12 name="Wilfrid Py" time="39.33" timeList="" scrambleList="" date="2017-04-08" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265434#p265434"/>
+			<avg50 name="Wilfrid Py" time="43.77" timeList="" scrambleList="" date="2017-04-08" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265434#p265434"/>
+			<avg100 name="Wilfrid Py" time="46.95" timeList="" scrambleList="" date="2017-04-08" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265434#p265434"/>
 		</event>
 		<event eventName="Ghost Cube">
-			<single name="Nicolas Girard" time="1:54.81" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265328#p265328"/>
-			<mo3 name="Nicolas Girard" time="2:13.53" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265328#p265328"/>
-			<avg5 name="Nicolas Girard" time="2:09.45" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265328#p265328"/>
-			<avg12 name="Nicolas Girard" time="2:29.46" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265328#p265328"/>
+			<single name="Nicolas Girard" time="1:54.81" timeList="" scrambleList="" date="2017-04-06" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265328#p265328"/>
+			<mo3 name="Nicolas Girard" time="2:13.53" timeList="" scrambleList="" date="2017-04-06" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265328#p265328"/>
+			<avg5 name="Nicolas Girard" time="2:09.45" timeList="" scrambleList="" date="2017-04-06" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265328#p265328"/>
+			<avg12 name="Nicolas Girard" time="2:29.46" timeList="" scrambleList="" date="2017-04-06" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265328#p265328"/>
 			<avg50 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 	</records>
-	<pbSheets>
-		<pbSheet name="Alaric Pouchain" link="https://docs.google.com/spreadsheets/d/1-4Ov6rK6aF7wZilGR_2QcByZFJinsywi60El_YPXTwE/edit#gid=0"/>
-		<pbSheet name="Axel Brisse" link="https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing"/>
-		<pbSheet name="Matthieu Aubert" link="https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html"/>
-		<pbSheet name="Thibaud Ou" link="https://docs.google.com/spreadsheets/d/1H4AoY1-6TmBt8ZoTC4Yu8U4C47rjU43zTfeaTcMlYI0/edit#gid=0"/>
-		<pbSheet name="Thibaud Ou" link="https://bit.ly/TeebooPBs"/>
-	</pbSheets>
+	<persons>
+		<person name="Abdelhak Kaddour" wcaId="2010KADD01" pbSheetLink=""/>
+		<person name="Alaric Pouchain" wcaId="2019POUC01" pbSheetLink="https://docs.google.com/spreadsheets/d/1-4Ov6rK6aF7wZilGR_2QcByZFJinsywi60El_YPXTwE/edit#gid=0"/>
+		<person name="Alexandre Carlier" wcaId="2012CARL03" pbSheetLink=""/>
+		<person name="Anaël Champion" wcaId="2017CHAM02" pbSheetLink=""/>
+		<person name="Arthur Garcin" wcaId="2014GARC27" pbSheetLink=""/>
+		<person name="Axel Brisse" wcaId="2016BRIS01" pbSheetLink="https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing"/>
+		<person name="Clément Cherblanc" wcaId="2014CHER05" pbSheetLink=""/>
+		<person name="Diego Alfonso" wcaId="2018ALFO01" pbSheetLink=""/>
+		<person name="Émilien Fabre" wcaId="2012FABR01" pbSheetLink=""/>
+		<person name="Emma Cadet" wcaId="" pbSheetLink=""/>
+		<person name="Gabriel Luthun" wcaId="2016LUTH01" pbSheetLink=""/>
+		<person name="John Bacouël" wcaId="2018BACO01" pbSheetLink=""/>
+		<person name="Juliette Sébastien" wcaId="2014SEBA01" pbSheetLink=""/>
+		<person name="Léo Bailly" wcaId="2015BAIL04" pbSheetLink=""/>
+		<person name="Louis Fertier" wcaId="2013FERT01" pbSheetLink=""/>
+		<person name="Lucas Déglise" wcaId="2015DEGL01" pbSheetLink=""/>
+		<person name="Matteo Chancerel" wcaId="2017CHAN16" pbSheetLink=""/>
+		<person name="Matthieu Aubert" wcaId="2016AUBE01" pbSheetLink="https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html"/>
+		<person name="Nathan Prigent" wcaId="2016PRIG01" pbSheetLink=""/>
+		<person name="Nicolas Gertner" wcaId="2013GERT01" pbSheetLink=""/>
+		<person name="Nicolas Girard" wcaId="" pbSheetLink=""/>
+		<person name="Roderic Blazy" wcaId="2016BLAZ03" pbSheetLink=""/>
+		<person name="Théo Paris" wcaId="2016PARI08" pbSheetLink=""/>
+		<person name="Thibaud Ou" wcaId="2016OUTH01" pbSheetLink="https://bit.ly/TeebooPBs"/>
+		<person name="Victor Wijsman" wcaId="2016WIJS01" pbSheetLink=""/>
+		<person name="Virgile Perrot" wcaId="2017PERR02" pbSheetLink=""/>
+		<person name="Wilfrid Py" wcaId="2016PYWI01" pbSheetLink=""/>
+		<person name="William Phommaha" wcaId="2015PHOM01" pbSheetLink=""/>
+	</persons>
 	<normalPlan>
 		<section sectionName="Officiels WCA">
 			<subsection subsectionName="Cubes NxNxN">
