@@ -155,14 +155,14 @@
 		</event>
 		<event eventName="2x2x2 Blindfolded">
 			<single name="" time="" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<mo3 name="Alaric Pouchain" time="3.69" memoTimeList="" timeList="3.64, 3.45, 3.97" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg5 name="Alaric Pouchain" time="4.04" memoTimeList="" timeList="3.64, (3.45), 3.97, (4.87), 4.50" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg12 name="Alaric Pouchain" time="6.25" memoTimeList="" timeList="6.51, 6.58, 6.12, 5.84, 5.64, (3.59), (8.07), 6.20, 6.78, 6.59, 5.97, 6.25" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
-			<avg50 name="Alaric Pouchain" time="8.35" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
+			<mo3 name="Anaël Champion" time="3.29" memoTimeList="" timeList="2.56, 3.84, 3.48" scrambleList="" date="2019-11-02" youtubeLink="" francocubeLink=""/>
+			<avg5 name="Anaël Champion" time="3.29" memoTimeList="" timeList="(2.42), (8.74), 3.48, 3.84, 2.56" scrambleList="" date="2019-11-02" youtubeLink="" francocubeLink=""/>
+			<avg12 name="Anaël Champion" time="4.65" memoTimeList="" timeList="8.29, 4.91, 4.36, 6.48, 4.29, 2.93, 5.45, (2.42), (8.74), 3.48, 3.84, 2.56" scrambleList="" date="2019-11-02" youtubeLink="" francocubeLink=""/>
+			<avg50 name="Anaël Champion" time="8.15" memoTimeList="" timeList="" scrambleList="" date="2019-11-02" youtubeLink="" francocubeLink=""/>
 			<avg100 name="Alaric Pouchain" time="8.62" memoTimeList="" timeList="" scrambleList="" date="2019-10-02" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="3x3x3 Blindfolded">
-			<single name="Arthur Garcin" time="16.41" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
+			<single name="Arthur Garcin" time="15.99" memoTimeList="" timeList="" scrambleList="" date="2019-10-17" youtubeLink="" francocubeLink=""/>
 			<mo3 name="Arthur Garcin" time="21.88" memoTimeList="" timeList="21.86, 19.25, 24.53" scrambleList="" date="2018-06-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273940#p273940"/>
 			<avg5 name="Arthur Garcin" time="22.79" memoTimeList="" timeList="22.68, (27.10), (22.41), 23.03, 22.67" scrambleList="" date="2018-06-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273940#p273940"/>
 			<avg12 name="Arthur Garcin" time="26.07" memoTimeList="" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
@@ -266,7 +266,7 @@
 			<avg100 name="Thibaud Ou" time="7.97" timeList="" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Clock">
-			<single name="Gabriel Luthun" time="3.13" timeList="" scrambleList="" date="2018-06-18" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273979#p273979"/>
+			<single name="Télian Delannoy" time="2.48" timeList="" scrambleList="" date="2019-01-31" youtubeLink="" francocubeLink=""/>
 			<mo3 name="Virgile Perrot" time="4.25" timeList="3.48, 4.73, 4.53" scrambleList="" date="2019-09-27" youtubeLink="" francocubeLink=""/>
 			<avg5 name="Virgile Perrot" time="4.68" timeList="(4.36), 5.19, (6.29), 4.49, 4.36" scrambleList="" date="2019-10-29" youtubeLink="" francocubeLink=""/>
 			<avg12 name="Virgile Perrot" time="5.37" timeList="4.91, (4.36), 5.19, 6.29, 4.49, 4.36, 6.68, (7.26), 4.94, 6.74, 5.21, 4.87" scrambleList="" date="2019-10-29" youtubeLink="" francocubeLink=""/>
@@ -377,6 +377,7 @@
 		<person name="Nicolas Gertner" wcaId="2013GERT01" pbSheetLink=""/>
 		<person name="Nicolas Girard" wcaId="" pbSheetLink=""/>
 		<person name="Roderic Blazy" wcaId="2016BLAZ03" pbSheetLink=""/>
+		<person name="Télian Delannoy" wcaId="2016DELA03" pbSheetLink=""/>
 		<person name="Théo Paris" wcaId="2016PARI08" pbSheetLink=""/>
 		<person name="Thibaud Ou" wcaId="2016OUTH01" pbSheetLink="https://bit.ly/TeebooPBs"/>
 		<person name="Victor Wijsman" wcaId="2016WIJS01" pbSheetLink=""/>
