@@ -1,8 +1,8 @@
 "use strict";
 
-  /***************************/
- /*     INITIALIZATION      */
-/***************************/
+  /****************************/
+ /*      INITIALIZATION      */
+/****************************/
 /* All functions used to initialize the data needed to build the page. */
 
 function init() // global initialization function
@@ -13,7 +13,6 @@ function init() // global initialization function
 	storePersonsInDataBase();
 	storeNormalPlanInDataBase();
 	storeCompactPlanInDataBase();
-	countRecords();
 }
 
 function loadXML() // load unrData.xml and store it in window.unrXmlData
@@ -81,7 +80,7 @@ function storeCompactPlanInDataBase() // parse window.unrXmlData and store the c
 
 function storeRecordsInDataBase() // parse window.unrXmlData and store records content in window.recordsDataBase
 {
-	let recordsXmlTag, recordEventXmlTag, recordXmlTag, recordDataBaseObject, eventName, compactPlanSectionName, normalPlanSectionAndSubsectionName, avgType;
+	let recordsXmlTag, recordEventXmlTag, recordXmlTag, recordDataBaseObject, eventName, compactPlanSectionName, normalPlanSectionAndSubsectionName, avgType, date;
 	window.recordsDataBase = [];
 	recordsXmlTag = window.unrXmlData.querySelector("records");
 	for (recordEventXmlTag of recordsXmlTag.querySelectorAll("event")) { // for each event
@@ -102,7 +101,12 @@ function storeRecordsInDataBase() // parse window.unrXmlData and store records c
 			}
 			recordDataBaseObject.timeList = listToArray(recordXmlTag.getAttribute("timeList"));
 			recordDataBaseObject.scrambleList = listToArray(recordXmlTag.getAttribute("name"));
-			recordDataBaseObject.date = dateOfString(recordXmlTag.getAttribute("date"));
+			date = recordXmlTag.getAttribute("date");
+			if (date === "") {
+				recordDataBaseObject.date = new Date(0);
+			} else {
+				recordDataBaseObject.date = dateOfString(recordXmlTag.getAttribute("date"));
+			}
 			recordDataBaseObject.youtubeLink = recordXmlTag.getAttribute("youtubeLink");
 			recordDataBaseObject.francocubeLink = recordXmlTag.getAttribute("francocubeLink");
 			recordDataBaseObject.compactPlanSection = compactPlanSectionName;
@@ -141,81 +145,23 @@ function findNormalPlanSectionAndSubsectionFromEventName(eventName) // return bo
 	return null;
 }
 
-function countRecords() // count records in window.recordDataBase and store the result in window.countingArray for palmares section
-{
-	let dataBaseObject, personNames;
-	window.countingArray = [];
-	for (dataBaseObject of window.recordsDataBase) {
-		personNames = dataBaseObject.name;
-		if (personNames !== "") {
-			addNamesInCountingArray(listOfNamesToUpdateFromNameString(personNames));
-		}
-	}
-}
 
-function addNamesInCountingArray(arrayOfNamesToUpdate) // both increment UNR count and update ranking in window.countingArray for input names
-{
-	let personName, personUnrCount, countingArrayIndex, countingArray = window.countingArray;
-	for (personName of arrayOfNamesToUpdate) {
-		countingArrayIndex = findIndexInCountingArray(personName);
-		if (countingArrayIndex === -1) { // if the name is not in the list, it should be added to it
-			countingArray.push({name: personName, count: 1});
-		} else { // if the name is already in the list, count and ranking should be updated
-			countingArray[countingArrayIndex].count++; // update count for this person
-			personUnrCount = countingArray[countingArrayIndex].count;
-			while (countingArrayIndex > 0 && countingArray[countingArrayIndex].count > countingArray[countingArrayIndex-1].count) { // update array sort
-				countingArray[countingArrayIndex].name = countingArray[countingArrayIndex-1].name;
-				countingArray[countingArrayIndex].count = countingArray[countingArrayIndex-1].count;
-				countingArray[countingArrayIndex-1].name = personName;
-				countingArray[countingArrayIndex-1].count = personUnrCount;
-				countingArrayIndex--;
-			}
-		}
-	}
-}
+  /****************************/
+ /* BUILDING RECORD SECTION  */
+/****************************/
+/* All functions used to build the record section of the HTML page. */
 
-function findIndexInCountingArray(name) // return the index of the name in the countingArray (-1 if absent)
-{
-	let countingArrayElement, countingArray = window.countingArray;
-	for (countingArrayElement of countingArray) {
-		if (countingArrayElement.name === name) {
-			return countingArray.indexOf(countingArrayElement);
-		}
-	}
-	return -1;
-}
-
-function listOfNamesToUpdateFromNameString(inputNamesList) // convert "firstPerson + secondPerson" to ["firstPerson", "secondPerson"]
-{
-	// if inputNamesList has no " + " (like "singlePerson"), it returns a 1-element array (["singlePerson"])
-	let indexOfPlus, namesList = inputNamesList, arrayOfNamesToUpdate = [];
-	while(namesList.includes(" + ")) { // split for each +
-		indexOfPlus = namesList.indexOf(" + ");
-		arrayOfNamesToUpdate.push(namesList.substring(0, indexOfPlus));
-		namesList = namesList.substring(indexOfPlus + 3, 1000);
-	}
-	arrayOfNamesToUpdate.push(namesList); // add the last part of the string
-	return arrayOfNamesToUpdate;
-}
-
-
-  /***************************/
- /*      BUILDING PAGE      */
-/***************************/
-/* All functions used to build the HTML page. */
-
-function buildPage() // global page building function
+function buildRecordSection() // global page building function
 {
 	//buildPlan(window.unrXmlData.querySelector("normalPlan"));
 	buildPlan("normal");
 	document.querySelector("#pagePlan").style.display = "none";
 	buildRecords(window.unrXmlData.querySelector("normalPlan"));
-	buildPalmaresSection(window.countingArray);
 }
 
 function buildPlan(planType) // build filters for avg type, filters and links for section and subsection
 {
-	let sectionName, planDataBase, planSectionObject, subsectionPlanHtmlTag, subsectionName, subsectionExternalButtonHtmlTag, planSubsectionObject, sectionPlanHtmlTag, sectionExternalButtonHtmlTag, pagePlanHtmlTag = document.querySelector("#pagePlan"), compactMode;
+	let sectionName, planDataBase, planSectionObject, subsectionPlanHtmlTag, subsectionName, subsectionExternalButtonHtmlTag, planSubsectionObject, sectionPlanHtmlTag, sectionExternalButtonHtmlTag, pagePlanHtmlTag = document.querySelector("#pagePlan");
 	if (planType === "normal") {
 		planDataBase = window.normalPlan;
 	} else {
@@ -344,6 +290,129 @@ function findRecordObjectInDataBase(eventName, avgType) // return dataBase eleme
 	return null;
 }
 
+
+  /****************************/
+ /* COMPUTING FOR STATISTICS */
+/****************************/
+/* All functions used to calculate data to build the statistics section. */
+
+function initStatistics() // statistics initialization function
+{
+	countRecords();
+	computeTopXLongestShortestStandingRecordEvents(5);
+}
+
+function countRecords() // count records in window.recordDataBase and store the result in window.countingArray for palmares section
+{
+	let dataBaseObject, personNames;
+	window.countingArray = [];
+	for (dataBaseObject of window.recordsDataBase) {
+		personNames = dataBaseObject.name;
+		if (personNames !== "") {
+			addNamesInCountingArray(listOfNamesToUpdateFromNameString(personNames));
+		}
+	}
+}
+
+function addNamesInCountingArray(arrayOfNamesToUpdate) // both increment UNR count and update ranking in window.countingArray for input names
+{
+	let personName, personUnrCount, countingArrayIndex, countingArray = window.countingArray;
+	for (personName of arrayOfNamesToUpdate) {
+		countingArrayIndex = findIndexInCountingArray(personName);
+		if (countingArrayIndex === -1) { // if the name is not in the list, it should be added to it
+			countingArray.push({name: personName, count: 1});
+		} else { // if the name is already in the list, count and ranking should be updated
+			countingArray[countingArrayIndex].count++; // update count for this person
+			personUnrCount = countingArray[countingArrayIndex].count;
+			while (countingArrayIndex > 0 && countingArray[countingArrayIndex].count > countingArray[countingArrayIndex-1].count) { // update array sort
+				countingArray[countingArrayIndex].name = countingArray[countingArrayIndex-1].name;
+				countingArray[countingArrayIndex].count = countingArray[countingArrayIndex-1].count;
+				countingArray[countingArrayIndex-1].name = personName;
+				countingArray[countingArrayIndex-1].count = personUnrCount;
+				countingArrayIndex--;
+			}
+		}
+	}
+}
+
+function findIndexInCountingArray(name) // return the index of the name in the countingArray (-1 if absent)
+{
+	let countingArrayElement, countingArray = window.countingArray;
+	for (countingArrayElement of countingArray) {
+		if (countingArrayElement.name === name) {
+			return countingArray.indexOf(countingArrayElement);
+		}
+	}
+	return -1;
+}
+
+function listOfNamesToUpdateFromNameString(inputNamesList) // convert "firstPerson + secondPerson" to ["firstPerson", "secondPerson"]
+{
+	// if inputNamesList has no " + " (like "singlePerson"), it returns a 1-element array (["singlePerson"])
+	let indexOfPlus, namesList = inputNamesList, arrayOfNamesToUpdate = [];
+	while(namesList.includes(" + ")) { // split for each +
+		indexOfPlus = namesList.indexOf(" + ");
+		arrayOfNamesToUpdate.push(namesList.substring(0, indexOfPlus));
+		namesList = namesList.substring(indexOfPlus + 3, 1000);
+	}
+	arrayOfNamesToUpdate.push(namesList); // add the last part of the string
+	return arrayOfNamesToUpdate;
+}
+
+
+function computeTopXLongestShortestStandingRecordEvents(nbEvents)
+{
+	let topXLongestStandingRecordEvents = [], topXShortestStandingRecordEvents = [], dataBaseObject, date,
+		nullDate = new Date(0), middleDate = new Date(0), infinityDate = new Date(9999999999999), arrayIndex, arraySorted;
+	// créer un tableau de taille nbEvents
+	// parcourir le recordDataBase, trouver les events dont un UNR tient depuis le plus longtemps (tous avgTypes confondus)
+	// stocker également les avgTypes qui correspondent à cette date
+	// en cas d'égalité, stocker les deux events
+
+	// initialiser ces tableaux en triant par date
+	let dateSortedRecordArray = [];
+	for (dataBaseObject of window.recordsDataBase) {
+		date = dataBaseObject.date;
+		if (date > nullDate) {
+			dateSortedRecordArray.push({eventName: dataBaseObject.eventName, avgType: dataBaseObject.avgType, name: dataBaseObject.name, time: dataBaseObject.time, date: date});
+			arrayIndex = dateSortedRecordArray.length - 1;
+			arraySorted = false;
+			while (!arraySorted && arrayIndex !== 0 ) {
+				if (date < dateSortedRecordArray[arrayIndex - 1].date) {
+					dateSortedRecordArray[arrayIndex] = dateSortedRecordArray[arrayIndex - 1];
+					dateSortedRecordArray[arrayIndex - 1] = dataBaseObject;
+					arrayIndex--;
+				} else {
+					arraySorted = true;
+				}
+			}
+		}
+	}
+	// prendre le top-X en haut en agrégeant par event
+	for (let object of dateSortedRecordArray) {
+		//alert("Name : " + object.name + ", time : " + object.time + "\ndate : " + object.date);
+	}
+	// prendre le top-X en bas en agrégeant par event
+	for (let object of dateSortedRecordArray) {
+		//alert("Name : " + object.name + ", time : " + object.time + "\ndate : " + object.date);
+	}
+	//window.topXLongestStandingRecordsEvents = [];
+	//window.topXShortestStandingRecordsEvents = [];
+}
+
+
+  /****************************/
+ /*    BUILDING STATISTICS   */
+/****************************/
+/* All functions used to build the record section of the HTML page. */
+
+function buildStatistics()
+{
+	buildPalmaresSection(window.countingArray);
+	buildTopXLongestStandingRecordsTable();
+	buildTopXShortestStandingRecordsTable();
+}
+
 function buildPalmaresSection(countingArray) // build table with ranking on each person's UNR count
 {
 	let palmaresHtmlTag = document.querySelector("#palmares"), palmaresHeaderHtmlTag, palmaresTableHtmlTag, palmaresRowHtmlTag, countingArrayElement, totalNbRecords;
@@ -377,10 +446,19 @@ function buildPalmaresSection(countingArray) // build table with ranking on each
 	palmaresHtmlTag.appendChild(palmaresTableHtmlTag);
 }
 
+function buildTopXShortestStandingRecordsTable()
+{
+	// TODO
+}
 
-  /***************************/
- /*     TOGGLE DISPLAY      */
-/***************************/
+function buildTopXLongestStandingRecordsTable()
+{
+	// TODO
+}
+
+  /****************************/
+ /*      TOGGLE DISPLAY      */
+/****************************/
 /* All function used as onclick to show/hide plan/section/subsection/avgType or toggle between compact/normal modes. */
 
 function toggleCompactMode() // toggle between compact and normal mode
@@ -451,9 +529,9 @@ function switchToggleButtonToOff(innerButtonHtmlTag) // switch button from on po
 }
 
 
-  /***************************/
- /*      GENERAL UTILS      */
-/***************************/
+  /****************************/
+ /*      GENERAL UTILS       */
+/****************************/
 /* All utility function used to initialize data and build page. */
 
 function sectionNameToId(name) // transform a section name to id format
@@ -490,9 +568,9 @@ function listToArray(inputListString) // convert a string of the form "a, b, c" 
 }
 
 
-  /***************************/
- /*   BUILDING PAGE UTILS   */
-/***************************/
+  /****************************/
+ /*   BUILDING PAGE UTILS    */
+/****************************/
 /* All function used to create HTML tags. */
 
 function createHtmlTag(tagType) // create simple tag
