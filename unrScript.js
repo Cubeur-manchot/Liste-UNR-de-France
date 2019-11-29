@@ -362,16 +362,15 @@ function listOfNamesToUpdateFromNameString(inputNamesList) // convert "firstPers
 
 function computeTopXLongestShortestStandingRecordEvents(nbEvents)
 {
-	let topXLongestStandingRecordEvents = [], topXShortestStandingRecordEvents = [], dataBaseObject, date,
-		nullDate = new Date(0), middleDate = new Date(0), infinityDate = new Date(9999999999999), arrayIndex, arraySorted;
-	// créer un tableau de taille nbEvents
-	// parcourir le recordDataBase, trouver les events dont un UNR tient depuis le plus longtemps (tous avgTypes confondus)
-	// stocker également les avgTypes qui correspondent à cette date
-	// en cas d'égalité, stocker les deux events
+	let dateSortedRecordArray = sortDataBaseByDate(window.recordsDataBase);
+	window.topXLongestStandingRecordsEvents = aggregateFirstByDate(dateSortedRecordArray, nbEvents);
+	window.topXShortestStandingRecordsEvents = aggregateFirstByDate(dateSortedRecordArray.reverse(), nbEvents);
+}
 
-	// initialiser ces tableaux en triant par date
-	let dateSortedRecordArray = [];
-	for (dataBaseObject of window.recordsDataBase) {
+function sortDataBaseByDate(dataBaseArray)
+{
+	let dateSortedRecordArray = [], dataBaseObject, date, nullDate = new Date(0), arrayIndex, arraySorted;
+	for (dataBaseObject of dataBaseArray) {
 		date = dataBaseObject.date;
 		if (date > nullDate) {
 			dateSortedRecordArray.push({eventName: dataBaseObject.eventName, avgType: dataBaseObject.avgType, name: dataBaseObject.name, time: dataBaseObject.time, date: date});
@@ -388,16 +387,52 @@ function computeTopXLongestShortestStandingRecordEvents(nbEvents)
 			}
 		}
 	}
-	// prendre le top-X en haut en agrégeant par event
-	for (let object of dateSortedRecordArray) {
-		//alert("Name : " + object.name + ", time : " + object.time + "\ndate : " + object.date);
+	return dateSortedRecordArray;
+}
+
+function aggregateFirstByDate(dateSortedRecordArray, nbElements)
+{
+	/*for (let object of dateSortedRecordArray) {
+		alert(object.name);
+	}*/
+	let biggestAggregatedArray = [], lastElement, recordObject, rank;
+	lastElement = {
+		rank: 1,
+		date: dateSortedRecordArray[0].date,
+		eventName: dateSortedRecordArray[0].eventName,
+		name: dateSortedRecordArray[0].name,
+		listOfTimes: [{avgType: dateSortedRecordArray[0].avgType, time: dateSortedRecordArray[0].time}]
+	};
+	biggestAggregatedArray.push(lastElement);
+	for (recordObject of dateSortedRecordArray) {
+		if (recordObject.date.getTime() === lastElement.date.getTime() && recordObject.eventName === lastElement.eventName && recordObject.name === lastElement.name) {
+			// correspondance found, just agregate to last element of the array
+			biggestAggregatedArray[biggestAggregatedArray.length - 1].listOfTimes.push({avgType: recordObject.avgType, time: recordObject.time});
+		} else {
+			// no correspondance found, add new element to the array if it's not full
+			if (biggestAggregatedArray.length < nbElements || lastElement.date.getTime() === recordObject.date.getTime()) { // array is not full or there is a date equality, add new element
+				if (recordObject.date.getTime() === lastElement.date.getTime()) { // date equality
+					rank = lastElement.rank;
+				} else { // no date equality
+					rank = biggestAggregatedArray.length + 1;
+				}
+				lastElement = {
+					rank: rank,
+					date: recordObject.date,
+					eventName: recordObject.eventName,
+					name: recordObject.name,
+					listOfTimes: [{avgType: recordObject.avgType, time: recordObject.time}]
+				};
+				biggestAggregatedArray.push(lastElement);
+			} else { // array is full and the date is not equal to the previous one, agregation is finished
+				//biggestAggregatedArray[0].listOfTimes.shift(); // remove initial value because it appears twice
+				return biggestAggregatedArray;
+			}
+		}
 	}
-	// prendre le top-X en bas en agrégeant par event
-	for (let object of dateSortedRecordArray) {
-		//alert("Name : " + object.name + ", time : " + object.time + "\ndate : " + object.date);
-	}
-	//window.topXLongestStandingRecordsEvents = [];
-	//window.topXShortestStandingRecordsEvents = [];
+	// return by security
+	biggestAggregatedArray[0].listOfTimes.shift(); // remove initial value because it appears twice
+	return biggestAggregatedArray;
 }
 
 
@@ -415,7 +450,7 @@ function buildStatistics()
 
 function buildPalmaresSection(countingArray) // build table with ranking on each person's UNR count
 {
-	let palmaresHtmlTag = document.querySelector("#palmares"), palmaresHeaderHtmlTag, palmaresTableHtmlTag, palmaresRowHtmlTag, countingArrayElement, totalNbRecords;
+	let palmaresHtmlTag = document.querySelector("#palmares"), palmaresTableHtmlTag, palmaresRowHtmlTag, countingArrayElement, totalNbRecords;
 	palmaresHtmlTag.textContent = "";
 
 	// count records
@@ -428,12 +463,12 @@ function buildPalmaresSection(countingArray) // build table with ranking on each
 	palmaresHtmlTag.appendChild(createHtmlTagWithTextContent("h2", "Palmarès du nombre d'UNRs"));
 	palmaresTableHtmlTag = createHtmlTag("table");
 
-	// build palmares table header line
-	palmaresHeaderHtmlTag = createHtmlTag("tr");
-	palmaresHeaderHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Personne (" + countingArray.length + ")"));
-	palmaresHeaderHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Nombre d'UNRs (" + totalNbRecords + ")"));
-	palmaresHeaderHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Pourcentage des UNRs"));
-	palmaresTableHtmlTag.appendChild(palmaresHeaderHtmlTag);
+	// build palmares table header row
+	palmaresRowHtmlTag = createHtmlTag("tr");
+	palmaresRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Personne (" + countingArray.length + ")"));
+	palmaresRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Nombre d'UNRs (" + totalNbRecords + ")"));
+	palmaresRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Pourcentage des UNRs"));
+	palmaresTableHtmlTag.appendChild(palmaresRowHtmlTag);
 
 	// build rows of the palmares table
 	for (countingArrayElement of countingArray) {
@@ -446,14 +481,45 @@ function buildPalmaresSection(countingArray) // build table with ranking on each
 	palmaresHtmlTag.appendChild(palmaresTableHtmlTag);
 }
 
-function buildTopXShortestStandingRecordsTable()
-{
-	// TODO
-}
-
 function buildTopXLongestStandingRecordsTable()
 {
-	// TODO
+	let longestStandingHtmlTag = document.querySelector("#longestStanding");
+	longestStandingHtmlTag.textContent = "";
+	longestStandingHtmlTag.appendChild(createHtmlTagWithTextContent("h2", "UNRs les plus vieux"));
+	longestStandingHtmlTag.appendChild(buildTopXLongestShortestStandingRecordsTable(window.topXLongestStandingRecordsEvents));
+}
+
+function buildTopXShortestStandingRecordsTable()
+{
+	let longestStandingHtmlTag = document.querySelector("#shortestStanding");
+	longestStandingHtmlTag.textContent = "";
+	longestStandingHtmlTag.appendChild(createHtmlTagWithTextContent("h2", "UNRs les plus récents"));
+	longestStandingHtmlTag.appendChild(buildTopXLongestShortestStandingRecordsTable(window.topXShortestStandingRecordsEvents));
+}
+
+function buildTopXLongestShortestStandingRecordsTable(topXLongestOrShortestStandingRecordArray)
+{
+	let longestOrShortestStandingTableHtmlTag, longestOrShortestStandingRowHtmlTag, longestOrShortestStandingRecordObject;
+	longestOrShortestStandingTableHtmlTag = createHtmlTag("table");
+
+	// build longest/shortest standing table header row
+	longestOrShortestStandingRowHtmlTag = createHtmlTag("tr");
+	longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Rang"));
+	longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Personne"));
+	longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Date"));
+	longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Event"));
+	longestOrShortestStandingTableHtmlTag.appendChild(longestOrShortestStandingRowHtmlTag);
+
+	// build rows of the longest/shortest standing record table
+	for (longestOrShortestStandingRecordObject of topXLongestOrShortestStandingRecordArray) {
+		longestOrShortestStandingRowHtmlTag = createHtmlTag("tr");
+		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", longestOrShortestStandingRecordObject.rank));
+		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", longestOrShortestStandingRecordObject.name));
+		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", dateToString(longestOrShortestStandingRecordObject.date)));
+		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", longestOrShortestStandingRecordObject.eventName));
+		longestOrShortestStandingTableHtmlTag.appendChild(longestOrShortestStandingRowHtmlTag);
+	}
+	return longestOrShortestStandingTableHtmlTag;
 }
 
   /****************************/
@@ -548,7 +614,41 @@ function sectionNameToId(name) // transform a section name to id format
 
 function dateOfString(dateString) // build a Date object from a string of the form "yyyy-mm-dd"
 {
-	return new Date(dateString.substring(0, 4), dateString.substring(5, 7), dateString.substring(8, 10));
+	return new Date(dateString.substring(0, 4), dateString.substring(5, 7) - 1, dateString.substring(8, 10)); // months are in [0..11] in Date objects
+}
+
+function dateToString(date) // build a displayable string from a Date object
+{
+	let dateString, monthString, dayString, year, month, dateOfMonth, day;
+	year = date.getFullYear();
+	month = date.getMonth();
+	dateOfMonth = date.getDate();
+	day = date.getDay();
+	switch (month) {
+		case 0: monthString = "janvier"; break;
+		case 1: monthString = "février"; break;
+		case 2: monthString = "mars"; break;
+		case 3: monthString = "avril"; break;
+		case 4: monthString = "mai"; break;
+		case 5: monthString = "juin"; break;
+		case 6: monthString = "juillet"; break;
+		case 7: monthString = "août"; break;
+		case 8: monthString = "septembre"; break;
+		case 9: monthString = "octobre"; break;
+		case 10: monthString = "novembre"; break;
+		default: monthString = "décembre"; break;
+	}
+	switch (day) {
+		case 0: dayString = "dimanche"; break;
+		case 1: dayString = "lundi"; break;
+		case 2: dayString = "mardi"; break;
+		case 3: dayString = "mercredi"; break;
+		case 4: dayString = "jeudi"; break;
+		case 5: dayString = "vendredi"; break;
+		default: dayString = "samedi"; break;
+	}
+	dateString = dayString + " " + dateOfMonth + " " + monthString + " " + year;
+	return dateString;
 }
 
 function listToArray(inputListString) // convert a string of the form "a, b, c" to an array of the form ["a", "b", "c"]
