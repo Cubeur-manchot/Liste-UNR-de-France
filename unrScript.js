@@ -363,8 +363,10 @@ function listOfNamesToUpdateFromNameString(inputNamesList) // convert "firstPers
 function computeTopXLongestShortestStandingRecordEvents(nbEvents)
 {
 	let dateSortedRecordArray = sortDataBaseByDate(window.recordsDataBase);
-	window.topXLongestStandingRecordsEvents = aggregateFirstByDate(dateSortedRecordArray, nbEvents);
-	window.topXShortestStandingRecordsEvents = aggregateFirstByDate(dateSortedRecordArray.reverse(), nbEvents);
+	window.topXLongestStandingRecordsEvents = aggregateFirstByDate(dateSortedRecordArray, nbEvents, "longestStanding");
+	window.topXLongestStandingRecordsEvents[0].listOfTimes.shift(); // remove initial value because it appears twice
+	window.topXShortestStandingRecordsEvents = aggregateFirstByDate(dateSortedRecordArray.reverse(), nbEvents, "shortestStanding");
+	window.topXShortestStandingRecordsEvents[0].listOfTimes.pop(); // remove initial value because it appears twice
 }
 
 function sortDataBaseByDate(dataBaseArray)
@@ -390,11 +392,8 @@ function sortDataBaseByDate(dataBaseArray)
 	return dateSortedRecordArray;
 }
 
-function aggregateFirstByDate(dateSortedRecordArray, nbElements)
+function aggregateFirstByDate(dateSortedRecordArray, nbElements, mode)
 {
-	/*for (let object of dateSortedRecordArray) {
-		alert(object.name);
-	}*/
 	let biggestAggregatedArray = [], lastElement, recordObject, rank;
 	lastElement = {
 		rank: 1,
@@ -407,7 +406,11 @@ function aggregateFirstByDate(dateSortedRecordArray, nbElements)
 	for (recordObject of dateSortedRecordArray) {
 		if (recordObject.date.getTime() === lastElement.date.getTime() && recordObject.eventName === lastElement.eventName && recordObject.name === lastElement.name) {
 			// correspondance found, just agregate to last element of the array
-			biggestAggregatedArray[biggestAggregatedArray.length - 1].listOfTimes.push({avgType: recordObject.avgType, time: recordObject.time});
+			if (mode === "longestStanding") { // agregating with longest standing mode
+				biggestAggregatedArray[biggestAggregatedArray.length - 1].listOfTimes.push({avgType: recordObject.avgType, time: recordObject.time});
+			} else { // agregating with shortest standing mode
+				biggestAggregatedArray[biggestAggregatedArray.length - 1].listOfTimes.unshift({avgType: recordObject.avgType, time: recordObject.time});
+			}
 		} else {
 			// no correspondance found, add new element to the array if it's not full
 			if (biggestAggregatedArray.length < nbElements || lastElement.date.getTime() === recordObject.date.getTime()) { // array is not full or there is a date equality, add new element
@@ -425,13 +428,11 @@ function aggregateFirstByDate(dateSortedRecordArray, nbElements)
 				};
 				biggestAggregatedArray.push(lastElement);
 			} else { // array is full and the date is not equal to the previous one, agregation is finished
-				//biggestAggregatedArray[0].listOfTimes.shift(); // remove initial value because it appears twice
 				return biggestAggregatedArray;
 			}
 		}
 	}
 	// return by security
-	biggestAggregatedArray[0].listOfTimes.shift(); // remove initial value because it appears twice
 	return biggestAggregatedArray;
 }
 
@@ -516,11 +517,21 @@ function buildTopXLongestShortestStandingRecordsTable(topXLongestOrShortestStand
 		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", longestOrShortestStandingRecordObject.rank));
 		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", longestOrShortestStandingRecordObject.name));
 		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", dateToString(longestOrShortestStandingRecordObject.date)));
-		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", longestOrShortestStandingRecordObject.eventName));
+		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", longestOrShortestStandingRecordObject.eventName + " " + longestShortestStandingListOfTimesToAvgTypes(longestOrShortestStandingRecordObject.listOfTimes)));
 		longestOrShortestStandingTableHtmlTag.appendChild(longestOrShortestStandingRowHtmlTag);
 	}
 	return longestOrShortestStandingTableHtmlTag;
 }
+
+function longestShortestStandingListOfTimesToAvgTypes(inputListOfTimesArray)
+{
+	let outputString = "", listOfTimesElement;
+	for (listOfTimesElement of inputListOfTimesArray) {
+		outputString += ", " + listOfTimesElement.avgType;
+	}
+	return "(" + outputString.substring(2) + ")";
+}
+
 
   /****************************/
  /*      TOGGLE DISPLAY      */
@@ -666,7 +677,6 @@ function listToArray(inputListString) // convert a string of the form "a, b, c" 
 	outputArray.push(listString); // insert last element
 	return outputArray;
 }
-
 
   /****************************/
  /*   BUILDING PAGE UTILS    */
