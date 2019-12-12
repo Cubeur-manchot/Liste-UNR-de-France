@@ -78,7 +78,7 @@ a:hover > .commentary, td:hover > .commentary { display: inline-block; position:
 #stock_xml { display: none; }
 
 /*____________ PLAN DE PAGE, FILTRER ET MODE COMPACT ____________*/
-#bouton_filtrer, #offCompactButton, #onCompactButton
+#planAndFiltersButton, #offCompactButton, #onCompactButton
 {
 	display: inline-block;
 	vertical-align: top;
@@ -94,29 +94,33 @@ a:hover > .commentary, td:hover > .commentary { display: inline-block; position:
 	font-size: 18px;
 }
 
-#bouton_filtrer { background-color: rgb(100,200,100); }
+#planAndFiltersButton { background-color: rgb(100,200,100); }
 #offCompactButton { background-color: rgb(100,100,200); }
 #onCompactButton { background-color: rgb(150,150,200); }
 
-#pagePlan
+#pagePlanAndFilters
 {
-	display: inline-block;
+	display: none;
 	margin: 15px;
 	padding: 0px;
 	border: 1px solid rgb(128, 128, 128);
 	border-radius: 10px;
-	width: 425px;
+	width: 460px;
 	text-align: center;
 	background-color: rgb(200,255,200);
 }
 
-.sectionPlan { display: inline-block; vertical-align: top; margin: 0px; padding: 5px; }
-.sectionPlanTitle { display: inline-block; vertical-align: top; margin: 0px 10px 10px 10px; }
+.sectionPlan { display: inline-block; vertical-align: top; margin: 5px 0px 5px 0px; padding: 0px 0px 0px 5px; }
+.normalPlan .sectionPlan { width: 46%; text-align: left; }
+.compactPlan .sectionPlan { width: 130px; }
+.sectionPlanTitle { display: inline-block; vertical-align: top; margin: 0px 0px 0px 0px; }
+.normalPlan .sectionPlanTitle { min-width: 100px; margin-left: 10px; }
+.compactPlan .sectionPlanTitle { width: 100%; text-align: center; }
 
-.subsectionPlan { display: inline-block; text-align: center; margin: 3px 0px 0px 15px; padding: 0px; }
-.subsectionPlanTitle { display: inline-block; vertical-align: middle; margin: 0px 0px 0px 10px; }
+.subsectionPlan { display: inline-block; margin: 3px 0px 0px 15px; padding: 0px; }
+.subsectionPlanTitle { display: inline-block; min-width: 100px; vertical-align: middle; margin: 0px 0px 0px 10px; }
 
-#filters { border-bottom: 1px solid rgb(170,170,170); text-align: center; }
+#avgTypeFilters { border-bottom: 1px solid rgb(170,170,170); text-align: center; }
 .avgTypeFilter { display: inline-block; margin: 5px 5px 0px 5px; }
 .avgTypeFilterName { display: inline-block; vertical-align: middle; margin: 5px; }
 
@@ -127,7 +131,7 @@ a:hover > .commentary, td:hover > .commentary { display: inline-block; position:
 	text-align: left;
 	width: 35px;
 	height: 14px;
-	margin: 0px 0px 0px 10px;
+	margin: 0px 0px 0px 0px;
 	padding: 0px;
 	background-color: rgb(180,180,180);
 	border: 1px solid rgb(100,100,100);

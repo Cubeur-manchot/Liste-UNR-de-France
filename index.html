@@ -4,14 +4,23 @@
 		<meta charset="utf-8"/>
 		<title>Liste UNR de France</title>
 		<link href="forme_unr.css" type="text/css" rel="stylesheet" media="all">
-		<script src="unrScript.js" type="text/javascript"></script>
+        <script src="buildPage.js" type="text/javascript"></script>
+        <script src="inputData.js" type="text/javascript"></script>
+        <script src="pagePlan.js" type="text/javascript"></script>
+        <script src="buildRecords.js" type="text/javascript"></script>
+        <script src="statistics.js" type="text/javascript"></script>
+		<script src="tagCreator.js" type="text/javascript"></script>
+		<script src="utils.js" type="text/javascript"></script>
 	</head>
-	<body onload="init(); buildRecordSection(); initStatistics(); buildStatistics();">
+	<body onload="buildPage();">
 		<h1>Liste UNR de France</h1>
 		<div id="offCompactButton" onclick="toggleCompactMode();">Passer en Mode Compact</div>
-		<div id="bouton_filtrer" onclick="toggleDisplayPlan();">Plan de Page / Filtrer</div>
+		<div id="planAndFiltersButton" onclick="toggleDisplayPlan();">Plan de Page / Filtrer</div>
 		<br/>
-		<div id="pagePlan"></div>
+		<div id="pagePlanAndFilters">
+            <div id="avgTypeFilters"></div>
+            <div id="pagePlan" class="normalPlan"></div>
+        </div>
 		<p>En cas d'oubli ou d'erreur sur un UNR, n'hésitez pas à contacter Cubeur-manchot, soit via le forum Francocube (MP ou topic des UNR) soit via le discord des cubeurs francophones.</p>
 		<section id="records"></section>
 		<section id="palmares"></section>
