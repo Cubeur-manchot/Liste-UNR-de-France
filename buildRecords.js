@@ -29,7 +29,7 @@ function buildRecords(planObject) // build all sections, h2, subsections, h3 and
 
 function buildTableForSection(sectionObject) // build record table for input section/subsection
 {
-	let tableHtmlTag = createHtmlTag("table"), trHtmlTag, tdHtmlTag, recordObject, eventName, avgType;
+	let tableHtmlTag = createHtmlTagWithClassName("table", "recordTable"), trHtmlTag, tdHtmlTag, recordObject, eventName, avgType;
 	tableHtmlTag.appendChild(buildHeaderRow());
 	for (eventName of sectionObject.events) {
 		trHtmlTag = createHtmlTag("tr");

@@ -1,59 +1,63 @@
 "use strict";
 
 // import functions from tagCreator.js
-/* global createHtmlTag, createHtmlTagWithTextContent */
+/* global createHtmlTag, createHtmlTagWithTextContent, createHtmlTagWithClassNameAndTextContent */
 
 // import functions from utils.js
 /* global dateToString */
 
-function countRecords() // count records in window.recordDataBase and store the result in window.countingArray for palmares section
+function buildStatistics() // compute the statistics and build the tables displaying them
 {
-	let dataBaseObject, personNames;
-	window.countingArray = [];
-	for (dataBaseObject of window.bruteRecordsDataBase) {
-		personNames = dataBaseObject.name;
-		if (personNames !== "") {
-			addNamesInCountingArray(listOfNamesToUpdateFromNameString(personNames));
-		}
-	}
+	sortCountRecords(countRecords());
+	computeTopXLongestShortestStandingRecordEvents(5);
+	buildPalmaresSection();
+	buildTopXLongestStandingRecordsTable();
+	buildTopXShortestStandingRecordsTable();
 }
 
-function addNamesInCountingArray(arrayOfNamesToUpdate) // both increment UNR count and update ranking in window.countingArray for input names
+function countRecords()
 {
-	let personName, personUnrCount, countingArrayIndex, countingArray = window.countingArray;
-	for (personName of arrayOfNamesToUpdate) {
-		countingArrayIndex = findIndexInCountingArray(personName);
-		if (countingArrayIndex === -1) { // if the name is not in the list, it should be added to it
-			countingArray.push({name: personName, count: 1});
-		} else { // if the name is already in the list, count and ranking should be updated
-			countingArray[countingArrayIndex].count++; // update count for this person
-			personUnrCount = countingArray[countingArrayIndex].count;
-			while (countingArrayIndex > 0 && countingArray[countingArrayIndex].count > countingArray[countingArrayIndex-1].count) { // update array sort
-				countingArray[countingArrayIndex].name = countingArray[countingArrayIndex-1].name;
-				countingArray[countingArrayIndex].count = countingArray[countingArrayIndex-1].count;
-				countingArray[countingArrayIndex-1].name = personName;
-				countingArray[countingArrayIndex-1].count = personUnrCount;
-				countingArrayIndex--;
+	let namesArray = [], countArray = [], dataBaseObject, name;
+	for (dataBaseObject of window.bruteRecordsDataBase) {
+		for (name of listOfNamesToUpdateFromNameString(dataBaseObject.name)) {
+			if (countArray[name] === undefined) {
+				countArray[name] = 1;
+				namesArray.push(name);
+			} else {
+				countArray[name]++;
 			}
 		}
 	}
+	return {namesArray: namesArray, countArray: countArray};
 }
 
-function findIndexInCountingArray(name) // return the index of the name in the countingArray (-1 if absent)
+function sortCountRecords(namesArrayAndCountArrayObject) // sort the UNR count decreasingly and stores it in window.countingArray
 {
-	let countingArrayElement, countingArray = window.countingArray;
-	for (countingArrayElement of countingArray) {
-		if (countingArrayElement.name === name) {
-			return countingArray.indexOf(countingArrayElement);
+	let namesArray = namesArrayAndCountArrayObject.namesArray, countArray = namesArrayAndCountArrayObject.countArray, minimumNameAndCountArray, name, minimumCount;
+	window.countingArray = [];
+	while (namesArray.length !== 0) {
+		minimumCount = 1000;
+		minimumNameAndCountArray = [];
+		for (name of namesArray) { // find the persons that have the smallest UNR count
+			if (countArray[name] < minimumCount) { // if the person has a smallest UNR count than the current minimum, update this minimum with the new value
+				minimumCount = countArray[name];
+				minimumNameAndCountArray = [{name: name, count: minimumCount}];
+			} else if (countArray[name] === minimumCount) { // if the person has the same UNR count than the current minimum, add the name to the list
+				minimumNameAndCountArray.push({name: name, count: minimumCount});
+			}
 		}
+		window.countingArray = minimumNameAndCountArray.concat(window.countingArray); // insert names with minimum count at the beginning of window.countingArray
+		namesArray = namesArray.filter(function(name) { return countArray[name] !== minimumCount; }); // remove names with minimum count
 	}
-	return -1;
 }
 
 function listOfNamesToUpdateFromNameString(inputNamesList) // convert a string of the form "firstPerson + secondPerson" to an array of the form ["firstPerson", "secondPerson"]
 {
-	// if inputNamesList has no " + " (like "singlePerson"), it returns a 1-element array (["singlePerson"])
 	let indexOfPlus, namesList = inputNamesList, arrayOfNamesToUpdate = [];
+	if (inputNamesList === "") { // if list is empty, return empty array
+		return arrayOfNamesToUpdate;
+	}
+	// if inputNamesList has no " + " (like "singlePerson"), it returns a 1-element array (["singlePerson"])
 	while(namesList.includes(" + ")) { // split for each +
 		indexOfPlus = namesList.indexOf(" + ");
 		arrayOfNamesToUpdate.push(namesList.substring(0, indexOfPlus));
@@ -63,20 +67,19 @@ function listOfNamesToUpdateFromNameString(inputNamesList) // convert a string o
 	return arrayOfNamesToUpdate;
 }
 
-
-function computeTopXLongestShortestStandingRecordEvents(nbEvents)
+function computeTopXLongestShortestStandingRecordEvents(nbEvents) // compute statistics on longest standing and shortest standing records
 {
-	let dateSortedRecordArray = sortDataBaseByDate(window.bruteRecordsDataBase);
+	let dateSortedRecordArray = sortDataBaseByDate();
 	window.topXLongestStandingRecordsEvents = aggregateFirstByDate(dateSortedRecordArray, nbEvents, "longestStanding");
 	window.topXLongestStandingRecordsEvents[0].listOfAvgTypeAndTimePairs.shift(); // remove initial value because it appears twice
 	window.topXShortestStandingRecordsEvents = aggregateFirstByDate(dateSortedRecordArray.reverse(), nbEvents, "shortestStanding");
 	window.topXShortestStandingRecordsEvents[0].listOfAvgTypeAndTimePairs.pop(); // remove initial value because it appears twice
 }
 
-function sortDataBaseByDate(dataBaseArray)
+function sortDataBaseByDate() // sort window.bruteDataBase by date and remove empty records
 {
 	let dateSortedRecordArray = [], dataBaseObject, date, nullDate = new Date(0), arrayIndex, arraySorted;
-	for (dataBaseObject of dataBaseArray) {
+	for (dataBaseObject of window.bruteRecordsDataBase) {
 		date = dataBaseObject.date;
 		if (date > nullDate) {
 			dateSortedRecordArray.push({eventName: dataBaseObject.eventName, avgType: dataBaseObject.avgType, name: dataBaseObject.name, time: dataBaseObject.time, date: date});
@@ -96,9 +99,9 @@ function sortDataBaseByDate(dataBaseArray)
 	return dateSortedRecordArray;
 }
 
-function aggregateFirstByDate(dateSortedRecordArray, nbElements, mode)
+function aggregateFirstByDate(dateSortedRecordArray, nbElements, mode) // aggregate dataBase elements when they have the same event, person name and date
 {
-	let biggestAggregatedArray = [], lastElement, recordObject, rank;
+	let aggregatedArray = [], lastElement, recordObject, rank;
 	lastElement = {
 		rank: 1,
 		date: dateSortedRecordArray[0].date,
@@ -106,22 +109,22 @@ function aggregateFirstByDate(dateSortedRecordArray, nbElements, mode)
 		name: dateSortedRecordArray[0].name,
 		listOfAvgTypeAndTimePairs: [{avgType: dateSortedRecordArray[0].avgType, time: dateSortedRecordArray[0].time}]
 	};
-	biggestAggregatedArray.push(lastElement);
+	aggregatedArray.push(lastElement);
 	for (recordObject of dateSortedRecordArray) {
 		if (recordObject.date.getTime() === lastElement.date.getTime() && recordObject.eventName === lastElement.eventName && recordObject.name === lastElement.name) {
 			// correspondance found, just agregate to last element of the array
-			if (mode === "longestStanding") { // agregating with longest standing mode
-				biggestAggregatedArray[biggestAggregatedArray.length - 1].listOfAvgTypeAndTimePairs.push({avgType: recordObject.avgType, time: recordObject.time});
-			} else { // agregating with shortest standing mode
-				biggestAggregatedArray[biggestAggregatedArray.length - 1].listOfAvgTypeAndTimePairs.unshift({avgType: recordObject.avgType, time: recordObject.time});
+			if (mode === "longestStanding") { // agregating with normal order
+				aggregatedArray[aggregatedArray.length - 1].listOfAvgTypeAndTimePairs.push({avgType: recordObject.avgType, time: recordObject.time});
+			} else { // agregating with reverse order
+				aggregatedArray[aggregatedArray.length - 1].listOfAvgTypeAndTimePairs.unshift({avgType: recordObject.avgType, time: recordObject.time});
 			}
 		} else {
 			// no correspondance found, add new element to the array if it's not full
-			if (biggestAggregatedArray.length < nbElements || lastElement.date.getTime() === recordObject.date.getTime()) { // array is not full or there is a date equality, add new element
-				if (recordObject.date.getTime() === lastElement.date.getTime()) { // date equality
+			if (aggregatedArray.length < nbElements || lastElement.date.getTime() === recordObject.date.getTime()) { // array is not full or there is a date equality, add new element
+				if (recordObject.date.getTime() === lastElement.date.getTime()) { // date equality, rank is the same as the previous one
 					rank = lastElement.rank;
-				} else { // no date equality
-					rank = biggestAggregatedArray.length + 1;
+				} else { // no date equality, rank is equal to the number of previous elements + 1
+					rank = aggregatedArray.length + 1;
 				}
 				lastElement = {
 					rank: rank,
@@ -130,33 +133,13 @@ function aggregateFirstByDate(dateSortedRecordArray, nbElements, mode)
 					name: recordObject.name,
 					listOfAvgTypeAndTimePairs: [{avgType: recordObject.avgType, time: recordObject.time}]
 				};
-				biggestAggregatedArray.push(lastElement);
+				aggregatedArray.push(lastElement);
 			} else { // array is full and the date is not equal to the previous one, agregation is finished
-				return biggestAggregatedArray;
+				return aggregatedArray;
 			}
 		}
 	}
-	// return by security
-	return biggestAggregatedArray;
-}
-
-
-function buildStatistics() // build the tables containing statistics
-{
-	countRecords();
-	computeTopXLongestShortestStandingRecordEvents(5);
-	buildPalmaresSection();
-	buildTopXLongestStandingRecordsTable();
-	buildTopXShortestStandingRecordsTable();
-}
-
-function buildPalmaresTableHeaderRow(nbPersons, nbRecords) // build header row for table of ranking on each person's UNR count
-{
-	let palmaresHeaderRowHtmlTag = createHtmlTag("tr");
-	palmaresHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Personne (" + nbPersons + ")"));
-	palmaresHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Nombre d'UNRs (" + nbRecords + ")"));
-	palmaresHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Pourcentage des UNRs"));
-	return palmaresHeaderRowHtmlTag;
+	return aggregatedArray; // return by security
 }
 
 function buildPalmaresSection() // build table of ranking on each person's UNR count
@@ -177,6 +160,15 @@ function buildPalmaresSection() // build table of ranking on each person's UNR c
 		palmaresTableHtmlTag.appendChild(palmaresRowHtmlTag);
 	}
 	palmaresHtmlTag.appendChild(palmaresTableHtmlTag);
+}
+
+function buildPalmaresTableHeaderRow(nbPersons, nbRecords) // build header row for table of ranking on each person's UNR count
+{
+	let palmaresHeaderRowHtmlTag = createHtmlTag("tr");
+	palmaresHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Personne (" + nbPersons + ")"));
+	palmaresHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Nombre d'UNRs (" + nbRecords + ")"));
+	palmaresHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Pourcentage des UNRs"));
+	return palmaresHeaderRowHtmlTag;
 }
 
 function buildTopXLongestStandingRecordsTable() // build the section of longest standing records
@@ -202,6 +194,7 @@ function buildLongestShortestStandingTableHeaderRow() // build header row of the
 	longestOrShortestStandingHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Personne"));
 	longestOrShortestStandingHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Date"));
 	longestOrShortestStandingHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Event"));
+	longestOrShortestStandingHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Score"));
 	return longestOrShortestStandingHeaderRowHtmlTag;
 }
 
@@ -211,21 +204,21 @@ function buildTopXLongestShortestStandingRecordsTable(topXLongestOrShortestStand
 	longestOrShortestStandingTableHtmlTag.appendChild(buildLongestShortestStandingTableHeaderRow());
 	for (longestOrShortestStandingRecordObject of topXLongestOrShortestStandingRecordArray) {
 		longestOrShortestStandingRowHtmlTag = createHtmlTag("tr");
-		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", longestOrShortestStandingRecordObject.rank));
-		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", longestOrShortestStandingRecordObject.name));
-		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", dateToString(longestOrShortestStandingRecordObject.date)));
-		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithTextContent("td",longestOrShortestStandingRecordObject.eventName + " " +
-			longestShortestStandingAvgTypes(longestOrShortestStandingRecordObject.listOfAvgTypeAndTimePairs)));
+		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("td", "rank", longestOrShortestStandingRecordObject.rank));
+		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("td", "name", longestOrShortestStandingRecordObject.name));
+		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("td", "date", dateToString(longestOrShortestStandingRecordObject.date)));
+		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("td", "eventName", longestOrShortestStandingRecordObject.eventName));
+		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("td", "times", longestShortestStandingAvgTypes(longestOrShortestStandingRecordObject.listOfAvgTypeAndTimePairs)));
 		longestOrShortestStandingTableHtmlTag.appendChild(longestOrShortestStandingRowHtmlTag);
 	}
 	return longestOrShortestStandingTableHtmlTag;
 }
 
-function longestShortestStandingAvgTypes(inputAvgTypeAndTimePairsArray) // convert an aray of the form [{avgType, time}, {avgType, time}, ...] to a string of the form "(avgType, avgType, ...)"
+function longestShortestStandingAvgTypes(inputAvgTypeAndTimePairsArray) // convert an array [{avgType, time}, {avgType, time}, ...] to a string "time avgType, time avgType, ..."
 {
 	let outputString = "", avgTypeAndTimePair;
 	for (avgTypeAndTimePair of inputAvgTypeAndTimePairsArray) {
-		outputString += ", " + avgTypeAndTimePair.avgType;
+		outputString += ", " + avgTypeAndTimePair.time + " " + avgTypeAndTimePair.avgType;
 	}
-	return "(" + outputString.substring(2) + ")";
+	return outputString.substring(2);
 }

@@ -1,7 +1,7 @@
 "use strict";
 
 // import functions from tagCreator.js
-/* global createHtmlTag, createHtmlTagWithId, createHtmlTagWithClassName, createHtmlTagWithClassNameAndTextContent, createHtmlTagWithClassNameHrefTextContent */
+/* global createHtmlTag, createHtmlTagWithClassName, createHtmlTagWithClassNameAndTextContent, createHtmlTagWithClassNameHrefTextContent */
 
 // import functions from utils.js
 /* global sectionNameToId */
