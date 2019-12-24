@@ -6,9 +6,12 @@
 // import functions from utils.js
 /* global dateToString */
 
+// import functions from Chart.js (local version)
+/* global Chart */
+
 function buildStatistics() // compute the statistics and build the tables displaying them
 {
-	sortCountRecords(countRecords());
+	countRecords();
 	computeTopXLongestShortestStandingRecordEvents(5);
 	buildPalmaresSection();
 	buildTopXLongestStandingRecordsTable();
@@ -17,7 +20,9 @@ function buildStatistics() // compute the statistics and build the tables displa
 
 function countRecords()
 {
-	let namesArray = [], countArray = [], dataBaseObject, name;
+	let namesArray = [], countArray = [], namesWithMinimumCountArray, dataBaseObject, name, minimumCount;
+	window.countingArray = {names: [], counts: []};
+	// count records in database
 	for (dataBaseObject of window.bruteRecordsDataBase) {
 		for (name of listOfNamesToUpdateFromNameString(dataBaseObject.name)) {
 			if (countArray[name] === undefined) {
@@ -28,25 +33,20 @@ function countRecords()
 			}
 		}
 	}
-	return {namesArray: namesArray, countArray: countArray};
-}
-
-function sortCountRecords(namesArrayAndCountArrayObject) // sort the UNR count decreasingly and stores it in window.countingArray
-{
-	let namesArray = namesArrayAndCountArrayObject.namesArray, countArray = namesArrayAndCountArrayObject.countArray, minimumNameAndCountArray, name, minimumCount;
-	window.countingArray = [];
+	// sort persons by count and stores them in window.countingArray
 	while (namesArray.length !== 0) {
 		minimumCount = 1000;
-		minimumNameAndCountArray = [];
+		namesWithMinimumCountArray = [];
 		for (name of namesArray) { // find the persons that have the smallest UNR count
 			if (countArray[name] < minimumCount) { // if the person has a smallest UNR count than the current minimum, update this minimum with the new value
 				minimumCount = countArray[name];
-				minimumNameAndCountArray = [{name: name, count: minimumCount}];
+				namesWithMinimumCountArray = [name];
 			} else if (countArray[name] === minimumCount) { // if the person has the same UNR count than the current minimum, add the name to the list
-				minimumNameAndCountArray.push({name: name, count: minimumCount});
+				namesWithMinimumCountArray.push(name);
 			}
 		}
-		window.countingArray = minimumNameAndCountArray.concat(window.countingArray); // insert names with minimum count at the beginning of window.countingArray
+		window.countingArray.names = namesWithMinimumCountArray.concat(window.countingArray.names);
+		window.countingArray.counts = Array(namesWithMinimumCountArray.length).fill(minimumCount).concat(window.countingArray.counts);
 		namesArray = namesArray.filter(function(name) { return countArray[name] !== minimumCount; }); // remove names with minimum count
 	}
 }
@@ -142,33 +142,43 @@ function aggregateFirstByDate(dateSortedRecordArray, nbElements, mode) // aggreg
 	return aggregatedArray; // return by security
 }
 
-function buildPalmaresSection() // build table of ranking on each person's UNR count
+function buildPalmaresSection() // build the bar graphic of UNR count
 {
-	let palmaresHtmlTag = document.querySelector("#palmares"), palmaresTableHtmlTag, palmaresRowHtmlTag, countingArrayElement, totalNbRecords = 0;
-	palmaresHtmlTag.textContent = "";
-	for (countingArrayElement of window.countingArray) { // count records
-		totalNbRecords += countingArrayElement.count;
-	}
-	palmaresHtmlTag.appendChild(createHtmlTagWithTextContent("h2", "Palmarès du nombre d'UNRs"));
-	palmaresTableHtmlTag = createHtmlTag("table");
-	palmaresTableHtmlTag.appendChild(buildPalmaresTableHeaderRow(window.countingArray.length, totalNbRecords));
-	for (countingArrayElement of window.countingArray) {
-		palmaresRowHtmlTag = createHtmlTag("tr");
-		palmaresRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", countingArrayElement.name));
-		palmaresRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", countingArrayElement.count));
-		palmaresRowHtmlTag.appendChild(createHtmlTagWithTextContent("td", (100 * countingArrayElement.count / totalNbRecords + "").substring(0,4) + " %"));
-		palmaresTableHtmlTag.appendChild(palmaresRowHtmlTag);
-	}
-	palmaresHtmlTag.appendChild(palmaresTableHtmlTag);
-}
+	let ctx = document.getElementById('myChart').getContext('2d');
+	let backgroundColorGradientStroke = ctx.createLinearGradient(0, 0, 0, 500);
+	let borderColorGradientStroke = ctx.createLinearGradient(0, 0, 0, 500);
 
-function buildPalmaresTableHeaderRow(nbPersons, nbRecords) // build header row for table of ranking on each person's UNR count
-{
-	let palmaresHeaderRowHtmlTag = createHtmlTag("tr");
-	palmaresHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Personne (" + nbPersons + ")"));
-	palmaresHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Nombre d'UNRs (" + nbRecords + ")"));
-	palmaresHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Pourcentage des UNRs"));
-	return palmaresHeaderRowHtmlTag;
+	backgroundColorGradientStroke.addColorStop(0.0, "rgb(255,224,230)");
+	backgroundColorGradientStroke.addColorStop(0.2, "rgb(255,236,217)");
+	backgroundColorGradientStroke.addColorStop(0.4, "rgb(255,245,221)");
+	backgroundColorGradientStroke.addColorStop(0.6, "rgb(219,242,242)");
+	backgroundColorGradientStroke.addColorStop(0.8, "rgb(215,236,251)");
+	backgroundColorGradientStroke.addColorStop(1.0, "rgb(235,224,255)");
+
+	borderColorGradientStroke.addColorStop(0.0, "rgb(255,134,160)");
+	borderColorGradientStroke.addColorStop(0.2, "rgb(255,160,67)");
+	borderColorGradientStroke.addColorStop(0.4, "rgb(255,205,88)");
+	borderColorGradientStroke.addColorStop(0.6, "rgb(78,193,193)");
+	borderColorGradientStroke.addColorStop(0.8, "rgb(57,163,235)");
+	borderColorGradientStroke.addColorStop(1.0, "rgb(154,104,255)");
+
+	new Chart(
+		ctx,
+		{
+			type: 'bar',
+			data: {
+				labels: window.countingArray.names,
+				datasets: [{
+					label: "Nombre d'UNRs",
+					backgroundColor: backgroundColorGradientStroke,
+					borderColor: borderColorGradientStroke,
+					borderWidth: 1,
+					data: window.countingArray.counts
+				}]
+			},
+			options: {}
+		}
+	);
 }
 
 function buildTopXLongestStandingRecordsTable() // build the section of longest standing records

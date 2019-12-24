@@ -3,6 +3,7 @@ body
 	margin: 0px;
 	padding: 0px;
 	background-color: rgb(230, 243, 255);
+	font-family: "Muli", sans-serif;
 }
 
 section
@@ -14,7 +15,16 @@ section
 
 section.recordsSubsection
 {
-	margin: 20px 0px 10px 0px;
+	margin: 20px 0px 40px 0px;
+}
+
+section#statistics div#palmaresContainer
+{
+	width: 80%;
+	margin: 20px auto 20px auto;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: rgb(255,255,255);
 }
 
 h1
@@ -32,4 +42,9 @@ p
 	margin: 20px;
 	font-size: 1em;
 	text-align: justify;
+}
+
+a
+{
+	text-decoration: none;
 }

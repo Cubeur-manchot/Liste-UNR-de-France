@@ -63,12 +63,12 @@ function toggleCompactMode() // toggle between compact and normal mode
 	if (compactModeButtonOnOffPositionHtmlTag) { // switch to compact mode
 		planObject = window.compactPlan;
 		compactModeButtonOnOffPositionHtmlTag.id = "onCompactButton";
-		compactModeButtonOnOffPositionHtmlTag.textContent = "Repasser en Mode Normal";
+		compactModeButtonOnOffPositionHtmlTag.textContent = "Mode Compact";
 	} else { //switch back to normal mode
 		compactModeButtonOnOnPositionHtmlTag = document.querySelector("#onCompactButton");
 		planObject = window.normalPlan;
 		compactModeButtonOnOnPositionHtmlTag.id = "offCompactButton";
-		compactModeButtonOnOnPositionHtmlTag.textContent = "Passer en Mode Compact";
+		compactModeButtonOnOnPositionHtmlTag.textContent = "Mode Normal";
 	}
 	buildAvgTypeFilters(); // reinitialize avg type filters
 	buildPlan(planObject); // update plan and filters

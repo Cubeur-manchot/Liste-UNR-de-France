@@ -6,6 +6,7 @@
 		<link type="text/css" rel="stylesheet" media="all" href="general.css">
 		<link type="text/css" rel="stylesheet" media="all" href="table.css">
 		<link type="text/css" rel="stylesheet" media="all" href="planAndFilters.css">
+		<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 		<script type="text/javascript" src="buildPage.js"></script>
 		<script type="text/javascript" src="inputData.js"></script>
 		<script type="text/javascript" src="pagePlan.js"></script>
@@ -13,20 +14,26 @@
 		<script type="text/javascript" src="statistics.js"></script>
 		<script type="text/javascript" src="tagCreator.js"></script>
 		<script type="text/javascript" src="utils.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 	</head>
 	<body onload="buildPage();">
 		<h1>Liste UNR de France</h1>
-		<div id="offCompactButton" onclick="toggleCompactMode();">Passer en Mode Compact</div>
-		<div id="planAndFiltersButton" onclick="toggleDisplayPlan();">Plan de Page / Filtrer</div>
-		<br/>
-		<div id="pagePlanAndFilters">
-            <div id="avgTypeFilters"></div>
-            <div id="pagePlan" class="normalPlan"></div>
-        </div>
-		<p>En cas d'oubli ou d'erreur sur un UNR, n'hésitez pas à contacter Cubeur-manchot, soit via le forum Francocube (MP ou topic des UNR) soit via le discord des cubeurs francophones.</p>
-		<section id="records"></section>/>
+		<section id=filters">
+			<div class="button" id="offCompactButton" onclick="toggleCompactMode();">Mode Normal</div>
+			<div class="button" id="planAndFiltersButton" onclick="toggleDisplayPlan();">Filtres</div>
+			<br/>
+			<div id="pagePlanAndFilters">
+	            <div id="avgTypeFilters"></div>
+	            <div id="pagePlan" class="normalPlan"></div>
+    	    </div>
+		</section>
+		<p>Une mise à jour ? Une erreur ? Un bug ? N'hésitez pas à <a href="contact.html" target="_blank">me contacter</a>.</p>
+		<section id="records"></section>
 		<section id="statistics">
-            <section id="palmares"></section>
+			<h2>Statistiques</h2>
+			<div id="palmaresContainer">
+				<canvas id="myChart"></canvas>
+			</div>
 			<section id="longestStanding"></section>
 			<section id="shortestStanding"></section>
         </section>

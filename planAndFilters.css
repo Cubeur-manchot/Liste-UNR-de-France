@@ -1,4 +1,6 @@
-#planAndFiltersButton, #offCompactButton, #onCompactButton
+/* Style for the two buttons on top of the page */
+
+div.button
 {
     display: inline-block;
     vertical-align: top;
@@ -10,56 +12,130 @@
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
     cursor: pointer;
-    text-shadow: rgb(255, 255, 255) 1px 1px 1px;
     font-size: 18px;
 }
 
-#planAndFiltersButton { background-color: rgb(100,200,100); }
-#offCompactButton { background-color: rgb(100,100,200); }
-#onCompactButton { background-color: rgb(150,150,200); }
+div#planAndFiltersButton
+{
+    background-color: rgb(100,200,100);
+}
 
-#pagePlanAndFilters
+div#offCompactButton
+{
+    background-color: rgb(125,125,200);
+}
+
+div#onCompactButton
+{
+    background-color: rgb(150,150,200);
+}
+
+ /* Style for avgType filters and page plan */
+
+div#pagePlanAndFilters
 {
     display: none;
     margin: 15px;
     padding: 0px;
     border: 1px solid rgb(128, 128, 128);
     border-radius: 10px;
-    width: 460px;
+    width: 480px;
     text-align: center;
     background-color: rgb(200,255,200);
 }
 
-.sectionPlan { display: inline-block; vertical-align: top; margin: 5px 0px 5px 0px; padding: 0px 0px 0px 5px; }
-.normalPlan .sectionPlan { width: 46%; text-align: left; }
-.compactPlan .sectionPlan { width: 130px; }
-.sectionPlanTitle { display: inline-block; vertical-align: top; margin: 0px 0px 0px 0px; }
-.normalPlan .sectionPlanTitle { min-width: 100px; margin-left: 10px; }
-.compactPlan .sectionPlanTitle { width: 100%; text-align: center; }
+#avgTypeFilters
+{
+    border-bottom: 1px solid rgb(170,170,170);
+    text-align: center;
+}
 
-.subsectionPlan { display: inline-block; margin: 3px 0px 0px 15px; padding: 0px; }
-.subsectionPlanTitle { display: inline-block; min-width: 100px; vertical-align: middle; margin: 0px 0px 0px 10px; }
+.avgTypeFilter
+{
+    display: inline-block;
+    margin: 5px 5px 0px 5px;
+}
 
-#avgTypeFilters { border-bottom: 1px solid rgb(170,170,170); text-align: center; }
-.avgTypeFilter { display: inline-block; margin: 5px 5px 0px 5px; }
-.avgTypeFilterName { display: inline-block; vertical-align: middle; margin: 5px; }
-
-.externalButton
+.avgTypeFilterName
 {
     display: inline-block;
     vertical-align: middle;
+    margin: 5px;
+}
+
+.sectionPlan
+{
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px 0px 5px 0px;
+    padding: 0px 0px 0px 5px;
+}
+
+.normalPlan .sectionPlan
+{
+    width: 46%;
     text-align: left;
+}
+
+.compactPlan .sectionPlan
+{
+    width: 130px;
+}
+
+.sectionPlanTitle
+{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 0px 0px 0px;
+}
+
+.normalPlan .sectionPlanTitle
+{
+    min-width: 100px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.compactPlan .sectionPlanTitle
+{
+    width: 100%;
+    text-align: center;
+}
+
+.subsectionPlan
+{
+    display: inline-block;
+    margin: 3px 0px 0px 15px;
+    padding: 0px;
+}
+
+.subsectionPlanTitle
+{
+    display: inline-block;
+    min-width: 100px;
+    vertical-align: middle;
+    margin: 0px 0px 0px 10px;
+}
+
+
+/* Style for filter buttons */
+
+div.externalButton
+{
+    display: inline-block;
+    vertical-align: middle;
     width: 35px;
     height: 14px;
     margin: 0px 0px 0px 0px;
     padding: 0px;
-    background-color: rgb(180,180,180);
     border: 1px solid rgb(100,100,100);
     border-radius: 50px;
+    background-color: rgb(180,180,180);
+    text-align: left;
     cursor: pointer;
 }
-.sectionPlan > .externalButton { vertical-align: middle; }
-.innerButton
+
+div.innerButton
 {
     display: inline-block;
     vertical-align: middle;
@@ -67,9 +143,9 @@
     transform: translate(0px,-4px);
     width: 12px;
     height: 12px;
-    border-radius: 50px;
-    border: 1px solid rgb(100,100,100);
     margin: 0px;
+    border: 1px solid rgb(100,100,100);
+    border-radius: 50px;
     background-color: rgb(100,255,100);
     transition: all 0.5s;
 }
