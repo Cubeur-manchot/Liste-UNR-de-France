@@ -18,7 +18,7 @@
 	</head>
 	<body onload="buildPage();">
 		<h1>Liste UNR de France</h1>
-		<section id=filters">
+		<section id="filters">
 			<div class="button" id="offCompactButton" onclick="toggleCompactMode();">Mode Normal</div>
 			<div class="button" id="planAndFiltersButton" onclick="toggleDisplayPlan();">Filtres</div>
 			<br/>
@@ -31,8 +31,11 @@
 		<section id="records"></section>
 		<section id="statistics">
 			<h2>Statistiques</h2>
-			<div id="palmaresContainer">
-				<canvas id="myChart"></canvas>
+			<div id="palmaresHistogramContainer">
+				<canvas id="palmaresHistogram"></canvas>
+			</div>
+			<div id="palmaresDoughnutContainer">
+				<canvas id="palmaresDoughnut"></canvas>
 			</div>
 			<section id="longestStanding"></section>
 			<section id="shortestStanding"></section>

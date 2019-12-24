@@ -1,8 +1,27 @@
+/* General style */
+
+section#filters div.button, section#filters div#pagePlanAndFilters div
+{
+    display: inline-block;
+}
+
+div#pagePlanAndFilters
+{
+    display: none;
+    margin: 15px;
+    padding: 0px;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 10px;
+    width: 480px;
+    text-align: center;
+    background-color: rgb(200,255,200);
+}
+
+
 /* Style for the two buttons on top of the page */
 
 div.button
 {
-    display: inline-block;
     vertical-align: top;
     width: 200px;
     height: 25px;
@@ -30,86 +49,75 @@ div#onCompactButton
     background-color: rgb(150,150,200);
 }
 
- /* Style for avgType filters and page plan */
 
-div#pagePlanAndFilters
-{
-    display: none;
-    margin: 15px;
-    padding: 0px;
-    border: 1px solid rgb(128, 128, 128);
-    border-radius: 10px;
-    width: 480px;
-    text-align: center;
-    background-color: rgb(200,255,200);
-}
+/* Style for avgType filters */
 
-#avgTypeFilters
+div#avgTypeFilters
 {
+    width: 100%;
     border-bottom: 1px solid rgb(170,170,170);
     text-align: center;
 }
 
-.avgTypeFilter
+div.avgTypeFilter
 {
-    display: inline-block;
     margin: 5px 5px 0px 5px;
 }
 
-.avgTypeFilterName
+div.avgTypeFilterName
 {
-    display: inline-block;
     vertical-align: middle;
     margin: 5px;
 }
 
-.sectionPlan
+
+/* Style for page plan */
+
+div.sectionPlan
 {
-    display: inline-block;
     vertical-align: top;
     margin: 5px 0px 5px 0px;
     padding: 0px 0px 0px 5px;
 }
 
-.normalPlan .sectionPlan
+div.normalPlan div.sectionPlan
 {
     width: 46%;
     text-align: left;
 }
 
-.compactPlan .sectionPlan
+div.compactPlan div.sectionPlan
 {
     width: 130px;
 }
 
-.sectionPlanTitle
+a.sectionPlanTitle
 {
-    display: inline-block;
     vertical-align: top;
-    margin: 0px 0px 0px 0px;
+    margin: 0px;
 }
 
-.normalPlan .sectionPlanTitle
+div.normalPlan a.sectionPlanTitle
 {
+    display: inline-block;
     min-width: 100px;
     margin-left: 10px;
     text-align: left;
 }
 
-.compactPlan .sectionPlanTitle
+div.compactPlan a.sectionPlanTitle
 {
-    width: 100%;
+    display: block;
     text-align: center;
 }
 
-.subsectionPlan
+div.subsectionPlan
 {
-    display: inline-block;
     margin: 3px 0px 0px 15px;
     padding: 0px;
 }
 
-.subsectionPlanTitle
+a.subsectionPlanTitle
 {
     display: inline-block;
     min-width: 100px;
@@ -122,7 +130,6 @@ div#pagePlanAndFilters
 
 div.externalButton
 {
-    display: inline-block;
     vertical-align: middle;
     width: 35px;
     height: 14px;
@@ -137,10 +144,9 @@ div.externalButton
 
 div.innerButton
 {
-    display: inline-block;
     vertical-align: middle;
     position: relative;
-    transform: translate(0px,-4px);
+    transform: translate(0px,-5px);
     width: 12px;
     height: 12px;
     margin: 0px;
