@@ -145,15 +145,16 @@ function aggregateFirstByDate(dateSortedRecordArray, nbElements, mode) // aggreg
 function buildPalmaresSection() // build the bar graphic of UNR count
 {
 	let ctx = document.getElementById('myChart').getContext('2d');
-	let backgroundColorGradientStroke = ctx.createLinearGradient(0, 0, 0, 500);
-	let borderColorGradientStroke = ctx.createLinearGradient(0, 0, 0, 500);
+	let backgroundColorGradientStroke = ctx.createLinearGradient(0, 0, 0, 400);
+	let borderColorGradientStroke = ctx.createLinearGradient(0, 0, 0, 400);
 
-	backgroundColorGradientStroke.addColorStop(0.0, "rgb(255,224,230)");
-	backgroundColorGradientStroke.addColorStop(0.2, "rgb(255,236,217)");
-	backgroundColorGradientStroke.addColorStop(0.4, "rgb(255,245,221)");
-	backgroundColorGradientStroke.addColorStop(0.6, "rgb(219,242,242)");
-	backgroundColorGradientStroke.addColorStop(0.8, "rgb(215,236,251)");
-	backgroundColorGradientStroke.addColorStop(1.0, "rgb(235,224,255)");
+	backgroundColorGradientStroke.addColorStop(0.00, "rgb(255,224,230)");
+	backgroundColorGradientStroke.addColorStop(0.30, "rgb(255,224,230)");
+	backgroundColorGradientStroke.addColorStop(0.44, "rgb(255,236,217)");
+	backgroundColorGradientStroke.addColorStop(0.58, "rgb(255,245,221)");
+	backgroundColorGradientStroke.addColorStop(0.72, "rgb(219,242,242)");
+	backgroundColorGradientStroke.addColorStop(0.86, "rgb(215,236,251)");
+	backgroundColorGradientStroke.addColorStop(1.00, "rgb(235,224,255)");
 
 	borderColorGradientStroke.addColorStop(0.0, "rgb(255,134,160)");
 	borderColorGradientStroke.addColorStop(0.2, "rgb(255,160,67)");
