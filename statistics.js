@@ -156,12 +156,13 @@ function buildPalmaresSection() // build the bar graphic of UNR count
 	backgroundColorGradientStroke.addColorStop(0.86, "rgb(215,236,251)");
 	backgroundColorGradientStroke.addColorStop(1.00, "rgb(235,224,255)");
 
-	borderColorGradientStroke.addColorStop(0.0, "rgb(255,134,160)");
-	borderColorGradientStroke.addColorStop(0.2, "rgb(255,160,67)");
-	borderColorGradientStroke.addColorStop(0.4, "rgb(255,205,88)");
-	borderColorGradientStroke.addColorStop(0.6, "rgb(78,193,193)");
-	borderColorGradientStroke.addColorStop(0.8, "rgb(57,163,235)");
-	borderColorGradientStroke.addColorStop(1.0, "rgb(154,104,255)");
+	borderColorGradientStroke.addColorStop(0.00, "rgb(255,134,160)");
+	borderColorGradientStroke.addColorStop(0.30, "rgb(255,134,160)");
+	borderColorGradientStroke.addColorStop(0.44, "rgb(255,160,67)");
+	borderColorGradientStroke.addColorStop(0.58, "rgb(255,205,88)");
+	borderColorGradientStroke.addColorStop(0.72, "rgb(78,193,193)");
+	borderColorGradientStroke.addColorStop(0.86, "rgb(57,163,235)");
+	borderColorGradientStroke.addColorStop(1.00, "rgb(154,104,255)");
 
 	new Chart(
 		ctx,
