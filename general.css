@@ -18,7 +18,7 @@ section.recordsSubsection
 	margin: 20px 0px 40px 0px;
 }
 
-section#statistics div#palmaresContainer
+div#palmaresHistogramContainer, div#palmaresDoughnutContainer
 {
 	width: 80%;
 	margin: 20px auto 20px auto;

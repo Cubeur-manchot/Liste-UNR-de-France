@@ -142,37 +142,94 @@ function aggregateFirstByDate(dateSortedRecordArray, nbElements, mode) // aggreg
 	return aggregatedArray; // return by security
 }
 
+function rgbFromColorObject(colorObject) // transform an object of the form {r: r, g: g, b: b} to a string of the form "rgb(r,g,b)"
+{
+	return "rgb(" + colorObject.r + "," + colorObject.g + "," + colorObject.b + ")";
+}
+
 function buildPalmaresSection() // build the bar graphic of UNR count
 {
-	let ctx = document.getElementById('myChart').getContext('2d');
-	let backgroundColorGradientStroke = ctx.createLinearGradient(0, 0, 0, 400);
-	let borderColorGradientStroke = ctx.createLinearGradient(0, 0, 0, 400);
+	window.gradientBackgroundColors = [{r:255,g:224,b:230}, {r:255,g:236,b:217}, {r:255,g:245,b:221}, {r:219,g:242,b:242}, {r:215,g:236,b:251}, {r:235,g:224,b:255}];
+	window.gradientBorderColors = [{r:255,g:134,b:160}, {r:255,g:160,b:67}, {r:255,g:205,b:88}, {r:78,g:193,b:193}, {r:57,g:163,b:235}, {r:154,g:104,b:255}];
+	buildHistogram();
+	buildDoughnut();
+}
 
-	backgroundColorGradientStroke.addColorStop(0.00, "rgb(255,224,230)");
-	backgroundColorGradientStroke.addColorStop(0.30, "rgb(255,224,230)");
-	backgroundColorGradientStroke.addColorStop(0.44, "rgb(255,236,217)");
-	backgroundColorGradientStroke.addColorStop(0.58, "rgb(255,245,221)");
-	backgroundColorGradientStroke.addColorStop(0.72, "rgb(219,242,242)");
-	backgroundColorGradientStroke.addColorStop(0.86, "rgb(215,236,251)");
-	backgroundColorGradientStroke.addColorStop(1.00, "rgb(235,224,255)");
+function buildDoughnut()
+{
+	let context = document.getElementById("palmaresDoughnut").getContext("2d");
+	let backgroundColors = [];
+	let borderColors = [];
+	let nbPersons = window.countingArray.counts.length; // number of data
+	let nbColorsForGradient = window.gradientBackgroundColors.length; // number of given colors to create gradient
+	let nbGradientParts = nbColorsForGradient - 1; // number of linear interpolations to do
+	let gradientLength = Math.floor((nbPersons - 1)/nbGradientParts); // length of a linear interpolation (including starting point)
+	let nbBiggerGradients = (nbPersons - nbColorsForGradient) % nbGradientParts; // number of gradients of length gradientLength + 1 instead of gradientLength
+	let i, j, gradientSize, previousBackgroundColor, nextBackgroundColor, previousBorderColor, nextBorderColor;
+	for (i = 0; i < nbGradientParts; i++) {
+		previousBackgroundColor = window.gradientBackgroundColors[i];
+		nextBackgroundColor = window.gradientBackgroundColors[i+1];
+		previousBorderColor = window.gradientBorderColors[i];
+		nextBorderColor = window.gradientBorderColors[i+1];
 
-	borderColorGradientStroke.addColorStop(0.00, "rgb(255,134,160)");
-	borderColorGradientStroke.addColorStop(0.30, "rgb(255,134,160)");
-	borderColorGradientStroke.addColorStop(0.44, "rgb(255,160,67)");
-	borderColorGradientStroke.addColorStop(0.58, "rgb(255,205,88)");
-	borderColorGradientStroke.addColorStop(0.72, "rgb(78,193,193)");
-	borderColorGradientStroke.addColorStop(0.86, "rgb(57,163,235)");
-	borderColorGradientStroke.addColorStop(1.00, "rgb(154,104,255)");
+		// interpolate until next fixed color
+		gradientSize = gradientLength + (i < nbBiggerGradients); // interpolation is of length 1 bigger if it's in the nbBiggerGradients first ones
+		for (j = 0; j < gradientSize; j++) {
+			backgroundColors.push(rgbFromColorObject({
+				r: Math.round(previousBackgroundColor.r + (nextBackgroundColor.r - previousBackgroundColor.r) * j / gradientSize),
+				g : Math.round(previousBackgroundColor.g + (nextBackgroundColor.g - previousBackgroundColor.g) * j / gradientSize),
+				b : Math.round(previousBackgroundColor.b + (nextBackgroundColor.b - previousBackgroundColor.b) * j / gradientSize)
+			}));
+			borderColors.push(rgbFromColorObject({
+				r: Math.round(previousBorderColor.r + (nextBorderColor.r - previousBorderColor.r) * j / gradientSize),
+				g : Math.round(previousBorderColor.g + (nextBorderColor.g - previousBorderColor.g) * j / gradientSize),
+				b : Math.round(previousBorderColor.b + (nextBorderColor.b - previousBorderColor.b) * j / gradientSize)
+			}));
+		}
+	}
+	backgroundColors.push(rgbFromColorObject(window.gradientBackgroundColors[nbColorsForGradient - 1]));
+	borderColors.push(rgbFromColorObject(window.gradientBorderColors[nbColorsForGradient - 1]));
 
 	new Chart(
-		ctx,
+		context,
 		{
-			type: 'bar',
+			type: "doughnut",
+			data: {
+				labels: window.countingArray.names,
+				datasets: [{
+					label: "Nombre d'UNRs",
+					backgroundColor: borderColors,
+					hoverBackgroundColor: backgroundColors,
+					borderColor: "rgb(255, 255, 255)",
+					borderWidth: 1,
+					data: window.countingArray.counts
+				}]
+			},
+			options: {}
+		}
+	);
+}
+
+function buildHistogram() // build a bar chart with the UNR count for each person
+{
+	let palmaresHistogramContext = document.getElementById("palmaresHistogram").getContext("2d"),
+		backgroundColorGradientStroke = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
+		borderColorGradientStroke = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
+		nbColors = window.gradientBackgroundColors.length, offsetBegin = 0.3, offset = (1 - offsetBegin)/(nbColors - 1), colorIndex;
+	for (colorIndex = 0; colorIndex < nbColors; colorIndex++) { // build the gradients
+		backgroundColorGradientStroke.addColorStop(offsetBegin + colorIndex*offset, rgbFromColorObject(window.gradientBackgroundColors[colorIndex]));
+		borderColorGradientStroke.addColorStop(offsetBegin + colorIndex*offset,  rgbFromColorObject(window.gradientBorderColors[colorIndex]));
+	}
+	new Chart( // build the bar chart
+		palmaresHistogramContext,
+		{
+			type: "bar",
 			data: {
 				labels: window.countingArray.names,
 				datasets: [{
 					label: "Nombre d'UNRs",
 					backgroundColor: backgroundColorGradientStroke,
+					hoverBackgroundColor: borderColorGradientStroke,
 					borderColor: borderColorGradientStroke,
 					borderWidth: 1,
 					data: window.countingArray.counts
