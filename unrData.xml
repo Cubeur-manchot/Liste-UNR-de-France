@@ -305,6 +305,14 @@
 			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
+		<event eventName="Relai 17 events WCA">
+			<single name="William Phommaha" time="39:44.37" timeList="" scrambleList="" date="2019-08-28" youtubeLink="" francocubeLink=""/>
+			<mo3 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg5 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg12 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+		</event>
 		<event eventName="Mini-Guilford Duo">
 			<single name="Clément Cherblanc + Lucas Déglise" time="1:52.53" timeList="" scrambleList="" date="2019-05-06" youtubeLink="https://www.youtube.com/watch?v=7jgfZIpjr3A" francocubeLink=""/>
 			<mo3 name="Louis Fertier + Victor Wijsman" time="2:23.63" timeList="" scrambleList="" date="2017-10-26" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271420#p271420"/>
@@ -431,6 +439,7 @@
 				<event>Relai 2x2x2 - 7x7x7</event>
 				<event>Relai Minx (mega + pyra + skewb)</event>
 				<event>Mini-Guilford Solo</event>
+				<event>Relai 17 events WCA</event>
 			</subsection>
 			<subsection subsectionName="Team">
 				<event>Team Solve Duo</event>
@@ -504,6 +513,7 @@
 			<event>Relai 2x2x2 - 7x7x7</event>
 			<event>Relai Minx (mega + pyra + skewb)</event>
 			<event>Mini-Guilford Solo</event>
+			<event>Relai 17 events WCA</event>
 		</section>
 		<section sectionName="Team">
 			<event>Team Solve Duo</event>
