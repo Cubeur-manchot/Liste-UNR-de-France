@@ -412,7 +412,6 @@
 			</subsection>
 			<subsection subsectionName="Autres WCA">
 				<event>3x3x3 One-Handed</event>
-				<event>3x3x3 With Feet</event>
 				<event>3x3x3 Fewest Moves</event>
 				<event>Megaminx</event>
 				<event>Pyraminx</event>
@@ -457,6 +456,7 @@
 			</subsection>
 			<subsection subsectionName="Autres Non WCA">
 				<event>4x4x4 One-Handed</event>
+				<event>3x3x3 With Feet</event>
 				<event>Mirror Blocks</event>
 				<event>Inequilateral Cube</event>
 				<event>Ghost Cube</event>
