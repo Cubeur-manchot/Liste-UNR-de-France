@@ -4,21 +4,26 @@
 /* global createHtmlTag, createHtmlTagWithTextContent, createHtmlTagWithClassNameAndTextContent */
 
 // import functions from utils.js
-/* global dateToString */
+/* global dateToString, multiplyColor, addColors, substractColors, rgbFromColorObject */
 
 // import functions from Chart.js (local version)
 /* global Chart */
 
-function buildStatistics() // compute the statistics and build the tables displaying them
+function buildStatistics() // compute the statistics and build the tables and graphics displaying them
 {
 	countRecords();
 	computeTopXLongestShortestStandingRecordEvents(5);
-	buildPalmaresSection();
+	//computeDateAggregatedArray();
+	//createDataForTimeLine();
+	initColors();
+	buildHistogram();
+	buildDoughnut();
+	//buildTimeLine();
 	buildTopXLongestStandingRecordsTable();
 	buildTopXShortestStandingRecordsTable();
 }
 
-function countRecords()
+function countRecords() // count records for histogram and doughnut charts
 {
 	let namesArray = [], countArray = [], namesWithMinimumCountArray, dataBaseObject, name, minimumCount;
 	window.countingArray = {names: [], counts: []};
@@ -99,6 +104,74 @@ function sortDataBaseByDate() // sort window.bruteDataBase by date and remove em
 	return dateSortedRecordArray;
 }
 
+function computeDateAggregatedArray() // aggregate database objects that have the same person, eventName and date and stores it in window.aggregatedDataBase
+{
+	let aggregatedArray, aggregatedArrayObject, sectionObject, dataBaseObject, eventName, avgType;
+	window.aggregatedDataBase = [];
+	for (sectionObject of window.compactPlan.sections) {
+		for (eventName of sectionObject.events) {
+			aggregatedArray = [];
+			for (avgType of window.avgTypes) {
+				dataBaseObject = window.smartRecordsDataBase[eventName][avgType];
+				if (dataBaseObject.time !== "") {
+					if (aggregatedArray.length === 0) { // if it's the first element to be possibly aggregated, it should be added
+						aggregatedArray.push({
+							date: dataBaseObject.date,
+							eventName: dataBaseObject.eventName,
+							name: dataBaseObject.name,
+							listOfAvgTypeAndTimePairs: [{avgType: avgType, time: dataBaseObject.time}]
+						});
+					} else {
+						for (aggregatedArrayObject of aggregatedArray) { // try to match to an aggregated element
+							if (aggregatedArrayObject.date.getDate() === dataBaseObject.date.getDate() && aggregatedArrayObject.name === dataBaseObject.name) {
+								aggregatedArrayObject.listOfAvgTypeAndTimePairs.push({avgType: avgType, time: dataBaseObject.time}); // aggregate to the element that corresponds
+								dataBaseObject = undefined;
+							}
+						}
+						if (dataBaseObject !== undefined) {
+							aggregatedArray.push({
+								date: dataBaseObject.date,
+								eventName: dataBaseObject.eventName,
+								name: dataBaseObject.name,
+								listOfAvgTypeAndTimePairs: [{avgType: avgType, time: dataBaseObject.time}]
+							});
+						}
+					}
+				}
+			}
+			window.aggregatedDataBase = window.aggregatedDataBase.concat(aggregatedArray);
+		}
+	}
+}
+
+function createDataForTimeLine() // create the three datasets used to build the time line chart
+{
+	let dateCounterArray = [], aggregatedDataBaseObject, date;
+	window.timeLineData = {zeroData: [], barData: [], bubbleData: []};
+	for (aggregatedDataBaseObject of window.aggregatedDataBase) {
+		window.timeLineData.zeroData.push({ // data to create a line on the x axis with a point on each date
+			t: aggregatedDataBaseObject.date,
+			y: 0
+		});
+		if (dateCounterArray[aggregatedDataBaseObject.date] === undefined) { // increment the count for each date we already met
+			dateCounterArray[aggregatedDataBaseObject.date] = 1;
+		} else {
+			dateCounterArray[aggregatedDataBaseObject.date]++;
+		}
+		window.timeLineData.bubbleData.push({ // data to create a bubble chart with a bubble on each aggregated object (many points for the same date)
+			t: aggregatedDataBaseObject.date,
+			y: dateCounterArray[aggregatedDataBaseObject.date],
+			r: 3*Math.sqrt(aggregatedDataBaseObject.listOfAvgTypeAndTimePairs.length) // increasing bubble size but not linear
+		});
+	}
+	for (date in dateCounterArray) {
+		window.timeLineData.barData.push({ // data to create a bar chart with a bar on each date (only one bar for each date)
+			t: new Date(date), // dateCounterArray indexes are actually stored as numbers, so dates should be rebuilt from them
+			y: dateCounterArray[date]
+		});
+	}
+}
+
 function aggregateFirstByDate(dateSortedRecordArray, nbElements, mode) // aggregate dataBase elements when they have the same event, person name and date
 {
 	let aggregatedArray = [], lastElement, recordObject, rank;
@@ -142,83 +215,28 @@ function aggregateFirstByDate(dateSortedRecordArray, nbElements, mode) // aggreg
 	return aggregatedArray; // return by security
 }
 
-function rgbFromColorObject(colorObject) // transform an object of the form {r: r, g: g, b: b} to a string of the form "rgb(r,g,b)"
+function initColors() // initialize window.lightColors, window.middleColors and window.intenseColors for histogram and doughnut charts
 {
-	return "rgb(" + colorObject.r + "," + colorObject.g + "," + colorObject.b + ")";
-}
-
-function buildPalmaresSection() // build the bar graphic of UNR count
-{
-	window.gradientBackgroundColors = [{r:255,g:224,b:230}, {r:255,g:236,b:217}, {r:255,g:245,b:221}, {r:219,g:242,b:242}, {r:215,g:236,b:251}, {r:235,g:224,b:255}];
-	window.gradientBorderColors = [{r:255,g:134,b:160}, {r:255,g:160,b:67}, {r:255,g:205,b:88}, {r:78,g:193,b:193}, {r:57,g:163,b:235}, {r:154,g:104,b:255}];
-	buildHistogram();
-	buildDoughnut();
-}
-
-function buildDoughnut()
-{
-	let context = document.getElementById("palmaresDoughnut").getContext("2d");
-	let backgroundColors = [];
-	let borderColors = [];
-	let nbPersons = window.countingArray.counts.length; // number of data
-	let nbColorsForGradient = window.gradientBackgroundColors.length; // number of given colors to create gradient
-	let nbGradientParts = nbColorsForGradient - 1; // number of linear interpolations to do
-	let gradientLength = Math.floor((nbPersons - 1)/nbGradientParts); // length of a linear interpolation (including starting point)
-	let nbBiggerGradients = (nbPersons - nbColorsForGradient) % nbGradientParts; // number of gradients of length gradientLength + 1 instead of gradientLength
-	let i, j, gradientSize, previousBackgroundColor, nextBackgroundColor, previousBorderColor, nextBorderColor;
-	for (i = 0; i < nbGradientParts; i++) {
-		previousBackgroundColor = window.gradientBackgroundColors[i];
-		nextBackgroundColor = window.gradientBackgroundColors[i+1];
-		previousBorderColor = window.gradientBorderColors[i];
-		nextBorderColor = window.gradientBorderColors[i+1];
-
-		// interpolate until next fixed color
-		gradientSize = gradientLength + (i < nbBiggerGradients); // interpolation is of length 1 bigger if it's in the nbBiggerGradients first ones
-		for (j = 0; j < gradientSize; j++) {
-			backgroundColors.push(rgbFromColorObject({
-				r: Math.round(previousBackgroundColor.r + (nextBackgroundColor.r - previousBackgroundColor.r) * j / gradientSize),
-				g : Math.round(previousBackgroundColor.g + (nextBackgroundColor.g - previousBackgroundColor.g) * j / gradientSize),
-				b : Math.round(previousBackgroundColor.b + (nextBackgroundColor.b - previousBackgroundColor.b) * j / gradientSize)
-			}));
-			borderColors.push(rgbFromColorObject({
-				r: Math.round(previousBorderColor.r + (nextBorderColor.r - previousBorderColor.r) * j / gradientSize),
-				g : Math.round(previousBorderColor.g + (nextBorderColor.g - previousBorderColor.g) * j / gradientSize),
-				b : Math.round(previousBorderColor.b + (nextBorderColor.b - previousBorderColor.b) * j / gradientSize)
-			}));
-		}
+	let i;
+	window.lightColors = [{r:255,g:224,b:230}, {r:255,g:236,b:217}, {r:255,g:245,b:221}, {r:219,g:242,b:242}, {r:215,g:236,b:251}, {r:235,g:224,b:255}];
+	window.intenseColors = [{r:255,g:134,b:160}, {r:255,g:160,b:67}, {r:255,g:205,b:88}, {r:78,g:193,b:193}, {r:57,g:163,b:235}, {r:154,g:104,b:255}];
+	window.middleColors = [];
+	for (i = 0; i < window.lightColors.length; i++) {
+		window.middleColors.push(multiplyColor(addColors(window.lightColors[i], window.intenseColors[i]),0.5));
 	}
-	backgroundColors.push(rgbFromColorObject(window.gradientBackgroundColors[nbColorsForGradient - 1]));
-	borderColors.push(rgbFromColorObject(window.gradientBorderColors[nbColorsForGradient - 1]));
-
-	new Chart(
-		context,
-		{
-			type: "doughnut",
-			data: {
-				labels: window.countingArray.names,
-				datasets: [{
-					label: "Nombre d'UNRs",
-					backgroundColor: borderColors,
-					hoverBackgroundColor: backgroundColors,
-					borderColor: "rgb(255, 255, 255)",
-					borderWidth: 1,
-					data: window.countingArray.counts
-				}]
-			},
-			options: {}
-		}
-	);
 }
 
 function buildHistogram() // build a bar chart with the UNR count for each person
 {
-	let palmaresHistogramContext = document.getElementById("palmaresHistogram").getContext("2d"),
-		backgroundColorGradientStroke = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
-		borderColorGradientStroke = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
-		nbColors = window.gradientBackgroundColors.length, offsetBegin = 0.3, offset = (1 - offsetBegin)/(nbColors - 1), colorIndex;
+	let palmaresHistogramContext = document.querySelector("canvas#palmaresHistogram").getContext("2d"),
+		histogramBackgroundColorGradient = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
+		histogramBorderColorGradient = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
+		histogramHoverBackgroundColorGradient = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
+		nbColors = window.lightColors.length, offsetBegin = 0.3, offset = (1 - offsetBegin)/(nbColors - 1), colorIndex;
 	for (colorIndex = 0; colorIndex < nbColors; colorIndex++) { // build the gradients
-		backgroundColorGradientStroke.addColorStop(offsetBegin + colorIndex*offset, rgbFromColorObject(window.gradientBackgroundColors[colorIndex]));
-		borderColorGradientStroke.addColorStop(offsetBegin + colorIndex*offset,  rgbFromColorObject(window.gradientBorderColors[colorIndex]));
+		histogramBackgroundColorGradient.addColorStop(offsetBegin + colorIndex*offset, rgbFromColorObject(window.lightColors[colorIndex]));
+		histogramBorderColorGradient.addColorStop(offsetBegin + colorIndex*offset,  rgbFromColorObject(window.intenseColors[colorIndex]));
+		histogramHoverBackgroundColorGradient.addColorStop(offsetBegin + colorIndex*offset,  rgbFromColorObject(window.middleColors[colorIndex]));
 	}
 	new Chart( // build the bar chart
 		palmaresHistogramContext,
@@ -228,14 +246,106 @@ function buildHistogram() // build a bar chart with the UNR count for each perso
 				labels: window.countingArray.names,
 				datasets: [{
 					label: "Nombre d'UNRs",
-					backgroundColor: backgroundColorGradientStroke,
-					hoverBackgroundColor: borderColorGradientStroke,
-					borderColor: borderColorGradientStroke,
+					backgroundColor: histogramBackgroundColorGradient,
+					borderColor: histogramBorderColorGradient,
 					borderWidth: 1,
+					hoverBackgroundColor: histogramHoverBackgroundColorGradient,
 					data: window.countingArray.counts
 				}]
+			}
+		}
+	);
+}
+
+function buildDoughnut() // build a doughnut chart with the UNR count for each person
+{
+	let palmaresDoughnutContext = document.querySelector("canvas#palmaresDoughnut").getContext("2d"), doughnutBackgroundColors = [], doughnutHoverColors = [],
+		nbPersons = window.countingArray.counts.length, nbColorsForDoughnutGradient = window.lightColors.length, nbGradientParts = nbColorsForDoughnutGradient - 1,
+		gradientLength = Math.floor((nbPersons - 1)/nbGradientParts), nbNotBiggerGradientParts = nbGradientParts - (nbPersons - nbColorsForDoughnutGradient) % nbGradientParts,
+		i, j, gradientSize;
+	for (i = 0; i < nbGradientParts; i++) { // manually compute gradients by linear interpolations from previous fixed color included and until next fixed color excluded
+		gradientSize = gradientLength + (i >= nbNotBiggerGradientParts);
+		for (j = 0; j < gradientSize; j++) {
+			doughnutBackgroundColors.push(rgbFromColorObject(
+				addColors(window.middleColors[i], multiplyColor(substractColors(window.middleColors[i+1], window.middleColors[i]),j / gradientSize))
+			));
+			doughnutHoverColors.push(rgbFromColorObject(
+				addColors(window.intenseColors[i], multiplyColor(substractColors(window.intenseColors[i+1], window.intenseColors[i]), j / gradientSize))
+			));
+		}
+	}
+	doughnutHoverColors.push(rgbFromColorObject(window.intenseColors[nbColorsForDoughnutGradient - 1]));
+	doughnutBackgroundColors.push(rgbFromColorObject(window.middleColors[nbColorsForDoughnutGradient - 1]));
+	new Chart( // build the doughnut chart
+		palmaresDoughnutContext,
+		{
+			type: "doughnut",
+			data: {
+				labels: window.countingArray.names,
+				datasets: [{
+					label: "Nombre d'UNRs",
+					data: window.countingArray.counts,
+					backgroundColor: doughnutBackgroundColors,
+					borderColor: "rgb(255, 255, 255)",
+					borderWidth: 1,
+					borderAlign: "inner",
+					hoverBackgroundColor: doughnutHoverColors,
+					hoverBorderColor: doughnutHoverColors
+				}]
+			}
+		}
+	);
+}
+
+function buildTimeLine() // build a time line chart made of many basic charts
+{
+	let timeLineContext = document.getElementById("timeLine").getContext("2d");
+	new Chart( // build the time line chart
+		timeLineContext,
+		{
+			type: "line",
+			data: {
+				datasets: [{ // line chart on the x axis
+					label: "test zero",
+					data: window.timeLineData.zeroData,
+					fill: false,
+					borderColor: 'rgba(220,20,60,1)',
+					backgroundColor: 'rgba(220,20,60,1)'
+				}, { // bar chart on each date
+					label: "test bar",
+					type: "bar",
+					data: window.timeLineData.barData,
+					backgroundColor:"rgb(0,0,255)",
+				}, { // bubble chart on each aggregated data of each date
+					label: "test bulle",
+					type: "bubble",
+					data: window.timeLineData.bubbleData,
+					backgroundColor:"rgb(0,255,0)",
+				}]
 			},
-			options: {}
+			options: {
+						scales: {
+							xAxes: [{
+								type: "time",
+								time: {
+									parser: "x",
+									displayFormats: {
+										quarter: "MM/YYYY",
+										month: "MM/YYYY",
+										week: "LLLL",
+										day: "L",
+										hour: "DD/MM/YYYY HH:mm",
+										minute: "HH:mm",
+										second: "HH:mm:ss"
+									},
+									tooltipFormat: "DD/MM/YYYY HH:mm:ss"
+								}
+							}],
+					yAxes: [{
+						display: false
+					}],
+				}
+			}
 		}
 	);
 }

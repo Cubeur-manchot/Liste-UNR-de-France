@@ -69,3 +69,31 @@ function listToArray(inputString) // convert a string of the form "a, b, c" to a
 	outputArray.push(listString); // insert last element
 	return outputArray;
 }
+
+function multiplyColor(colorObject, number) // multiply an {r, g, b} color object by a number n
+{
+	return {
+		r: Math.round(colorObject.r * number),
+		g: Math.round(colorObject.g * number),
+		b: Math.round(colorObject.b * number)
+	};
+}
+
+function addColors(firstColorObject, secondColorObject) // add two {r, g, b} color objects
+{
+	return {
+		r: firstColorObject.r + secondColorObject.r,
+		g: firstColorObject.g + secondColorObject.g,
+		b: firstColorObject.b + secondColorObject.b,
+	};
+}
+
+function substractColors(firstColorObject, secondColorObject) // substract two {r, g, b} color objects
+{
+	return addColors(firstColorObject, multiplyColor(secondColorObject, -1));
+}
+
+function rgbFromColorObject(colorObject) // transform an object of the form {r: r, g: g, b: b} to a string of the form "rgb(r,g,b)"
+{
+	return "rgb(" + colorObject.r + "," + colorObject.g + "," + colorObject.b + ")";
+}

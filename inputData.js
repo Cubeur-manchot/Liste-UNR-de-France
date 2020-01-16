@@ -47,7 +47,8 @@ function storeRecordsInDataBase() // parse window.unrXmlData and store records c
 				francocubeLink: recordXmlTag.getAttribute("francocubeLink"),
 				compactPlanSection: window.compactPlan.sectionFromEvent[eventName],
 				normalPlanSection: window.normalPlan.sectionFromEvent[eventName],
-				normalPlanSubsection: window.normalPlan.subsectionFromEvent[eventName]};
+				normalPlanSubsection: window.normalPlan.subsectionFromEvent[eventName]
+			};
 			window.smartRecordsDataBase[eventName][recordXmlTag.tagName] = recordDataBaseObject;
 			recordDataBaseObject.eventName = eventName;
 			recordDataBaseObject.avgType = recordXmlTag.tagName;
