@@ -463,6 +463,7 @@
 				<event>Relay 2-5 Blindfolded</event>
 			</subsection>
 			<subsection subsectionName="Autres Non WCA">
+				<event>2x2x2 One-Handed</event>
 				<event>4x4x4 One-Handed</event>
 				<event>3x3x3 With Feet</event>
 				<event>Mirror Blocks</event>
@@ -486,6 +487,7 @@
 			<event>13x13x13</event>
 		</section>
 		<section sectionName="OH, Feet, FM">
+			<event>2x2x2 One-Handed</event>
 			<event>3x3x3 One-Handed</event>
 			<event>4x4x4 One-Handed</event>
 			<event>3x3x3 With Feet</event>
