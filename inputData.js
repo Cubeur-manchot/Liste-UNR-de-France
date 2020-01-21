@@ -70,7 +70,7 @@ function storePersonsInDataBase() // parse window.unrXmlData and stores persons 
 function storeNormalPlanInDataBase() // parse window.unrXmlData and store the normal plan in window.normalPlan
 {
 	let sectionXmlTag, subsectionXmlTag, eventXmlTag, sectionObject, subsectionObject;
-	window.normalPlan = {sections: [], sectionFromEvent: [], subsectionFromEvent: []};
+	window.normalPlan = {sections: [], sectionIsDisplayed: [], sectionFromEvent: [], subsectionIsDisplayed: [], subsectionFromEvent: []};
 	for (sectionXmlTag of window.unrXmlData.querySelector("normalPlan").querySelectorAll("section")) {
 		sectionObject = {sectionName: sectionXmlTag.getAttribute("sectionName"), subsections: []};
 		for (subsectionXmlTag of sectionXmlTag.querySelectorAll("subsection")) {
@@ -80,22 +80,27 @@ function storeNormalPlanInDataBase() // parse window.unrXmlData and store the no
 				window.normalPlan.sectionFromEvent[eventXmlTag.textContent] = sectionObject.sectionName;
 				window.normalPlan.subsectionFromEvent[eventXmlTag.textContent] = subsectionObject.subsectionName;
 			}
+			window.normalPlan.subsectionIsDisplayed[subsectionObject.subsectionName] = true;
 			sectionObject.subsections.push(subsectionObject);
 		}
+		window.normalPlan.sectionIsDisplayed[sectionObject.sectionName] = true;
 		window.normalPlan.sections.push(sectionObject);
 	}
+	window.normalPlan.isDisplayed = true;
 }
 
 function storeCompactPlanInDataBase() // parse window.unrXmlData and store the compact plan in window.compactPlan
 {
 	let sectionXmlTag, eventXmlTag, sectionObject;
-	window.compactPlan = {sections: [], sectionFromEvent: []};
+	window.compactPlan = {sections: [], sectionIsDisplayed: [], sectionFromEvent: []};
 	for (sectionXmlTag of window.unrXmlData.querySelector("compactPlan").querySelectorAll("section")) {
 		sectionObject = {sectionName: sectionXmlTag.getAttribute("sectionName"), subsections: [], events: []};
 		for (eventXmlTag of sectionXmlTag.querySelectorAll("event")) {
 			sectionObject.events.push(eventXmlTag.textContent);
 			window.compactPlan.sectionFromEvent[eventXmlTag.textContent] = sectionObject.sectionName;
 		}
+		window.compactPlan.sectionIsDisplayed[sectionObject.sectionName] = true;
 		window.compactPlan.sections.push(sectionObject);
 	}
+	window.compactPlan.isDisplayed = false;
 }

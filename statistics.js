@@ -1,7 +1,7 @@
 "use strict";
 
 // import functions from tagCreator.js
-/* global createHtmlTag, createHtmlTagWithTextContent, createHtmlTagWithClassNameAndTextContent */
+/* global createHtmlTag, createHtmlTagWithId, createHtmlTagWithTextContent, createHtmlTagWithClassNameAndTextContent */
 
 // import functions from utils.js
 /* global dateToString, multiplyColor, addColors, substractColors, rgbFromColorObject */
@@ -23,18 +23,40 @@ function buildStatistics() // compute the statistics and build the tables and gr
 	buildTopXShortestStandingRecordsTable();
 }
 
+function isNormalSectionDisplayed(dataBaseObject) // tell if a record object is display in normal mode
+{
+	return window.normalPlan.sectionIsDisplayed[dataBaseObject.normalPlanSection] && window.normalPlan.subsectionIsDisplayed[dataBaseObject.normalPlanSubsection];
+}
+
+function isCompactSectionDisplayed(dataBaseObject) // tell if a record object is displayed in compact mode
+{
+	return window.compactPlan.sectionIsDisplayed[dataBaseObject.compactPlanSection];
+}
+
+function isAvgTypeDisplayed(dataBaseObject) // tell if a record object is displayed regarding to avgType filters
+{
+	return window.avgTypeFilters[dataBaseObject.avgType].isDisplayed;
+}
+
+function isDisplayed(dataBaseObject) // tell if a record object is displayed regarding to filters
+{
+	return isAvgTypeDisplayed(dataBaseObject) && window.isSectionDisplayed(dataBaseObject);
+}
+
 function countRecords() // count records for histogram and doughnut charts
 {
 	let namesArray = [], countArray = [], namesWithMinimumCountArray, dataBaseObject, name, minimumCount;
 	window.countingArray = {names: [], counts: []};
 	// count records in database
 	for (dataBaseObject of window.bruteRecordsDataBase) {
-		for (name of listOfNamesToUpdateFromNameString(dataBaseObject.name)) {
-			if (countArray[name] === undefined) {
-				countArray[name] = 1;
-				namesArray.push(name);
-			} else {
-				countArray[name]++;
+		if (isDisplayed(dataBaseObject)) {
+			for (name of listOfNamesToUpdateFromNameString(dataBaseObject.name)) {
+				if (countArray[name] === undefined) {
+					countArray[name] = 1;
+					namesArray.push(name);
+				} else {
+					countArray[name]++;
+				}
 			}
 		}
 	}
@@ -76,9 +98,13 @@ function computeTopXLongestShortestStandingRecordEvents(nbEvents) // compute sta
 {
 	let dateSortedRecordArray = sortDataBaseByDate();
 	window.topXLongestStandingRecordsEvents = aggregateFirstByDate(dateSortedRecordArray, nbEvents, "longestStanding");
-	window.topXLongestStandingRecordsEvents[0].listOfAvgTypeAndTimePairs.shift(); // remove initial value because it appears twice
+	if (window.topXLongestStandingRecordsEvents.length !== 0) {
+		window.topXLongestStandingRecordsEvents[0].listOfAvgTypeAndTimePairs.shift(); // remove initial value because it appears twice
+	}
 	window.topXShortestStandingRecordsEvents = aggregateFirstByDate(dateSortedRecordArray.reverse(), nbEvents, "shortestStanding");
-	window.topXShortestStandingRecordsEvents[0].listOfAvgTypeAndTimePairs.pop(); // remove initial value because it appears twice
+	if (window.topXShortestStandingRecordsEvents.length !== 0) {
+		window.topXShortestStandingRecordsEvents[0].listOfAvgTypeAndTimePairs.pop(); // remove initial value because it appears twice
+	}
 }
 
 function sortDataBaseByDate() // sort window.bruteDataBase by date and remove empty records
@@ -86,7 +112,7 @@ function sortDataBaseByDate() // sort window.bruteDataBase by date and remove em
 	let dateSortedRecordArray = [], dataBaseObject, date, nullDate = new Date(0), arrayIndex, arraySorted;
 	for (dataBaseObject of window.bruteRecordsDataBase) {
 		date = dataBaseObject.date;
-		if (date > nullDate) {
+		if (date > nullDate && isDisplayed(dataBaseObject)) {
 			dateSortedRecordArray.push({eventName: dataBaseObject.eventName, avgType: dataBaseObject.avgType, name: dataBaseObject.name, time: dataBaseObject.time, date: date});
 			arrayIndex = dateSortedRecordArray.length - 1;
 			arraySorted = false;
@@ -175,6 +201,9 @@ function createDataForTimeLine() // create the three datasets used to build the 
 function aggregateFirstByDate(dateSortedRecordArray, nbElements, mode) // aggregate dataBase elements when they have the same event, person name and date
 {
 	let aggregatedArray = [], lastElement, recordObject, rank;
+	if (dateSortedRecordArray.length === 0) {
+		return aggregatedArray;
+	}
 	lastElement = {
 		rank: 1,
 		date: dateSortedRecordArray[0].date,
@@ -228,11 +257,14 @@ function initColors() // initialize window.lightColors, window.middleColors and 
 
 function buildHistogram() // build a bar chart with the UNR count for each person
 {
-	let palmaresHistogramContext = document.querySelector("canvas#palmaresHistogram").getContext("2d"),
+	let palmaresHistogramContainerHtmlTag = document.querySelector("div#palmaresHistogramContainer"),
+		palmaresHistogramCanvasHtmlTag = createHtmlTagWithId("canvas", "palmaresHistogram"),
+		palmaresHistogramContext = palmaresHistogramCanvasHtmlTag.getContext("2d"),
 		histogramBackgroundColorGradient = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
 		histogramBorderColorGradient = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
 		histogramHoverBackgroundColorGradient = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
 		nbColors = window.lightColors.length, offsetBegin = 0.3, offset = (1 - offsetBegin)/(nbColors - 1), colorIndex;
+	palmaresHistogramContainerHtmlTag.textContent = "";
 	for (colorIndex = 0; colorIndex < nbColors; colorIndex++) { // build the gradients
 		histogramBackgroundColorGradient.addColorStop(offsetBegin + colorIndex*offset, rgbFromColorObject(window.lightColors[colorIndex]));
 		histogramBorderColorGradient.addColorStop(offsetBegin + colorIndex*offset,  rgbFromColorObject(window.intenseColors[colorIndex]));
@@ -255,14 +287,18 @@ function buildHistogram() // build a bar chart with the UNR count for each perso
 			}
 		}
 	);
+	palmaresHistogramContainerHtmlTag.appendChild(palmaresHistogramCanvasHtmlTag);
 }
 
 function buildDoughnut() // build a doughnut chart with the UNR count for each person
 {
-	let palmaresDoughnutContext = document.querySelector("canvas#palmaresDoughnut").getContext("2d"), doughnutBackgroundColors = [], doughnutHoverColors = [],
+	let palmaresDoughnutContainerHtmlTag = document.querySelector("div#palmaresDoughnutContainer"),
+		palmaresDoughnutCanvasHtmlTag = createHtmlTagWithId("canvas", "palmaresDoughnut"),
+		palmaresDoughnutContext = palmaresDoughnutCanvasHtmlTag.getContext("2d"), doughnutBackgroundColors = [], doughnutHoverColors = [],
 		nbPersons = window.countingArray.counts.length, nbColorsForDoughnutGradient = window.lightColors.length, nbGradientParts = nbColorsForDoughnutGradient - 1,
 		gradientLength = Math.floor((nbPersons - 1)/nbGradientParts), nbNotBiggerGradientParts = nbGradientParts - (nbPersons - nbColorsForDoughnutGradient) % nbGradientParts,
 		i, j, gradientSize;
+	palmaresDoughnutContainerHtmlTag.textContent = "";
 	for (i = 0; i < nbGradientParts; i++) { // manually compute gradients by linear interpolations from previous fixed color included and until next fixed color excluded
 		gradientSize = gradientLength + (i >= nbNotBiggerGradientParts);
 		for (j = 0; j < gradientSize; j++) {
@@ -295,6 +331,7 @@ function buildDoughnut() // build a doughnut chart with the UNR count for each p
 			}
 		}
 	);
+	palmaresDoughnutContainerHtmlTag.appendChild(palmaresDoughnutCanvasHtmlTag);
 }
 
 function buildTimeLine() // build a time line chart made of many basic charts

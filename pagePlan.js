@@ -9,41 +9,50 @@
 // import functions from buildRecords.js
 /* global buildRecords */
 
+// import functions from statistics.js
+/* global buildStatistics, isNormalSectionDisplayed, isCompactSectionDisplayed */
+
+
 function buildPlan(planObject) // build filters and links for sections and subsections
 {
 	let pagePlanHtmlTag = document.querySelector("#pagePlan"), sectionPlanHtmlTag, subsectionPlanHtmlTag, externalButtonHtmlTag, planSectionObject, planSubsectionObject;
 	pagePlanHtmlTag.textContent = "";
 	if (planObject === window.normalPlan) {
 		pagePlanHtmlTag.className = "normalPlan";
+		window.isSectionDisplayed = isNormalSectionDisplayed;
 	} else {
 		pagePlanHtmlTag.className = "compactPlan";
+		window.isSectionDisplayed = isCompactSectionDisplayed;
 	}
 	for (planSectionObject of planObject.sections) { // create sections with name and filter
-		sectionPlanHtmlTag = createHtmlTagWithClassName("div", "sectionPlan");
-		externalButtonHtmlTag = createHtmlTagWithClassName("div", "externalButton");
-		externalButtonHtmlTag.appendChild(createHtmlTagWithClassName("div", "innerButton"));
-		externalButtonHtmlTag.onclick = function() { toggleDisplaySectionOrSubsection(this); };
-		sectionPlanHtmlTag.appendChild(externalButtonHtmlTag);
-		sectionPlanHtmlTag.appendChild(createHtmlTagWithClassNameHrefTextContent("a", "sectionPlanTitle",
-			"#" + sectionNameToId(planSectionObject.sectionName), planSectionObject.sectionName));
+		planObject.sectionIsDisplayed[planSectionObject.sectionName] = true;
+		sectionPlanHtmlTag = buildPlanSectionOrSubsectionItem("section", planSectionObject.sectionName);
 		for (planSubsectionObject of planSectionObject.subsections) { // create subsections with name and filter
-			subsectionPlanHtmlTag = createHtmlTagWithClassName("div", "subsectionPlan");
-			externalButtonHtmlTag = createHtmlTagWithClassName("div", "externalButton");
-			externalButtonHtmlTag.appendChild(createHtmlTagWithClassName("div", "innerButton"));
-			externalButtonHtmlTag.onclick = function () { toggleDisplaySectionOrSubsection(this); };
-			subsectionPlanHtmlTag.appendChild(externalButtonHtmlTag);
-			subsectionPlanHtmlTag.appendChild(createHtmlTagWithClassNameHrefTextContent("a", "subsectionPlanTitle",
-				"#" + sectionNameToId(planSubsectionObject.subsectionName), planSubsectionObject.subsectionName));
+			planObject.subsectionIsDisplayed[planSubsectionObject.subsectionName] = true;
+			subsectionPlanHtmlTag = buildPlanSectionOrSubsectionItem("subsection", planSubsectionObject.subsectionName);
 			sectionPlanHtmlTag.appendChild(subsectionPlanHtmlTag);
 		}
 		pagePlanHtmlTag.appendChild(sectionPlanHtmlTag);
 	}
 }
 
+function buildPlanSectionOrSubsectionItem(type, sectionOrSubsectionName) // build a line for the plan with an external button, an inner button and a link
+{
+	let sectionOrSubsectionPlanHtmlTag = createHtmlTagWithClassName("div", type + "Plan"),
+		externalButtonHtmlTag = createHtmlTagWithClassName("div", "externalButton");
+	externalButtonHtmlTag.appendChild(createHtmlTagWithClassName("div", "innerButton"));
+	externalButtonHtmlTag.onclick = function() { toggleDisplaySectionOrSubsection(this); };
+	sectionOrSubsectionPlanHtmlTag.appendChild(externalButtonHtmlTag);
+	sectionOrSubsectionPlanHtmlTag.appendChild(createHtmlTagWithClassNameHrefTextContent("a", type + "PlanTitle",
+		"#" + sectionNameToId(sectionOrSubsectionName), sectionOrSubsectionName));
+	return sectionOrSubsectionPlanHtmlTag;
+}
+
 function buildAvgTypeFilters() // build filters for single, mo3, avg5, ...
 {
 	let avgTypeFiltersHtmlTag = document.querySelector("#avgTypeFilters"), avgTypeFilterHtmlTag, externalButtonHtmlTag, avgType;
 	avgTypeFiltersHtmlTag.textContent = "";
+	window.avgTypeFilters = [];
 	for (avgType of window.avgTypes) {
 		avgTypeFilterHtmlTag = createHtmlTagWithClassName("div", "avgTypeFilter");
 		externalButtonHtmlTag = createHtmlTagWithClassName("div", "externalButton");
@@ -53,6 +62,7 @@ function buildAvgTypeFilters() // build filters for single, mo3, avg5, ...
 		avgTypeFilterHtmlTag.appendChild(createHtmlTag("br"));
 		avgTypeFilterHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("div", "avgTypeFilterName", avgType));
 		avgTypeFiltersHtmlTag.appendChild(avgTypeFilterHtmlTag);
+		window.avgTypeFilters[avgType] = {isDisplayed: true};
 	}
 	return avgTypeFiltersHtmlTag;
 }
@@ -64,15 +74,20 @@ function toggleCompactMode() // toggle between compact and normal mode
 		planObject = window.compactPlan;
 		compactModeButtonOnOffPositionHtmlTag.id = "onCompactButton";
 		compactModeButtonOnOffPositionHtmlTag.textContent = "Mode Compact";
+		window.normalPlan.isDisplayed = false;
+		window.compactPlan.isDisplayed = true;
 	} else { //switch back to normal mode
 		compactModeButtonOnOnPositionHtmlTag = document.querySelector("#onCompactButton");
 		planObject = window.normalPlan;
 		compactModeButtonOnOnPositionHtmlTag.id = "offCompactButton";
 		compactModeButtonOnOnPositionHtmlTag.textContent = "Mode Normal";
+		window.normalPlan.isDisplayed = true;
+		window.compactPlan.isDisplayed = false;
 	}
 	buildAvgTypeFilters(); // reinitialize avg type filters
 	buildPlan(planObject); // update plan and filters
 	buildRecords(planObject); // update record sections and tables
+	buildStatistics();
 }
 
 function toggleDisplayPlan() // toggle between none and inline-block display for avgType filters and section filters
@@ -87,28 +102,47 @@ function toggleDisplayPlan() // toggle between none and inline-block display for
 
 function toggleDisplayAvgType(externalButtonHtmlTag) // toggle between none and default display for each UNR of selected avgType
 {
-	let htmlTagToHide, displayMode, selector = "." + externalButtonHtmlTag.parentNode.querySelector(".avgTypeFilterName").textContent;
-	if (document.querySelector(selector).style.display === "") { // if these HTML tags are currently displayed, they should be hidden
+	let htmlTagToHide, displayMode, avgType = externalButtonHtmlTag.parentNode.querySelector(".avgTypeFilterName").textContent;
+	if (document.querySelector("." + avgType).style.display === "") { // if these HTML tags are currently displayed, they should be hidden
 		displayMode = "none";
 		switchToggleButtonToOff(externalButtonHtmlTag.querySelector(".innerButton"));
+		window.avgTypeFilters[avgType].isDisplayed = false;
 	} else { // else they are currently hidden, and they should be displayed
 		displayMode = "";
 		switchToggleButtonToOn(externalButtonHtmlTag.querySelector(".innerButton"));
+		window.avgTypeFilters[avgType].isDisplayed = true;
 	}
-	for (htmlTagToHide of document.querySelectorAll(selector)) {
+	for (htmlTagToHide of document.querySelectorAll("." + avgType)) {
 		htmlTagToHide.style.display = displayMode;
 	}
+	buildStatistics();
 }
 
 function toggleDisplaySectionOrSubsection(externalButtonHtmlTag) // toggle between none and default display for selected section
 {
-	let sectionOrSubsectionHtmlTag = document.querySelector("#" + sectionNameToId(externalButtonHtmlTag.parentNode.querySelector("a").textContent));
+	let sectionOrSubsectionName = externalButtonHtmlTag.parentNode.querySelector("a").textContent, sectionOrSubsectionHtmlTag = document.querySelector("#" + sectionNameToId(sectionOrSubsectionName));
 	if (sectionOrSubsectionHtmlTag.style.display === "") { // if it's displayed, it should be hidden
 		sectionOrSubsectionHtmlTag.style.display = "none";
+		setSectionOrSubsectionDisplayInPlan(sectionOrSubsectionName, false);
 		switchToggleButtonToOff(externalButtonHtmlTag.querySelector(".innerButton"));
 	} else { // else it's hidden and it should be displayed
 		sectionOrSubsectionHtmlTag.style.display = "";
+		setSectionOrSubsectionDisplayInPlan(sectionOrSubsectionName, true);
 		switchToggleButtonToOn(externalButtonHtmlTag.querySelector(".innerButton"));
+	}
+	buildStatistics();
+}
+
+function setSectionOrSubsectionDisplayInPlan(sectionOrSubsectionName, displayMode) // set the isDisplayed property of a section or a subsection in window.normalPlan or window.compactPlan
+{
+	if (window.normalPlan.isDisplayed) {
+		if (window.normalPlan.sectionIsDisplayed[sectionOrSubsectionName] === undefined) {
+			window.normalPlan.subsectionIsDisplayed[sectionOrSubsectionName] = displayMode;
+		} else {
+			window.normalPlan.sectionIsDisplayed[sectionOrSubsectionName] = displayMode;
+		}
+	} else {
+		window.compactPlan.sectionIsDisplayed[sectionOrSubsectionName] = displayMode;
 	}
 }
 

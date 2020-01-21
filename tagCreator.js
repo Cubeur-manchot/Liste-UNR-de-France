@@ -5,6 +5,13 @@ function createHtmlTag(tagType) // create simple HTML tag
 	return document.createElement(tagType);
 }
 
+function createHtmlTagWithId(tagType, tagId) // create simple HTML tag and sets its id
+{
+	let htmlTag = document.createElement(tagType);
+	htmlTag.id = tagId;
+	return htmlTag;
+}
+
 function createHtmlTagWithClassName(tagType, tagClassName) // create simple HTML tag and set its class
 {
 	let htmlTag = document.createElement(tagType);
