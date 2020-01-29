@@ -1,7 +1,7 @@
 "use strict";
 
 // import functions from tagCreator.js
-/* global createHtmlTag, createHtmlTagWithClassName, createHtmlTagWithClassNameAndTextContent, createHtmlTagWithClassNameHrefTextContent */
+/* global createHtmlTag, createHtmlTagWithClassName, createHtmlTagWithClassNameAndTextContent, createHtmlTagWithIdClassNameHrefTextContent */
 
 // import functions from utils.js
 /* global sectionNameToId */
@@ -15,7 +15,7 @@
 
 function buildPlan(planObject) // build filters and links for sections and subsections
 {
-	let pagePlanHtmlTag = document.querySelector("#pagePlan"), sectionPlanHtmlTag, subsectionPlanHtmlTag, externalButtonHtmlTag, planSectionObject, planSubsectionObject;
+	let pagePlanHtmlTag = document.querySelector("#pagePlan"), sectionPlanHtmlTag, subsectionPlanHtmlTag, planSectionObject, planSubsectionObject;
 	pagePlanHtmlTag.textContent = "";
 	if (planObject === window.normalPlan) {
 		pagePlanHtmlTag.className = "normalPlan";
@@ -39,12 +39,13 @@ function buildPlan(planObject) // build filters and links for sections and subse
 function buildPlanSectionOrSubsectionItem(type, sectionOrSubsectionName) // build a line for the plan with an external button, an inner button and a link
 {
 	let sectionOrSubsectionPlanHtmlTag = createHtmlTagWithClassName("div", type + "Plan"),
-		externalButtonHtmlTag = createHtmlTagWithClassName("div", "externalButton");
+		externalButtonHtmlTag = createHtmlTagWithClassName("div", "externalButton"),
+	sectionOrSubsectionId = sectionNameToId(sectionOrSubsectionName);
 	externalButtonHtmlTag.appendChild(createHtmlTagWithClassName("div", "innerButton"));
 	externalButtonHtmlTag.onclick = function() { toggleDisplaySectionOrSubsection(this); };
 	sectionOrSubsectionPlanHtmlTag.appendChild(externalButtonHtmlTag);
-	sectionOrSubsectionPlanHtmlTag.appendChild(createHtmlTagWithClassNameHrefTextContent("a", type + "PlanTitle",
-		"#" + sectionNameToId(sectionOrSubsectionName), sectionOrSubsectionName));
+	sectionOrSubsectionPlanHtmlTag.appendChild(createHtmlTagWithIdClassNameHrefTextContent("a", "pagePlan_" + sectionOrSubsectionId, type + "PlanTitle",
+		"#" + sectionOrSubsectionId, sectionOrSubsectionName));
 	return sectionOrSubsectionPlanHtmlTag;
 }
 

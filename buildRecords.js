@@ -56,7 +56,7 @@ function buildTableForSection(sectionObject) // build record table for input sec
 function buildHeaderRow() // build header row for record table
 {
 	let trHtmlTag = createHtmlTag("tr"), avgType;
-	trHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Épreuve"));
+	trHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("th", "eventHeaderRow","Épreuve"));
 	for (avgType of window.avgTypes) {
 		trHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("th", avgType, avgType.charAt(0).toUpperCase() + avgType.substr(1,100)));
 	}

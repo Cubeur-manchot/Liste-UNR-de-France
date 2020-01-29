@@ -263,12 +263,17 @@ function buildHistogram() // build a bar chart with the UNR count for each perso
 		histogramBackgroundColorGradient = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
 		histogramBorderColorGradient = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
 		histogramHoverBackgroundColorGradient = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
-		nbColors = window.lightColors.length, offsetBegin = 0.3, offset = (1 - offsetBegin)/(nbColors - 1), colorIndex;
+		label, nbColors = window.lightColors.length, offsetBegin = 0.3, offset = (1 - offsetBegin)/(nbColors - 1), colorIndex;
 	palmaresHistogramContainerHtmlTag.textContent = "";
 	for (colorIndex = 0; colorIndex < nbColors; colorIndex++) { // build the gradients
 		histogramBackgroundColorGradient.addColorStop(offsetBegin + colorIndex*offset, rgbFromColorObject(window.lightColors[colorIndex]));
 		histogramBorderColorGradient.addColorStop(offsetBegin + colorIndex*offset,  rgbFromColorObject(window.intenseColors[colorIndex]));
 		histogramHoverBackgroundColorGradient.addColorStop(offsetBegin + colorIndex*offset,  rgbFromColorObject(window.middleColors[colorIndex]));
+	}
+	if (document.querySelector("img#frontFlag").src.substr(-10, 10) === "flagFR.png") {
+		label = "Nombre d'UNRs";
+	} else {
+		label = "Number of UNRs";
 	}
 	new Chart( // build the bar chart
 		palmaresHistogramContext,
@@ -277,7 +282,7 @@ function buildHistogram() // build a bar chart with the UNR count for each perso
 			data: {
 				labels: window.countingArray.names,
 				datasets: [{
-					label: "Nombre d'UNRs",
+					label: label,
 					backgroundColor: histogramBackgroundColorGradient,
 					borderColor: histogramBorderColorGradient,
 					borderWidth: 1,

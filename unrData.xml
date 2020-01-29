@@ -536,4 +536,23 @@
 			<event>Ghost Cube</event>
 		</section>
 	</compactPlan>
+	<translations>
+		<translation translationType="globalOnce" selector="h1" textInFrench="Liste UNR de France" textInEnglish="France UNR List"/>
+		<translation translationType="globalOnce" selector="div#offCompactButton" textInFrench="Mode Normal" textInEnglish="Normal Mode"/>
+		<translation translationType="globalOnce" selector="div#onCompactButton" textInFrench="Mode Compact" textInEnglish="Compact Mode"/>
+		<translation translationType="globalOnce" selector="div#planAndFiltersButton" textInFrench="Filtres" textInEnglish="Filters"/>
+		<translation translationType="globalOnce" selector="section#statistics h2" textInFrench="Statistiques" textInEnglish="Statistics"/>
+		<translation translationType="globalOnce" selector="section#contact p" textInFrench="Une mise à jour ? Une erreur ? Un bug ? N'hésitez pas à " textInEnglish="An update ? A mistake ? A bug ? Don't hesitate to "/>
+		<translation translationType="globalOnce" selector="section#contact a" textInFrench="me contacter" textInEnglish="contact me"/>
+		<translation translationType="globalMany" selector="table.recordTable th.eventHeaderRow" textInFrench="Épreuve" textInEnglish="Event"/>
+		<translation translationType="sectionName" textInFrench="Officiels WCA" textInEnglish="WCA Officials"/>
+		<translation translationType="sectionName" textInFrench="Épreuves non officielles" textInEnglish="Unofficial events"/>
+		<translation translationType="sectionName" textInFrench="Cubes NxNxN" textInEnglish="NxNxN Cubes"/>
+		<translation translationType="sectionName" textInFrench="Cubes NxNxN " textInEnglish="NxNxN Cubes "/>
+		<translation translationType="sectionName" textInFrench="Autres WCA" textInEnglish="Other WCA"/>
+		<translation translationType="sectionName" textInFrench="Dodécaèdres" textInEnglish="Dodecahedron"/>
+		<translation translationType="sectionName" textInFrench="Relais" textInEnglish="Relays"/>
+		<translation translationType="sectionName" textInFrench="Autres Non WCA" textInEnglish="Other non-WCA"/>
+		<translation translationType="sectionName" textInFrench="Mods du 3x3x3" textInEnglish="3x3x3 mods"/>
+	</translations>
 </xml>

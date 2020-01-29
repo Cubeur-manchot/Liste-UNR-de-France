@@ -48,3 +48,15 @@ a
 {
 	text-decoration: none;
 }
+
+section#contact a
+{
+	display: inline-block;
+	margin: 0px;
+}
+
+section#contact p
+{
+	display: inline-block;
+	margin: 0px 5px 0px 0px;
+}

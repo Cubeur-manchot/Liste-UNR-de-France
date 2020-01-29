@@ -22,10 +22,10 @@ div#pagePlanAndFilters
 
 div.button
 {
-    vertical-align: top;
+    vertical-align: middle;
     width: 200px;
     height: 25px;
-    margin: 15px 0px 0px 15px;
+    margin: 0px 0px 0px 15px;
     padding: 5px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
@@ -154,4 +154,39 @@ div.innerButton
     border-radius: 50px;
     background-color: rgb(100,255,100);
     transition: all 0.5s;
+}
+
+div#toggleLanguageButton
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 18px;
+    padding: 5px 8px 6px 6px;
+    cursor: pointer;
+}
+
+img.flag
+{
+    display: inline-block;
+    width: 30px;
+    height: 18px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 3px;
+}
+
+img#frontFlag
+{
+    position: absolute;
+    z-index: 1;
+    transform: translate(-20%, 20%);
+    background-image: url("flagFR.png");
+}
+
+img#backFlag
+{
+    position: absolute;
+    z-index: 0;
+    transform: translate(20%, -20%);
+    background-image: url("flagUK.png");
 }

@@ -11,6 +11,7 @@ function inputData() // load XML file and stores data in window
 	storeNormalPlanInDataBase();
 	storeCompactPlanInDataBase();
 	storeRecordsInDataBase();
+	storeTranslations();
 	window.unrXmlData = undefined;
 }
 
@@ -25,6 +26,29 @@ function loadXml() // load unrData.xml and store it in window.unrXmlData
 	xmlHttp.open("get", "unrData.xml", false);
 	xmlHttp.send();
 	window.unrXmlData = xmlHttp.responseXML.querySelector("xml");
+}
+
+function storeTranslations()
+{
+	let translationXmlTag, translationType;
+	window.translations = [];
+	for (translationXmlTag of window.unrXmlData.querySelector("translations").querySelectorAll("translation")) {
+		translationType = translationXmlTag.getAttribute("translationType");
+		if (translationType === "globalOnce" || translationType === "globalMany") { // globalOnce or globalMany
+			window.translations.push({
+				translationType: translationType,
+				selector: translationXmlTag.getAttribute("selector"),
+				textInFrench: translationXmlTag.getAttribute("textInFrench"),
+				textInEnglish: translationXmlTag.getAttribute("textInEnglish")
+			});
+		} else { // sectionName or subsectionName
+			window.translations.push({
+				translationType: translationType,
+				textInFrench: translationXmlTag.getAttribute("textInFrench"),
+				textInEnglish: translationXmlTag.getAttribute("textInEnglish")
+			});
+		}
+	}
 }
 
 function storeRecordsInDataBase() // parse window.unrXmlData and store records content in window.recordsDataBase

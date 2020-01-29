@@ -42,9 +42,10 @@ function createHtmlTagWithClassNameAndTextContent(tagType, tagClassName, tagText
 	return htmlTag;
 }
 
-function createHtmlTagWithClassNameHrefTextContent(tagType, tagClassName, tagHref, tagTextContent) // create simple HTML tag and set its class, href and text content
+function createHtmlTagWithIdClassNameHrefTextContent(tagType, tagId, tagClassName, tagHref, tagTextContent) // create simple HTML tag and set its class, href and text content
 {
 	let htmlTag = document.createElement(tagType);
+	htmlTag.id = tagId;
 	htmlTag.className = tagClassName;
 	htmlTag.href = tagHref;
 	htmlTag.textContent = tagTextContent;
