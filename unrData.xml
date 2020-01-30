@@ -5,7 +5,7 @@
 			<single name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<mo3 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg5 name="Alaric Pouchain" time="0.80" timeList="0.71, (1.60), 0.82, 0.87, (0.68)" scrambleList="F2 R' U' R2 U' F2 U R' F, R' U2 F' U2 R2 F R2 U' R2, F R' F2 R U2 R U' R' U', U2 R' F2 R' U' F U R2 U', F R F U' R' F2 U' F2 U'" date="2019-10-08" youtubeLink="" francocubeLink=""/>
-			<avg12 name="Alaric Pouchain" time="1.06" timeList="0.82, 0.76, (1.57), 1.03, 1.28, 1.08, (0.76), 1.47, 1.21, 0.93, 0.82, 1.26" scrambleList="" date="2020-01-01" youtubeLink="" francocubeLink=""/>
+			<avg12 name="Alaric Pouchain" time="1.09" timeList="1.08, 1.21, 1.09, (1.57), 1.12, (0.74), 1.09, 1.12, 1.20, 1.07, 0.85, 1.11" scrambleList="" date="2019-09-16" youtubeLink="" francocubeLink=""/>
 			<avg50 name="Anaël Champion" time="1.34" timeList="" scrambleList="" date="2019-09-13" youtubeLink="" francocubeLink=""/>
 			<avg100 name="Alaric Pouchain" time="1.39" timeList="" scrambleList="" date="2019-10-02" youtubeLink="" francocubeLink=""/>
 		</event>
@@ -27,7 +27,7 @@
 		</event>
 		<event eventName="5x5x5">
 			<single name="Alexandre Carlier" time="46.18" timeList="" scrambleList="" date="2017-04-12" youtubeLink="" francocubeLink=""/>
-			<mo3 name="Abdelhak Kaddour" time="50.08" timeList="47.97, 50.08" scrambleList="" date="2019-08-10" youtubeLink="" francocubeLink=""/>
+			<mo3 name="Abdelhak Kaddour" time="50.08" timeList="52.20, 47.97, 50.07" scrambleList="" date="2019-08-10" youtubeLink="" francocubeLink=""/>
 			<avg5 name="Abdelhak Kaddour" time="52.53" timeList="55.33, (56.25), 52.20, (47.97), 50.07" scrambleList="" date="2019-08-10" youtubeLink="" francocubeLink=""/>
 			<avg12 name="Abdelhak Kaddour" time="55.54" timeList="" scrambleList="" date="2017-09-21" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271023#p271023"/>
 			<avg50 name="Alexandre Carlier" time="59.68" timeList="" scrambleList="" date="2017-09-21" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271023#p271023"/>
@@ -89,14 +89,6 @@
 			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
-		<event eventName="2x2x2 One-Handed">
-			<single name="Anaël Champion" time="0.63" timeList="" scrambleList="R' U' R2 U2 R2 U R U R U' R'" date="2020-01-20" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/394571064224514048/668940000087244810" francocubeLink=""/>
-			<mo3 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
-			<avg5 name="Anaël Champion" time="2.56" timeList="" scrambleList="" date="2020-01-19" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/353928758211903497/668506661492752404" francocubeLink=""/>
-			<avg12 name="Anaël Champion" time="2.79" timeList="" scrambleList="" date="2020-01-19" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/353928758211903497/668506661492752404" francocubeLink=""/>
-			<avg50 name="Anaël Champion" time="3.35" timeList="" scrambleList="" date="2020-01-19" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/353928758211903497/668506661492752404" francocubeLink=""/>
-			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
-		</event>
 		<event eventName="3x3x3 One-Handed">
 			<single name="Juliette Sébastien" time="5.71" timeList="" scrambleList="" date="2016-12-17" youtubeLink="" francocubeLink="http://forum.francocube.com/viewtopic.php?p=260319#p260319"/>
 			<mo3 name="Juliette Sébastien" time="8.37" timeList="7.14, 11.16, 6.80" scrambleList="" date="2018-04-05" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273394#p273394"/>
@@ -123,11 +115,11 @@
 		</event>
 		<event eventName="3x3x3 Fewest Moves">
 			<single name="Émilien Fabre" time="16" timeList="" scrambleList="" date="2016-11-22" youtubeLink="" francocubeLink="http://forum.francocube.com/viewtopic.php?p=259632#p259632"/>
-			<mo3 name="Alaric Pouchain" time="21.33" timeList="19, 22, 23" scrambleList="" date="2020-01-01" youtubeLink="" francocubeLink=""/>
-			<avg5 name="Nicolas Gertner" time="21.33" timeList="" scrambleList="" date="2019-12-12" youtubeLink="" francocubeLink=""/>
-			<avg12 name="Nicolas Gertner" time="22.30" timeList="" scrambleList="" date="2019-12-12" youtubeLink="" francocubeLink=""/>
-			<avg50 name="Nicolas Gertner" time="23.16" timeList="" scrambleList="" date="2019-12-12" youtubeLink="" francocubeLink=""/>
-			<avg100 name="Nicolas Gertner" time="23.72" timeList="" scrambleList="" date="2019-12-12" youtubeLink="" francocubeLink=""/>
+			<mo3 name="Alaric Pouchain" time="22" timeList="23, 21, 22" scrambleList="" date="2019-10-02" youtubeLink="" francocubeLink=""/>
+			<avg5 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg12 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Kilominx">
 			<single name="Théo Paris" time="11.29" timeList="" scrambleList="" date="2018-02-17" youtubeLink="" francocubeLink=""/>
@@ -166,8 +158,8 @@
 			<mo3 name="Anaël Champion" time="3.29" memoTimeList="" timeList="2.56, 3.84, 3.48" scrambleList="" date="2019-11-02" youtubeLink="" francocubeLink=""/>
 			<avg5 name="Anaël Champion" time="3.29" memoTimeList="" timeList="(2.42), (8.74), 3.48, 3.84, 2.56" scrambleList="" date="2019-11-02" youtubeLink="" francocubeLink=""/>
 			<avg12 name="Anaël Champion" time="4.65" memoTimeList="" timeList="8.29, 4.91, 4.36, 6.48, 4.29, 2.93, 5.45, (2.42), (8.74), 3.48, 3.84, 2.56" scrambleList="" date="2019-11-02" youtubeLink="" francocubeLink=""/>
-			<avg50 name="Alaric Pouchain" time="6.97" memoTimeList="" timeList="" scrambleList="" date="2020-01-01" youtubeLink="" francocubeLink=""/>
-			<avg100 name="Alaric Pouchain" time="7.18" memoTimeList="" timeList="" scrambleList="" date="2020-01-01" youtubeLink="" francocubeLink=""/>
+			<avg50 name="Anaël Champion" time="8.15" memoTimeList="" timeList="" scrambleList="" date="2019-11-02" youtubeLink="" francocubeLink=""/>
+			<avg100 name="Alaric Pouchain" time="8.62" memoTimeList="" timeList="" scrambleList="" date="2019-10-02" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="3x3x3 Blindfolded">
 			<single name="Arthur Garcin" time="15.99" memoTimeList="" timeList="" scrambleList="" date="2019-10-17" youtubeLink="" francocubeLink=""/>
@@ -210,7 +202,7 @@
 			<avg100 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="8x8x8 Blindfolded">
-			<single name="Wilfrid Py" time="5:15:30.00" memoTimeList="[2:37:20]" timeList="" scrambleList="" date="2018-09-21" youtubeLink="https://www.youtube.com/watch?v=rYMUp5gfbZ4" francocubeLink=""/>
+			<single name="Wilfrid Py" time="5:15.30" memoTimeList="[2:37:20]" timeList="" scrambleList="" date="2018-09-21" youtubeLink="https://www.youtube.com/watch?v=rYMUp5gfbZ4" francocubeLink=""/>
 			<mo3 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg5 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg12 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
@@ -242,7 +234,7 @@
 			<avg100 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="3x3x3 Multi-Blindfolded">
-			<single name="William Phommaha" time="28/30 (54:00.17)" memoTimeList="36:22.74" timeList="" scrambleList="" date="2020-01-02" youtubeLink="" francocubeLink=""/>
+			<single name="Maxime Madrzyk" time="25/25 (52:53)" memoTimeList="39:39" timeList="" scrambleList="" date="2019-12-03" youtubeLink="https://www.youtube.com/watch?v=iLDaasJ8U5A" francocubeLink=""/>
 			<mo3 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg5 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg12 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
@@ -250,12 +242,12 @@
 			<avg100 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Pyraminx">
-			<single name="Diego Alfonso" time="0.68" timeList="" scrambleList="U' B' U' B' U B' U L' b" date="2020-01-01" youtubeLink="" francocubeLink=""/>
+			<single name="Diego Alfonso" time="0.73" timeList="" scrambleList="U' L' B' R' U R B L' l' b'" date="2019-09-13" youtubeLink="" francocubeLink=""/>
 			<mo3 name="Diego Alfonso" time="1.35" timeList="1.21, 1.36, 1.48" scrambleList="" date="2019-09-09" youtubeLink="" francocubeLink=""/>
 			<avg5 name="Diego Alfonso" time="1.40" timeList="1.06, (0.93), 4.11, 1.30, 1.86" scrambleList="" date="2019-09-09" youtubeLink="" francocubeLink=""/>
-			<avg12 name="Diego Alfonso" time="1.95" timeList="2.13, 1.75, 1.70, 2.23, 1.86, 1.87, (1.46), 2.00, 1.54, 2.32, (4.82+), 2.13" scrambleList="" date="2020-01-01" youtubeLink="" francocubeLink=""/>
-			<avg50 name="Diego Alfonso" time="2.09" timeList="" scrambleList="" date="2020-01-01" youtubeLink="" francocubeLink=""/>
-			<avg100 name="Diego Alfonso" time="2.19" timeList="" scrambleList="" date="2020-01-01" youtubeLink="" francocubeLink=""/>
+			<avg12 name="Diego Alfonso" time="2.00" timeList="2.17, 1.58, 2.08, 1.89, 2.29, (1.40), 1.71, 2.27, 2.21, 2.17, (2.99), 1.75" scrambleList="" date="2019-10-02" youtubeLink="" francocubeLink=""/>
+			<avg50 name="Diego Alfonso" time="2.23" timeList="" scrambleList="" date="2019-10-02" youtubeLink="" francocubeLink=""/>
+			<avg100 name="Diego Alfonso" time="2.28" timeList="" scrambleList="" date="2019-10-02" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Skewb">
 			<single name="Thibaud Ou" time="0.70" timeList="" scrambleList="B' L R' U' R L' B L" date="2018-11-03" youtubeLink="" francocubeLink=""/>
@@ -266,15 +258,15 @@
 			<avg100 name="Léo Bailly" time="2.73" timeList="" scrambleList="" date="2017-10-10" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271267#p271267"/>
 		</event>
 		<event eventName="Square-1">
-			<single name="Thibaud Ou" time="1.81" timeList="" scrambleList="" date="2018-01-02" youtubeLink="" francocubeLink=""/>
-			<mo3 name="Thibaud Ou" time="5.25" timeList="3.86, 6.48, 5.42" scrambleList="" date="2019-12-26" youtubeLink="" francocubeLink=""/>
+			<single name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<mo3 name="Thibaud Ou" time="5.96" timeList="6.44, 5.47, 5.98" scrambleList="" date="2019-10-28" youtubeLink="" francocubeLink=""/>
 			<avg5 name="Thibaud Ou" time="6.23" timeList="5.47, 5.98, 7.24, (8.02), (5.44)" scrambleList="" date="2019-10-28" youtubeLink="" francocubeLink=""/>
 			<avg12 name="Thibaud Ou" time="6.90" timeList="7.62, 7.16, 6.91, 6.44, 5.47, 5.98, 7.24, (8.02), (5.44), 8.36, 6.96, 7.20" scrambleList="" date="2019-10-28" youtubeLink="" francocubeLink=""/>
-			<avg50 name="Thibaud Ou" time="7.34" timeList="" scrambleList="" date="2019-12-02" youtubeLink="" francocubeLink=""/>
-			<avg100 name="Thibaud Ou" time="7.90" timeList="" scrambleList="" date="2019-12-19" youtubeLink="" francocubeLink=""/>
+			<avg50 name="Thibaud Ou" time="7.45" timeList="" scrambleList="" date="2019-05-06" youtubeLink="" francocubeLink=""/>
+			<avg100 name="Thibaud Ou" time="7.97" timeList="" scrambleList="" date="2019-05-06" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Clock">
-			<single name="Gabriel Luthun" time="3.13" timeList="" scrambleList="" date="2018-06-18" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273979#p273979"/>
+			<single name="Télian Delannoy" time="2.48" timeList="" scrambleList="" date="2019-01-31" youtubeLink="" francocubeLink=""/>
 			<mo3 name="Virgile Perrot" time="4.25" timeList="3.48, 4.73, 4.53" scrambleList="" date="2019-09-26" youtubeLink="" francocubeLink=""/>
 			<avg5 name="Virgile Perrot" time="4.44" timeList="(4.03), 4.28, (6.18), 4.35, 4.70" scrambleList="" date="2019-11-23" youtubeLink="" francocubeLink=""/>
 			<avg12 name="Virgile Perrot" time="5.31" timeList="" scrambleList="" date="2019-11-23" youtubeLink="" francocubeLink=""/>
@@ -306,15 +298,7 @@
 			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="Mini-Guilford Solo">
-			<single name="Lucas Déglise" time="3:41.92" timeList="" scrambleList="" date="2019-12-18" youtubeLink="https://www.youtube.com/watch?v=o_Ul_unOUU8" francocubeLink=""/>
-			<mo3 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
-			<avg5 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
-			<avg12 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
-			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
-			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
-		</event>
-		<event eventName="Relai 17 events WCA">
-			<single name="William Phommaha" time="34:13.57" timeList="" scrambleList="" date="2020-01-16" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/667414979116531732" francocubeLink=""/>
+			<single name="Clément Cherblanc" time="4:19.99" timeList="" scrambleList="" date="2017-12-04" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=271969#p271900"/>
 			<mo3 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg5 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg12 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
@@ -420,6 +404,7 @@
 			</subsection>
 			<subsection subsectionName="Autres WCA">
 				<event>3x3x3 One-Handed</event>
+				<event>3x3x3 With Feet</event>
 				<event>3x3x3 Fewest Moves</event>
 				<event>Megaminx</event>
 				<event>Pyraminx</event>
@@ -446,7 +431,6 @@
 				<event>Relai 2x2x2 - 7x7x7</event>
 				<event>Relai Minx (mega + pyra + skewb)</event>
 				<event>Mini-Guilford Solo</event>
-				<event>Relai 17 events WCA</event>
 			</subsection>
 			<subsection subsectionName="Team">
 				<event>Team Solve Duo</event>
@@ -463,9 +447,7 @@
 				<event>Relay 2-5 Blindfolded</event>
 			</subsection>
 			<subsection subsectionName="Autres Non WCA">
-				<event>2x2x2 One-Handed</event>
 				<event>4x4x4 One-Handed</event>
-				<event>3x3x3 With Feet</event>
 				<event>Mirror Blocks</event>
 				<event>Inequilateral Cube</event>
 				<event>Ghost Cube</event>
@@ -475,8 +457,6 @@
 	<compactPlan>
 		<section sectionName="Cubes NxNxN">
 			<event>2x2x2</event>
-			<event>3x3x3</event>
-			<event>4x4x4</event>
 			<event>5x5x5</event>
 			<event>6x6x6</event>
 			<event>7x7x7</event>
@@ -487,7 +467,6 @@
 			<event>13x13x13</event>
 		</section>
 		<section sectionName="OH, Feet, FM">
-			<event>2x2x2 One-Handed</event>
 			<event>3x3x3 One-Handed</event>
 			<event>4x4x4 One-Handed</event>
 			<event>3x3x3 With Feet</event>
@@ -516,14 +495,12 @@
 			<event>Pyraminx</event>
 			<event>Skewb</event>
 			<event>Square-1</event>
-			<event>Clock</event>
 		</section>
 		<section sectionName="Relais">
 			<event>Relai 2x2x2 - 5x5x5</event>
 			<event>Relai 2x2x2 - 7x7x7</event>
 			<event>Relai Minx (mega + pyra + skewb)</event>
 			<event>Mini-Guilford Solo</event>
-			<event>Relai 17 events WCA</event>
 		</section>
 		<section sectionName="Team">
 			<event>Team Solve Duo</event>
@@ -542,8 +519,8 @@
 		<translation translationType="globalOnce" selector="div#onCompactButton" textInFrench="Mode Compact" textInEnglish="Compact Mode"/>
 		<translation translationType="globalOnce" selector="div#planAndFiltersButton" textInFrench="Filtres" textInEnglish="Filters"/>
 		<translation translationType="globalOnce" selector="section#statistics h2" textInFrench="Statistiques" textInEnglish="Statistics"/>
-		<translation translationType="globalOnce" selector="section#contact p" textInFrench="Une mise à jour ? Une erreur ? Un bug ? N'hésitez pas à " textInEnglish="An update ? A mistake ? A bug ? Don't hesitate to "/>
-		<translation translationType="globalOnce" selector="section#contact a" textInFrench="me contacter" textInEnglish="contact me"/>
+		<translation translationType="globalOnce" selector="section#contact p" textInFrench="Une mise à jour ? Une erreur ? Un bug ?" textInEnglish="An update ? A mistake ? A bug ?"/>
+		<translation translationType="globalOnce" selector="section#contact a" textInFrench="Contactez moi" textInEnglish="Contact me"/>
 		<translation translationType="globalMany" selector="table.recordTable th.eventHeaderRow" textInFrench="Épreuve" textInEnglish="Event"/>
 		<translation translationType="sectionName" textInFrench="Officiels WCA" textInEnglish="WCA Officials"/>
 		<translation translationType="sectionName" textInFrench="Épreuves non officielles" textInEnglish="Unofficial events"/>

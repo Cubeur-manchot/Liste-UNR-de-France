@@ -4,12 +4,24 @@ function sectionNameToId(inputName) // transform a section name to id format
 {
 	let outputId = inputName;
 	while (outputId.includes(" ")) { // replace every space by underscore
-		outputId = outputId.replace(" ", "_");
+		outputId = outputId.replace(" ", "-");
 	}
 	while (outputId.includes(",")) { // delete every comma
-		outputId = outputId.replace(",", "");
+		outputId = outputId.replace(",", "_");
 	}
 	return outputId;
+}
+
+function sectionIdToName(inputId) // transform back a section id to original name
+{
+	let outputName = inputId;
+	while (outputName.includes("-")) { // replace every space by underscore
+		outputName = outputName.replace("-", " ");
+	}
+	while (outputName.includes("_")) { // delete every comma
+		outputName = outputName.replace("_", ",");
+	}
+	return outputName;
 }
 
 function stringToDate(inputString) // build a Date object from a string of the form "yyyy-mm-dd"

@@ -4,13 +4,16 @@
 /* global createHtmlTag, createHtmlTagWithClassName, createHtmlTagWithClassNameAndTextContent, createHtmlTagWithIdClassNameHrefTextContent */
 
 // import functions from utils.js
-/* global sectionNameToId */
+/* global sectionNameToId, sectionIdToName */
 
 // import functions from buildRecords.js
 /* global buildRecords */
 
 // import functions from statistics.js
 /* global buildStatistics, isNormalSectionDisplayed, isCompactSectionDisplayed */
+
+// import functions from translation.js
+/* global translateSectionNameFromFrenchToEnglish */
 
 
 function buildPlan(planObject) // build filters and links for sections and subsections
@@ -44,6 +47,9 @@ function buildPlanSectionOrSubsectionItem(type, sectionOrSubsectionName) // buil
 	externalButtonHtmlTag.appendChild(createHtmlTagWithClassName("div", "innerButton"));
 	externalButtonHtmlTag.onclick = function() { toggleDisplaySectionOrSubsection(this); };
 	sectionOrSubsectionPlanHtmlTag.appendChild(externalButtonHtmlTag);
+	if (document.querySelector("img#frontFlag").src.substr(-10, 10) === "flagUK.png") {
+		sectionOrSubsectionName = translateSectionNameFromFrenchToEnglish(sectionOrSubsectionName);
+	}
 	sectionOrSubsectionPlanHtmlTag.appendChild(createHtmlTagWithIdClassNameHrefTextContent("a", "pagePlan_" + sectionOrSubsectionId, type + "PlanTitle",
 		"#" + sectionOrSubsectionId, sectionOrSubsectionName));
 	return sectionOrSubsectionPlanHtmlTag;
@@ -121,14 +127,15 @@ function toggleDisplayAvgType(externalButtonHtmlTag) // toggle between none and 
 
 function toggleDisplaySectionOrSubsection(externalButtonHtmlTag) // toggle between none and default display for selected section
 {
-	let sectionOrSubsectionName = externalButtonHtmlTag.parentNode.querySelector("a").textContent, sectionOrSubsectionHtmlTag = document.querySelector("#" + sectionNameToId(sectionOrSubsectionName));
+	let sectionOrSubsectionId = externalButtonHtmlTag.parentNode.querySelector("a").id.substring(9,100),
+		sectionOrSubsectionHtmlTag = document.querySelector("#" + sectionOrSubsectionId);
 	if (sectionOrSubsectionHtmlTag.style.display === "") { // if it's displayed, it should be hidden
 		sectionOrSubsectionHtmlTag.style.display = "none";
-		setSectionOrSubsectionDisplayInPlan(sectionOrSubsectionName, false);
+		setSectionOrSubsectionDisplayInPlan(sectionIdToName(sectionOrSubsectionId), false);
 		switchToggleButtonToOff(externalButtonHtmlTag.querySelector(".innerButton"));
 	} else { // else it's hidden and it should be displayed
 		sectionOrSubsectionHtmlTag.style.display = "";
-		setSectionOrSubsectionDisplayInPlan(sectionOrSubsectionName, true);
+		setSectionOrSubsectionDisplayInPlan(sectionIdToName(sectionOrSubsectionId), true);
 		switchToggleButtonToOn(externalButtonHtmlTag.querySelector(".innerButton"));
 	}
 	buildStatistics();

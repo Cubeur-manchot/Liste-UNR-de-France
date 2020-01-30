@@ -12,7 +12,7 @@ div#pagePlanAndFilters
     padding: 0px;
     border: 1px solid rgb(128, 128, 128);
     border-radius: 10px;
-    width: 480px;
+    width: 550px;
     text-align: center;
     background-color: rgb(200,255,200);
 }
@@ -156,6 +156,9 @@ div.innerButton
     transition: all 0.5s;
 }
 
+
+/* Style for toggle language button and flags */
+
 div#toggleLanguageButton
 {
     display: inline-block;
@@ -169,6 +172,7 @@ div#toggleLanguageButton
 img.flag
 {
     display: inline-block;
+    position: absolute;
     width: 30px;
     height: 18px;
     border: 1px solid rgb(0, 0, 0);
@@ -177,7 +181,6 @@ img.flag
 
 img#frontFlag
 {
-    position: absolute;
     z-index: 1;
     transform: translate(-20%, 20%);
     background-image: url("flagFR.png");
@@ -185,7 +188,6 @@ img#frontFlag
 
 img#backFlag
 {
-    position: absolute;
     z-index: 0;
     transform: translate(20%, -20%);
     background-image: url("flagUK.png");

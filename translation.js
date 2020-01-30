@@ -23,6 +23,17 @@ function getEnglishText(translationObject)
 	return translationObject.textInEnglish;
 }
 
+function translateSectionNameFromFrenchToEnglish(frenchSectionName)
+{
+	let translationObject;
+	for (translationObject of window.translations) {
+		if (translationObject.translationType === "sectionName" && translationObject.textInFrench === frenchSectionName) { // if a translation corresponds, return english value
+			return translationObject.textInEnglish;
+		}
+	}
+	return frenchSectionName; // if no translation corresponds, the section name is the same in french and english
+}
+
 function translatePage()
 {
 	let sectionHtmlTag, elementToTranslateHtmlTag, getTranslatedText, translationObject, sectionId, translatedText;

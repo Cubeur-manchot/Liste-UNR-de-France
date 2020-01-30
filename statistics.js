@@ -289,6 +289,15 @@ function buildHistogram() // build a bar chart with the UNR count for each perso
 					hoverBackgroundColor: histogramHoverBackgroundColorGradient,
 					data: window.countingArray.counts
 				}]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						}
+					}]
+				}
 			}
 		}
 	);
@@ -299,24 +308,32 @@ function buildDoughnut() // build a doughnut chart with the UNR count for each p
 {
 	let palmaresDoughnutContainerHtmlTag = document.querySelector("div#palmaresDoughnutContainer"),
 		palmaresDoughnutCanvasHtmlTag = createHtmlTagWithId("canvas", "palmaresDoughnut"),
-		palmaresDoughnutContext = palmaresDoughnutCanvasHtmlTag.getContext("2d"), doughnutBackgroundColors = [], doughnutHoverColors = [],
+		palmaresDoughnutContext = palmaresDoughnutCanvasHtmlTag.getContext("2d"), doughnutBackgroundColors = [], doughnutHoverColors = [], colorsIndexes,
 		nbPersons = window.countingArray.counts.length, nbColorsForDoughnutGradient = window.lightColors.length, nbGradientParts = nbColorsForDoughnutGradient - 1,
 		gradientLength = Math.floor((nbPersons - 1)/nbGradientParts), nbNotBiggerGradientParts = nbGradientParts - (nbPersons - nbColorsForDoughnutGradient) % nbGradientParts,
 		i, j, gradientSize;
 	palmaresDoughnutContainerHtmlTag.textContent = "";
-	for (i = 0; i < nbGradientParts; i++) { // manually compute gradients by linear interpolations from previous fixed color included and until next fixed color excluded
-		gradientSize = gradientLength + (i >= nbNotBiggerGradientParts);
-		for (j = 0; j < gradientSize; j++) {
-			doughnutBackgroundColors.push(rgbFromColorObject(
-				addColors(window.middleColors[i], multiplyColor(substractColors(window.middleColors[i+1], window.middleColors[i]),j / gradientSize))
-			));
-			doughnutHoverColors.push(rgbFromColorObject(
-				addColors(window.intenseColors[i], multiplyColor(substractColors(window.intenseColors[i+1], window.intenseColors[i]), j / gradientSize))
-			));
+	if (gradientLength === 0) { // particular case when there are not enough persons to build the gradients
+		colorsIndexes = [0, 4, 2, 3, 5].slice(0, nbPersons).sort(); // take the nbPersons first elements of this array, it gives the color indexes to take
+		for (j = 0; j < nbPersons; j++) {
+			doughnutBackgroundColors.push(rgbFromColorObject(window.middleColors[colorsIndexes[j]]));
+			doughnutHoverColors.push(rgbFromColorObject(window.intenseColors[colorsIndexes[j]]));
 		}
+	} else {
+		for (i = 0; i < nbGradientParts; i++) { // manually compute gradients by linear interpolations from previous fixed color included and until next fixed color excluded
+			gradientSize = gradientLength + (i >= nbNotBiggerGradientParts);
+			for (j = 0; j < gradientSize; j++) {
+				doughnutBackgroundColors.push(rgbFromColorObject(
+					addColors(window.middleColors[i], multiplyColor(substractColors(window.middleColors[i + 1], window.middleColors[i]), j / gradientSize))
+				));
+				doughnutHoverColors.push(rgbFromColorObject(
+					addColors(window.intenseColors[i], multiplyColor(substractColors(window.intenseColors[i + 1], window.intenseColors[i]), j / gradientSize))
+				));
+			}
+		}
+		doughnutHoverColors.push(rgbFromColorObject(window.intenseColors[nbColorsForDoughnutGradient - 1]));
+		doughnutBackgroundColors.push(rgbFromColorObject(window.middleColors[nbColorsForDoughnutGradient - 1]));
 	}
-	doughnutHoverColors.push(rgbFromColorObject(window.intenseColors[nbColorsForDoughnutGradient - 1]));
-	doughnutBackgroundColors.push(rgbFromColorObject(window.middleColors[nbColorsForDoughnutGradient - 1]));
 	new Chart( // build the doughnut chart
 		palmaresDoughnutContext,
 		{
