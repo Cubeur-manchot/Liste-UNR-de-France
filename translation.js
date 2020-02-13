@@ -6,35 +6,14 @@
 // import functions from statistics.js
 /* global buildHistogram */
 
-function toggleLanguage()
+function toggleLanguage() // translate the whole page from french to english or from english to french
 {
 	translatePage();
 	switchFlags();
 	buildHistogram();
 }
 
-function getFrenchText(translationObject)
-{
-	return translationObject.textInFrench;
-}
-
-function getEnglishText(translationObject)
-{
-	return translationObject.textInEnglish;
-}
-
-function translateSectionNameFromFrenchToEnglish(frenchSectionName)
-{
-	let translationObject;
-	for (translationObject of window.translations) {
-		if (translationObject.translationType === "sectionName" && translationObject.textInFrench === frenchSectionName) { // if a translation corresponds, return english value
-			return translationObject.textInEnglish;
-		}
-	}
-	return frenchSectionName; // if no translation corresponds, the section name is the same in french and english
-}
-
-function translatePage()
+function translatePage() // loop over window.translations and translate the corresponding elements in the page
 {
 	let sectionHtmlTag, elementToTranslateHtmlTag, getTranslatedText, translationObject, sectionId, translatedText;
 	if (document.querySelector("img#frontFlag").src.substr(-10, 10) === "flagUK.png") {
@@ -56,25 +35,46 @@ function translatePage()
 		} else { // section and subsection names are translated in the page plan and in the corresponding section
 			sectionId = sectionNameToId(translationObject.textInFrench);
 			elementToTranslateHtmlTag = document.querySelector("div#pagePlan a#pagePlan_" + sectionId);
-			if (elementToTranslateHtmlTag) {
+			if (elementToTranslateHtmlTag) { // replace the section name in the page plan with it's translation
 				elementToTranslateHtmlTag.textContent = translatedText;
 			}
 			sectionHtmlTag = document.querySelector("section#" + sectionId);
-			if (sectionHtmlTag) {
+			if (sectionHtmlTag) { // replace the section name in the record section with it's translation
 				sectionHtmlTag.firstChild.textContent = translatedText;
 			}
 		}
 	}
-	if (getTranslatedText === getEnglishText) {
+	if (getTranslatedText === getEnglishText) { // change contact page link
 		document.querySelector("section#contact a").href = "contactEN.html";
 	} else {
 		document.querySelector("section#contact a").href = "contactFR.html";
 	}
 }
 
-function switchFlags()
+function getFrenchText(translationObject) // return french text
+{
+	return translationObject.textInFrench;
+}
+
+function getEnglishText(translationObject) // return english text
+{
+	return translationObject.textInEnglish;
+}
+
+function switchFlags() // switch the front and back flags
 {
 	let frontFlagHtmlTag = document.querySelector("img#frontFlag"), backFlagHtmlTag = document.querySelector("img#backFlag"), frontImageSource = frontFlagHtmlTag.src;
 	frontFlagHtmlTag.src = backFlagHtmlTag.src;
 	backFlagHtmlTag.src = frontImageSource;
+}
+
+function translateSectionNameFromFrenchToEnglish(frenchSectionName) // translate sections names to english
+{
+	let translationObject;
+	for (translationObject of window.translations) {
+		if (translationObject.translationType === "sectionName" && translationObject.textInFrench === frenchSectionName) { // if a translation corresponds, return english value
+			return translationObject.textInEnglish;
+		}
+	}
+	return frenchSectionName; // if no translation corresponds, the section name is the same in french and english
 }

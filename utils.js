@@ -35,35 +35,25 @@ function stringToDate(inputString) // build a Date object from a string of the f
 
 function dateToString(inputDate) // build a displayable string from a Date object
 {
-	let monthString, dayString, year, month, dateOfMonth, day;
-	year = inputDate.getFullYear();
-	month = inputDate.getMonth();
-	dateOfMonth = inputDate.getDate();
-	day = inputDate.getDay();
-	switch (month) {
-		case 0: monthString = "janvier"; break;
-		case 1: monthString = "février"; break;
-		case 2: monthString = "mars"; break;
-		case 3: monthString = "avril"; break;
-		case 4: monthString = "mai"; break;
-		case 5: monthString = "juin"; break;
-		case 6: monthString = "juillet"; break;
-		case 7: monthString = "août"; break;
-		case 8: monthString = "septembre"; break;
-		case 9: monthString = "octobre"; break;
-		case 10: monthString = "novembre"; break;
-		default: monthString = "décembre"; break;
+	return addZeroIfSmallerThanTen(inputDate.getDate()) + "/" + addZeroIfSmallerThanTen(inputDate.getMonth() + 1) + "/" + inputDate.getFullYear();
+}
+
+function addZeroIfSmallerThanTen(inputNumber) // if a number is on one character, add a zero at the beginning
+{
+	if (inputNumber < 10) {
+		return "0" + inputNumber;
+	} else {
+		return inputNumber;
 	}
-	switch (day) {
-		case 0: dayString = "dimanche"; break;
-		case 1: dayString = "lundi"; break;
-		case 2: dayString = "mardi"; break;
-		case 3: dayString = "mercredi"; break;
-		case 4: dayString = "jeudi"; break;
-		case 5: dayString = "vendredi"; break;
-		default: dayString = "samedi"; break;
+}
+
+function getBeginOfWeek(inputDate) // return the Date object corresponding to the begin of the week of the input date
+{
+	let dayOfWeek = inputDate.getDay();
+	if (dayOfWeek === 0) { // sunday
+		dayOfWeek = 7; // weeks begin on monday
 	}
-	return dayString + " " + dateOfMonth + " " + monthString + " " + year;
+	return new Date(inputDate.getFullYear(), inputDate.getMonth(), inputDate.getDate() - dayOfWeek + 1);
 }
 
 function listToArray(inputString) // convert a string of the form "a, b, c" to an array of the form ["a", "b", "c"]
@@ -96,7 +86,7 @@ function addColors(firstColorObject, secondColorObject) // add two {r, g, b} col
 	return {
 		r: firstColorObject.r + secondColorObject.r,
 		g: firstColorObject.g + secondColorObject.g,
-		b: firstColorObject.b + secondColorObject.b,
+		b: firstColorObject.b + secondColorObject.b
 	};
 }
 

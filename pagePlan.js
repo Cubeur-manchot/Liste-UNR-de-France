@@ -47,7 +47,7 @@ function buildPlanSectionOrSubsectionItem(type, sectionOrSubsectionName) // buil
 	externalButtonHtmlTag.appendChild(createHtmlTagWithClassName("div", "innerButton"));
 	externalButtonHtmlTag.onclick = function() { toggleDisplaySectionOrSubsection(this); };
 	sectionOrSubsectionPlanHtmlTag.appendChild(externalButtonHtmlTag);
-	if (document.querySelector("img#frontFlag").src.substr(-10, 10) === "flagUK.png") {
+	if (document.querySelector("img#frontFlag").src.substr(-10, 10) === "flagUK.png") { // if english language, translate text to english
 		sectionOrSubsectionName = translateSectionNameFromFrenchToEnglish(sectionOrSubsectionName);
 	}
 	sectionOrSubsectionPlanHtmlTag.appendChild(createHtmlTagWithIdClassNameHrefTextContent("a", "pagePlan_" + sectionOrSubsectionId, type + "PlanTitle",

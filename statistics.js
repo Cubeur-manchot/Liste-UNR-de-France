@@ -4,7 +4,7 @@
 /* global createHtmlTag, createHtmlTagWithId, createHtmlTagWithTextContent, createHtmlTagWithClassNameAndTextContent */
 
 // import functions from utils.js
-/* global dateToString, multiplyColor, addColors, substractColors, rgbFromColorObject */
+/* global dateToString, getBeginOfWeek, multiplyColor, addColors, substractColors, rgbFromColorObject */
 
 // import functions from Chart.js (local version)
 /* global Chart */
@@ -13,14 +13,12 @@ function buildStatistics() // compute the statistics and build the tables and gr
 {
 	countRecords();
 	computeTopXLongestShortestStandingRecordEvents(5);
-	//computeDateAggregatedArray();
-	//createDataForTimeLine();
+	computeDateAggregatedArray();
+	createDataForTimeLine();
 	initColors();
 	buildHistogram();
 	buildDoughnut();
-	//buildTimeLine();
-	buildTopXLongestStandingRecordsTable();
-	buildTopXShortestStandingRecordsTable();
+	buildTimeLine();
 }
 
 function isNormalSectionDisplayed(dataBaseObject) // tell if a record object is display in normal mode
@@ -132,70 +130,62 @@ function sortDataBaseByDate() // sort window.bruteDataBase by date and remove em
 
 function computeDateAggregatedArray() // aggregate database objects that have the same person, eventName and date and stores it in window.aggregatedDataBase
 {
-	let aggregatedArray, aggregatedArrayObject, sectionObject, dataBaseObject, eventName, avgType;
+	let aggregatedArray = [], aggregatedArrayElement, sectionObject, dataBaseObject, date, nullDate = new Date(0), weekBeginDate, eventName, avgType;
 	window.aggregatedDataBase = [];
 	for (sectionObject of window.compactPlan.sections) {
 		for (eventName of sectionObject.events) {
-			aggregatedArray = [];
 			for (avgType of window.avgTypes) {
 				dataBaseObject = window.smartRecordsDataBase[eventName][avgType];
-				if (dataBaseObject.time !== "") {
-					if (aggregatedArray.length === 0) { // if it's the first element to be possibly aggregated, it should be added
-						aggregatedArray.push({
-							date: dataBaseObject.date,
-							eventName: dataBaseObject.eventName,
+				if (isDisplayed(dataBaseObject)) {
+					date = dataBaseObject.date;
+					if (date.getTime() !== nullDate.getTime()) {
+						weekBeginDate = getBeginOfWeek(date);
+						aggregatedArrayElement = {
+							date: date,
 							name: dataBaseObject.name,
-							listOfAvgTypeAndTimePairs: [{avgType: avgType, time: dataBaseObject.time}]
-						});
-					} else {
-						for (aggregatedArrayObject of aggregatedArray) { // try to match to an aggregated element
-							if (aggregatedArrayObject.date.getDate() === dataBaseObject.date.getDate() && aggregatedArrayObject.name === dataBaseObject.name) {
-								aggregatedArrayObject.listOfAvgTypeAndTimePairs.push({avgType: avgType, time: dataBaseObject.time}); // aggregate to the element that corresponds
-								dataBaseObject = undefined;
-							}
-						}
-						if (dataBaseObject !== undefined) {
-							aggregatedArray.push({
-								date: dataBaseObject.date,
-								eventName: dataBaseObject.eventName,
-								name: dataBaseObject.name,
-								listOfAvgTypeAndTimePairs: [{avgType: avgType, time: dataBaseObject.time}]
-							});
+							eventName: eventName,
+							avgType: avgType,
+							time: dataBaseObject.time
+						};
+						if (aggregatedArray[weekBeginDate] === undefined) {
+							aggregatedArray[weekBeginDate] = [aggregatedArrayElement];
+						} else {
+							aggregatedArray[weekBeginDate].push(aggregatedArrayElement);
 						}
 					}
 				}
 			}
-			window.aggregatedDataBase = window.aggregatedDataBase.concat(aggregatedArray);
 		}
+	}
+	for (date in aggregatedArray) {
+		window.aggregatedDataBase.push(aggregatedArray[date]);
 	}
 }
 
 function createDataForTimeLine() // create the three datasets used to build the time line chart
 {
-	let dateCounterArray = [], aggregatedDataBaseObject, date;
-	window.timeLineData = {zeroData: [], barData: [], bubbleData: []};
+	let aggregatedDataBaseObject;
+	window.timeLineData = {newData: [], bubbleData: [], labels: []};
 	for (aggregatedDataBaseObject of window.aggregatedDataBase) {
-		window.timeLineData.zeroData.push({ // data to create a line on the x axis with a point on each date
-			t: aggregatedDataBaseObject.date,
-			y: 0
+		window.timeLineData.bubbleData.push({
+			t: getBeginOfWeek(aggregatedDataBaseObject[0].date),
+			y: 0,
+			r: 3.5*Math.sqrt(Math.sqrt(aggregatedDataBaseObject.length))
 		});
-		if (dateCounterArray[aggregatedDataBaseObject.date] === undefined) { // increment the count for each date we already met
-			dateCounterArray[aggregatedDataBaseObject.date] = 1;
-		} else {
-			dateCounterArray[aggregatedDataBaseObject.date]++;
-		}
-		window.timeLineData.bubbleData.push({ // data to create a bubble chart with a bubble on each aggregated object (many points for the same date)
-			t: aggregatedDataBaseObject.date,
-			y: dateCounterArray[aggregatedDataBaseObject.date],
-			r: 3*Math.sqrt(aggregatedDataBaseObject.listOfAvgTypeAndTimePairs.length) // increasing bubble size but not linear
-		});
+		window.timeLineData.labels.push(labelFromAggregatedDataBaseObject(aggregatedDataBaseObject));
+		//window.timeLineData.labels.push(Math.random() > 0.5 ? "coucou" : "nuage");
 	}
-	for (date in dateCounterArray) {
-		window.timeLineData.barData.push({ // data to create a bar chart with a bar on each date (only one bar for each date)
-			t: new Date(date), // dateCounterArray indexes are actually stored as numbers, so dates should be rebuilt from them
-			y: dateCounterArray[date]
-		});
+}
+
+function labelFromAggregatedDataBaseObject(aggregatedDataBaseObject) // build the label corresponding to the aggregated database object
+{
+	let aggregatedDataBaseElement, label = [];
+	for (aggregatedDataBaseElement of aggregatedDataBaseObject) {
+		label.push(
+			"["	+ dateToString(aggregatedDataBaseElement.date) + "] " + aggregatedDataBaseElement.name + " : " + aggregatedDataBaseElement.eventName + " " + aggregatedDataBaseElement.avgType + " (" + aggregatedDataBaseElement.time + ")\n"
+		);
 	}
+	return label;
 }
 
 function aggregateFirstByDate(dateSortedRecordArray, nbElements, mode) // aggregate dataBase elements when they have the same event, person name and date
@@ -260,15 +250,15 @@ function buildHistogram() // build a bar chart with the UNR count for each perso
 	let palmaresHistogramContainerHtmlTag = document.querySelector("div#palmaresHistogramContainer"),
 		palmaresHistogramCanvasHtmlTag = createHtmlTagWithId("canvas", "palmaresHistogram"),
 		palmaresHistogramContext = palmaresHistogramCanvasHtmlTag.getContext("2d"),
-		histogramBackgroundColorGradient = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
-		histogramBorderColorGradient = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
-		histogramHoverBackgroundColorGradient = palmaresHistogramContext.createLinearGradient(0, 0, 0, 400),
-		label, nbColors = window.lightColors.length, offsetBegin = 0.3, offset = (1 - offsetBegin)/(nbColors - 1), colorIndex;
+		histogramBackgroundColorGradient = palmaresHistogramContext.createLinearGradient(0, 150, 0, 400),
+		histogramBorderColorGradient = palmaresHistogramContext.createLinearGradient(0, 150, 0, 400),
+		histogramHoverBackgroundColorGradient = palmaresHistogramContext.createLinearGradient(0, 150, 0, 400),
+		label, nbColors = window.lightColors.length, offset = 1/(nbColors - 1), colorIndex;
 	palmaresHistogramContainerHtmlTag.textContent = "";
 	for (colorIndex = 0; colorIndex < nbColors; colorIndex++) { // build the gradients
-		histogramBackgroundColorGradient.addColorStop(offsetBegin + colorIndex*offset, rgbFromColorObject(window.lightColors[colorIndex]));
-		histogramBorderColorGradient.addColorStop(offsetBegin + colorIndex*offset,  rgbFromColorObject(window.intenseColors[colorIndex]));
-		histogramHoverBackgroundColorGradient.addColorStop(offsetBegin + colorIndex*offset,  rgbFromColorObject(window.middleColors[colorIndex]));
+		histogramBackgroundColorGradient.addColorStop(colorIndex*offset, rgbFromColorObject(window.lightColors[colorIndex]));
+		histogramBorderColorGradient.addColorStop(colorIndex*offset,  rgbFromColorObject(window.intenseColors[colorIndex]));
+		histogramHoverBackgroundColorGradient.addColorStop(colorIndex*offset,  rgbFromColorObject(window.middleColors[colorIndex]));
 	}
 	if (document.querySelector("img#frontFlag").src.substr(-10, 10) === "flagFR.png") {
 		label = "Nombre d'UNRs";
@@ -358,105 +348,67 @@ function buildDoughnut() // build a doughnut chart with the UNR count for each p
 
 function buildTimeLine() // build a time line chart made of many basic charts
 {
-	let timeLineContext = document.getElementById("timeLine").getContext("2d");
+	let timeLineContainerHtmlTag = document.querySelector("div#timeLineContainer"),
+		timeLineCanvasHtmlTag = createHtmlTagWithId("canvas", "timeLine"),
+		timeLineContext = timeLineCanvasHtmlTag.getContext("2d"),
+		timeLineBackgroundColorGradient = timeLineContext.createLinearGradient(1000, 250, 800, 650),
+		nbColors = window.lightColors.length, offsetBegin = 0, offset = (1 - offsetBegin)/(nbColors - 1), colorIndex;
+	for (colorIndex = 0; colorIndex < nbColors; colorIndex++) { // build the gradients
+		timeLineBackgroundColorGradient.addColorStop(offsetBegin + colorIndex*offset, rgbFromColorObject(window.intenseColors[colorIndex]));
+	}
+	timeLineContainerHtmlTag.textContent = "";
 	new Chart( // build the time line chart
 		timeLineContext,
 		{
 			type: "line",
 			data: {
-				datasets: [{ // line chart on the x axis
-					label: "test zero",
-					data: window.timeLineData.zeroData,
-					fill: false,
-					borderColor: 'rgba(220,20,60,1)',
-					backgroundColor: 'rgba(220,20,60,1)'
-				}, { // bar chart on each date
-					label: "test bar",
-					type: "bar",
-					data: window.timeLineData.barData,
-					backgroundColor:"rgb(0,0,255)",
-				}, { // bubble chart on each aggregated data of each date
-					label: "test bulle",
+				datasets: [{
+					label: "Time Line",
+					labels: window.timeLineData.labels,
 					type: "bubble",
 					data: window.timeLineData.bubbleData,
-					backgroundColor:"rgb(0,255,0)",
+					backgroundColor: timeLineBackgroundColorGradient,
+					borderColor: "rgb(0,0,0)",
+					hoverBorderColor: "rgb(0,0,0)"
 				}]
 			},
 			options: {
-						scales: {
-							xAxes: [{
-								type: "time",
-								time: {
-									parser: "x",
-									displayFormats: {
-										quarter: "MM/YYYY",
-										month: "MM/YYYY",
-										week: "LLLL",
-										day: "L",
-										hour: "DD/MM/YYYY HH:mm",
-										minute: "HH:mm",
-										second: "HH:mm:ss"
-									},
-									tooltipFormat: "DD/MM/YYYY HH:mm:ss"
-								}
-							}],
-					yAxes: [{
-						display: false
+				scales: {
+					xAxes: [{
+						type: "time",
+						time: {
+							parser: "x",
+							displayFormats: {
+								quarter: "MM/YYYY",
+								month: "MM/YYYY",
+								week: "LLLL",
+								day: "L",
+								hour: "DD/MM/YYYY HH:mm",
+								minute: "HH:mm",
+								second: "HH:mm:ss"
+							},
+							tooltipFormat: "DD/MM/YYYY HH:mm:ss"
+						}
+					}], yAxes: [{
+						ticks: {
+							display: false
+						},
+						gridLines: {
+							lineWidth: 0,
+							drawBorder: false
+						}
 					}],
+				},
+				tooltips: {
+					callbacks: {
+						label: function(t, d) {
+							console.log(t);
+							return d.datasets[t.datasetIndex].labels[t.index];
+						}
+					}
 				}
 			}
 		}
 	);
-}
-
-function buildTopXLongestStandingRecordsTable() // build the section of longest standing records
-{
-	let longestStandingHtmlTag = document.querySelector("#longestStanding");
-	longestStandingHtmlTag.textContent = "";
-	longestStandingHtmlTag.appendChild(createHtmlTagWithTextContent("h2", "UNRs les plus vieux"));
-	longestStandingHtmlTag.appendChild(buildTopXLongestShortestStandingRecordsTable(window.topXLongestStandingRecordsEvents));
-}
-
-function buildTopXShortestStandingRecordsTable() // build the section of shortest standing records
-{
-	let longestStandingHtmlTag = document.querySelector("#shortestStanding");
-	longestStandingHtmlTag.textContent = "";
-	longestStandingHtmlTag.appendChild(createHtmlTagWithTextContent("h2", "UNRs les plus récents"));
-	longestStandingHtmlTag.appendChild(buildTopXLongestShortestStandingRecordsTable(window.topXShortestStandingRecordsEvents));
-}
-
-function buildLongestShortestStandingTableHeaderRow() // build header row of the table of either the longest or the shortest standing records
-{
-	let longestOrShortestStandingHeaderRowHtmlTag = createHtmlTag("tr");
-	longestOrShortestStandingHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Rang"));
-	longestOrShortestStandingHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Personne"));
-	longestOrShortestStandingHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Date"));
-	longestOrShortestStandingHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Event"));
-	longestOrShortestStandingHeaderRowHtmlTag.appendChild(createHtmlTagWithTextContent("th", "Score"));
-	return longestOrShortestStandingHeaderRowHtmlTag;
-}
-
-function buildTopXLongestShortestStandingRecordsTable(topXLongestOrShortestStandingRecordArray) // build the table of either the longest or the shortest standing records
-{
-	let longestOrShortestStandingTableHtmlTag = createHtmlTag("table"), longestOrShortestStandingRowHtmlTag, longestOrShortestStandingRecordObject;
-	longestOrShortestStandingTableHtmlTag.appendChild(buildLongestShortestStandingTableHeaderRow());
-	for (longestOrShortestStandingRecordObject of topXLongestOrShortestStandingRecordArray) {
-		longestOrShortestStandingRowHtmlTag = createHtmlTag("tr");
-		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("td", "rank", longestOrShortestStandingRecordObject.rank));
-		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("td", "name", longestOrShortestStandingRecordObject.name));
-		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("td", "date", dateToString(longestOrShortestStandingRecordObject.date)));
-		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("td", "eventName", longestOrShortestStandingRecordObject.eventName));
-		longestOrShortestStandingRowHtmlTag.appendChild(createHtmlTagWithClassNameAndTextContent("td", "times", longestShortestStandingAvgTypes(longestOrShortestStandingRecordObject.listOfAvgTypeAndTimePairs)));
-		longestOrShortestStandingTableHtmlTag.appendChild(longestOrShortestStandingRowHtmlTag);
-	}
-	return longestOrShortestStandingTableHtmlTag;
-}
-
-function longestShortestStandingAvgTypes(inputAvgTypeAndTimePairsArray) // convert an array [{avgType, time}, {avgType, time}, ...] to a string "time avgType, time avgType, ..."
-{
-	let outputString = "", avgTypeAndTimePair;
-	for (avgTypeAndTimePair of inputAvgTypeAndTimePairsArray) {
-		outputString += ", " + avgTypeAndTimePair.time + " " + avgTypeAndTimePair.avgType;
-	}
-	return outputString.substring(2);
+	timeLineContainerHtmlTag.appendChild(timeLineCanvasHtmlTag);
 }
