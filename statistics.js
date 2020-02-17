@@ -373,6 +373,7 @@ function buildTimeLine() // build a time line chart made of many basic charts
 				}]
 			},
 			options: {
+				aspectRatio: 4,
 				scales: {
 					xAxes: [{
 						type: "time",
