@@ -369,6 +369,14 @@
 			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
+		<event eventName="Penrose Cube">
+			<single name="Wilfrid Py" time="27.14" timeList="" scrambleList="" date="2020-02-10" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/676210497196130304" francocubeLink=""/>
+			<mo3 name="Wilfrid Py" time="31.56" timeList="" scrambleList="" date="2020-02-18" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/679390729260367893" francocubeLink=""/>
+			<avg5 name="Wilfrid Py" time="34.40" timeList="" scrambleList="" date="2020-02-18" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/679390729260367893" francocubeLink=""/>
+			<avg12 name="Wilfrid Py" time="37.22" timeList="" scrambleList="" date="2020-02-18" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/679390729260367893" francocubeLink=""/>
+			<avg50 name="Wilfrid Py" time="44.37" timeList="" scrambleList="" date="2020-02-18" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/679390729260367893" francocubeLink=""/>
+			<avg100 name="Wilfrid Py" time="45.30" timeList="" scrambleList="" date="2020-02-18" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/679390729260367893" francocubeLink=""/>
+		</event>
 	</records>
 	<persons>
 		<person name="Abdelhak Kaddour" wcaId="2010KADD01" pbSheetLink=""/>
@@ -468,6 +476,7 @@
 				<event>3x3x3 With Feet</event>
 				<event>Mirror Blocks</event>
 				<event>Inequilateral Cube</event>
+				<event>Penrose Cube</event>
 				<event>Ghost Cube</event>
 			</subsection>
 		</section>
@@ -533,6 +542,7 @@
 		<section sectionName="Mods du 3x3x3">
 			<event>Mirror Blocks</event>
 			<event>Inequilateral Cube</event>
+			<event>Penrose Cube</event>
 			<event>Ghost Cube</event>
 		</section>
 	</compactPlan>
