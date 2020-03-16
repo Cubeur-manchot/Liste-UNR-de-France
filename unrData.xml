@@ -233,6 +233,14 @@
 			<avg50 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
+		<event eventName="Relay 2-6 Blindfolded">
+			<single name="William Phommaha" time="31:38:86" memoTimeList="[17:34.85]" timeList="" scrambleList="" date="2020-02-15" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/353504450867888128/688718045128032261" francocubeLink=""/>
+			<mo3 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg5 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg12 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg50 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg100 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+		</event>
 		<event eventName="Megaminx Blindfolded">
 			<single name="Emma Cadet" time="36:15.00" memoTimeList="" timeList="" scrambleList="" date="2018-06-09" youtubeLink="" francocubeLink=""/>
 			<mo3 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
@@ -469,6 +477,7 @@
 				<event>9x9x9 Blindfolded</event>
 				<event>Megaminx Blindfolded</event>
 				<event>Relay 2-5 Blindfolded</event>
+				<event>Relay 2-6 Blindfolded</event>
 			</subsection>
 			<subsection subsectionName="Autres Non WCA">
 				<event>2x2x2 One-Handed</event>
@@ -519,6 +528,7 @@
 			<event>9x9x9 Blindfolded</event>
 			<event>Megaminx Blindfolded</event>
 			<event>Relay 2-5 Blindfolded</event>
+			<event>Relay 2-6 Blindfolded</event>
 			<event>3x3x3 Multi-Blindfolded</event>
 		</section>
 		<section sectionName="Autres WCA">
