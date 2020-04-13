@@ -385,6 +385,14 @@
 			<avg50 name="Wilfrid Py" time="44.37" timeList="" scrambleList="" date="2020-02-18" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/679390729260367893" francocubeLink=""/>
 			<avg100 name="Wilfrid Py" time="45.30" timeList="" scrambleList="" date="2020-02-18" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/679390729260367893" francocubeLink=""/>
 		</event>
+		<event eventName="Mastermorphix">
+			<single name="Iannis Golfin" time="1:12.08" timeList="" scrambleList="F2 R2 U2 B2 L2 D2 F2 U' B2 D' L' B F' L' D B L U' F2 R2" date="2020-04-12" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/329175643877015553/699224960077398016" francocubeLink=""/>
+			<mo3 name="Iannis Golfin" time="1:45.37" timeList="" scrambleList="" date="2020-04-12" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/329175643877015553/699224960077398016" francocubeLink=""/>
+			<avg5 name="Iannis Golfin" time="1:45.37" timeList="" scrambleList="" date="2020-04-12" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/329175643877015553/699224960077398016" francocubeLink=""/>
+			<avg12 name="Iannis Golfin" time="1:42.32" timeList="" scrambleList="" date="2020-04-12" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/329175643877015553/699224960077398016" francocubeLink=""/>
+			<avg50 name="" time="44.37" timeList="" scrambleList="" date="" youtubeLink="" discordLink="" francocubeLink=""/>
+			<avg100 name="" time="45.30" timeList="" scrambleList="" date="" youtubeLink="" discordLink="" francocubeLink=""/>
+		</event>
 	</records>
 	<persons>
 		<person name="Abdelhak Kaddour" wcaId="2010KADD01" pbSheetLink=""/>
@@ -398,6 +406,7 @@
 		<person name="Émilien Fabre" wcaId="2012FABR01" pbSheetLink=""/>
 		<person name="Emma Cadet" wcaId="" pbSheetLink=""/>
 		<person name="Gabriel Luthun" wcaId="2016LUTH01" pbSheetLink=""/>
+		<person name="Iannis Golfin" wcaId="" pbSheetLink=""/>
 		<person name="John Bacouël" wcaId="2018BACO01" pbSheetLink=""/>
 		<person name="Juliette Sébastien" wcaId="2014SEBA01" pbSheetLink=""/>
 		<person name="Léo Bailly" wcaId="2015BAIL04" pbSheetLink=""/>
@@ -487,6 +496,7 @@
 				<event>Inequilateral Cube</event>
 				<event>Penrose Cube</event>
 				<event>Ghost Cube</event>
+				<event>Mastermorphix</event>
 			</subsection>
 		</section>
 	</normalPlan>
@@ -554,6 +564,7 @@
 			<event>Inequilateral Cube</event>
 			<event>Penrose Cube</event>
 			<event>Ghost Cube</event>
+			<event>Mastermorphix</event>
 		</section>
 	</compactPlan>
 	<translations>
