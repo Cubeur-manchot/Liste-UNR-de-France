@@ -386,10 +386,10 @@
 			<avg100 name="Wilfrid Py" time="45.30" timeList="" scrambleList="" date="2020-02-18" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/679390729260367893" francocubeLink=""/>
 		</event>
 		<event eventName="Mastermorphix">
-			<single name="Iannis Golfin" time="1:12.08" timeList="" scrambleList="F2 R2 U2 B2 L2 D2 F2 U' B2 D' L' B F' L' D B L U' F2 R2" date="2020-04-12" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/329175643877015553/699224960077398016" francocubeLink=""/>
-			<mo3 name="Iannis Golfin" time="1:27.95" timeList="" scrambleList="" date="2020-04-12" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/329175643877015553/699224960077398016" francocubeLink=""/>
-			<avg5 name="Iannis Golfin" time="1:38.39" timeList="" scrambleList="" date="2020-04-12" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/329175643877015553/699224960077398016" francocubeLink=""/>
-			<avg12 name="Iannis Golfin" time="1:42.32" timeList="" scrambleList="" date="2020-04-12" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/329175643877015553/699224960077398016" francocubeLink=""/>
+			<single name="Iannis Golfin" time="1:05.57" timeList="" scrambleList="" date="2020-04-14" youtubeLink="" discordLink="" francocubeLink=""/>
+			<mo3 name="Iannis Golfin" time="1:14.70" timeList="" scrambleList="" date="2020-04-14" youtubeLink="" discordLink="" francocubeLink=""/>
+			<avg5 name="Iannis Golfin" time="1:21.85" timeList="" scrambleList="" date="2020-04-14" youtubeLink="" discordLink="" francocubeLink=""/>
+			<avg12 name="Iannis Golfin" time="1:32.83" timeList="" scrambleList="" date="2020-04-14" youtubeLink="" discordLink="" francocubeLink=""/>
 			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" discordLink="" francocubeLink=""/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" discordLink="" francocubeLink=""/>
 		</event>
@@ -406,7 +406,7 @@
 		<person name="Émilien Fabre" wcaId="2012FABR01" pbSheetLink=""/>
 		<person name="Emma Cadet" wcaId="" pbSheetLink=""/>
 		<person name="Gabriel Luthun" wcaId="2016LUTH01" pbSheetLink=""/>
-		<person name="Iannis Golfin" wcaId="" pbSheetLink=""/>
+		<person name="Iannis Golfin" wcaId="" pbSheetLink="https://docs.google.com/spreadsheets/d/1siu68UDYTOdIOIgH1VBg3UId3qmTurMyyu_TGK42hLU/edit?usp=sharing"/>
 		<person name="John Bacouël" wcaId="2018BACO01" pbSheetLink=""/>
 		<person name="Juliette Sébastien" wcaId="2014SEBA01" pbSheetLink=""/>
 		<person name="Léo Bailly" wcaId="2015BAIL04" pbSheetLink=""/>
