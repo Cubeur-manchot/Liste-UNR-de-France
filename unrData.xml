@@ -10,7 +10,7 @@
 			<avg100 name="Alaric Pouchain" time="1.39" timeList="" scrambleList="" date="2019-10-02" youtubeLink="" discordLink="" francocubeLink=""/>
 		</event>
 		<event eventName="3x3x3">
-			<single name="Alexandre Carlier" time="3.28" timeList="" scrambleList="D2 F R D2 F D R U2 F' B2 D F2 U L2 B2 U2 B2 D L2 U2" date="2018-03-18" youtubeLink="" discordLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273206#p273206"/>
+			<single name="Alexandre Carlier" time="3.28" timeList="" scrambleLimasyst="D2 F R D2 F D R U2 F' B2 D F2 U L2 B2 U2 B2 D L2 U2" date="2018-03-18" youtubeLink="" discordLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273206#p273206"/>
 			<mo3 name="Alexandre Carlier" time="5.40" timeList="5.63, 5.61, 4.97" scrambleList="" date="2019-05-11" youtubeLink="" discordLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=275085#p275085"/>
 			<avg5 name="Alexandre Carlier" time="5.80" timeList="(6.90), 6.17, 5.63, 5.61, (4.97)" scrambleList="" date="2019-05-11" youtubeLink="" discordLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=275085#p275085"/>
 			<avg12 name="Alexandre Carlier" time="6.55" timeList="" scrambleList="" date="2019-05-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=275085#p275085"/>
@@ -386,12 +386,12 @@
 			<avg100 name="Wilfrid Py" time="45.30" timeList="" scrambleList="" date="2020-02-18" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/679390729260367893" francocubeLink=""/>
 		</event>
 		<event eventName="Mastermorphix">
-			<single name="Wilfrid Py" time="45.13" timeList="" scrambleList="U2 R' U2 R' D2 U2 L' U2 R U F2 R2 B' F R' D2 F2 D F' D'" date="2020-04-14" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/699729482755473567" francocubeLink=""/>
-			<mo3 name="Iannis Golfin" time="1:02.28" timeList="" scrambleList="" date="2020-04-15" youtubeLink="" discordLink="" francocubeLink=""/>
-			<avg5 name="Iannis Golfin" time="1:07.70" timeList="" scrambleList="" date="2020-04-15" youtubeLink="" discordLink="" francocubeLink=""/>
-			<avg12 name="Iannis Golfin" time="1:16.78" timeList="" scrambleList="" date="2020-04-15" youtubeLink="" discordLink="" francocubeLink=""/>
-			<avg50 name="Iannis Golfin" time="1:24.32" timeList="" scrambleList="" date="2020-04-15" youtubeLink="" discordLink="" francocubeLink=""/>
-			<avg100 name="Iannis Golfin" time="1:28.83" timeList="" scrambleList="" date="2020-04-15" youtubeLink="" discordLink="" francocubeLink=""/>
+			<single name="Wilfrid Py" time="45.13" timeList="" scrambleList="U2 R' U2 R' D2 U2 L' U2 R U F2 R2 B' F R' D2 F2 D F' D'" date="2020-04-15" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/699729482755473567" francocubeLink=""/>
+			<mo3 name="Wilfrid Py" time="59.25" timeList="" scrambleList="" date="2020-04-15" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/700062588058337290" francocubeLink=""/>
+			<avg5 name="wilfrid Py" time="1:03.77" timeList="" scrambleList="" date="2020-04-15" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/700062588058337290" francocubeLink=""/>
+			<avg12 name="Wilfrid Py" time="1:05.93" timeList="" scrambleList="" date="2020-04-15" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/700062588058337290" francocubeLink=""/>
+			<avg50 name="Wilfrid Py" time="1:15.31" timeList="" scrambleList="" date="2020-04-15" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/700062588058337290" francocubeLink=""/>
+			<avg100 name="Wilfrid Py" time="1:22.13" timeList="" scrambleList="" date="2020-04-15" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/700062588058337290" francocubeLink=""/>
 		</event>
 	</records>
 	<persons>
