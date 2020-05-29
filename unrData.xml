@@ -172,7 +172,7 @@
 		<event eventName="3x3x3 Blindfolded">
 			<single name="Arthur Garcin" time="15.99" memoTimeList="" timeList="" scrambleList="" date="2019-10-17" youtubeLink="" francocubeLink=""/>
 			<mo3 name="Arthur Garcin" time="21.88" memoTimeList="" timeList="21.86, 19.25, 24.53" scrambleList="" date="2018-06-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273940#p273940"/>
-			<avg5 name="Arthur Garcin" time="22.79" memoTimeList="" timeList="22.68, (27.10), (22.41), 23.03, 22.67" scrambleList="" date="2018-06-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=273940#p273940"/>
+			<avg5 name="Martial Bonarek" time="22.62" memoTimeList="(8.44), (8.54), 7.83, 9.57, 9.32" timeList="(20.89), (29.85), 21.30, 22.71, 23.84" scrambleList="" date="2020-04-28" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=275880#p275880"/>
 			<avg12 name="Arthur Garcin" time="26.07" memoTimeList="" timeList="" scrambleList="" date="2018-06-11" youtubeLink="" francocubeLink=""/>
 			<avg50 name="Arthur Garcin" time="37.54" memoTimeList="" timeList="" scrambleList="" date="2018-02-08" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=272754#p272754"/>
 			<avg100 name="" time="" timeList="" memoTimeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
@@ -420,6 +420,7 @@
 		<person name="Léo Bailly" wcaId="2015BAIL04" pbSheetLink=""/>
 		<person name="Louis Fertier" wcaId="2013FERT01" pbSheetLink=""/>
 		<person name="Lucas Déglise" wcaId="2015DEGL01" pbSheetLink=""/>
+		<person name="Martial Bonarek" wcaId="2013BONA01" pbSheetLink=""/>
 		<person name="Matteo Chancerel" wcaId="2017CHAN16" pbSheetLink=""/>
 		<person name="Matthieu Aubert" wcaId="2016AUBE01" pbSheetLink="https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html"/>
 		<person name="Maxime Madrzyk" wcaId="2018MADR02" pbSheetLink=""/>
