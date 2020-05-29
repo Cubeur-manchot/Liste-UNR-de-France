@@ -66,10 +66,10 @@
 			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="10x10x10">
-			<single name="Matthieu Aubert" time="18:04.38" timeList="" scrambleList="" date="2018-04-19" youtubeLink="" francocubeLink=""/>
-			<mo3 name="Matthieu Aubert" time="19:17.26" timeList="" scrambleList="" date="2018-04-19" youtubeLink="" francocubeLink=""/>
-			<avg5 name="Matthieu Aubert" time="19:17.49" timeList="" scrambleList="" date="2018-04-19" youtubeLink="" francocubeLink=""/>
-			<avg12 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<single name="Matthieu Aubert" time="14:25.19" timeList="" scrambleList="" date="2020-05-29" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/715945183329517649" francocubeLink=""/>
+			<mo3 name="Matthieu Aubert" time="14:50.72" timeList="14:49.66, 15:17.32, 14:25.19" scrambleList="" date="2020-05-29" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/715945183329517649" francocubeLink=""/>
+			<avg5 name="Matthieu Aubert" time="14:54.64" timeList="(15:27.07), 14:36.95, 14:49.66, 15:17.32, (14:25.19)" scrambleList="" date="2020-05-29" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/715945183329517649" francocubeLink=""/>
+			<avg12 name="Matthieu Aubert" time="15:15.37" timeList="15:39.77, 16:16.19, 15:16.53, 15:17.82, 14:26.61, 15:25.83, (17:26.51), 15:27.07, 14:36.95, 14:49.66, 15:17.32, (14:25.19)" scrambleList="" date="2020-05-29" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/715945183329517649" francocubeLink=""/>
 			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
