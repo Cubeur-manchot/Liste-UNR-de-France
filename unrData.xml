@@ -147,9 +147,9 @@
 		</event>
 		<event eventName="Masterkilominx">
 			<single name="Axel Brisse" time="3:22.09" timeList="" scrambleList="" date="2020-07-10" youtubeLink="https://youtu.be/4ppRIoSbNkg" discordLink="https://discord.com/channels/329175643877015553/332432847908634644/731197865812295690" francocubeLink=""/>
-			<mo3 name="Matthieu Aubert" time="3:53.48" timeList="3:47.69, 3:51.79, 4:00.96" scrambleList="" date="2019-09-30" youtubeLink="" francocubeLink=""/>
-			<avg5 name="Matthieu Aubert" time="3:51.78" timeList="3:47.69, 3:51.79, (4:00.96), 3:55.87, (3:45.04)" scrambleList="" date="2019-09-30" youtubeLink="" francocubeLink=""/>
-			<avg12 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<mo3 name="Matthieu Aubert" time="3:38.56" timeList="" scrambleList="" date="2020-08-02" youtubeLink="" discordLink="" francocubeLink=""/>
+			<avg5 name="Matthieu Aubert" time="3:45.55" timeList="" scrambleList="" date="2020-08-02" youtubeLink="" discordLink="" francocubeLink=""/>
+			<avg12 name="Matthieu Aubert" time="3:49.93" timeList="" scrambleList="" date="2020-08-02" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/739281133941948526" francocubeLink=""/>
 			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
