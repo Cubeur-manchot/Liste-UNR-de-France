@@ -18,7 +18,7 @@
 			<avg100 name="Alexandre Carlier" time="7.49" timeList="" scrambleList="" date="2017-03-18" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=264195#p264195"/>
 		</event>
 		<event eventName="4x4x4">
-			<single name="Nathan Prigent" time="21.53" timeList="" scrambleList="" date="2018-02-05" youtubeLink="" francocubeLink=""/>
+			<single name="Abdelhak Kaddour" time="21.45" timeList="" scrambleList="" date="2020-08-01" youtubeLink="" discordLink="" francocubeLink=""/>
 			<mo3 name="Alexandre Carlier" time="25.60" timeList="" scrambleList="" date="2017-07-04" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=268812#p268812"/>
 			<avg5 name="Alexandre Carlier" time="26.35" timeList="26.16, (25.63), (33.01), 27.02, 25.88" scrambleList="" date="2017-05-11" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=266940#p266940"/>
 			<avg12 name="Alexandre Carlier" time="27.90" timeList="" scrambleList="" date="2017-07-04" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=268812#p268812"/>
@@ -424,7 +424,6 @@
 		<person name="Matteo Chancerel" wcaId="2017CHAN16" pbSheetLink=""/>
 		<person name="Matthieu Aubert" wcaId="2016AUBE01" pbSheetLink="https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html"/>
 		<person name="Maxime Madrzyk" wcaId="2018MADR02" pbSheetLink=""/>
-		<person name="Nathan Prigent" wcaId="2016PRIG01" pbSheetLink=""/>
 		<person name="Nicolas Gertner" wcaId="2013GERT01" pbSheetLink=""/>
 		<person name="Nicolas Girard" wcaId="" pbSheetLink=""/>
 		<person name="Roderic Blazy" wcaId="2016BLAZ03" pbSheetLink=""/>
