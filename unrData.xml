@@ -378,10 +378,10 @@
 			<avg100 name="Wilfrid Py" time="38.72" timeList="" scrambleList="" date="2020-02-12" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/677161207341514792" francocubeLink=""/>
 		</event>
 		<event eventName="Ghost Cube">
-			<single name="Nicolas Girard" time="1:54.81" timeList="" scrambleList="" date="2017-04-06" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265328#p265328"/>
-			<mo3 name="Nicolas Girard" time="2:13.53" timeList="" scrambleList="" date="2017-04-06" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265328#p265328"/>
-			<avg5 name="Nicolas Girard" time="2:09.45" timeList="" scrambleList="" date="2017-04-06" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265328#p265328"/>
-			<avg12 name="Nicolas Girard" time="2:29.46" timeList="" scrambleList="" date="2017-04-06" youtubeLink="" francocubeLink="https://forum.francocube.com/viewtopic.php?p=265328#p265328"/>
+			<single name="Matthieu Aubert" time="1:41.42" timeList="" scrambleList="" date="2020-08-25" youtubeLink="" francocubeLink=""/>
+			<mo3 name="Matthieu Aubert" time="1:51.99" timeList="1:41.42, 1:55.03, 1:59.54" scrambleList="" date="2020-08-25" youtubeLink="" francocubeLink=""/>
+			<avg5 name="Matthieu Aubert" time="2:01.45" timeList="(2:39.61), 2:09.79, (1:41.42), 1:55.03, 1:59.54" scrambleList="" date="2020-08-25" youtubeLink="" francocubeLink=""/>
+			<avg12 name="Matthieu Aubert" time="2:11.15" timeList="" scrambleList="" date="2020-08-25" youtubeLink="" francocubeLink=""/>
 			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
@@ -425,7 +425,6 @@
 		<person name="Matthieu Aubert" wcaId="2016AUBE01" pbSheetLink="https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html"/>
 		<person name="Maxime Madrzyk" wcaId="2018MADR02" pbSheetLink=""/>
 		<person name="Nicolas Gertner" wcaId="2013GERT01" pbSheetLink=""/>
-		<person name="Nicolas Girard" wcaId="" pbSheetLink=""/>
 		<person name="Roderic Blazy" wcaId="2016BLAZ03" pbSheetLink=""/>
 		<person name="Télian Delannoy" wcaId="2016DELA03" pbSheetLink=""/>
 		<person name="Théo Paris" wcaId="2016PARI08" pbSheetLink=""/>
