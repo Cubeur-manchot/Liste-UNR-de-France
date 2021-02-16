@@ -97,6 +97,14 @@
 			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
+		<event eventName="14x14x14">
+			<single name="Matthieu Aubert" time="51:33.42" timeList="" scrambleList="" date="2020-12-20" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/330974462239309824/790237444381474836" francocubeLink=""/>
+			<mo3 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" discordLink="" rancocubeLink=""/>
+			<avg5 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" discordLink="" francocubeLink=""/>
+			<avg12 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" discordLink="" francocubeLink=""/>
+			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+		</event>
 		<event eventName="2x2x2 One-Handed">
 			<single name="Anaël Champion" time="0.63" timeList="" scrambleList="R' U' R2 U2 R2 U R U R U' R'" date="2020-01-20" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/394571064224514048/668940000087244810" francocubeLink=""/>
 			<mo3 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
@@ -476,6 +484,7 @@
 				<event>11x11x11</event>
 				<event>12x12x12</event>
 				<event>13x13x13</event>
+				<event>14x14x14</event>
 			</subsection>
 			<subsection subsectionName="Dodécaèdres">
 				<event>Kilominx</event>
@@ -531,6 +540,7 @@
 			<event>11x11x11</event>
 			<event>12x12x12</event>
 			<event>13x13x13</event>
+			<event>14x14x14</event>
 		</section>
 		<section sectionName="OH, Feet, FM">
 			<event>2x2x2 One-Handed</event>
