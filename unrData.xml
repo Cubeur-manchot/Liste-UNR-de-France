@@ -74,8 +74,8 @@
 			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="11x11x11">
-			<single name="Matthieu Aubert" time="19:31.67" timeList="" scrambleList="" date="2020-06-12" youtubeLink="https://www.youtube.com/watch?v=lDqeTDKowdg" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/721055495129006113" francocubeLink=""/>
-			<mo3 name="Matthieu Aubert" time="20:18.85" timeList="20:50.72, 20:23.58, 19:42.25" scrambleList="" date="2020-06-14" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/721775801053479073" francocubeLink=""/>
+			<single name="Matthieu Aubert" time="18.31.83" timeList="" scrambleList="" date="2022-01-10" youtubeLink="https://www.youtube.com/watch?v=3B7R9AL0BjY" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/930200061323923468" francocubeLink=""/>
+			<mo3 name="Paul Ducruet" time="19:46.47" timeList="" scrambleList="" date="2022-01-14" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/931568119527387196" francocubeLink=""/>
 			<avg5 name="Matthieu Aubert" time="20:19.22" timeList="19:50.81, 20:43.28, (20:50.72), 20:23.58, (19:42.25)" scrambleList="" date="2020-06-14" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/721775801053479073" francocubeLink=""/>
 			<avg12 name="Matthieu Aubert" time="20:39.76" timeList="20:28.29, (19:41.68), 21:13.27, 21:00.17, 20:48.30, 19:50.81, 20:43.28, 20:50.72, 20:23.58, 19:42.25, 21:36.88, (21:53.93)" scrambleList="" date="2020-06-14" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/721775801053479073" francocubeLink=""/>
 			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
@@ -450,6 +450,7 @@
 		<person name="Maxime Madrzyk" wcaId="2018MADR02" pbSheetLink=""/>
 		<person name="Nicolas Gertner" wcaId="2013GERT01" pbSheetLink=""/>
 		<person name="Patrick Jamet" wcaId="2012JAME02" pbSheetLink=""/>
+		<person name="Paul Ducruet" wcaId="" pbSheetLink=""/>
 		<person name="Roderic Blazy" wcaId="2016BLAZ03" pbSheetLink=""/>
 		<person name="Télian Delannoy" wcaId="2016DELA03" pbSheetLink=""/>
 		<person name="Théo Paris" wcaId="2016PARI08" pbSheetLink=""/>
