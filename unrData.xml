@@ -50,12 +50,12 @@
 			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="8x8x8">
-			<single name="Axel Brisse" time="5:07.22" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
-			<mo3 name="Axel Brisse" time="5:28.95" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
-			<avg5 name="Axel Brisse" time="5:32.60" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
-			<avg12 name="Axel Brisse" time="5:37.68" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
+			<single name="Axel Brisse" time="3:56.35" timeList="" scrambleList="" date="2021-12-19" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/922152458527060028" francocubeLink=""/>
+			<mo3 name="Axel Brisse" time="4:11.66" timeList="4:16.16, 4:06.95, 4:11.88" scrambleList="" date="2021-12-18" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/921752347946913802" francocubeLink=""/>
+			<avg5 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg12 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
-			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg100 name="Axel Brisse" time="4:39.94" timeList="" scrambleList="" date="2021-12-06" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/330974462239309824/917210531742486608" francocubeLink=""/>
 		</event>
 		<event eventName="9x9x9">
 			<single name="Axel Brisse" time="7:24.36" timeList="" scrambleList="" date="2019-07-21" youtubeLink="" francocubeLink=""/>
