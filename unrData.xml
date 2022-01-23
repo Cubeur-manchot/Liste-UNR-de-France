@@ -378,7 +378,7 @@
 			<avg100 name="Axel Brisse + Wilfrid Py" time="21.14" timeList="" scrambleList="" date="2021-08-25" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634" francocubeLink=""/>
 		</event>
 		<event eventName="Team Solve Duo">
-			<single name="Juliette Sébastien + Ilona Ansel" time="5.96" timeList="" scrambleList="F' R2 F U' B2 L' B2 R2 B L F L2 U2 F B2 R2 D2 R2 B" date="2020-08-21" youtubeLink="https://www.youtube.com/watch?v=nVsNOYoI7Sc" francocubeLink=""/>
+			<single name="Juliette Sébastien + Diego Fraile" time="5.89" timeList="" scrambleList="" date="2022-01-23" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/329918000553525258/934916707213013062" francocubeLink=""/>
 			<mo3 name="Juliette Sébastien + Nicolas Gertner" time="10.01" timeList="" scrambleList="" date="2017-01-04" youtubeLink="" francocubeLink=""/>
 			<avg5 name="Juliette Sébastien + Nicolas Gertner" time="10.49" timeList="" scrambleList="" date="2017-01-04" youtubeLink="" francocubeLink=""/>
 			<avg12 name="Juliette Sébastien + Nicolas Gertner" time="10.97" timeList="" scrambleList="" date="2017-01-04" youtubeLink="" francocubeLink=""/>
@@ -435,6 +435,7 @@
 		<person name="Axel Brisse" wcaId="2016BRIS01" pbSheetLink="https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing"/>
 		<person name="Clément Cherblanc" wcaId="2014CHER05" pbSheetLink=""/>
 		<person name="Diego Alfonso" wcaId="2018ALFO01" pbSheetLink=""/>
+		<person name="Diego Fraile" wcaId="2013FRAI01" pbSheetLink=""/>
 		<person name="Émilien Fabre" wcaId="2012FABR01" pbSheetLink=""/>
 		<person name="Emma Cadet" wcaId="" pbSheetLink=""/>
 		<person name="Gabriel Luthun" wcaId="2016LUTH01" pbSheetLink=""/>
