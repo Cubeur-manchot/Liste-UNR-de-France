@@ -281,6 +281,14 @@
 			<avg50 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 			<avg100 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
 		</event>
+		<event eventName="Clock Blindfolded">
+			<single name="Emma Cadet" time="3:39.94" memoTimeList="50.65" timeList="" scrambleList="" date="2022-01-31" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/353504450867888128/937146829106196500" francocubeLink=""/>
+			<mo3 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" discordLink="" francocubeLink=""/>
+			<avg5 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" discordLink="" francocubeLink=""/>
+			<avg12 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg50 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg100 name="" time="" memoTimeList="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+		</event>
 		<event eventName="3x3x3 Multi-Blindfolded">
 			<single name="William Phommaha" time="37/37 (54:50.00)" memoTimeList="34:52.00" timeList="" scrambleList="" date="2020-04-16" youtubeLink="" otherLink="https://www.speedcubingfrance.org/online_competitions/ConfinementOpen9" francocubeLink=""/>
 			<mo3 name="William Phommaha" time="33" memoTimeList="" timeList="33/35, 33/35, 37/37" scrambleList="" date="2020-04-06" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/353504450867888128/700410469973754007" francocubeLink=""/>
@@ -522,6 +530,7 @@
 				<event>9x9x9 Blindfolded</event>
 				<event>Megaminx Blindfolded</event>
 				<event>Square One Blindfolded</event>
+				<event>Clock Blindfolded</event>
 				<event>Relay 2-5 Blindfolded</event>
 				<event>Relay 2-6 Blindfolded</event>
 			</subsection>
@@ -579,6 +588,7 @@
 			<event>9x9x9 Blindfolded</event>
 			<event>Megaminx Blindfolded</event>
 			<event>Square One Blindfolded</event>
+			<event>Clock Blindfolded</event>
 			<event>Relay 2-5 Blindfolded</event>
 			<event>Relay 2-6 Blindfolded</event>
 			<event>3x3x3 Multi-Blindfolded</event>
