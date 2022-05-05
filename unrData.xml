@@ -129,6 +129,14 @@
 			<avg50 name="Axel Brisse" time="1:14.22" timeList="" scrambleList="" date="2018-05-13" youtubeLink="" francocubeLink=""/>
 			<avg100 name="Axel Brisse" time="1:16.65" timeList="" scrambleList="" date="2018-05-13" youtubeLink="" francocubeLink=""/>
 		</event>
+		<event eventName="3x3x3 Virtual cube">
+			<single name="Lucas Déglise" time="6.79" timeList="" scrambleList="F' U B' R2 U' R F' L' F B2 R B2 L U2 D2 F2 L2 U2 L' F2" date="2022-05-05" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/971816434168651847" francocubeLink=""/>
+			<mo3 name="Lucas Déglise" time="9.25" timeList="" scrambleList="" date="2022-05-04" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/971457177808142376" francocubeLink=""/>
+			<avg5 name="Lucas Déglise" time="9.65" timeList="" scrambleList="" date="2022-05-05" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/971827506195861574" francocubeLink=""/>
+			<avg12 name="Lucas Déglise" time="10.52" timeList="" scrambleList="" date="2022-05-05" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/971827506195861574" francocubeLink=""/>
+			<avg50 name="Lucas Déglise" time="11.41" timeList="" scrambleList="" date="2022-05-05" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/971827506195861574" francocubeLink=""/>
+			<avg100 name="Lucas Déglise" time="11.81" timeList="" scrambleList="" date="2022-05-05" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/971827506195861574" francocubeLink=""/>
+		</event>
 		<event eventName="3x3x3 With Feet">
 			<single name="Nicolas Gertner" time="26.81" timeList="" scrambleList="" date="2019-10-02" youtubeLink="" francocubeLink=""/>
 			<mo3 name="Nicolas Gertner" time="31.08" timeList="30.22, 33.25, 29.77" scrambleList="" date="2019-10-08" youtubeLink="" francocubeLink=""/>
@@ -539,6 +547,7 @@
 				<event>2x2x2 One-Handed</event>
 				<event>4x4x4 One-Handed</event>
 				<event>3x3x3 With Feet</event>
+				<event>3x3x3 Virtual cube</event>
 				<event>4x4x4 Fewest Moves</event>
 				<event>Mirror Blocks</event>
 				<event>Inequilateral Cube</event>
@@ -568,6 +577,7 @@
 			<event>2x2x2 One-Handed</event>
 			<event>3x3x3 One-Handed</event>
 			<event>4x4x4 One-Handed</event>
+			<event>3x3x3 Virtual cube</event>
 			<event>3x3x3 With Feet</event>
 			<event>3x3x3 Fewest Moves</event>
 			<event>4x4x4 Fewest Moves</event>
