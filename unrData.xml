@@ -130,7 +130,7 @@
 			<avg100 name="Axel Brisse" time="1:16.65" timeList="" scrambleList="" date="2018-05-13" youtubeLink="" francocubeLink=""/>
 		</event>
 		<event eventName="3x3x3 Virtual cube">
-			<single name="Lucas Déglise" time="6.79" timeList="" scrambleList="F' U B' R2 U' R F' L' F B2 R B2 L U2 D2 F2 L2 U2 L' F2" date="2022-05-05" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/971816434168651847" francocubeLink=""/>
+			<single name="Alix Jack" time="6.77" timeList="" scrambleList="L2 D2 R2 U2 B2 D' B2 U L F' L U' R' B U' L B2 L" date="2022-05-15" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/975464707064487966" francocubeLink=""/>
 			<mo3 name="Lucas Déglise" time="9.25" timeList="" scrambleList="" date="2022-05-04" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/971457177808142376" francocubeLink=""/>
 			<avg5 name="Lucas Déglise" time="9.65" timeList="" scrambleList="" date="2022-05-05" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/971827506195861574" francocubeLink=""/>
 			<avg12 name="Lucas Déglise" time="10.52" timeList="" scrambleList="" date="2022-05-05" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/971827506195861574" francocubeLink=""/>
@@ -446,6 +446,7 @@
 		<person name="Abdelhak Kaddour" wcaId="2010KADD01" pbSheetLink=""/>
 		<person name="Alaric Pouchain" wcaId="2019POUC01" pbSheetLink="https://docs.google.com/spreadsheets/d/1-4Ov6rK6aF7wZilGR_2QcByZFJinsywi60El_YPXTwE/edit#gid=0"/>
 		<person name="Alexandre Carlier" wcaId="2012CARL03" pbSheetLink=""/>
+		<person name="Alix Jack" wcaId="2016JACK05" pbSheetLink=""/>
 		<person name="Anaël Champion" wcaId="2017CHAM02" pbSheetLink=""/>
 		<person name="Arthur Garcin" wcaId="2014GARC27" pbSheetLink=""/>
 		<person name="Axel Brisse" wcaId="2016BRIS01" pbSheetLink="https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing"/>
