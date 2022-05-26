@@ -393,6 +393,14 @@
 			<avg50 name="Axel Brisse + Wilfrid Py" time="20.73" timeList="" scrambleList="" date="2021-08-25" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634" francocubeLink=""/>
 			<avg100 name="Axel Brisse + Wilfrid Py" time="21.14" timeList="" scrambleList="" date="2021-08-25" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634" francocubeLink=""/>
 		</event>
+		<event eventName="2-man 3x3x3 Blindfolded relay">
+			<single name="Arthur Garcin + Maxime Madrzyk" time="39.76" timeList="" scrambleList="" date="2022-05-24" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/353504450867888128/978593706972160011" francocubeLink=""/>
+			<mo3 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg5 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg12 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" francocubeLink=""/>
+		</event>
 		<event eventName="Team Solve Duo">
 			<single name="Juliette Sébastien + Nicolas Gertner" time="5.36" timeList="" scrambleList="U2 L2 U2 R' D2 B2 R U2 F' R' B2 R2 U2 B2 U2 R" date="2022-04-30" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/329918000553525258/969880187640623144" francocubeLink=""/>
 			<mo3 name="Juliette Sébastien + Nicolas Gertner" time="10.01" timeList="" scrambleList="" date="2017-01-04" youtubeLink="" francocubeLink=""/>
@@ -530,6 +538,7 @@
 			<subsection subsectionName="Team">
 				<event>Team Solve Duo</event>
 				<event>Team Blind</event>
+				<event>2-man 3x3x3 Blindfolded relay</event>
 				<event>Mini-Guilford Duo</event>
 			</subsection>
 			<subsection subsectionName="Blindfolded ">
@@ -621,6 +630,7 @@
 		<section sectionName="Team">
 			<event>Team Solve Duo</event>
 			<event>Team Blind</event>
+			<event>2-man 3x3x3 Blindfolded relay</event>
 			<event>Mini-Guilford Duo</event>
 		</section>
 		<section sectionName="Mods du 3x3x3">
