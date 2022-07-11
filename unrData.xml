@@ -443,11 +443,11 @@
 		</event>
 		<event eventName="Mastermorphix">
 			<single name="Thibaud Ou" time="29.67" timeList="" scrambleList="" date="2019-10-15" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/716056187795144825" francocubeLink=""/>
-			<mo3 name="Wilfrid Py" time="45.40" timeList="" scrambleList="" date="2020-04-23" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/702668479102320742" francocubeLink=""/>
-			<avg5 name="Wilfrid Py" time="50.44" timeList="" scrambleList="" date="2020-04-23" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/702668479102320742" francocubeLink=""/>
-			<avg12 name="Wilfrid Py" time="54.32" timeList="" scrambleList="" date="2020-04-23" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/702668479102320742" francocubeLink=""/>
-			<avg50 name="Wilfrid Py" time="1:00.67" timeList="" scrambleList="" date="2020-04-23" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/702668479102320742" francocubeLink=""/>
-			<avg100 name="Wilfrid Py" time="1:02.64" timeList="" scrambleList="" date="2020-04-23" youtubeLink="" discordLink="https://discordapp.com/channels/329175643877015553/344073328744464384/702668479102320742" francocubeLink=""/>
+			<mo3 name="Maxime Dotto" time="43.86" timeList="" scrambleList="" date="2022-07-10" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/995798683809480714" francocubeLink=""/>
+			<avg5 name="Maxime Dotto" time="46.50" timeList="" scrambleList="" date="2022-07-10" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/995798683809480714" francocubeLink=""/>
+			<avg12 name="Maxime Dotto" time="50.26" timeList="" scrambleList="" date="2022-07-11" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/996109862125707264" francocubeLink=""/>
+			<avg50 name="Maxime Dotto" time="52.68" timeList="" scrambleList="" date="2022-07-11" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/996109862125707264" francocubeLink=""/>
+			<avg100 name="Maxime Dotto" time="56.23" timeList="" scrambleList="" date="2022-07-10" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/995798683809480714" francocubeLink=""/>
 		</event>
 	</records>
 	<persons>
@@ -474,6 +474,7 @@
 		<person name="Martial Bonarek" wcaId="2013BONA01" pbSheetLink=""/>
 		<person name="Matteo Chancerel" wcaId="2017CHAN16" pbSheetLink=""/>
 		<person name="Matthieu Aubert" wcaId="2016AUBE01" pbSheetLink="https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html"/>
+		<person name="Maxime Dotto" wcaId="2022DOTT02" pbSheetLink="https://bit.ly/3NTr5AI"/>
 		<person name="Maxime Madrzyk" wcaId="2018MADR02" pbSheetLink=""/>
 		<person name="Nicolas Gertner" wcaId="2013GERT01" pbSheetLink=""/>
 		<person name="Patrick Jamet" wcaId="2012JAME02" pbSheetLink=""/>
