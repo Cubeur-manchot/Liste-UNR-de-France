@@ -449,6 +449,14 @@
 			<avg50 name="Maxime Dotto" time="33.68" timeList="" scrambleList="" date="2022-08-10" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/1007037024513036368" francocubeLink=""/>
 			<avg100 name="Maxime Dotto" time="33.97" timeList="" scrambleList="" date="2022-08-10" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/1007037024513036368" francocubeLink=""/>
 		</event>
+		<event eventName="Megamorphix">
+			<single name="Maxime Dotto" time="2:43.85" timeList="" scrambleList="" date="2022-08-11" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/1007340656961781910" francocubeLink=""/>
+			<mo3 name="Maxime Dotto" time="3:06.25" timeList="2:43.85, 2:53.00, 3:41.90" scrambleList="" date="2022-08-11" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/1007340656961781910" francocubeLink=""/>
+			<avg5 name="Maxime Dotto" time="3:11.98" timeList="(2:43.85), 2:53.00, 3:41.90, (3:48.88), 3:01.06" scrambleList="" date="2022-08-11" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/1007340656961781910" francocubeLink=""/>
+			<avg12 name="Maxime Dotto" time="3:25.21" timeList="2:59.14, (4:18.59), 2:59.46, 3:46.69, 3:40.90, 3:54.86, (2:43.85), 2:53.00, 3:41.90, 3:48.88, 3:01.06, 3:26.30" scrambleList="" date="2022-08-11" youtubeLink="" discordLink="https://discord.com/channels/329175643877015553/344073328744464384/1007340656961781910" francocubeLink=""/>
+			<avg50 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" discordLink="" francocubeLink=""/>
+			<avg100 name="" time="" timeList="" scrambleList="" date="" youtubeLink="" discordLink="" francocubeLink=""/>
+		</event>
 	</records>
 	<persons>
 		<person name="Abdelhak Kaddour" wcaId="2010KADD01" pbSheetLink=""/>
@@ -474,7 +482,7 @@
 		<person name="Martial Bonarek" wcaId="2013BONA01" pbSheetLink=""/>
 		<person name="Matteo Chancerel" wcaId="2017CHAN16" pbSheetLink=""/>
 		<person name="Matthieu Aubert" wcaId="2016AUBE01" pbSheetLink="https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html"/>
-		<person name="Maxime Dotto" wcaId="2022DOTT02" pbSheetLink="https://bit.ly/3NTr5AI"/>
+		<person name="Maxime Dotto" wcaId="2022DOTT02" pbSheetLink="https://bit.ly/Thenemex-PBList"/>
 		<person name="Maxime Madrzyk" wcaId="2018MADR02" pbSheetLink=""/>
 		<person name="Nicolas Gertner" wcaId="2013GERT01" pbSheetLink=""/>
 		<person name="Patrick Jamet" wcaId="2012JAME02" pbSheetLink=""/>
@@ -485,7 +493,7 @@
 		<person name="Thibaud Ou" wcaId="2016OUTH01" pbSheetLink="https://bit.ly/TeebooPBs"/>
 		<person name="Victor Wijsman" wcaId="2016WIJS01" pbSheetLink=""/>
 		<person name="Virgile Perrot" wcaId="2017PERR02" pbSheetLink=""/>
-		<person name="Wilfrid Py" wcaId="2016PYWI01" pbSheetLink=""/>
+		<person name="Wilfrid Py" wcaId="2016PYWI01" pbSheetLink="https://bit.ly/2Ak2pyR"/>
 		<person name="William Phommaha" wcaId="2015PHOM01" pbSheetLink=""/>
 	</persons>
 	<normalPlan>
@@ -565,6 +573,7 @@
 				<event>Penrose Cube</event>
 				<event>Ghost Cube</event>
 				<event>Mastermorphix</event>
+				<event>Megamorphix</event>
 			</subsection>
 		</section>
 	</normalPlan>
@@ -634,12 +643,13 @@
 			<event>2-man 3x3x3 Blindfolded relay</event>
 			<event>Mini-Guilford Duo</event>
 		</section>
-		<section sectionName="Mods du 3x3x3">
+		<section sectionName="Mods de cubes NxNxN">
 			<event>Mirror Blocks</event>
 			<event>Inequilateral Cube</event>
 			<event>Penrose Cube</event>
 			<event>Ghost Cube</event>
 			<event>Mastermorphix</event>
+			<event>Megamorphix</event>
 		</section>
 	</compactPlan>
 	<translations>
