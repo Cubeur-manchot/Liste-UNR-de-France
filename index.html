@@ -1,48 +1,68 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 	<head>
 		<meta charset="utf-8"/>
-		<title>Liste UNR de France</title>
-		<link type="text/css" rel="stylesheet" media="all" href="general.css">
-		<link type="text/css" rel="stylesheet" media="all" href="table.css">
-		<link type="text/css" rel="stylesheet" media="all" href="planAndFilters.css">
+		<title>Liste UNR de France | French UNR List</title>
+		<meta name="description" content="Liste des records non officiels français de speedsolving. | List of French unofficial records of speedsolving."/>
+		<!-- Styles -->
 		<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-		<script type="text/javascript" src="buildPage.js"></script>
-		<script type="text/javascript" src="inputData.js"></script>
-		<script type="text/javascript" src="pagePlan.js"></script>
-		<script type="text/javascript" src="buildRecords.js"></script>
-		<script type="text/javascript" src="statistics.js"></script>
-		<script type="text/javascript" src="translation.js"></script>
-		<script type="text/javascript" src="tagCreator.js"></script>
-		<script type="text/javascript" src="utils.js"></script>
-		<script src="Chart.bundle.js"></script>
+		<link type="text/css" rel="stylesheet" media="all" href="./style/general.css">
+		<link type="text/css" rel="stylesheet" media="all" href="./style/header.css">
+		<link type="text/css" rel="stylesheet" media="all" href="./style/contact.css">
+		<link type="text/css" rel="stylesheet" media="all" href="./style/recordTables.css">
+		<link type="text/css" rel="stylesheet" media="all" href="./style/statistics.css">
+		<!-- Data -->
+		<script type="text/javascript" src="./data/pagePlans.js"></script>
+		<script type="text/javascript" src="./data/persons.js"></script>
+		<script type="text/javascript" src="./data/records.js"></script>
+		<script type="text/javascript" src="./data/translations.js"></script>
+		<!-- Scripts -->
+		<script type="text/javascript" src="./scripts/Chart.bundle.js"></script>
+		<script type="text/javascript" src="./scripts/tagCreator.js"></script>
+		<script type="text/javascript" src="./scripts/buildRecords.js"></script>
+		<script type="text/javascript" src="./scripts/translator.js"></script>
+		<script type="text/javascript" src="./scripts/color.js"></script>
+		<script type="text/javascript" src="./scripts/statistics.js"></script>
 	</head>
-	<body onload="buildPage();">
-		<h1>Liste UNR de France</h1>
-		<section id="filters">
+	<body onload="buildRecords(); fillStandardText('fr'); checkRefactorMessageVisibility(); buildStatistics();">
+		<section id="header">
 			<div id="toggleLanguageButton" onclick="toggleLanguage();">
-				<img src="flagFR.png" id="frontFlag" class="flag" alt="[FRA]"/>
-				<img src="flagUK.png" id="backFlag" class="flag" alt="[ENG]"/>
+				<img src="./images/flags/flagFR.png" id="frontFlag" class="flag" alt="[FRA]" data-language="fr"/>
+				<img src="./images/flags/flagUK.png" id="backFlag" class="flag" alt="[ENG]" data-language="en"/>
 			</div>
-			<div class="button" id="offCompactButton" onclick="toggleCompactMode();">Mode Normal</div>
-			<div class="button" id="planAndFiltersButton" onclick="toggleDisplayPlan();">Filtres</div>
-			<br/>
-			<div id="pagePlanAndFilters">
-	            <div id="avgTypeFilters"></div>
-	            <div id="pagePlan" class="normalPlan"></div>
-    	    </div>
+			<h1></h1>
+			<div id="emptyDivForJustifyStyle"></div>
 		</section>
-		<section id="contact">
-			<p>Une mise à jour ? Une erreur ? Un bug ?</p>
-			<br/>
-			<a href="contactFR.html" target="_blank">Contactez moi</a>
+		<section id="contactLink">
+			<p></p><a href="./html/contactFR.html" target="_blank"></a><p>.</p>
+		</section>
+		<section id="refactorMessage" hidden>
+			<p></p>
+			<ul><li></li><li></li><li></li><li></li></ul>
+			<p></p>
 		</section>
 		<section id="records"></section>
 		<section id="statistics">
-			<h2>Statistiques</h2>
-			<div id="palmaresHistogramContainer"></div>
-			<div id="palmaresDoughnutContainer"></div>
-			<div id="timeLineContainer"></div>
+			<div class="card">
+				<h2></h2>
+				<ul data-selected="bars">
+					<li id="barsButton" onclick="show(this.id);"><img src="./images/icons/barsIcon.svg"/></li>
+					<li id="circlesButton" onclick="show(this.id);"><img src="./images/icons/circlesIcon.svg"/></li>
+					<li id="timelineButton" onclick="show(this.id);"><img src="./images/icons/timelineIcon.svg"/></li>
+				</ul>
+				<div id="bars">
+					<div id="countByPersonSplitByGroupBarChartContainer"></div>
+					<div id="countByGroupSplitByPersonBarChartContainer"></div>
+				</div>
+				<div id="circles">
+					<div id="doughnutChartContainer"></div>
+					<div id="groupedBubbleChartContainer"></div>
+				</div>
+				<div id="timeline">
+					<div id="timelineChartContainer"></div>
+					<div id="emptyChartSlot"></div>
+				</div>
+			</div>
         </section>
     </body>
 </html>

@@ -1,0 +1,51 @@
+/* Table general */
+
+section#records table {
+	margin: 10px auto 0px auto;
+	border-collapse: collapse;
+	font: 12px "Verdana", sans-serif;
+}
+
+section#records tr {
+	height: 54px;
+}
+
+section#records th, section#records td {
+	text-align: center;
+	border: 1px solid rgb(200, 200, 200);
+	height: 100%;
+	padding: auto 5px;
+	position: relative;
+}
+
+/* Table headers */
+
+section#records thead tr {
+	background-color:rgb(0, 0, 0, 0.1);
+}
+
+section#records th {
+	border-bottom: 1px solid rgb(150, 150, 150);
+}
+
+/* Table rows */
+
+section#records tbody tr:nth-child(even) {
+	background-color:rgb(0, 0, 0, 0.04);
+}
+
+section#records td {
+	padding: 5px;
+}
+
+section#records td.eventName {
+	width: 200px;
+}
+
+section#records td:not(.eventName) {
+	width: 125px;
+}
+
+section#records tbody tr:hover {
+	background-color: rgb(0, 0, 0, 0.07);
+}

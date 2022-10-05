@@ -1,0 +1,64 @@
+section#statistics ul li {
+	width: 50px;
+	border-radius: 5px;
+	text-align: center;
+	margin: 0px 3px;
+	padding: 7px 15px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+section#statistics ul img {
+	height: 25px;
+	width: 25px;
+	vertical-align: middle;
+	list-style-type: none;
+}
+
+section#statistics ul[data-selected=bars] li#barsButton,
+section#statistics ul[data-selected=circles] li#circlesButton,
+section#statistics ul[data-selected=timeline] li#timelineButton {
+	background-color: #eeeeee;
+}
+
+section#statistics ul[data-selected=bars] ~ div#bars,
+section#statistics ul[data-selected=circles] ~ div#circles,
+section#statistics ul[data-selected=timeline] ~ div#timeline {
+	display: block;
+}
+
+div#bars, div#circles, div#timeline {
+	display: none;
+}
+
+section#statistics div#countByPersonSplitByGroupBarChartContainer,
+section#statistics div#countByGroupSplitByPersonBarChartContainer,
+section#statistics div#doughnutChartContainer,
+section#statistics div#groupedBubbleChartContainer,
+section#statistics div#timelineChartContainer,
+section#statistics div#emptyChartSlot {
+	height: 350px;
+	padding: 0px;
+}
+
+section#statistics div#countByPersonSplitByGroupBarChartContainer,
+section#statistics div#doughnutChartContainer,
+section#statistics div#timelineChartContainer {
+	margin-bottom: 30px;
+}
+
+/* Todo remove this when charts are available */
+section#statistics div#groupedBubbleChartContainer,
+section#statistics div#timelineChartContainer {
+	background-color: #eeeeee;
+	padding-left: 50%;
+}
+section#statistics div#groupedBubbleChartContainer:after,
+section#statistics div#timelineChartContainer:after {
+	content: "This chart will be available soon...";
+	font-size: 20px;
+	display: inline-block;
+	margin-top: 165px;
+	width: 200px;
+	transform: translateX(-50%);
+}

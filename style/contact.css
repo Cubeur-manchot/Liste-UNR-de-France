@@ -1,0 +1,12 @@
+section#contactLink p
+{
+	display: inline-block;
+	margin: 0px;
+}
+
+section#contactLink a
+{
+	display: inline-block;
+	margin-left: 5px;
+	text-decoration: none;
+}

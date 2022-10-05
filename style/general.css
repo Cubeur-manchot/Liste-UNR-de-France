@@ -1,0 +1,42 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: rgb(230, 243, 255);
+	font-family: "Muli", sans-serif;
+}
+
+section#header, section#contactLink, section#records, section#statistics, section#contact {
+	padding: 10px 30px;
+}
+
+h1 {
+	display: inline-block;
+	margin: auto 0px;
+	font-size: 50px;
+	color: rgb(0, 0, 0);
+	text-shadow: rgb(128, 128, 128) 2px 2px 2px;
+}
+
+.card {
+	border-radius: 10px;
+	background-color: white;
+	padding: 15px 18px 18px 18px;
+	margin: 20px 0px 0px 0px;
+}
+
+.card h2 {
+	margin: 0px;
+}
+
+/* Todo remove after it becomes obsolete */
+
+section#refactorMessage {
+	margin: 10px 30px;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: rgb(255, 160, 160);
+}
+
+section#refactorMessage p {
+	margin: 0px;
+}
