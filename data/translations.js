@@ -11,20 +11,20 @@ const standardTranslations = {
 		fr: "Suite à des occurrences répétitives, et persistant sur une période de plusieurs années, de cas de : (liste non exhaustive)"
 	},
 	"section#refactorMessage ul li:nth-child(1)": {
-		en: "free disregard of the UNR list",
-		fr: "mépris gratuit de la liste UNR"
+		en: "free disregard of the UNR list (various people, various events)",
+		fr: "mépris gratuit de la liste UNR (différentes personnes, différentes épreuves)"
 	},
 	"section#refactorMessage ul li:nth-child(2)": {
-		en: "very clear boycott of the UNR list",
-		fr: "boycott très clair de la liste UNR"
+		en: "very clear boycott of the UNR list (3x3, 4x4, 5x5, 6x6, 7x7, megaminx, skewb, OH, relays)",
+		fr: "boycott très clair de la liste UNR (3x3, 4x4, 5x5, 6x6, 7x7, megaminx, skewb, OH, relays)"
 	},
 	"section#refactorMessage ul li:nth-child(3)": {
-		en: "suspicion of cheating on records",
-		fr: "suspicion de triche sur des records"
+		en: "suspicion of cheating on records (2x2, square one, FMC)",
+		fr: "suspicion de triche sur des records (2x2, square one, FMC)"
 	},
 	"section#refactorMessage ul li:nth-child(4)": {
-		en: "proven cheating on records,",
-		fr: "triche avérée sur des records,"
+		en: "proven cheating on records (2x2, 4x4, pyraminx, clock, skewb, FMC),",
+		fr: "triche avérée sur des records (2x2, 4x4, pyraminx, clock, skewb, FMC),"
 	},
 	"section#refactorMessage p ~ p": {
 		en: "it has been decided, unanimously by the members of the council managing this list, that the official WCA events (with the exception of the blind events) are now removed from this list, at least for a test period of 6 months.",
