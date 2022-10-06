@@ -29,7 +29,8 @@ const buildRecords = () => {
 				if (eventRecords[avgType]) {
 					let td = createHtmlTag("td", {class: avgType});
 					td.appendChild(createHtmlTag("div", {class: "time", textContent: eventRecords[avgType].time}));
-					td.appendChild(createHtmlTag("div", {class: "name", textContent: eventRecords[avgType].name}));
+					td.appendChild(createHtmlTag("div", {class: "name",
+						textContent: eventRecords[avgType].name ?? eventRecords[avgType].names.join(" + ")}));
 					tr.appendChild(td);
 				} else {
 					tr.appendChild(createHtmlTag("td", {textContent: "x"}));

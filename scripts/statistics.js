@@ -152,7 +152,7 @@ const buildTimeline = () => { // todo
 	//container.appendChild(canvas);
 };
 
-const countByPersonAndGroup = () => { // todo count both persons in 2-people events
+const countByPersonAndGroup = () => {
 	let countPerName = {};
 	let groupLabels = [];
 	// build count object
@@ -161,18 +161,21 @@ const countByPersonAndGroup = () => { // todo count both persons in 2-people eve
 		for (let eventName of group.events) {
 			for (let avgType in records[eventName]) {
 				let record = records[eventName][avgType];
-				if (!countPerName[record.name]) {
-					countPerName[record.name] = {
-						name: record.name,
-						countPerGroup: {},
-						totalCount: 0
-					};
+				let names = record.name ? [record.name] : record.names;
+				for (let name of names) {		
+					if (!countPerName[name]) {
+						countPerName[name] = {
+							name: name,
+							countPerGroup: {},
+							totalCount: 0
+						};
+					}
+					if (!countPerName[name].countPerGroup[group.en]) {
+						countPerName[name].countPerGroup[group.en] = 0;
+					}
+					countPerName[name].countPerGroup[group.en]++;
+					countPerName[name].totalCount++;
 				}
-				if (!countPerName[record.name].countPerGroup[group.en]) {
-					countPerName[record.name].countPerGroup[group.en] = 0;
-				}
-				countPerName[record.name].countPerGroup[group.en]++;
-				countPerName[record.name].totalCount++;
 			}
 		}
 	}

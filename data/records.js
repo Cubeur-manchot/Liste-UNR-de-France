@@ -142,29 +142,29 @@ const records = {
 		single: {name: "Lucas Déglise", time: "3:41.92", date: "2019-12-18", links: ["https://www.youtube.com/watch?v=o_Ul_unOUU8"]}
 	},
 	"Mini-Guilford Duo": {
-		single: {name: "Clément Cherblanc + Lucas Déglise", time: "1:52.53", date: "2019-05-06", links: ["https://www.youtube.com/watch?v=7jgfZIpjr3A"]},
-		mo3: {name: "Louis Fertier + Victor Wijsman", time: "2:23.63", date: "2017-10-26", links: ["https://forum.francocube.com/viewtopic.php?p=271420#p271420"]},
-		avg5: {name: "Louis Fertier + Victor Wijsman", time: "2:25.69", date: "2017-10-26", links: ["https://forum.francocube.com/viewtopic.php?p=271420#p271420"]},
-		avg12: {name: "Louis Fertier + Victor Wijsman", time: "2:28.24", date: "2017-10-26", links: ["https://forum.francocube.com/viewtopic.php?p=271420#p271420"]}
+		single: {names: ["Clément Cherblanc", "Lucas Déglise"], time: "1:52.53", date: "2019-05-06", links: ["https://www.youtube.com/watch?v=7jgfZIpjr3A"]},
+		mo3: {names: ["Louis Fertier", "Victor Wijsman"], time: "2:23.63", date: "2017-10-26", links: ["https://forum.francocube.com/viewtopic.php?p=271420#p271420"]},
+		avg5: {names: ["Louis Fertier", "Victor Wijsman"], time: "2:25.69", date: "2017-10-26", links: ["https://forum.francocube.com/viewtopic.php?p=271420#p271420"]},
+		avg12: {names: ["Louis Fertier", "Victor Wijsman"], time: "2:28.24", date: "2017-10-26", links: ["https://forum.francocube.com/viewtopic.php?p=271420#p271420"]}
 	},
 	"Team Blind": {
-		single: {name: "Axel Brisse + Wilfrid Py", time: "11.79", date: "2021-08-25", scramble: "B F2 U2 L2 F2 R2 B2 F R D' B L2 U R' B D2 R2 D2 U", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880048593879302214"]},
-		mo3: {name: "Axel Brisse + Wilfrid Py", time: "16.42", date: "2021-08-25", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"]},
-		avg5: {name: "Axel Brisse + Wilfrid Py", time: "17.55", date: "2021-08-25", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"]},
-		avg12: {name: "Axel Brisse + Wilfrid Py", time: "18.65", date: "2021-08-25", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"]},
-		avg50: {name: "Axel Brisse + Wilfrid Py", time: "20.73", date: "2021-08-25", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"]},
-		avg100: {name: "Axel Brisse + Wilfrid Py", time: "21.14", date: "2021-08-25", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"]}
+		single: {names: ["Axel Brisse", "Wilfrid Py"], time: "11.79", date: "2021-08-25", scramble: "B F2 U2 L2 F2 R2 B2 F R D' B L2 U R' B D2 R2 D2 U", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880048593879302214"]},
+		mo3: {names: ["Axel Brisse", "Wilfrid Py"], time: "16.42", date: "2021-08-25", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"]},
+		avg5: {names: ["Axel Brisse", "Wilfrid Py"], time: "17.55", date: "2021-08-25", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"]},
+		avg12: {names: ["Axel Brisse", "Wilfrid Py"], time: "18.65", date: "2021-08-25", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"]},
+		avg50: {names: ["Axel Brisse", "Wilfrid Py"], time: "20.73", date: "2021-08-25", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"]},
+		avg100: {names: ["Axel Brisse", "Wilfrid Py"], time: "21.14", date: "2021-08-25", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"]}
 	},
 	"Team Solve Duo": {
-		single: {name: "Juliette Sébastien + Nicolas Gertner", time: "5.36", date: "2022-04-30", scramble: "U2 L2 U2 R' D2 B2 R U2 F' R' B2 R2 U2 B2 U2 R", links: ["https://discord.com/channels/329175643877015553/329918000553525258/969880187640623144"]},
-		mo3: {name: "Juliette Sébastien + Nicolas Gertner", time: "10.01", date: "2017-01-04"},
-		avg5: {name: "Juliette Sébastien + Nicolas Gertner", time: "10.49", date: "2017-01-04"},
-		avg12: {name: "Juliette Sébastien + Nicolas Gertner", time: "10.97", date: "2017-01-04"},
-		avg50: {name: "Juliette Sébastien + Nicolas Gertner", time: "11.75", date: "2017-01-04"},
-		avg100: {name: "Juliette Sébastien + Nicolas Gertner", time: "12.64", date: "2017-01-04"}
+		single: {names: ["Juliette Sébastien", "Nicolas Gertner"], time: "5.36", date: "2022-04-30", scramble: "U2 L2 U2 R' D2 B2 R U2 F' R' B2 R2 U2 B2 U2 R", links: ["https://discord.com/channels/329175643877015553/329918000553525258/969880187640623144"]},
+		mo3: {names: ["Juliette Sébastien", "Nicolas Gertner"], time: "10.01", date: "2017-01-04"},
+		avg5: {names: ["Juliette Sébastien", "Nicolas Gertner"], time: "10.49", date: "2017-01-04"},
+		avg12: {names: ["Juliette Sébastien", "Nicolas Gertner"], time: "10.97", date: "2017-01-04"},
+		avg50: {names: ["Juliette Sébastien", "Nicolas Gertner"], time: "11.75", date: "2017-01-04"},
+		avg100: {names: ["Juliette Sébastien", "Nicolas Gertner"], time: "12.64", date: "2017-01-04"}
 	},
 	"2-man 3x3x3 Blindfolded relay": {
-		single: {name: "Arthur Garcin + Maxime Madrzyk", time: "39.76", date: "2022-05-24", links: ["https://discord.com/channels/329175643877015553/353504450867888128/978593706972160011"]}
+		single: {names: ["Arthur Garcin", "Maxime Madrzyk"], time: "39.76", date: "2022-05-24", links: ["https://discord.com/channels/329175643877015553/353504450867888128/978593706972160011"]}
 	},
 	"Mirror": {
 		single: {name: "Axel Brisse", time: "14.41", date: "2021-09-06", links: ["https://discordapp.com/channels/329175643877015553/344073328744464384/884382012956352552"]},
