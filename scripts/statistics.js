@@ -144,12 +144,88 @@ const buildGroupedBubbleChart = () => { // todo
 	//container.appendChild(canvas);
 };
 
-const buildTimeline = () => { // todo
+const buildTimeline = () => {
 	let container = document.querySelector("div#timelineChartContainer");
 	let canvas = createHtmlTag("canvas", {id: "timelineChart"});
 	let context = canvas.getContext("2d");
-	// new Chart(context, {...});
-	//container.appendChild(canvas);
+	let data = {datasets: []};
+	for (let groupIndex = 0; groupIndex < pagePlans.noWca.length; groupIndex++) {
+		let dataset = {
+			label: pagePlans.noWca[groupIndex].en,
+			type: "bubble",
+			data: [],
+			labels: [],
+			backgroundColor: []
+		}
+		let group = pagePlans.noWca[groupIndex];
+		let color = colorScheme[groupIndex];
+		let recordsGroupedByDate = [];
+		for (let eventName of group.events) {
+			for (let avgType in records[eventName]) {
+				let record = records[eventName][avgType];
+				let recordObjectForGroup = {
+					eventName: eventName,
+					avgType: avgType,
+					name: record.name ?? record.names.join(" + "),
+					time: record.time
+				};
+				let matchingRecordGroup = recordsGroupedByDate.find(recordGroup => recordGroup.date === record.date);
+				if (matchingRecordGroup) {
+					matchingRecordGroup.records.push(recordObjectForGroup);
+				} else {
+					recordsGroupedByDate.push({
+						date: record.date,
+						records: [recordObjectForGroup]
+					});
+				}
+			}
+		}
+		for (let recordGroup of recordsGroupedByDate) {
+			dataset.data.push({
+				t: new Date(recordGroup.date),
+				y: groupIndex,
+				r: 5 * Math.sqrt(recordGroup.records.length)
+			});
+			dataset.backgroundColor.push(color);
+			let subLabels = [];
+			for (let record of recordGroup.records) {
+				subLabels.push(`${record.eventName} ${record.avgType} : ${record.name} (${record.time})`);
+			}
+			dataset.labels.push(subLabels);
+		}
+		data.datasets.push(dataset);
+	}
+	new Chart(context, {
+			data: data,
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				scales: {
+					xAxes: [{
+						type: "time",
+						time: {
+							tooltipFormat: "DD/MM/YYYY"
+						}
+					}],
+					yAxes: [{
+						display: false,
+						ticks: {
+							suggestedMin: -1,
+							suggestedMax: 6
+						}
+					}]
+				},
+				tooltips: {
+					callbacks: {
+						label: function(t, d) {
+							return d.datasets[t.datasetIndex].labels[t.index];
+						}
+					}
+				}
+			}
+		}
+	);
+	container.appendChild(canvas);
 };
 
 const countByPersonAndGroup = () => {

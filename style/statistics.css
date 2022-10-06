@@ -48,13 +48,11 @@ section#statistics div#timelineChartContainer {
 }
 
 /* Todo remove this when charts are available */
-section#statistics div#groupedBubbleChartContainer,
-section#statistics div#timelineChartContainer {
+section#statistics div#groupedBubbleChartContainer {
 	background-color: #eeeeee;
 	padding-left: 50%;
 }
-section#statistics div#groupedBubbleChartContainer:after,
-section#statistics div#timelineChartContainer:after {
+section#statistics div#groupedBubbleChartContainer:after {
 	content: "This chart will be available soon...";
 	font-size: 20px;
 	display: inline-block;
