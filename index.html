@@ -16,8 +16,10 @@
 		<script type="text/javascript" src="./data/persons.js"></script>
 		<script type="text/javascript" src="./data/records.js"></script>
 		<script type="text/javascript" src="./data/translations.js"></script>
-		<!-- Scripts -->
+		<!-- Chart.js -->
 		<script type="text/javascript" src="./scripts/Chart.bundle.js"></script>
+		<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+		<!-- Scripts -->
 		<script type="text/javascript" src="./scripts/tagCreator.js"></script>
 		<script type="text/javascript" src="./scripts/buildRecords.js"></script>
 		<script type="text/javascript" src="./scripts/translator.js"></script>
@@ -47,20 +49,20 @@
 				<h2></h2>
 				<ul data-selected="bars">
 					<li id="barsButton" onclick="show(this.id);"><img src="./images/icons/barsIcon.svg"/></li>
-					<li id="circlesButton" onclick="show(this.id);"><img src="./images/icons/circlesIcon.svg"/></li>
+					<li id="pieButton" onclick="show(this.id);"><img src="./images/icons/piesIcon.svg"/></li>
 					<li id="timelineButton" onclick="show(this.id);"><img src="./images/icons/timelineIcon.svg"/></li>
 				</ul>
 				<div id="bars">
 					<div id="countByPersonSplitByGroupBarChartContainer"></div>
 					<div id="countByGroupSplitByPersonBarChartContainer"></div>
 				</div>
-				<div id="circles">
+				<div id="pie">
 					<div id="doughnutChartContainer"></div>
-					<div id="groupedBubbleChartContainer"></div>
+					<div class="emptyChartSlot"></div>
 				</div>
 				<div id="timeline">
 					<div id="timelineChartContainer"></div>
-					<div id="emptyChartSlot"></div>
+					<div class="emptyChartSlot"></div>
 				</div>
 			</div>
         </section>

@@ -6,7 +6,6 @@ const buildStatistics = () => {
 	buildCountByPersonSplitByGroupBarChart(countPerName, names, groups);
 	buildCountByGroupSplitByPersonBarChart(countPerName, names, groups, colorGradient);
 	buildDoughnutChart(countPerName, names, colorGradient);
-	buildGroupedBubbleChart();
 	buildTimeline();
 };
 
@@ -22,7 +21,6 @@ const buildCountByPersonSplitByGroupBarChart = (countPerName, names, groups) => 
 		"NxNxN cubes Variations": colorScheme[4],
 		"Team, Relays": colorScheme[5]
 	};
-	
 	let data = {
 		labels: names,
 		datasets: []
@@ -134,14 +132,6 @@ const buildDoughnutChart = (countPerName, names, colorGradient) => {
 		}
 	});
 	container.appendChild(canvas);
-};
-
-const buildGroupedBubbleChart = () => { // todo
-	let container = document.querySelector("div#groupedBubbleChartContainer");
-	let canvas = createHtmlTag("canvas", {id: "groupedBubbleChart"});
-	let context = canvas.getContext("2d");
-	// new Chart(context, {...});
-	//container.appendChild(canvas);
 };
 
 const buildTimeline = () => {
