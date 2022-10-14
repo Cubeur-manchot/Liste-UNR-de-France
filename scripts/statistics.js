@@ -194,7 +194,8 @@ const buildTimeline = () => {
 					xAxes: [{
 						type: "time",
 						time: {
-							tooltipFormat: "DD/MM/YYYY"
+							tooltipFormat: "DD/MM/YYYY",
+							max: new Date()
 						}
 					}],
 					yAxes: [{
