@@ -199,10 +199,10 @@ const records = {
 	"Mastermorphix": {
 		single: {name: "Maxime Dotto", time: "21.21", date: "2022-07-28", scramble: "B U2 L2 U2 F L2 U2 F L2 U2 R B2 F' D2 R U' R2 U2 B' U2", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1001974528022429889"]},
 		mo3: {name: "Maxime Dotto", time: "25.59", date: "2022-09-13", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1019207803321208882"]},
-		avg5: {name: "Maxime Dotto", time: "27.87", date: "2022-09-13", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1019207803321208882"]},
-		avg12: {name: "Maxime Dotto", time: "28.55", date: "2022-09-13", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1019207803321208882"]},
-		avg50: {name: "Maxime Dotto", time: "30.46", date: "2022-09-13", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1019207803321208882"]},
-		avg100: {name: "Maxime Dotto", time: "31.37", date: "2022-09-13", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1019207803321208882"]}
+		avg5: {name: "Maxime Dotto", time: "26.62", date: "2022-09-27", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"]},
+		avg12: {name: "Maxime Dotto", time: "28.51", date: "2022-09-27", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"]},
+		avg50: {name: "Maxime Dotto", time: "30.30", date: "2022-09-27", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"]},
+		avg100: {name: "Maxime Dotto", time: "30.94", date: "2022-09-27", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"]}
 	},
 	"Megamorphix": {
 		single: {name: "Maxime Dotto", time: "1:55.38", date: "2022-10-15", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1030789105220599848"]},
