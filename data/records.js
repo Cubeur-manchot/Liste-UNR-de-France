@@ -205,11 +205,11 @@ const records = {
 		avg100: {name: "Maxime Dotto", time: "31.37", date: "2022-09-13", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1019207803321208882"]}
 	},
 	"Megamorphix": {
-		single: {name: "Maxime Dotto", time: "1:59.17", date: "2022-09-05", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016383631591227503"]},
-		mo3: {name: "Maxime Dotto", time: "2:13.26", date: "2022-09-05", timeList: ["1:59.17", "2:16.32", "2:24.29"], links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016383631591227503"]},
-		avg5: {name: "Maxime Dotto", time: "2:27.81", date: "2022-09-05", timeList: ["2:42.82", "2:44.64", "1:59.17", "2:16.32", "2:24.29"], links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016383631591227503"]},
-		avg12: {name: "Maxime Dotto", time: "2:34.09", date: "2022-09-05", timeList: ["2:16.09", "2:37.68", "2:43.20", "2:43.09", "2:32.13", "2:36.82", "2:31.51", "2:41.25", "2:42.82", "2:44.64", "1:59.17", "2:16.32"], links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016383631591227503"]},
-		avg50: {name: "Maxime Dotto", time: "2:54.40", date: "2022-09-05", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016383631591227503"]}
+		single: {name: "Maxime Dotto", time: "1:55.38", date: "2022-10-15", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1030789105220599848"]},
+		mo3: {name: "Maxime Dotto", time: "2:03.10", date: "2022-10-15", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1030789105220599848"]},
+		avg5: {name: "Maxime Dotto", time: "2:10.52", date: "2022-10-15", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1030789105220599848"]},
+		avg12: {name: "Maxime Dotto", time: "2:19.70", date: "2022-09-27", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"]},
+		avg50: {name: "Maxime Dotto", time: "2:38.08", date: "2022-09-27", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"]}
 	}
 };
 
