@@ -155,7 +155,6 @@ const buildTimeline = () => {
 			for (let record of recordGroup.records) {
 				subLabels.push(`${record.eventName} ${record.avgType} : ${record.name} (${record.time})`);
 			}
-			dataset.labels.push(subLabels);
 			labels.push(subLabels);
 		}
 		datasets.push({
