@@ -172,18 +172,13 @@ const buildTimeline = () => {
 			x: {
 				type: "time",
 				time: {
-					unit: "day",
-					/*displayFormats: {
-						hour: "dd/MM/yyyy hh:mm",
-						day: "dd/MM/yyyy",
-						week: "dd/MM/yyyy",
-						month: "MM/yyyy",
-						quarter: "MM/yyyy",
-						year: "yyyy"
-					},*/
+					unit: "quarter",
+					displayFormats: {
+						quarter: "MMM yyyy"
+					},
 					tooltipFormat: "dd/MM/yyyy"
 				},
-				max: getCurrentDateStringBubbleChart()
+				max: getBubbleChartUpperBound()
 			},
 			y: {
 				display: false,
@@ -270,7 +265,7 @@ const show = buttonId => { // show the div corresponding to the clicked button a
 	document.querySelector("section#statistics ul").setAttribute("data-selected", buttonId.replace(/Button$/, ""));
 };
 
-const getCurrentDateStringBubbleChart = () => { // returns the current date with format dd/MM/YYYY
+const getBubbleChartUpperBound = () => { // returns a date with format dd/MM/YYYY
 	let currentLocalDate = new Date();
 	currentLocalDate.setDate(currentLocalDate.getDate() + 14); // move 14 days to the future to avoid bubbles to overflow at the side of the chart
 	let day = currentLocalDate.getDate();
