@@ -17,8 +17,10 @@
 		<script type="text/javascript" src="./data/records.js"></script>
 		<script type="text/javascript" src="./data/translations.js"></script>
 		<!-- Chart.js -->
-		<script type="text/javascript" src="./scripts/Chart.bundle.js"></script>
-		<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+		<!--<script type="text/javascript" src="./scripts/Chart.bundle.js"></script><!-- Local -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><!-- Remote -->
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
 		<!-- Scripts -->
 		<script type="text/javascript" src="./scripts/tagCreator.js"></script>
 		<script type="text/javascript" src="./scripts/buildRecords.js"></script>
@@ -53,15 +55,23 @@
 					<li id="timelineButton" onclick="show(this.id);"><img src="./images/icons/timelineIcon.svg"/></li>
 				</ul>
 				<div id="bars">
-					<div id="countByPersonSplitByGroupBarChartContainer"></div>
-					<div id="countByGroupSplitByPersonBarChartContainer"></div>
+					<div id="countByPersonSplitByGroupBarChartContainer">
+						<canvas id="countByPersonSplitByGroupBarChart"></canvas>
+					</div>
+					<div id="countByGroupSplitByPersonBarChartContainer">
+						<canvas id="countByGroupSplitByPersonBarChart"></canvas>
+					</div>
 				</div>
 				<div id="pie">
-					<div id="doughnutChartContainer"></div>
+					<div id="doughnutChartContainer">
+						<canvas id="doughnutChart"></canvas>
+					</div>
 					<div class="emptyChartSlot"></div>
 				</div>
 				<div id="timeline">
-					<div id="timelineChartContainer"></div>
+					<div id="timelineChartContainer">
+						<canvas id="timelineChart"></canvas>
+					</div>
 					<div class="emptyChartSlot"></div>
 				</div>
 			</div>

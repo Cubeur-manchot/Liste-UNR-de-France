@@ -10,36 +10,26 @@ const buildStatistics = () => {
 };
 
 const buildCountByPersonSplitByGroupBarChart = (countPerName, names, groups) => {
-	let container = document.querySelector("div#countByPersonSplitByGroupBarChartContainer");
-	let canvas = createHtmlTag("canvas", {id: "countByPersonSplitByGroupBarChart"});
-	let context = canvas.getContext("2d");
-	let groupColors = {
-		"Big cubes": colorScheme[0],
-		"Blindfolded": colorScheme[1],
-		"Dodecahedrons": colorScheme[2],
-		"NxNxN cubes Shape Mods": colorScheme[3],
-		"NxNxN cubes Variations": colorScheme[4],
-		"Team, Relays": colorScheme[5]
-	};
-	let data = {
-		labels: names,
-		datasets: []
-	};
-	for (let group of groups) {
-		let dataset = {
-			label: group,
-			data: [],
-			backgroundColor: groupColors[group],
-			stack: "allSameStack"
-		};
+	let canvas = document.querySelector("canvas#countByPersonSplitByGroupBarChart");
+	let datasets = [];
+	for (let groupIndex = 0; groupIndex < groups.length; groupIndex++) {
+		let data = [];
 		for (let countForName of countPerName) {
-			dataset.data.push(countForName.countPerGroup[group] ?? 0);
+			data.push(countForName.countPerGroup[groups[groupIndex]] ?? 0);
 		}
-		data.datasets.push(dataset);
+		datasets.push({
+			label: groups[groupIndex],
+			data: data,
+			backgroundColor: colorScheme[groupIndex],
+			stack: "allSameStack"
+		});
 	}
-	new Chart(context, {
+	new Chart(canvas, {
 		type: "bar",
-		data: data,
+		data: {
+			labels: names,
+			datasets: datasets
+		},
 		options: {
 			responsive: true,
 			maintainAspectRatio: false,
@@ -53,17 +43,11 @@ const buildCountByPersonSplitByGroupBarChart = (countPerName, names, groups) => 
 			}
 		}
 	});
-	container.appendChild(canvas);
 };
 
 const buildCountByGroupSplitByPersonBarChart = (countPerName, names, groups, colorGradient) => {
-	let container = document.querySelector("div#countByGroupSplitByPersonBarChartContainer");
-	let canvas = createHtmlTag("canvas", {id: "countByGroupSplitByPersonBarChart"});
-	let context = canvas.getContext("2d");
-	let data = {
-		labels: groups,
-		datasets: []
-	};
+	let canvas = document.querySelector("canvas#countByGroupSplitByPersonBarChart");
+	let datasets = [];
 	let lastRecordCount = null;
 	let countGroupIndex = -1;
 	for (let nameIndex = 0; nameIndex < names.length; nameIndex++) {
@@ -71,20 +55,23 @@ const buildCountByGroupSplitByPersonBarChart = (countPerName, names, groups, col
 			countGroupIndex++;
 			lastRecordCount = countPerName[nameIndex].totalCount;
 		}
-		let dataset = {
+		let data = [];
+		for (let group of groups) {
+			data.push(countPerName[nameIndex].countPerGroup[group] ?? 0);
+		}
+		datasets.push({
 			label: names[nameIndex],
-			data: [],
+			data: data,
 			backgroundColor: colorGradient[countGroupIndex],
 			stack: "allSameStack"
-		};
-		for (let group of groups) {
-			dataset.data.push(countPerName[nameIndex].countPerGroup[group] ?? 0);
-		}
-		data.datasets.push(dataset);
+		});
 	}
-	new Chart(context, {
+	new Chart(canvas, {
 		type: "bar",
-		data: data,
+		data: {
+			labels: groups,
+			datasets: datasets
+		},
 		options: {
 			responsive: true,
 			maintainAspectRatio: false,
@@ -98,13 +85,10 @@ const buildCountByGroupSplitByPersonBarChart = (countPerName, names, groups, col
 			}
 		}
 	});
-	container.appendChild(canvas);
 };
 
 const buildDoughnutChart = (countPerName, names, colorGradient) => {
-	let container = document.querySelector("div#doughnutChartContainer");
-	let canvas = createHtmlTag("canvas", {id: "doughnutChart"});
-	let context = canvas.getContext("2d");
+	let canvas = document.querySelector("canvas#doughnutChart");
 	let data = [];
 	let backgroundColors = [];
 	let lastRecordCount = null;
@@ -117,7 +101,7 @@ const buildDoughnutChart = (countPerName, names, colorGradient) => {
 		}
 		backgroundColors.push(colorGradient[countGroupIndex]);
 	}
-	new Chart(context, {
+	new Chart(canvas, {
 		type: "doughnut",
 		data: {
 			labels: names,
@@ -131,24 +115,13 @@ const buildDoughnutChart = (countPerName, names, colorGradient) => {
 			maintainAspectRatio: false,
 		}
 	});
-	container.appendChild(canvas);
 };
 
 const buildTimeline = () => {
-	let container = document.querySelector("div#timelineChartContainer");
-	let canvas = createHtmlTag("canvas", {id: "timelineChart"});
-	let context = canvas.getContext("2d");
-	let data = {datasets: []};
+	let canvas = document.querySelector("canvas#timelineChart");
+	let datasets = [];
 	for (let groupIndex = 0; groupIndex < pagePlans.noWca.length; groupIndex++) {
-		let dataset = {
-			label: pagePlans.noWca[groupIndex].en,
-			type: "bubble",
-			data: [],
-			labels: [],
-			backgroundColor: []
-		}
 		let group = pagePlans.noWca[groupIndex];
-		let color = colorScheme[groupIndex];
 		let recordsGroupedByDate = [];
 		for (let eventName of group.events) {
 			for (let avgType in records[eventName]) {
@@ -170,53 +143,69 @@ const buildTimeline = () => {
 				}
 			}
 		}
+		let data = [];
+		let labels = [];
 		for (let recordGroup of recordsGroupedByDate) {
-			dataset.data.push({
-				t: new Date(recordGroup.date),
+			data.push({
+				x: recordGroup.date,
 				y: groupIndex,
 				r: 5 * Math.sqrt(recordGroup.records.length)
 			});
-			dataset.backgroundColor.push(color);
 			let subLabels = [];
 			for (let record of recordGroup.records) {
 				subLabels.push(`${record.eventName} ${record.avgType} : ${record.name} (${record.time})`);
 			}
 			dataset.labels.push(subLabels);
+			labels.push(subLabels);
 		}
-		data.datasets.push(dataset);
-	}
-	new Chart(context, {
+		datasets.push({
+			label: pagePlans.noWca[groupIndex].en,
 			data: data,
-			options: {
-				responsive: true,
-				maintainAspectRatio: false,
-				scales: {
-					xAxes: [{
-						type: "time",
-						time: {
-							tooltipFormat: "DD/MM/YYYY",
-							max: new Date()
-						}
-					}],
-					yAxes: [{
-						display: false,
-						ticks: {
-							suggestedMin: -1,
-							suggestedMax: 6
-						}
-					}]
+			labels: labels,
+			backgroundColor: colorScheme[groupIndex]
+		});
+	}
+	let options = {
+		responsive: true,
+		maintainAspectRatio: false,
+		scales: {
+			x: {
+				type: "time",
+				time: {
+					unit: "day",
+					/*displayFormats: {
+						hour: "dd/MM/yyyy hh:mm",
+						day: "dd/MM/yyyy",
+						week: "dd/MM/yyyy",
+						month: "MM/yyyy",
+						quarter: "MM/yyyy",
+						year: "yyyy"
+					},*/
+					tooltipFormat: "dd/MM/yyyy"
 				},
-				tooltips: {
-					callbacks: {
-						label: function(t, d) {
-							return d.datasets[t.datasetIndex].labels[t.index];
-						}
-					}
+				max: getCurrentDateStringBubbleChart()
+			},
+			y: {
+				display: false,
+				min: -1,
+				max: 6
+			}
+		},
+		tooltips: {
+			callbacks: {
+				label: function(t, d) {
+					return d.datasets[t.datasetIndex].labels[t.index];
 				}
 			}
 		}
-	);
-	container.appendChild(canvas);
+	};
+	new Chart(canvas, {
+		type: 'bubble',
+		data: {
+			datasets: datasets
+		},
+		options: options
+	});
 };
 
 const countByPersonAndGroup = () => {
@@ -279,4 +268,13 @@ const countByPersonAndGroup = () => {
 
 const show = buttonId => { // show the div corresponding to the clicked button and hide the other ones
 	document.querySelector("section#statistics ul").setAttribute("data-selected", buttonId.replace(/Button$/, ""));
+};
+
+const getCurrentDateStringBubbleChart = () => { // returns the current date with format dd/MM/YYYY
+	let currentLocalDate = new Date();
+	currentLocalDate.setDate(currentLocalDate.getDate() + 14); // move 14 days to the future to avoid bubbles to overflow at the side of the chart
+	let day = currentLocalDate.getDate();
+	let month = currentLocalDate.getMonth();
+	let year = currentLocalDate.getFullYear();
+	return `${year}-${month < 9 ? "0" : ""}${month + 1}-${day < 10 ? "0" : ""}${day}`;
 };
