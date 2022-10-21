@@ -205,7 +205,7 @@ const records = {
 		avg100: {name: "Maxime Dotto", time: "30.94", date: "2022-09-27", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"]}
 	},
 	"Megamorphix": {
-		single: {name: "Maxime Dotto", time: "1:55.38", date: "2022-10-15", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1030789105220599848"]},
+		single: {name: "Maxime Dotto", time: "1:48.73", date: "2022-10-21", scramble: "L2 F2 U2 R U2 L2 D2 R' U2 D2 L' F U2 L2 B D2 R2 L U B2 Fw2 L Fw2 B' Rw2 Uw2 F' Uw2 F2 B' U2 Fw2 Uw B2 F U2 F' L' Fw D L2 U' Fw Rw' R2", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1032948962207993866", "https://www.youtube.com/watch?v=JRu3AWbks8s"]},
 		mo3: {name: "Maxime Dotto", time: "2:03.10", date: "2022-10-15", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1030789105220599848"]},
 		avg5: {name: "Maxime Dotto", time: "2:10.52", date: "2022-10-15", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1030789105220599848"]},
 		avg12: {name: "Maxime Dotto", time: "2:19.70", date: "2022-09-27", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"]},
