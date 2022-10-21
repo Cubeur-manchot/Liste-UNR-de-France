@@ -161,7 +161,8 @@ const buildTimeline = () => {
 			label: pagePlans.noWca[groupIndex].en,
 			data: data,
 			labels: labels,
-			backgroundColor: colorScheme[groupIndex]
+			backgroundColor: colorScheme[groupIndex],
+			borderColor: "rgba(0, 0, 0, 0.5)"
 		});
 	}
 	let options = {
