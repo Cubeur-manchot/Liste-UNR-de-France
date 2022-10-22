@@ -144,52 +144,55 @@ const buildTimeline = () => {
 			}
 		}
 		let data = [];
-		let labels = [];
 		for (let recordGroup of recordsGroupedByDate) {
 			data.push({
 				x: recordGroup.date,
 				y: groupIndex,
-				r: 5 * Math.sqrt(recordGroup.records.length)
+				r: 5 * Math.sqrt(recordGroup.records.length),
+				// custom label, not interpreted by Chart.js but stored in the tooltip context for tooltip rendering
+				tooltipLabel: recordGroup.records.map(record => `${record.eventName} ${record.avgType} : ${record.name} (${record.time})`)
 			});
-			let subLabels = [];
-			for (let record of recordGroup.records) {
-				subLabels.push(`${record.eventName} ${record.avgType} : ${record.name} (${record.time})`);
-			}
-			labels.push(subLabels);
 		}
 		datasets.push({
 			label: pagePlans.noWca[groupIndex].en,
 			data: data,
-			labels: labels,
 			backgroundColor: colorScheme[groupIndex],
 			borderColor: "rgba(0, 0, 0, 0.5)"
 		});
 	}
-	let options = {
-		responsive: true,
-		maintainAspectRatio: false,
-		scales: {
-			x: {
-				type: "time",
-				time: {
-					unit: "quarter",
-					displayFormats: {
-						quarter: "MMM yyyy"
-					},
-					tooltipFormat: "dd/MM/yyyy"
-				},
-				max: getBubbleChartUpperBound()
-			},
-			y: {
-				display: false,
-				min: -1,
-				max: 6
-			}
+	new Chart(canvas, {
+		type: 'bubble',
+		data: {
+			datasets: datasets
 		},
-		tooltips: {
-			callbacks: {
-				label: function(t, d) {
-					return d.datasets[t.datasetIndex].labels[t.index];
+		options: {
+			responsive: true,
+			maintainAspectRatio: false,
+			scales: {
+				x: {
+					type: "time",
+					time: {
+						unit: "quarter",
+						displayFormats: {
+							quarter: "MMM yyyy"
+						},
+						tooltipFormat: "dd/MM/yyyy"
+					},
+					max: getBubbleChartUpperBound()
+				},
+				y: {
+					display: false,
+					min: -1,
+					max: 6
+				}
+			},
+			plugins: {
+				tooltip: {
+					callbacks: {
+						label: tooltipContext => {
+							return tooltipContext.element.$context.raw.tooltipLabel;
+						}
+					}
 				}
 			}
 		}
