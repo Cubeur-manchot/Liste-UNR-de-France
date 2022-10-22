@@ -1,15 +1,15 @@
 "use strict";
 
 const buildStatistics = () => {
-	let {countPerName, names, groups, countLevels} = countByPersonAndGroup();
+	let {countPerName, groups, countLevels} = countByPersonAndGroup();
 	let colorGradient = buildColorGradient(countLevels.length);
-	buildCountByPersonSplitByGroupBarChart(countPerName, names, groups);
-	buildCountByGroupSplitByPersonBarChart(countPerName, names, groups, colorGradient);
-	buildDoughnutChart(countPerName, names, colorGradient);
+	buildCountByPersonSplitByGroupBarChart(countPerName, groups);
+	buildCountByGroupSplitByPersonBarChart(countPerName, groups, colorGradient);
+	buildDoughnutChart(countPerName, colorGradient);
 	buildTimeline();
 };
 
-const buildCountByPersonSplitByGroupBarChart = (countPerName, names, groups) => {
+const buildCountByPersonSplitByGroupBarChart = (countPerName, groups) => {
 	let canvas = document.querySelector("canvas#countByPersonSplitByGroupBarChart");
 	let datasets = [];
 	for (let groupIndex = 0; groupIndex < groups.length; groupIndex++) {
@@ -27,7 +27,7 @@ const buildCountByPersonSplitByGroupBarChart = (countPerName, names, groups) => 
 	new Chart(canvas, {
 		type: "bar",
 		data: {
-			labels: names,
+			labels: countPerName.map(countForName => countForName.name),
 			datasets: datasets
 		},
 		options: {
@@ -45,23 +45,19 @@ const buildCountByPersonSplitByGroupBarChart = (countPerName, names, groups) => 
 	});
 };
 
-const buildCountByGroupSplitByPersonBarChart = (countPerName, names, groups, colorGradient) => {
+const buildCountByGroupSplitByPersonBarChart = (countPerName, groups, colorGradient) => {
 	let canvas = document.querySelector("canvas#countByGroupSplitByPersonBarChart");
 	let datasets = [];
 	let lastRecordCount = null;
 	let countGroupIndex = -1;
-	for (let nameIndex = 0; nameIndex < names.length; nameIndex++) {
-		if (countPerName[nameIndex].totalCount !== lastRecordCount) {
+	for (let countForName of countPerName) {
+		if (countForName.totalCount !== lastRecordCount) {
 			countGroupIndex++;
-			lastRecordCount = countPerName[nameIndex].totalCount;
-		}
-		let data = [];
-		for (let group of groups) {
-			data.push(countPerName[nameIndex].countPerGroup[group] ?? 0);
+			lastRecordCount = countForName.totalCount;
 		}
 		datasets.push({
-			label: names[nameIndex],
-			data: data,
+			label: countForName.name,
+			data: groups.map(group => countForName.countPerGroup[group] ?? 0),
 			backgroundColor: colorGradient[countGroupIndex],
 			stack: "allSameStack"
 		});
@@ -87,24 +83,24 @@ const buildCountByGroupSplitByPersonBarChart = (countPerName, names, groups, col
 	});
 };
 
-const buildDoughnutChart = (countPerName, names, colorGradient) => {
+const buildDoughnutChart = (countPerName, colorGradient) => {
 	let canvas = document.querySelector("canvas#doughnutChart");
 	let data = [];
 	let backgroundColors = [];
 	let lastRecordCount = null;
 	let countGroupIndex = -1;
-	for (let nameIndex = 0; nameIndex < names.length; nameIndex++) {
-		data.push(countPerName[nameIndex].totalCount);
-		if (countPerName[nameIndex].totalCount !== lastRecordCount) {
+	for (let countForName of countPerName) {
+		data.push(countForName.totalCount);
+		if (countForName.totalCount !== lastRecordCount) {
 			countGroupIndex++;
-			lastRecordCount = countPerName[nameIndex].totalCount;
+			lastRecordCount = countForName.totalCount;
 		}
 		backgroundColors.push(colorGradient[countGroupIndex]);
 	}
 	new Chart(canvas, {
 		type: "doughnut",
 		data: {
-			labels: names,
+			labels: countPerName.map(countForName => countForName.name),
 			datasets: [{
 				data: data,
 				backgroundColor: backgroundColors
@@ -196,13 +192,6 @@ const buildTimeline = () => {
 				}
 			}
 		}
-	};
-	new Chart(canvas, {
-		type: 'bubble',
-		data: {
-			datasets: datasets
-		},
-		options: options
 	});
 };
 
@@ -244,11 +233,6 @@ const countByPersonAndGroup = () => {
 	}
 	// sort array
 	countPerNameArray.sort((count1, count2) => count2.totalCount - count1.totalCount);
-	// names
-	let nameLabels = [];
-	for (let countForName of countPerNameArray) {
-		nameLabels.push(countForName.name);
-	}
 	// countLevels
 	let countLevels = [];
 	for (let countForName of countPerNameArray) {
@@ -258,7 +242,6 @@ const countByPersonAndGroup = () => {
 	}
 	return {
 		countPerName: countPerNameArray,
-		names: nameLabels,
 		groups: groupLabels,
 		countLevels: countLevels
 	};
