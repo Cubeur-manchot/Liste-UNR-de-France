@@ -9,3 +9,6 @@ const getBubbleChartUpperBound = () => { // returns a date with format dd/MM/YYY
 	return `${year}-${month < 9 ? "0" : ""}${month + 1}-${day < 10 ? "0" : ""}${day}`;
 };
 
+const formatDateFromHyphensToSlashes = hyphenDate => { // converts date with format YYYY-MM-dd to format dd/MM/YYYY
+	return `${hyphenDate.substr(8, 2)}/${hyphenDate.substr(5, 2)}/${hyphenDate.substr(0, 4)}`;
+};
