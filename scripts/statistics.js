@@ -186,9 +186,7 @@ const buildTimeline = () => {
 				tooltip: {
 					callbacks: {
 						title: tooltipContext => formatDateFromHyphensToSlashes(tooltipContext[0].element.$context.raw.x),
-						label: tooltipContext => {
-							return tooltipContext.element.$context.raw.tooltipLabel;
-						}
+						label: tooltipContext => tooltipContext.element.$context.raw.tooltipLabel
 					}
 				}
 			}
