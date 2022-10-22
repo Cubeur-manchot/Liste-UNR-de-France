@@ -250,12 +250,3 @@ const countByPersonAndGroup = () => {
 const show = buttonId => { // show the div corresponding to the clicked button and hide the other ones
 	document.querySelector("section#statistics ul").setAttribute("data-selected", buttonId.replace(/Button$/, ""));
 };
-
-const getBubbleChartUpperBound = () => { // returns a date with format dd/MM/YYYY
-	let currentLocalDate = new Date();
-	currentLocalDate.setDate(currentLocalDate.getDate() + 14); // move 14 days to the future to avoid bubbles to overflow at the side of the chart
-	let day = currentLocalDate.getDate();
-	let month = currentLocalDate.getMonth();
-	let year = currentLocalDate.getFullYear();
-	return `${year}-${month < 9 ? "0" : ""}${month + 1}-${day < 10 ? "0" : ""}${day}`;
-};
