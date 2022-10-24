@@ -48,7 +48,8 @@ const buildCountByPersonSplitByGroupBarChart = (countPerName, groups) => {
 					callbacks: {
 						title: tooltipContexts => tooltipContexts[0].label,
 						label: tooltipContext => tooltipContext.raw ? `${tooltipContext.dataset.label} : ${tooltipContext.raw}` : null
-					}
+					},
+					itemSort: (firstTooltipContext, secondTooltipContext) => secondTooltipContext.datasetIndex - firstTooltipContext.datasetIndex
 				}
 			}
 		}
@@ -96,7 +97,8 @@ const buildCountByGroupSplitByPersonBarChart = (countPerName, groups, colorGradi
 					callbacks: {
 						title: tooltipContexts => tooltipContexts[0].label,
 						label: tooltipContext => tooltipContext.raw ? `${tooltipContext.dataset.label} : ${tooltipContext.raw}` : null
-					}
+					},
+					itemSort: (firstTooltipContext, secondTooltipContext) => secondTooltipContext.datasetIndex - firstTooltipContext.datasetIndex
 				}
 			}
 		}
