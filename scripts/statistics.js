@@ -20,8 +20,7 @@ const buildCountByPersonSplitByGroupBarChart = (countPerName, groups) => {
 		datasets.push({
 			label: groups[groupIndex],
 			data: data,
-			backgroundColor: colorScheme[groupIndex],
-			stack: "allSameStack"
+			backgroundColor: colorScheme[groupIndex]
 		});
 	}
 	new Chart(canvas, {
@@ -58,8 +57,7 @@ const buildCountByGroupSplitByPersonBarChart = (countPerName, groups, colorGradi
 		datasets.push({
 			label: countForName.name,
 			data: groups.map(group => countForName.countPerGroup[group] ?? 0),
-			backgroundColor: colorGradient[countGroupIndex],
-			stack: "allSameStack"
+			backgroundColor: colorGradient[countGroupIndex]
 		});
 	}
 	new Chart(canvas, {
