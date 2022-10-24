@@ -39,6 +39,17 @@ const buildCountByPersonSplitByGroupBarChart = (countPerName, groups) => {
 				y: {
 					stacked: true
 				}
+			},
+			interaction: {
+				mode: "index"
+			},
+			plugins: {
+				tooltip: {
+					callbacks: {
+						title: tooltipContexts => tooltipContexts[0].label,
+						label: tooltipContext => tooltipContext.raw ? `${tooltipContext.dataset.label} : ${tooltipContext.raw}` : null
+					}
+				}
 			}
 		}
 	});
@@ -75,6 +86,17 @@ const buildCountByGroupSplitByPersonBarChart = (countPerName, groups, colorGradi
 				},
 				y: {
 					stacked: true
+				}
+			},
+			interaction: {
+				mode: "index"
+			},
+			plugins: {
+				tooltip: {
+					callbacks: {
+						title: tooltipContexts => tooltipContexts[0].label,
+						label: tooltipContext => tooltipContext.raw ? `${tooltipContext.dataset.label} : ${tooltipContext.raw}` : null
+					}
 				}
 			}
 		}
