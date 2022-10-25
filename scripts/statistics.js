@@ -45,6 +45,7 @@ const buildCountByPersonSplitByGroupBarChart = (countPerName, groups) => {
 			},
 			plugins: {
 				tooltip: {
+					position: "stackedBarCenteredPosition",
 					callbacks: {
 						title: tooltipContexts => tooltipContexts[0].label,
 						label: tooltipContext => tooltipContext.raw ? `${tooltipContext.dataset.label} : ${tooltipContext.raw}` : null
@@ -94,6 +95,7 @@ const buildCountByGroupSplitByPersonBarChart = (countPerName, groups, colorGradi
 			},
 			plugins: {
 				tooltip: {
+					position: "stackedBarCenteredPosition",
 					callbacks: {
 						title: tooltipContexts => tooltipContexts[0].label,
 						label: tooltipContext => tooltipContext.raw ? `${tooltipContext.dataset.label} : ${tooltipContext.raw}` : null
@@ -266,6 +268,14 @@ const countByPersonAndGroup = () => {
 		groups: groupLabels,
 		countLevels: countLevels
 	};
+};
+
+Chart.Tooltip.positioners.stackedBarCenteredPosition = function(items) { // Custom tooltip positioner
+	return items.length ? {
+		x: items[0].element.x,
+		y: items[items.length - 1].element.y // take y of top item
+			+ items.map(item => item.element.height).reduce((sum, height) => sum + height) / 2 // move down of half of the stack height
+	} : false; // when no item in the tooltip, don't position the tooltip
 };
 
 const show = buttonId => { // show the div corresponding to the clicked button and hide the other ones
