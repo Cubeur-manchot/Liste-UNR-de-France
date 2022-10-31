@@ -1,0 +1,115 @@
+/* Modal structure */
+
+div#modalBackdrop {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.5;
+}
+
+div.modal {
+	display: none;
+	position: fixed;
+	z-index: 2;
+	top: 5%;
+	left: 20%;
+	height: 80%;
+	width: 60%;
+	background-color: white;
+	border: 1px solid rgba(0, 0, 0, 0.6);
+	border-radius: 0.5rem;
+}
+
+div.modal-header, div.modal-body, div.modal-footer {
+	padding: 1rem;
+}
+
+button.modal-closeButton {
+	cursor: pointer;
+}
+
+/* Modal header */
+
+div.modal-header {
+	min-height: 5%;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	display: flex;
+	justify-content: space-between;
+	padding-right: 0.5rem;
+	font-size: 1.25rem;
+}
+
+div.modal-header label.modal-title {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+div.modal-header button.modal-closeButton {
+	display: inline-block;
+	height: 2rem;
+	width: 2rem;
+	padding: 1rem;
+	vertical-align: middle;
+	background: transparent url("../images/buttons/closeButton.svg") center/1em auto no-repeat;
+	border: none;
+	opacity: 0.5;
+}
+
+div.modal-header button.modal-closeButton:hover {
+	opacity: 0.75;
+}
+
+/* Modal body */
+
+.modal-body {
+	overflow-y: auto;
+	height: calc(
+		100% /* total modal height */
+		- 4rem /* modal-header height */
+		- 1px /* modal-header border-bottom */
+		- 2rem /* modal-body padding */
+		- 1px /* modal-footer border-top */
+		- 4.2rem /* modal-footer height */
+		- 2px /* unexplained close-button extra height to font-size */
+	);
+}
+
+/* Modal footer */
+
+div.modal-footer {
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+	text-align: right;
+}
+
+div.modal-footer button.modal-closeButton {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	opacity: 0.9;
+	padding: 0.7rem;
+	font-size: 0.8rem;
+	border-radius: 0.4rem;
+	border: none;
+}
+
+div.modal-footer button.modal-closeButton:hover {
+	opacity: 1;
+}
+
+/* Activation of the modal mode */
+
+body[data-modalMode=true] {
+	overflow: hidden;
+}
+
+body[data-modalMode=true] div#recordDetailsModal {
+	display: block;
+}
+
+body[data-modalMode=true] div#modalBackdrop {
+	display: block;
+}
