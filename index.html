@@ -26,8 +26,9 @@
 		<script type="text/javascript" src="./scripts/translator.js"></script>
 		<script type="text/javascript" src="./scripts/color.js"></script>
 		<script type="text/javascript" src="./scripts/statistics.js"></script>
+		<script type="text/javascript" src="./scripts/bodyOnload.js"></script>
 	</head>
-	<body onload="buildRecords(); fillStandardText('fr'); checkRefactorMessageVisibility(); buildStatistics();">
+	<body onload="bodyOnload();" data-modalMode="false">
 		<section id="header">
 			<div id="toggleLanguageButton" onclick="toggleLanguage();">
 				<img src="./images/flags/flagFR.png" id="frontFlag" class="flag" alt="[FRA]" data-language="fr"/>
