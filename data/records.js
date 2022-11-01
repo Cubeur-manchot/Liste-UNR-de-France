@@ -198,12 +198,12 @@ const records = {
 		avg100: {name: "Wilfrid Py", time: "45.30", date: "2020-02-18", links: ["https://discordapp.com/channels/329175643877015553/344073328744464384/679390729260367893"]}
 	},
 	"Mastermorphix": {
-		single: {name: "Maxime Dotto", time: "21.21", date: "2022-07-28", scramble: "B U2 L2 U2 F L2 U2 F L2 U2 R B2 F' D2 R U' R2 U2 B' U2", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1001974528022429889"]},
+		single: {name: "Maxime Dotto", time: "21.19", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"]},
 		mo3: {name: "Maxime Dotto", time: "25.59", date: "2022-09-13", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1019207803321208882"]},
 		avg5: {name: "Maxime Dotto", time: "26.62", date: "2022-09-27", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"]},
 		avg12: {name: "Maxime Dotto", time: "28.51", date: "2022-09-27", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"]},
-		avg50: {name: "Maxime Dotto", time: "30.30", date: "2022-09-27", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"]},
-		avg100: {name: "Maxime Dotto", time: "30.94", date: "2022-09-27", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"]}
+		avg50: {name: "Maxime Dotto", time: "29.83", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"]},
+		avg100: {name: "Maxime Dotto", time: "30.62", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"]}
 	},
 	"Megamorphix": {
 		single: {name: "Maxime Dotto", time: "1:48.73", date: "2022-10-21", scramble: "L2 F2 U2 R U2 L2 D2 R' U2 D2 L' F U2 L2 B D2 R2 L U B2 Fw2 L Fw2 B' Rw2 Uw2 F' Uw2 F2 B' U2 Fw2 Uw B2 F U2 F' L' Fw D L2 U' Fw Rw' R2", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1032948962207993866", "https://www.youtube.com/watch?v=JRu3AWbks8s"]},
