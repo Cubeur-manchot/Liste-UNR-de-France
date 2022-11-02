@@ -50,7 +50,7 @@ const records = {
 		single: {name: "Alix Jack", time: "6.11", date: "2022-09-04", scramble: "L2 U' R2 U L2 D F2 D' L2 B2 D L' D' L2 R' D F R2 U2 L2 F2", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016032613380653096"]},
 		mo3: {name: "Alix Jack", time: "8.35", date: "2022-10-23", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1033847004230590575"]},
 		avg5: {name: "Alix Jack", time: "8.24", date: "2022-10-23", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1033847172489302068"]},
-		avg12: {name: "Charles Daloz-Baltenberger", time: "10.21", date: "2022-10-21", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1032970883217764372"]},
+		avg12: {name: "Charles Daloz-Baltenberger", time: "9.75", date: "2022-10-21", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1033064765095952524"]},
 		avg50: {name: "Alix Jack", time: "11.01", date: "2022-09-04", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016101293061832774"]},
 		avg100: {name: "Alix Jack", time: "11.18", date: "2022-09-04", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016101363706511370"]}
 	},
