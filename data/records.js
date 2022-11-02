@@ -48,9 +48,9 @@ const records = {
 	},
 	"3x3x3 Virtual cube": {
 		single: {name: "Alix Jack", time: "6.11", date: "2022-09-04", scramble: "L2 U' R2 U L2 D F2 D' L2 B2 D L' D' L2 R' D F R2 U2 L2 F2", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016032613380653096"]},
-		mo3: {name: "Charles Daloz-Baltenberger", time: "8.40", date: "2022-10-05", timeList: ["7.77", "10.42", "7.00"], links: ["https://discord.com/channels/329175643877015553/344073328744464384/1027156029919744023"]},
-		avg5: {name: "Alix Jack", time: "8.98", date: "2022-09-04", timeList: ["9.03", "9.28", "10.43", "7.91", "8.63"], scrambleList: ["U' R2 U2 L2 F L2 B2 F U2 F' L2 D R2 F' L' F' D B R U'", "R F2 D2 U2 L' B2 R2 F2 U2 R2 D2 F' R2 D' L2 D' R B' L' U F'", "D F' L2 F' R' F R B2 D F' R2 U2 D2 B' D2 F' U2 L2 F2 R2", "L' F' L B2 L2 F2 D2 R' F2 R2 B2 L U2 R' B L' B D' B L F", "F' D2 R2 U2 L2 B2 R2 F' L2 F' D2 B2 L F R B2 D L' B L F"], links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016033542700027965"]},
-		avg12: {name: "Alix Jack", time: "10.30", date: "2022-09-04", timeList: ["9.85", "8.44", "12.30", "13.00", "9.38", "12.83", "7.87", "8.25", "12.23", "9.52", "11.96", "8.28"], scrambleList: ["F' D' R2 L B R2 D2 B R F' U2 F' D2 R2 F2 R2 B' U2 R2 F", "F L2 F L2 R2 F2 U2 B U2 F L2 F U L' R F R2 U' R2 F' D'", "R F' L' B2 R2 B2 F2 U2 B2 R B2 R2 D' U2 F U B F L'", "B' L' F D2 B' R2 D2 L2 D2 B' R2 B R2 F' D' R' F U R' B2 R", "D2 L2 F2 R U2 R D2 F2 R D2 B' D' R' D F' U' F R2 B2", "F2 D2 L D2 R' D2 F2 R' F2 L U2 R' B' D R D2 L2 B' F' L' F'", "D F' L' R2 B2 D' F2 D L2 U2 L2 D F2 U L' F U B2 L2 F U'", "U2 L' B2 R B2 R' U2 L' F2 U2 R' D B L2 F' U' L2 U2 F' L'", "R2 F D2 B D2 L2 F2 U2 B L2 R2 F2 L' B L' U L' B' D2 R F2", "D' L2 F2 U R2 B2 D' F2 R2 D' R' B L D' L' D' F' D' F2 R", "D2 U2 R2 F2 D2 B' L2 B' U2 L2 F' U' F2 R' B' R' B2 F D2 L2", "U' F2 U2 R' F D2 R F' R2 F2 B2 D' F2 U2 D' R2 U' B2 D' R2"], links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016101138707259503"]},
+		mo3: {name: "Alix Jack", time: "8.35", date: "2022-10-23", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1033847004230590575"]},
+		avg5: {name: "Alix Jack", time: "8.24", date: "2022-10-23", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1033847172489302068"]},
+		avg12: {name: "Charles Daloz-Baltenberger", time: "10.21", date: "2022-10-21", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1032970883217764372"]},
 		avg50: {name: "Alix Jack", time: "11.01", date: "2022-09-04", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016101293061832774"]},
 		avg100: {name: "Alix Jack", time: "11.18", date: "2022-09-04", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016101363706511370"]}
 	},
@@ -206,7 +206,7 @@ const records = {
 		avg100: {name: "Maxime Dotto", time: "30.62", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"]}
 	},
 	"Megamorphix": {
-		single: {name: "Maxime Dotto", time: "1:44.90", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320", "https://youtube.com/watch?v=4mdgtR5ljI8"]},
+		single: {name: "Maxime Dotto", time: "1:44.90", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320", "https://youtube.com/watch?v=4mdgtR5ljI8"], youtubeVideoId: "4mdgtR5ljI8"},
 		mo3: {name: "Maxime Dotto", time: "1:57.28", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"]},
 		avg5: {name: "Maxime Dotto", time: "2:02.76", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"]},
 		avg12: {name: "Maxime Dotto", time: "2:04.60", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"]},
