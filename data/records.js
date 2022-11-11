@@ -10,10 +10,11 @@ const records = {
 		avg100: {name: "Axel Brisse", time: "4:31.86", date: "2022-11-05", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1038514618055786496"]}
 	},
 	"9x9x9": {
-		single: {name: "Matthieu Aubert", time: "6:57.77", date: "2022-04-26", links: ["https://discord.com/channels/329175643877015553/330974462239309824/968470449434538026"]},
-		mo3: {name: "Matthieu Aubert", time: "7:14.14", date: "2022-04-26", timeList: ["7:20.64", "7:20.97", "7:00.80"], links: ["https://discord.com/channels/329175643877015553/330974462239309824/968470449434538026"]},
-		avg5: {name: "Matthieu Aubert", time: "7:14.14", date: "2022-04-26", timeList: ["6:57.77", "7:24.33", "7:20.64", "7:20.97", "7:00.80"], links: ["https://discord.com/channels/329175643877015553/330974462239309824/968470449434538026"]},
-		avg12: {name: "Matthieu Aubert", time: "7:32.74", date: "2022-03-19", timeList: ["7:48.98", "7:29.35", "7:32.45", "7:10.75", "7:40.87", "8:11.24", "7:17.98", "7:37.33", "7:25.85", "7:30.90", "7:27.02", "7:36.68"], links: ["https://discord.com/channels/329175643877015553/330974462239309824/954785965300391946"]}
+		single: {name: "Axel Brisse", time: "6:04.55", date: "2022-11-05", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1038514618055786496"]},
+		mo3: {name: "Axel Brisse", time: "6:20.82", date: "2022-11-05", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1038514618055786496"]},
+		avg5: {name: "Axel Brisse", time: "6:31.31", date: "2022-11-05", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1038514618055786496"]},
+		avg12: {name: "Axel Brisse", time: "6:35.55", date: "2022-11-05", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1038514618055786496"]},
+		avg50: {name: "Axel Brisse", time: "6:44.04", date: "2022-11-05", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1038514618055786496"]}
 	},
 	"10x10x10": {
 		single: {name: "Matthieu Aubert", time: "14:25.19", date: "2020-05-29", links: ["https://discordapp.com/channels/329175643877015553/330974462239309824/715945183329517649"]},
