@@ -78,9 +78,9 @@ const records = {
 		avg12: {name: "Matthieu Aubert", time: "3:49.93", date: "2020-08-02", links: ["https://discord.com/channels/329175643877015553/344073328744464384/739281133941948526"]}
 	},
 	"Gigaminx": {
-		single: {name: "Matthieu Aubert", time: "6:02.75", date: "2020-08-09", links: ["https://discord.com/channels/329175643877015553/344073328744464384/742062237086253096"]},
+		single: {name: "Axel Brisse", time: "5:59.78", date: "2022-11-06", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1038770209340796940"]},
 		mo3: {name: "Matthieu Aubert", time: "6:14.75", date: "2020-08-09", links: ["https://discord.com/channels/329175643877015553/344073328744464384/742062237086253096"]},
-		avg5: {name: "Matthieu Aubert", time: "6:25.15", date: "2020-08-09", links: ["https://discord.com/channels/329175643877015553/344073328744464384/742062237086253096"]},
+		avg5: {name: "Axel Brisse", time: "6:12.10", date: "2022-11-06"},
 		avg12: {name: "Matthieu Aubert", time: "6:27.80", date: "2020-08-09", links: ["https://discord.com/channels/329175643877015553/344073328744464384/742062237086253096"]}
 	},
 	"3x3x3 Blindfolded": {
