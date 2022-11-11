@@ -4,7 +4,10 @@ const records = {
 	"8x8x8": {
 		single: {name: "Axel Brisse", time: "3:56.35", date: "2021-12-19", links: ["https://discordapp.com/channels/329175643877015553/330974462239309824/922152458527060028"]},
 		mo3: {name: "Axel Brisse", time: "4:11.66", date: "2021-12-18", timeList: ["4:16.16", "4:06.95", "4:11.88"], links: ["https://discordapp.com/channels/329175643877015553/330974462239309824/921752347946913802"]},
-		avg100: {name: "Axel Brisse", time: "4:39.94", date: "2021-12-06", links: ["https://discordapp.com/channels/329175643877015553/330974462239309824/917210531742486608"]}
+		avg5: {name: "Axel Brisse", time: "4:13.53", date: "2022-11-05", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1038514618055786496"]},
+		avg12: {name: "Axel Brisse", time: "4:20.47", date: "2022-11-05", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1038514618055786496"]},
+		avg50: {name: "Axel Brisse", time: "4:27.16", date: "2022-11-05", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1038514618055786496"]},
+		avg100: {name: "Axel Brisse", time: "4:31.86", date: "2022-11-05", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1038514618055786496"]}
 	},
 	"9x9x9": {
 		single: {name: "Matthieu Aubert", time: "6:57.77", date: "2022-04-26", links: ["https://discord.com/channels/329175643877015553/330974462239309824/968470449434538026"]},
