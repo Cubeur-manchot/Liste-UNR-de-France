@@ -37,7 +37,7 @@ const records = {
 		avg12: {name: "Matthieu Aubert", time: "20:34.05", date: "2022-05-28", timeList: "21:08.08, 19:49.21, 20:10.92, 20:13.96, 21:02.30, 19:50.02, (19:46.86), 21:09.20, 20:19.73, (21:46.09), 20:33.37, 21:23.75", links: ["https://discord.com/channels/329175643877015553/330974462239309824/980137924177850410"]}
 	},
 	"13x13x13": {
-		single: {name: "Paul Ducruet", time: "27:26.84", date: "2022-10-24", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1034094729245237348"]},
+		single: {name: "Paul Ducruet", time: "27:06.84", date: "2022-10-24", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1034094729245237348"]},
 		mo3: {name: "Paul Ducruet", time: "29:50.62", date: "2022-08-31", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1014525776714023046"]},
 		avg5: {name: "Paul Ducruet", time: "30:00.34", date: "2022-10-24", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1034094729245237348"]},
 		avg12: {name: "Paul Ducruet", time: "31:11.89", date: "2022-08-31", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1014525776714023046"]}
