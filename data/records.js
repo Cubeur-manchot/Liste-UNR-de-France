@@ -26,9 +26,9 @@ const records = {
 		single: {name: "Matthieu Aubert", time: "14:17.32", date: "2022-09-15", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1019927743237988362"]},
 		mo3: {name: "Matthieu Aubert", time: "14:52.27", date: "2022-08-18", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1009888484506472469"]},
 		avg5: {name: "Matthieu Aubert", time: "15:01.18", date: "2022-08-18", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1009888484506472469"]},
-		avg12: {name: "Matthieu Aubert", time: "15:18.15", date: "2022-09-20", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1021748016249589772"]},
-		avg50: {name: "Matthieu Aubert", time: "15:34.32", date: "2022-10-27", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1035150159308406825"]},
-		avg100: {name: "Matthieu Aubert", time: "15:39.81", date: "2022-10-27", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1035150159308406825"]}
+		avg12: {name: "Matthieu Aubert", time: "15:12.67", date: "2022-11-13", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1041142647475142696"]},
+		avg50: {name: "Matthieu Aubert", time: "15:33.38", date: "2022-11-13", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1041143305708249149"]},
+		avg100: {name: "Matthieu Aubert", time: "15:37.33", date: "2022-11-13", links: ["https://discord.com/channels/329175643877015553/330974462239309824/1041143305708249149"]}
 	},
 	"12x12x12": {
 		single: {name: "Matthieu Aubert", time: "19:17.20", date: "2022-06-30", links: ["https://discord.com/channels/329175643877015553/330974462239309824/992015504405450814"]},
