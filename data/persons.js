@@ -2,7 +2,7 @@
 
 const persons = {
 	"Alix Jack": {wcaId: "2016JACK05", youtubeChannel: "AlixJack"},
-	"Arthur Garcin": {wcaId: "2016JACK05", youtubeChannel: "UC_3y32gRPV8mvMih-SehzUQ"},
+	"Arthur Garcin": {wcaId: "2014GARC27", youtubeChannel: "UC_3y32gRPV8mvMih-SehzUQ"},
 	"Axel Brisse": {wcaId: "2016BRIS01", pbSheet: "https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing", youtubeChannel: "UCywzNEGJvQ6fHn6863oGfhg"},
 	"Charles Daloz-Baltenberger": {wcaId: "2018DALO01", pbSheet: "https://docs.google.com/spreadsheets/d/1cpiEQtcvm8o8hDIGwIK_HWygD1mX664OH2ClzRwELWE/edit?usp=drivesdk"},
 	"Clément Cherblanc": {wcaId: "2014CHER05", youtubeChannel: "ClémentCherblanc"},
