@@ -31,6 +31,7 @@ const buildRecords = () => {
 					td.appendChild(createHtmlTag("div", {class: "time", textContent: eventRecords[avgType].time}));
 					td.appendChild(createHtmlTag("div", {class: "name",
 						textContent: eventRecords[avgType].name ?? eventRecords[avgType].names.join(" + ")}));
+					td.onclick = () => recordDetailsModal(eventName, avgType);
 					tr.appendChild(td);
 				} else {
 					tr.appendChild(createHtmlTag("td", {textContent: "x"}));

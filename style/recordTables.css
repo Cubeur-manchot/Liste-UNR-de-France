@@ -28,6 +28,11 @@ section#records th {
 	border-bottom: 1px solid rgb(150, 150, 150);
 }
 
+section#records td.single, section#records td.mo3, section#records td.avg5,
+section#records td.avg12, section#records td.avg50, section#records td.avg100 {
+	cursor: pointer;
+}
+
 /* Table rows */
 
 section#records tbody tr:nth-child(even) {

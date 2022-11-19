@@ -65,7 +65,7 @@ const records = {
 	},
 	"Kilominx": {
 		single: {name: "Théo Paris", time: "11.29", date: "2018-02-17"},
-		mo3: {name: "Théo Paris", time: "15.02", date: "2018-02-17", links: ["https://forum.francocube.com/viewtopic.php?p=272754#p272739"]},
+		mo3: {name: "Théo Paris", time: "15.02", date: "2018-02-17", francocubePostId: "272739"},
 		avg5: {name: "Théo Paris", time: "15.26", date: "2018-02-17"},
 		avg12: {name: "Théo Paris", time: "15.93", date: "2018-02-17"},
 		avg50: {name: "Théo Paris", time: "17.31", date: "2018-02-17"},
@@ -88,7 +88,7 @@ const records = {
 		mo3: {name: "Arthur Garcin", time: "18.69", date: "2020-11-24", links: ["https://discord.com/channels/329175643877015553/353504450867888128/781231504562192394"]},
 		avg5: {name: "Arthur Garcin", time: "20.04", date: "2020-11-24", links: ["https://discord.com/channels/329175643877015553/353504450867888128/781231504562192394"]},
 		avg12: {name: "Arthur Garcin", time: "22.77", date: "2020-11-24", links: ["https://discord.com/channels/329175643877015553/353504450867888128/781231504562192394"]},
-		avg50: {name: "Arthur Garcin", time: "37.54", date: "2018-02-08", links: ["https://forum.francocube.com/viewtopic.php?p=272754#p272754"]},
+		avg50: {name: "Arthur Garcin", time: "37.54", date: "2018-02-08", francocubePostId: "272754"},
 		avg100: {name: "William Phommaha", time: "57.86", date: "2020-06-21", links: ["https://discordapp.com/channels/329175643877015553/353504450867888128/724249018137575505"]}
 	},
 	"4x4x4 Blindfolded": {
@@ -111,7 +111,7 @@ const records = {
 		single: {name: "William Phommaha", time: "31:00.08", date: "2019-05-03", memoTime: "14:17.81"}
 	},
 	"8x8x8 Blindfolded": {
-		single: {name: "Wilfrid Py", time: "5:15:30.00", date: "2018-09-21", memoTime: "2:37:20.00", links: ["https://www.youtube.com/watch?v=rYMUp5gfbZ4"]}
+		single: {name: "Wilfrid Py", time: "5:15:30.00", date: "2018-09-21", memoTime: "2:37:20.00", youtubeVideoId: "rYMUp5gfbZ4"}
 	},
 	"9x9x9 Blindfolded": {
 		single: {name: "Matteo Chancerel", time: "2:41:00.00", date: "2019-07-15", memoTime: "1:24:00.00", links: ["https://youtu.be/IBJ4KsB8gqY"]}
@@ -144,13 +144,13 @@ const records = {
 		single: {name: "William Phommaha", time: "34:13.57", date: "2020-01-16", links: ["https://discordapp.com/channels/329175643877015553/344073328744464384/667414979116531732"]}
 	},
 	"Mini-Guilford Solo": {
-		single: {name: "Lucas Déglise", time: "3:41.92", date: "2019-12-18", links: ["https://www.youtube.com/watch?v=o_Ul_unOUU8"]}
+		single: {name: "Lucas Déglise", time: "3:41.92", date: "2019-12-18", youtubeVideoId: "o_Ul_unOUU8"}
 	},
 	"Mini-Guilford Duo": {
-		single: {names: ["Clément Cherblanc", "Lucas Déglise"], time: "1:52.53", date: "2019-05-06", links: ["https://www.youtube.com/watch?v=7jgfZIpjr3A"]},
-		mo3: {names: ["Louis Fertier", "Victor Wijsman"], time: "2:23.63", date: "2017-10-26", links: ["https://forum.francocube.com/viewtopic.php?p=271420#p271420"]},
-		avg5: {names: ["Louis Fertier", "Victor Wijsman"], time: "2:25.69", date: "2017-10-26", links: ["https://forum.francocube.com/viewtopic.php?p=271420#p271420"]},
-		avg12: {names: ["Louis Fertier", "Victor Wijsman"], time: "2:28.24", date: "2017-10-26", links: ["https://forum.francocube.com/viewtopic.php?p=271420#p271420"]}
+		single: {names: ["Clément Cherblanc", "Lucas Déglise"], time: "1:52.53", date: "2019-05-06", youtubeVideoId: "7jgfZIpjr3A"},
+		mo3: {names: ["Louis Fertier", "Victor Wijsman"], time: "2:23.63", date: "2017-10-26", francocubePostId: "271420"},
+		avg5: {names: ["Louis Fertier", "Victor Wijsman"], time: "2:25.69", date: "2017-10-26", francocubePostId: "271420"},
+		avg12: {names: ["Louis Fertier", "Victor Wijsman"], time: "2:28.24", date: "2017-10-26", francocubePostId: "271420"}
 	},
 	"Team Blind": {
 		single: {names: ["Axel Brisse", "Wilfrid Py"], time: "11.79", date: "2021-08-25", scramble: "B F2 U2 L2 F2 R2 B2 F R D' B L2 U R' B D2 R2 D2 U", links: ["https://discord.com/channels/329175643877015553/344073328744464384/880048593879302214"]},
@@ -180,7 +180,7 @@ const records = {
 		avg100: {name: "Axel Brisse", time: "23.39", date: "2021-09-06", links: ["https://discordapp.com/channels/329175643877015553/344073328744464384/884382012956352552"]}
 	},
 	"Inequilateral": {
-		single: {name: "Wilfrid Py", time: "23.76", date: "2017-04-08", links: ["https://forum.francocube.com/viewtopic.php?p: 265434#p265434"]},
+		single: {name: "Wilfrid Py", time: "23.76", date: "2017-04-08", francocubePostId: "265434"},
 		mo3: {name: "Wilfrid Py", time: "32.46", date: "2020-02-12", links: ["https://discordapp.com/channels/329175643877015553/344073328744464384/677161207341514792"]},
 		avg5: {name: "Wilfrid Py", time: "32.89", date: "2020-02-12", links: ["https://discordapp.com/channels/329175643877015553/344073328744464384/677161207341514792"]},
 		avg12: {name: "Wilfrid Py", time: "35.90", date: "2020-02-12", links: ["https://discordapp.com/channels/329175643877015553/344073328744464384/677161207341514792"]},
@@ -210,7 +210,7 @@ const records = {
 		avg100: {name: "Maxime Dotto", time: "30.62", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"]}
 	},
 	"Megamorphix": {
-		single: {name: "Maxime Dotto", time: "1:44.90", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320", "https://youtube.com/watch?v=4mdgtR5ljI8"], youtubeVideoId: "4mdgtR5ljI8"},
+		single: {name: "Maxime Dotto", time: "1:44.90", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"], youtubeVideoId: "4mdgtR5ljI8"},
 		mo3: {name: "Maxime Dotto", time: "1:57.28", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"]},
 		avg5: {name: "Maxime Dotto", time: "2:02.76", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"]},
 		avg12: {name: "Maxime Dotto", time: "2:04.60", date: "2022-10-30", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"]},

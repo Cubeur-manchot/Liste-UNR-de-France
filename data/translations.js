@@ -31,5 +31,8 @@ const standardTranslations = {
 		fr: "il a été décidé, à l'unanimité par les membres du conseil gérant cette liste, que les épreuves officielles WCA (à l'exception des épreuves de blind) sont désormais retirées de cette liste, au moins pour une période de test de 6 mois."
 	},
 	"div#recordDetailsModal div.modal-header label.modal-title": {en: "Record details", fr: "Détails du record"},
-	"div#recordDetailsModal div.modal-footer button.modal-closeButton": {en: "Close", "fr": "Fermer"}
+	"div#recordDetailsModal div.modal-footer button.modal-closeButton": {en: "Close", "fr": "Fermer"},
+	"div#recordDetailsModal div#recordTime label#recordTimeLabel": {en: "Time :", fr: "Temps :"},
+	"div#recordDetailsModal h2#personsInfoTitle": {en: "Established by :", fr: "Établi par :"},
+	"div#recordDetailsModal h2#recordPostsTitle": {en: "Posted on :", fr: "Posté sur :"}
 };

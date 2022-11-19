@@ -38,3 +38,5 @@ const pagePlans = {
 		}
 	]
 };
+
+const groupLabels = pagePlans.noWca.map(group => group.en);

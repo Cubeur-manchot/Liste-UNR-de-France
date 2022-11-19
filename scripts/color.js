@@ -9,7 +9,8 @@ const colorScheme = [
 	"#9966ff"
 ];
 
-const buildColorGradient = gradientLength => {
+const buildColorGradient = countPerName => {
+	let gradientLength = [...new Set(countPerName.map(countForName => countForName.rank))].length;
 	let colorGradientProportions = [];
 	for (let colorIndex in colorScheme) {
 		colorGradientProportions[colorIndex] = colorIndex / (colorScheme.length - 1);

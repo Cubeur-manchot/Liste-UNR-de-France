@@ -1,10 +1,9 @@
 "use strict";
 
 const buildStatistics = () => {
-	let {countPerName, groups, countLevels} = countByPersonAndGroup();
-	let colorGradient = buildColorGradient(countLevels.length);
-	buildCountByPersonSplitByGroupBarChart(countPerName, groups);
-	buildCountByGroupSplitByPersonBarChart(countPerName, groups, colorGradient);
+	let colorGradient = buildColorGradient(countPerName);
+	buildCountByPersonSplitByGroupBarChart(countPerName, groupLabels);
+	buildCountByGroupSplitByPersonBarChart(countPerName, groupLabels, colorGradient);
 	buildDoughnutChart(countPerName, colorGradient);
 	buildTimeline();
 };
@@ -220,10 +219,8 @@ const buildTimeline = () => {
 
 const countByPersonAndGroup = () => {
 	let countPerName = {};
-	let groupLabels = [];
 	// build count object
 	for (let group of pagePlans.noWca) {
-		groupLabels.push(group.en);
 		for (let eventName of group.events) {
 			for (let avgType in records[eventName]) {
 				let record = records[eventName][avgType];
@@ -256,19 +253,17 @@ const countByPersonAndGroup = () => {
 	}
 	// sort array
 	countPerNameArray.sort((count1, count2) => count2.totalCount - count1.totalCount);
-	// countLevels
-	let countLevels = [];
-	for (let countForName of countPerNameArray) {
-		if (!countLevels.includes(countForName.totalCount)) {
-			countLevels.push(countForName.totalCount)
-		}
+	// rank
+	for (let countForNameIndex = 0; countForNameIndex < countPerNameArray.length; countForNameIndex++) {
+		countPerNameArray[countForNameIndex].rank = 
+			(countPerNameArray[countForNameIndex].totalCount === countPerNameArray[countForNameIndex - 1]?.totalCount)
+				? countPerNameArray[countForNameIndex - 1].rank
+				: countForNameIndex + 1;
 	}
-	return {
-		countPerName: countPerNameArray,
-		groups: groupLabels,
-		countLevels: countLevels
-	};
+	return countPerNameArray;
 };
+
+const countPerName = countByPersonAndGroup();
 
 Chart.Tooltip.positioners.stackedBarCenteredPosition = function(items) { // Custom tooltip positioner
 	return items.length ? {
