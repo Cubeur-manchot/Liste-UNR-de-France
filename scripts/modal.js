@@ -67,12 +67,12 @@ const buildRecordDetailsModal = record => {
 		}
 		personPbSheetLinkTag.appendChild(personPbSheetLabelTag);
 		personInfoTag.appendChild(personPbSheetLinkTag);
-		// Youtube channel // todo fix replace id with full url
+		// Youtube channel
 		let personYoutubeChannelLinkTag = createHtmlTag("a", {class: "personYoutubeChannelLink infoLink personInfoItem"});
 		personYoutubeChannelLinkTag.appendChild(createHtmlTag("img", {src: "./images/icons/youtubeIcon.svg", class: "icon"}));
 		let personYoutubeChannelLabelTag = createHtmlTag("label", {class: "linkLabel"});
 		if (persons[name].youtubeChannel) {
-			personYoutubeChannelLinkTag.href = `https://www.youtube.com/user/${persons[name].youtubeChannel}`;
+			personYoutubeChannelLinkTag.href = persons[name].youtubeChannel;
 			personYoutubeChannelLinkTag.target = "_blank";
 			personYoutubeChannelLabelTag.textContent = "Youtube channel";
 		} else {
