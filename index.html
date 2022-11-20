@@ -78,12 +78,15 @@
 				</div>
 			</div>
         </section>
-		<div id="recordDetailsModal" class="modal">
-			<div class="modal-header">
-				<label class="modal-title"></label>
-				<button type="button" class="modal-closeButton" onclick="hideRecordDetailsModal();"></button>
+		<div id="recordDetailsModal">
+			<div id="modal-header">
+				<div id="modal-title">
+					<label id="modal-title-begin"></label>
+					<label id="modal-title-end"></label>
+				</div>
+				<button type="button" class="modal-closeButton" onclick="closeRecordDetailsModal();"></button>
 			</div>
-			<div class="modal-body">
+			<div id="modal-body">
 				<div class="col-2">
 					<div id="recordDetails">
 						<h2 id="recordDetailsTitle" class="modal-section-title">Record :</h2>
@@ -124,10 +127,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="modal-footer">
-				<button type="button" class="modal-closeButton" onclick="hideRecordDetailsModal();"></button>
+			<div id="modal-footer">
+				<button type="button" class="modal-closeButton" onclick="closeRecordDetailsModal();"></button>
 			</div>
 		</div>
-		<div id="modal-backdrop" onclick="hideRecordDetailsModal();"></div>
+		<div id="modal-backdrop" onclick="closeRecordDetailsModal();"></div>
     </body>
 </html>

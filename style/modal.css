@@ -12,7 +12,7 @@ div#modal-backdrop {
 	opacity: 0.5;
 }
 
-div.modal {
+div#recordDetailsModal {
 	display: none;
 	position: fixed;
 	z-index: 2;
@@ -25,17 +25,19 @@ div.modal {
 	border-radius: 0.5rem;
 }
 
-div.modal-header, div.modal-body, div.modal-footer {
+div#modal-header,
+div#modal-body,
+div#modal-footer {
 	padding: 1rem 2rem;
 }
 
-div.modal button.modal-closeButton {
+div#recordDetailsModal button.modal-closeButton {
 	cursor: pointer;
 }
 
 /* Modal header */
 
-div.modal-header {
+div#modal-header {
 	min-height: 5%;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 	display: flex;
@@ -44,12 +46,13 @@ div.modal-header {
 	font-size: 1.25rem;
 }
 
-div.modal-header label.modal-title {
+div#modal-header label#modal-title-begin,
+div#modal-header label#modal-title-end {
 	display: inline-block;
 	vertical-align: middle;
 }
 
-div.modal-header button.modal-closeButton {
+div#modal-header button.modal-closeButton {
 	display: inline-block;
 	height: 2rem;
 	width: 2rem;
@@ -60,13 +63,13 @@ div.modal-header button.modal-closeButton {
 	opacity: 0.5;
 }
 
-div.modal-header button.modal-closeButton:hover {
+div#modal-header button.modal-closeButton:hover {
 	opacity: 0.75;
 }
 
 /* Modal body */
 
-div.modal-body {
+div#modal-body {
 	overflow-y: auto;
 	height: calc(
 		100% /* total modal height */
@@ -82,58 +85,60 @@ div.modal-body {
 	align-items: flex-start;
 }
 
-div.modal-body div.col-2:first-child {
+div#modal-body div.col-2:first-child {
 	width: 60%;
 }
 
-div.modal-body div.col-2:last-child {
+div#modal-body div.col-2:last-child {
 	width: 35%;
 }
 
-div.modal-body div#recordDetails, div.modal-body div#recordPosts, div.modal-body div#personsInfo {
+div#modal-body div#recordDetails,
+div#modal-body div#recordPosts,
+div#modal-body div#personsInfo {
 	margin: 0px;
 }
 
-div.modal-body div#recordPosts {
+div#modal-body div#recordPosts {
 	margin-top: 2rem;
 }
 
-div.modal-body h2.modal-section-title {
+div#modal-body h2.modal-section-title {
 	font-size: 1.25rem;
 	font-weight: 500;
 	margin: 0px 0px 1rem 0px;
 }
 
-div.modal-body div.recordDetailsField:not(:first-child) {
+div#modal-body div.recordDetailsField:not(:first-child) {
 	margin-top: 0.5rem;
 }
 
-div.modal-body div.fieldValue {
+div#modal-body div.fieldValue {
 	display: inline;
 }
 
-div.modal-body div#recordScore,
-div.modal-body div#recordTime {
+div#modal-body div#recordScore,
+div#modal-body div#recordTime {
 	display: none;
 }
 
-div.modal-body div#recordScore:has(div#recordScoreValue:not(:empty)),
-div.modal-body div#recordTime:has(div#recordTimeValue:not(:empty)) {
+div#modal-body div#recordScore:has(div#recordScoreValue:not(:empty)),
+div#modal-body div#recordTime:has(div#recordTimeValue:not(:empty)) {
 	display: block;
 }
 
-div.modal-body div#youtubeVideo {
+div#modal-body div#youtubeVideo {
 	display: none;
 	position: relative;
 	width: 100%;
 	padding-top: 56.111%; /* standard aspect ratio from Youtube miniatures (360x202) */
 }
 
-div.modal-body div#youtubeVideo:has(iframe#youtubeVideoEmbedIframe) {
+div#modal-body div#youtubeVideo:has(iframe#youtubeVideoEmbedIframe) {
 	display: block;
 }
 
-div.modal-body iframe#youtubeVideoEmbedIframe {
+div#modal-body iframe#youtubeVideoEmbedIframe {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -144,58 +149,60 @@ div.modal-body iframe#youtubeVideoEmbedIframe {
 	border: none;
 }
 
-div.modal-body a.infoLink {
+div#modal-body a.infoLink {
 	display: block;
 	text-decoration: none;
+	width: fit-content;
+	padding-right: 5px;
 }
 
-div.modal-body a.infoLink img.icon, div.modal-body a.infoLink label.linkLabel {
+div#modal-body a.infoLink img.icon,
+div#modal-body a.infoLink label.linkLabel {
 	vertical-align: middle;
 }
 
-div.modal-body a.infoLink img.icon {
+div#modal-body a.infoLink img.icon {
 	height: 25px;
 	width: 25px;
 	margin-right: 5px;
 }
 
-div.modal-body a.infoLink[href], div.modal-body a.infoLink[href] label {
+div#modal-body a.infoLink[href],
+div#modal-body a.infoLink[href] label {
 	cursor: pointer;
 }
 
-div.modal-body a.infoLink:not([href]) img.icon {
+div#modal-body a.infoLink:not([href]) img.icon {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
 
-div.modal-body div#recordPosts a.infoLink:not([href]) {
+div#modal-body div#recordPosts a.infoLink:not([href]),
+div#modal-body div#recordPosts:not(:has(a.infoLink[href])) {
 	display: none;
 }
 
-div.modal-body div#recordPosts:not(:has(a.infoLink[href])) {
-	display: none;
-}
-
-div.modal-body div.personInfo:not(:first-child) {
+div#modal-body div.personInfo:not(:first-child) {
 	margin-top: 1rem;
 }
 
-div.modal-body div.personInfo .personInfoItem:not(:first-child) {
+div#modal-body div.personInfo .personInfoItem:not(:first-child) {
 	margin-top: 0.25rem;
 }
 
-div.modal-body div.personInfo div.personName, div.modal-body div.personInfo div.personRecordCountAndRank {
+div#modal-body div.personInfo div.personName,
+div#modal-body div.personInfo div.personRecordCountAndRank {
 	height: 25px;
 }
 
 /* Modal footer */
 
-div.modal-footer {
+div#modal-footer {
 	border-top: 1px solid rgba(0, 0, 0, 0.15);
 	text-align: right;
 }
 
-div.modal-footer button.modal-closeButton {
+div#modal-footer button.modal-closeButton {
 	background-color: rgba(0, 0, 0, 0.6);
 	color: white;
 	opacity: 0.9;
@@ -205,20 +212,20 @@ div.modal-footer button.modal-closeButton {
 	border: none;
 }
 
-div.modal-footer button.modal-closeButton:hover {
+div#modal-footer button.modal-closeButton:hover {
 	opacity: 1;
 }
 
 /* Activation of the modal mode */
 
-body[data-modalMode=true] {
+body:has(div#recordDetailsModal[data-activated=true]) {
 	overflow: hidden;
 }
 
-body[data-modalMode=true] div#recordDetailsModal {
+body:has(div#recordDetailsModal[data-activated=true]) div#modal-backdrop {
 	display: block;
 }
 
-body[data-modalMode=true] div#modal-backdrop {
+div#recordDetailsModal[data-activated=true] {
 	display: block;
 }

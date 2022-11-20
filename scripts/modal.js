@@ -1,16 +1,9 @@
 "use strict";
 
-const recordDetailsModal = (eventName, avgType) => {
+const openRecordDetailsModal = (eventName, avgType) => {
 	let record = records[eventName][avgType];
-	buildRecordDetailsModal(record, eventName);
-	openRecordDetailsModal();
-};
-
-/* Building the modal */
-
-const buildRecordDetailsModal = (record, eventName) => {
-	// Event
-	document.querySelector("div#recordDetailsModal div#recordEventValue").textContent = eventName;
+	// Event and avgType in title
+	document.querySelector("div#recordDetailsModal label#modal-title-end").textContent = `(${eventName} ${avgType})`;
 	// Score
 	document.querySelector("div#recordDetailsModal div#recordScoreValue").textContent = record.score ?? "";
 	// Time
@@ -97,14 +90,12 @@ const buildRecordDetailsModal = (record, eventName) => {
 	} else {
 		recordDiscordPostLink.removeAttribute("href");
 	}
+	// Opening the modal
+	document.querySelector("div#recordDetailsModal").setAttribute("data-activated", "true");
 };
 
-/* Showing and hiding the modal */
+/* Closing the modal */
 
-const openRecordDetailsModal = () => {
-	document.body.setAttribute("data-modalMode", "true"); // CSS will do the rest
-};
-
-const hideRecordDetailsModal = () => {
-	document.body.setAttribute("data-modalMode", "false"); // CSS will do the rest
+const closeRecordDetailsModal = () => {
+	document.querySelector("div#recordDetailsModal").setAttribute("data-activated", "false");
 };
