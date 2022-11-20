@@ -9,8 +9,10 @@ const recordDetailsModal = (eventName, avgType) => {
 /* Building the modal */
 
 const buildRecordDetailsModal = record => {
+	// Score
+	document.querySelector("div#recordScoreValue").textContent = record.score ?? "";
 	// Time
-	document.querySelector("div#recordTimeValue").textContent = record.time;
+	document.querySelector("div#recordTimeValue").textContent = record.time ?? "";
 	// todo add other details (split, memo time, time list for avg, scramble(s), reconstruction, ...)
 	// Date
 	document.querySelector("div#recordDateValue").textContent = record.date;

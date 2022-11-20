@@ -28,7 +28,8 @@ const buildRecords = () => {
 			for (let avgType of avgTypes) {
 				if (eventRecords[avgType]) {
 					let td = createHtmlTag("td", {class: avgType});
-					td.appendChild(createHtmlTag("div", {class: "time", textContent: eventRecords[avgType].time}));
+					td.appendChild(createHtmlTag("div", {class: "score",
+						textContent: getFormattedRecord(eventRecords[avgType])}));
 					td.appendChild(createHtmlTag("div", {class: "name",
 						textContent: eventRecords[avgType].name ?? eventRecords[avgType].names.join(" + ")}));
 					td.onclick = () => recordDetailsModal(eventName, avgType);
@@ -42,6 +43,18 @@ const buildRecords = () => {
 		table.appendChild(tbody);
 		recordSection.appendChild(table);
 		recordsSection.appendChild(recordSection);
+	}
+};
+
+const getFormattedRecord = record => {
+	if (record.score) {
+		if (record.time) {
+			return `${record.score} (${record.time})`; // multi-blindfolded
+		} else {
+			return record.score; // fewest moves
+		}
+	} else {
+		return record.time; // standard records
 	}
 };
 

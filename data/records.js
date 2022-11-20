@@ -59,9 +59,9 @@ const records = {
 		avg100: {name: "Alix Jack", time: "11.18", date: "2022-09-04", links: ["https://discord.com/channels/329175643877015553/344073328744464384/1016101363706511370"]}
 	},
 	"4x4x4 Fewest Moves": {
-		single: {name: "Patrick Jamet", time: "69", date: "2021-03-31", links: ["https://discord.com/channels/329175643877015553/340029021884514316/826907931240824912"]},
-		mo3: {name: "Patrick Jamet", time: "72.33", date: "2021-03-31"},
-		avg5: {name: "Patrick Jamet", time: "75", date: "2021-03-31"}
+		single: {name: "Patrick Jamet", score: "69", date: "2021-03-31", links: ["https://discord.com/channels/329175643877015553/340029021884514316/826907931240824912"]},
+		mo3: {name: "Patrick Jamet", score: "72.33", date: "2021-03-31"},
+		avg5: {name: "Patrick Jamet", score: "75", date: "2021-03-31"}
 	},
 	"Kilominx": {
 		single: {name: "Théo Paris", time: "11.29", date: "2018-02-17"},
@@ -136,9 +136,9 @@ const records = {
 		single: {name: "Maxime Madrzyk", time: "1:50.10", date: "2022-07-13", links: ["https://discord.com/channels/329175643877015553/353504450867888128/996827561877319770"]}
 	},
 	"3x3x3 Multi-Blindfolded": {
-		single: {name: "William Phommaha", time: "37/37 (54:50.00)", date: "2020-04-16", memoTime: "34:52.00", links: ["https://www.speedcubingfrance.org/online_competitions/ConfinementOpen9"]},
-		mo3: {name: "William Phommaha", time: "33", date: "2020-04-06", timeList: "33/35, 33/35, 37/37", links: ["https://discordapp.com/channels/329175643877015553/353504450867888128/700410469973754007"]},
-		avg5: {name: "William Phommaha", time: "29", date: "2020-02-09", timeList: ["29/33", "31/33", "32/33", "30/33", "33/33"]}
+		single: {name: "William Phommaha", score: "37/37", time: "54:50.00", date: "2020-04-16", memoTime: "34:52.00", links: ["https://www.speedcubingfrance.org/online_competitions/ConfinementOpen9"]},
+		mo3: {name: "William Phommaha", score: "33", date: "2020-04-06", scoreList: "33/35, 33/35, 37/37", links: ["https://discordapp.com/channels/329175643877015553/353504450867888128/700410469973754007"]},
+		avg5: {name: "William Phommaha", score: "29", date: "2020-02-09", scoreList: ["29/33", "31/33", "32/33", "30/33", "33/33"]}
 	},
 	"Relay WCA 17 events": {
 		single: {name: "William Phommaha", time: "34:13.57", date: "2020-01-16", links: ["https://discordapp.com/channels/329175643877015553/344073328744464384/667414979116531732"]}

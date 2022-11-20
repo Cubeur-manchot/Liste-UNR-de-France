@@ -112,6 +112,16 @@ div.modal-body div.fieldValue {
 	display: inline;
 }
 
+div.modal-body div#recordScore,
+div.modal-body div#recordTime {
+	display: none;
+}
+
+div.modal-body div#recordScore:has(div#recordScoreValue:not(:empty)),
+div.modal-body div#recordTime:has(div#recordTimeValue:not(:empty)) {
+	display: block;
+}
+
 div.modal-body div#youtubeVideo {
 	display: none;
 	position: relative;
