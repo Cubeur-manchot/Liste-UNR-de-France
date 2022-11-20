@@ -2,20 +2,22 @@
 
 const recordDetailsModal = (eventName, avgType) => {
 	let record = records[eventName][avgType];
-	buildRecordDetailsModal(record);
+	buildRecordDetailsModal(record, eventName);
 	openRecordDetailsModal();
 };
 
 /* Building the modal */
 
-const buildRecordDetailsModal = record => {
+const buildRecordDetailsModal = (record, eventName) => {
+	// Event
+	document.querySelector("div#recordDetailsModal div#recordEventValue").textContent = eventName;
 	// Score
-	document.querySelector("div#recordScoreValue").textContent = record.score ?? "";
+	document.querySelector("div#recordDetailsModal div#recordScoreValue").textContent = record.score ?? "";
 	// Time
-	document.querySelector("div#recordTimeValue").textContent = record.time ?? "";
+	document.querySelector("div#recordDetailsModal div#recordTimeValue").textContent = record.time ?? "";
 	// todo add other details (split, memo time, time list for avg, scramble(s), reconstruction, ...)
 	// Date
-	document.querySelector("div#recordDateValue").textContent = record.date;
+	document.querySelector("div#recordDetailsModal div#recordDateValue").textContent = record.date;
 	// Youtube video embed
 	let youtubeVideoEmbedTag = document.querySelector("div#recordDetailsModal div#youtubeVideo");
 	youtubeVideoEmbedTag.textContent = "";
