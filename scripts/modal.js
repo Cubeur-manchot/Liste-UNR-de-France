@@ -89,10 +89,6 @@ const buildRecordDetailsModal = record => {
 	} else {
 		recordFrancocubePostLink.removeAttribute("href");
 	}
-
-	if (record.links && record.links[0].includes("discord")) { // temporary, todo remove when migrated
-		record.discordLink = record.links[0];
-	}
 	let recordDiscordPostLink = document.querySelector("div#recordDetailsModal a#recordDiscordPostLink");
 	if (record.discordLink) {
 		recordDiscordPostLink.href = record.discordLink;
