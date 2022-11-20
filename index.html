@@ -30,7 +30,7 @@
 		<script type="text/javascript" src="./scripts/statistics.js"></script>
 		<script type="text/javascript" src="./scripts/bodyOnload.js"></script>
 	</head>
-	<body onload="bodyOnload();" data-modalMode="false">
+	<body onload="bodyOnload();">
 		<section id="header">
 			<div id="toggleLanguageButton" onclick="toggleLanguage();">
 				<img src="./images/flags/flagFR.png" id="frontFlag" class="flag" alt="[FRA]" data-language="fr"/>
@@ -79,17 +79,17 @@
 			</div>
         </section>
 		<div id="recordDetailsModal">
-			<div id="modal-header">
-				<div id="modal-title">
-					<label id="modal-title-begin"></label>
-					<label id="modal-title-end"></label>
+			<div id="modalHeader">
+				<div id="modalTitle">
+					<label id="modalTitleBegin"></label>
+					<label id="modalTitleEnd"></label>
 				</div>
-				<button type="button" class="modal-closeButton" onclick="closeRecordDetailsModal();"></button>
+				<button type="button" class="modalCloseButton" onclick="closeRecordDetailsModal();"></button>
 			</div>
-			<div id="modal-body">
+			<div id="modalBody">
 				<div class="col-2">
 					<div id="recordDetails">
-						<h2 id="recordDetailsTitle" class="modal-section-title">Record :</h2>
+						<h2 id="recordDetailsTitle" class="modalSectionTitle">Record :</h2>
 						<div id="recordScore" class="recordDetailsField">
 							<label id="recordScoreLabel">Score :</label>
 							<div id="recordScoreValue" class="fieldValue"></div>
@@ -105,7 +105,7 @@
 						<div id="youtubeVideo" class="recordDetailsField"></div>
 					</div>
 					<div id="recordPosts">
-						<h2 id="recordPostsTitle" class="modal-section-title"></h2>
+						<h2 id="recordPostsTitle" class="modalSectionTitle"></h2>
 						<a id="recordFrancocubePostLink" class="infoLink" target="_blank">
 							<img class="icon" src="./images/icons/francocubeIcon.svg"/>
 							<label id="recordFrancocubePostLabel">Francocube</label>
@@ -118,15 +118,15 @@
 				</div>
 				<div class="col-2">
 					<div id="personsInfo">
-						<h2 id="personsInfoTitle" class="modal-section-title"></h2>
+						<h2 id="personsInfoTitle" class="modalSectionTitle"></h2>
 						<div id="personsList"></div>
 					</div>
 				</div>
 			</div>
-			<div id="modal-footer">
-				<button type="button" class="modal-closeButton" onclick="closeRecordDetailsModal();"></button>
+			<div id="modalFooter">
+				<button type="button" class="modalCloseButton" onclick="closeRecordDetailsModal();"></button>
 			</div>
 		</div>
-		<div id="modal-backdrop" onclick="closeRecordDetailsModal();"></div>
+		<div id="modalBackdrop" onclick="closeRecordDetailsModal();"></div>
     </body>
 </html>

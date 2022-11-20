@@ -3,7 +3,7 @@
 const openRecordDetailsModal = (eventName, avgType) => {
 	let record = records[eventName][avgType];
 	// Event and avgType in title
-	document.querySelector("div#recordDetailsModal label#modal-title-end").textContent = `(${eventName} ${avgType})`;
+	document.querySelector("div#recordDetailsModal label#modalTitleEnd").textContent = `(${eventName} ${avgType})`;
 	// Score
 	document.querySelector("div#recordDetailsModal div#recordScoreValue").textContent = record.score ?? "";
 	// Time
@@ -15,13 +15,10 @@ const openRecordDetailsModal = (eventName, avgType) => {
 	let youtubeVideoEmbedTag = document.querySelector("div#recordDetailsModal div#youtubeVideo");
 	youtubeVideoEmbedTag.textContent = "";
 	if (record.youtubeVideoId) {
-		youtubeVideoEmbedTag.setAttribute("data-youtubeVideoAvailable", "true");
 		youtubeVideoEmbedTag.appendChild(createHtmlTag("iframe", {
 			id: "youtubeVideoEmbedIframe",
 			src: `https://www.youtube.com/embed/${record.youtubeVideoId}`
 		}));
-	} else {
-		youtubeVideoEmbedTag.setAttribute("data-youtubeVideoAvailable", "false");
 	}
 	// Person(s) info, loop over all people owning the record
 	let personsInfoTag = document.querySelector("div#recordDetailsModal div#personsList");

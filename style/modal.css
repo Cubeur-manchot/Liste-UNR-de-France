@@ -1,6 +1,6 @@
 /* Modal structure */
 
-div#modal-backdrop {
+div#modalBackdrop {
 	display: none;
 	position: fixed;
 	top: 0px;
@@ -25,19 +25,33 @@ div#recordDetailsModal {
 	border-radius: 0.5rem;
 }
 
-div#modal-header,
-div#modal-body,
-div#modal-footer {
+div#recordDetailsModal div#modalHeader,
+div#recordDetailsModal div#modalBody,
+div#recordDetailsModal div#modalFooter {
 	padding: 1rem 2rem;
 }
 
-div#recordDetailsModal button.modal-closeButton {
+div#recordDetailsModal button.modalCloseButton {
 	cursor: pointer;
+}
+
+/* Activation of the modal mode */
+
+body:has(div#recordDetailsModal[data-activated=true]) {
+	overflow: hidden;
+}
+
+body:has(div#recordDetailsModal[data-activated=true]) div#modalBackdrop {
+	display: block;
+}
+
+div#recordDetailsModal[data-activated=true] {
+	display: block;
 }
 
 /* Modal header */
 
-div#modal-header {
+div#recordDetailsModal div#modalHeader {
 	min-height: 5%;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 	display: flex;
@@ -46,13 +60,13 @@ div#modal-header {
 	font-size: 1.25rem;
 }
 
-div#modal-header label#modal-title-begin,
-div#modal-header label#modal-title-end {
+div#recordDetailsModal div#modalHeader label#modalTitleBegin,
+div#recordDetailsModal div#modalHeader label#modalTitleEnd {
 	display: inline-block;
 	vertical-align: middle;
 }
 
-div#modal-header button.modal-closeButton {
+div#recordDetailsModal div#modalHeader button.modalCloseButton {
 	display: inline-block;
 	height: 2rem;
 	width: 2rem;
@@ -63,21 +77,21 @@ div#modal-header button.modal-closeButton {
 	opacity: 0.5;
 }
 
-div#modal-header button.modal-closeButton:hover {
+div#recordDetailsModal div#modalHeader button.modalCloseButton:hover {
 	opacity: 0.75;
 }
 
 /* Modal body */
 
-div#modal-body {
+div#recordDetailsModal div#modalBody {
 	overflow-y: auto;
 	height: calc(
 		100% /* total modal height */
-		- 4rem /* modal-header height */
-		- 1px /* modal-header border-bottom */
-		- 2rem /* modal-body padding */
-		- 1px /* modal-footer border-top */
-		- 4.2rem /* modal-footer height */
+		- 4rem /* modalHeader height */
+		- 1px /* modalHeader border-bottom */
+		- 2rem /* modalBody padding */
+		- 1px /* modalFooter border-top */
+		- 4.2rem /* modalFooter height */
 		- 2px /* unexplained close-button extra height to font-size */
 	);
 	display: flex;
@@ -85,60 +99,60 @@ div#modal-body {
 	align-items: flex-start;
 }
 
-div#modal-body div.col-2:first-child {
+div#recordDetailsModal div#modalBody div.col-2:first-child {
 	width: 60%;
 }
 
-div#modal-body div.col-2:last-child {
+div#recordDetailsModal div#modalBody div.col-2:last-child {
 	width: 35%;
 }
 
-div#modal-body div#recordDetails,
-div#modal-body div#recordPosts,
-div#modal-body div#personsInfo {
+div#recordDetailsModal div#modalBody div#recordDetails,
+div#recordDetailsModal div#modalBody div#recordPosts,
+div#recordDetailsModal div#modalBody div#personsInfo {
 	margin: 0px;
 }
 
-div#modal-body div#recordPosts {
+div#recordDetailsModal div#modalBody div#recordPosts {
 	margin-top: 2rem;
 }
 
-div#modal-body h2.modal-section-title {
+div#recordDetailsModal div#modalBody h2.modalSectionTitle {
 	font-size: 1.25rem;
 	font-weight: 500;
 	margin: 0px 0px 1rem 0px;
 }
 
-div#modal-body div.recordDetailsField:not(:first-child) {
+div#recordDetailsModal div#modalBody div.recordDetailsField:not(:first-child) {
 	margin-top: 0.5rem;
 }
 
-div#modal-body div.fieldValue {
+div#recordDetailsModal div#modalBody div.fieldValue {
 	display: inline;
 }
 
-div#modal-body div#recordScore,
-div#modal-body div#recordTime {
+div#recordDetailsModal div#modalBody div#recordScore,
+div#recordDetailsModal div#modalBody div#recordTime {
 	display: none;
 }
 
-div#modal-body div#recordScore:has(div#recordScoreValue:not(:empty)),
-div#modal-body div#recordTime:has(div#recordTimeValue:not(:empty)) {
+div#recordDetailsModal div#modalBody div#recordScore:has(div#recordScoreValue:not(:empty)),
+div#recordDetailsModal div#modalBody div#recordTime:has(div#recordTimeValue:not(:empty)) {
 	display: block;
 }
 
-div#modal-body div#youtubeVideo {
+div#recordDetailsModal div#modalBody div#youtubeVideo {
 	display: none;
 	position: relative;
 	width: 100%;
 	padding-top: 56.111%; /* standard aspect ratio from Youtube miniatures (360x202) */
 }
 
-div#modal-body div#youtubeVideo:has(iframe#youtubeVideoEmbedIframe) {
+div#recordDetailsModal div#modalBody div#youtubeVideo:has(iframe#youtubeVideoEmbedIframe) {
 	display: block;
 }
 
-div#modal-body iframe#youtubeVideoEmbedIframe {
+div#recordDetailsModal div#modalBody iframe#youtubeVideoEmbedIframe {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -149,60 +163,60 @@ div#modal-body iframe#youtubeVideoEmbedIframe {
 	border: none;
 }
 
-div#modal-body a.infoLink {
+div#recordDetailsModal div#modalBody a.infoLink {
 	display: block;
 	text-decoration: none;
 	width: fit-content;
 	padding-right: 5px;
 }
 
-div#modal-body a.infoLink img.icon,
-div#modal-body a.infoLink label.linkLabel {
+div#recordDetailsModal div#modalBody a.infoLink img.icon,
+div#recordDetailsModal div#modalBody a.infoLink label.linkLabel {
 	vertical-align: middle;
 }
 
-div#modal-body a.infoLink img.icon {
+div#recordDetailsModal div#modalBody a.infoLink img.icon {
 	height: 25px;
 	width: 25px;
 	margin-right: 5px;
 }
 
-div#modal-body a.infoLink[href],
-div#modal-body a.infoLink[href] label {
+div#recordDetailsModal div#modalBody a.infoLink[href],
+div#recordDetailsModal div#modalBody a.infoLink[href] label {
 	cursor: pointer;
 }
 
-div#modal-body a.infoLink:not([href]) img.icon {
+div#recordDetailsModal div#modalBody a.infoLink:not([href]) img.icon {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
 
-div#modal-body div#recordPosts a.infoLink:not([href]),
-div#modal-body div#recordPosts:not(:has(a.infoLink[href])) {
+div#recordDetailsModal div#modalBody div#recordPosts a.infoLink:not([href]),
+div#recordDetailsModal div#modalBody div#recordPosts:not(:has(a.infoLink[href])) {
 	display: none;
 }
 
-div#modal-body div.personInfo:not(:first-child) {
+div#recordDetailsModal div#modalBody div.personInfo:not(:first-child) {
 	margin-top: 1rem;
 }
 
-div#modal-body div.personInfo .personInfoItem:not(:first-child) {
+div#recordDetailsModal div#modalBody div.personInfo .personInfoItem:not(:first-child) {
 	margin-top: 0.25rem;
 }
 
-div#modal-body div.personInfo div.personName,
-div#modal-body div.personInfo div.personRecordCountAndRank {
+div#recordDetailsModal div#modalBody div.personInfo div.personName,
+div#recordDetailsModal div#modalBody div.personInfo div.personRecordCountAndRank {
 	height: 25px;
 }
 
 /* Modal footer */
 
-div#modal-footer {
+div#recordDetailsModal div#modalFooter {
 	border-top: 1px solid rgba(0, 0, 0, 0.15);
 	text-align: right;
 }
 
-div#modal-footer button.modal-closeButton {
+div#recordDetailsModal div#modalFooter button.modalCloseButton {
 	background-color: rgba(0, 0, 0, 0.6);
 	color: white;
 	opacity: 0.9;
@@ -212,20 +226,6 @@ div#modal-footer button.modal-closeButton {
 	border: none;
 }
 
-div#modal-footer button.modal-closeButton:hover {
+div#recordDetailsModal div#modalFooter button.modalCloseButton:hover {
 	opacity: 1;
-}
-
-/* Activation of the modal mode */
-
-body:has(div#recordDetailsModal[data-activated=true]) {
-	overflow: hidden;
-}
-
-body:has(div#recordDetailsModal[data-activated=true]) div#modal-backdrop {
-	display: block;
-}
-
-div#recordDetailsModal[data-activated=true] {
-	display: block;
 }
