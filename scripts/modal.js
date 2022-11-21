@@ -8,7 +8,9 @@ const openRecordDetailsModal = (eventName, avgType) => {
 	document.querySelector("div#recordDetailsModal div#recordScoreValue").textContent = record.score ?? "";
 	// Time
 	document.querySelector("div#recordDetailsModal div#recordTimeValue").textContent = record.time ?? "";
-	// todo add other details (split, memo time, time list for avg, scramble(s), reconstruction, ...)
+	// Memorization time
+	document.querySelector("div#recordDetailsModal div#recordMemorizationTimeValue").textContent = record.memoTime ?? "";
+	// todo add other details (split, time list for avg, scramble(s), reconstruction, ...)
 	// Date
 	document.querySelector("div#recordDetailsModal div#recordDateValue").textContent = record.date;
 	// Youtube video embed

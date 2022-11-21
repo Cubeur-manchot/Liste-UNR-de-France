@@ -132,12 +132,14 @@ div#recordDetailsModal div#modalBody div.fieldValue {
 }
 
 div#recordDetailsModal div#modalBody div#recordScore,
-div#recordDetailsModal div#modalBody div#recordTime {
+div#recordDetailsModal div#modalBody div#recordTime,
+div#recordDetailsModal div#modalBody div#recordMemorizationTime {
 	display: none;
 }
 
 div#recordDetailsModal div#modalBody div#recordScore:has(div#recordScoreValue:not(:empty)),
-div#recordDetailsModal div#modalBody div#recordTime:has(div#recordTimeValue:not(:empty)) {
+div#recordDetailsModal div#modalBody div#recordTime:has(div#recordTimeValue:not(:empty)),
+div#recordDetailsModal div#modalBody div#recordMemorizationTime:has(div#recordMemorizationTimeValue:not(:empty)) {
 	display: block;
 }
 
