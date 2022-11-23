@@ -34,6 +34,7 @@ const standardTranslations = {
 	"div#recordDetailsModal div#modalFooter button.modalCloseButton": {en: "Close", "fr": "Fermer"},
 	"div#recordDetailsModal div#recordTime label#recordTimeLabel": {en: "Time :", fr: "Temps :"},
 	"div#recordDetailsModal div#recordMemorizationTime label#recordMemorizationTimeLabel": {en: "Including memorization :", fr: "Dont mémorisation :"},
+	"div#recordDetailsModal div#recordTimeList label#recordTimeListLabel": {en: "Time list :", fr: "Liste des temps :"},
 	"div#recordDetailsModal h2#personsInfoTitle": {en: "Established by :", fr: "Établi par :"},
 	"div#recordDetailsModal h2#recordPostsTitle": {en: "Posted on :", fr: "Posté sur :"}
 };

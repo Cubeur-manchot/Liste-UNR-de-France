@@ -10,7 +10,9 @@ const openRecordDetailsModal = (eventName, avgType) => {
 	document.querySelector("div#recordDetailsModal div#recordTimeValue").textContent = record.time ?? "";
 	// Memorization time
 	document.querySelector("div#recordDetailsModal div#recordMemorizationTimeValue").textContent = record.memoTime ?? "";
-	// todo add other details (split, time list for avg, scramble(s), reconstruction, ...)
+	// Time list
+	document.querySelector("div#recordDetailsModal div#recordTimeListValue").textContent = record.timeList ? formatTimeList(record.timeList) : "";
+	// todo add other details (split, time/score list for avg, scramble(s), reconstruction, ...)
 	// Date
 	document.querySelector("div#recordDetailsModal div#recordDateValue").textContent = record.date;
 	// Youtube video embed
@@ -32,7 +34,7 @@ const openRecordDetailsModal = (eventName, avgType) => {
 		// Person UNR count and rank
 		let countForName = countPerName.find(countForName => countForName.name === name);
 		personInfoTag.appendChild(createHtmlTag("div", {
-			class: "personRecordCountAndRank",
+			class: "personRecordCountAndRank personInfoItem",
 			textContent: `${countForName.totalCount} UNR${countForName.totalCount > 1 ? "s" : ""} (top ${countForName.rank})`
 		})); // todo add tooltip with list of UNRs ?
 		// WCA profile
@@ -91,6 +93,32 @@ const openRecordDetailsModal = (eventName, avgType) => {
 	}
 	// Opening the modal
 	document.querySelector("div#recordDetailsModal").setAttribute("data-activated", "true");
+};
+
+const formatTimeList = timeList => {
+	let nbElementsToDetect = {3: 0, 5: 1, 12: 1, 50: 3, 100: 5}[timeList.length];
+	return timeList
+		.map((timeString, index) => {return {
+			timeString: timeString,
+			timeSeconds: parseTimeSeconds(timeString),
+			index: index
+		};})
+		.sort((timeObject1, timeObject2) => timeObject1.timeSeconds - timeObject2.timeSeconds)
+		.map((timeObject, index) => {return {
+			timeString: index < nbElementsToDetect || index > timeList.length - 1 - nbElementsToDetect
+				? `(${timeObject.timeString})` : timeObject.timeString,
+			index: timeObject.index
+		};})
+		.sort((timeObject1, timeObject2) => timeObject1.index - timeObject2.index)
+		.map(timeObject => timeObject.timeString)
+		.join(", ");
+};
+
+const parseTimeSeconds = time => {
+	let timeSplitByColumn = time.split(":").reverse();
+	return parseFloat(timeSplitByColumn[0]) 
+		+ parseFloat(timeSplitByColumn[1] ?? "0") * 60
+		+ parseFloat(timeSplitByColumn[2] ?? "0") * 3600;
 };
 
 /* Closing the modal */

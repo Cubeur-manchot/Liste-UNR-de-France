@@ -133,13 +133,15 @@ div#recordDetailsModal div#modalBody div.fieldValue {
 
 div#recordDetailsModal div#modalBody div#recordScore,
 div#recordDetailsModal div#modalBody div#recordTime,
-div#recordDetailsModal div#modalBody div#recordMemorizationTime {
+div#recordDetailsModal div#modalBody div#recordMemorizationTime,
+div#recordDetailsModal div#modalBody div#recordTimeList {
 	display: none;
 }
 
 div#recordDetailsModal div#modalBody div#recordScore:has(div#recordScoreValue:not(:empty)),
 div#recordDetailsModal div#modalBody div#recordTime:has(div#recordTimeValue:not(:empty)),
-div#recordDetailsModal div#modalBody div#recordMemorizationTime:has(div#recordMemorizationTimeValue:not(:empty)) {
+div#recordDetailsModal div#modalBody div#recordMemorizationTime:has(div#recordMemorizationTimeValue:not(:empty)),
+div#recordDetailsModal div#modalBody div#recordTimeList:has(div#recordTimeListValue:not(:empty)) {
 	display: block;
 }
 
@@ -204,11 +206,6 @@ div#recordDetailsModal div#modalBody div.personInfo:not(:first-child) {
 
 div#recordDetailsModal div#modalBody div.personInfo .personInfoItem:not(:first-child) {
 	margin-top: 0.25rem;
-}
-
-div#recordDetailsModal div#modalBody div.personInfo div.personName,
-div#recordDetailsModal div#modalBody div.personInfo div.personRecordCountAndRank {
-	height: 25px;
 }
 
 /* Modal footer */
