@@ -10,6 +10,8 @@ const openRecordDetailsModal = (eventName, avgType) => {
 	document.querySelector("div#recordDetailsModal div#recordTimeValue").textContent = record.time ?? "";
 	// Memorization time
 	document.querySelector("div#recordDetailsModal div#recordMemorizationTimeValue").textContent = record.memoTime ?? "";
+	// Scramble
+	document.querySelector("div#recordDetailsModal div#recordScrambleValue").textContent = record.scramble ?? "";
 	// Time list
 	document.querySelector("div#recordDetailsModal div#recordTimeListValue").textContent = record.timeList ? formatTimeList(record.timeList) : "";
 	// todo add other details (split, time/score list for avg, scramble(s), reconstruction, ...)
