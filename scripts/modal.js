@@ -13,7 +13,9 @@ const openRecordDetailsModal = (eventName, avgType) => {
 	// Scramble
 	document.querySelector("div#recordDetailsModal div#recordScrambleValue").textContent = record.scramble ?? "";
 	// Time list
-	document.querySelector("div#recordDetailsModal div#recordTimeListValue").textContent = record.timeList ? formatTimeList(record.timeList) : "";
+	document.querySelector("div#recordDetailsModal div#recordTimeListValue").textContent = record.timeList ? formatScoreList(record.timeList, parseTimeSeconds) : "";
+	// Score list
+	document.querySelector("div#recordDetailsModal div#recordScoreListValue").textContent = record.scoreList ? formatScoreList(record.scoreList, parseScore) : "";
 	// todo add other details (split, time/score list for avg, scramble(s), reconstruction, ...)
 	// Date
 	document.querySelector("div#recordDetailsModal div#recordDateValue").textContent = record.date;
@@ -97,30 +99,39 @@ const openRecordDetailsModal = (eventName, avgType) => {
 	document.querySelector("div#recordDetailsModal").setAttribute("data-activated", "true");
 };
 
-const formatTimeList = timeList => {
-	let nbElementsToDetect = {3: 0, 5: 1, 12: 1, 50: 3, 100: 5}[timeList.length];
-	return timeList
-		.map((timeString, index) => {return {
-			timeString: timeString,
-			timeSeconds: parseTimeSeconds(timeString),
+const formatScoreList = (scoreList, scoreParser) => {
+	let nbElementsToDetect = {3: 0, 5: 1, 12: 1, 50: 3, 100: 5}[scoreList.length];
+	return scoreList
+		.map((scoreString, index) => {return {
+			scoreString: scoreString,
+			scoreValue: scoreParser(scoreString),
 			index: index
 		};})
-		.sort((timeObject1, timeObject2) => timeObject1.timeSeconds - timeObject2.timeSeconds)
-		.map((timeObject, index) => {return {
-			timeString: index < nbElementsToDetect || index > timeList.length - 1 - nbElementsToDetect
-				? `(${timeObject.timeString})` : timeObject.timeString,
-			index: timeObject.index
+		.sort((scoreObject1, scoreObject2) => scoreObject1.scoreValue - scoreObject2.scoreValue)
+		.map((scoreObject, index) => {return {
+			scoreString: index < nbElementsToDetect || index > scoreList.length - 1 - nbElementsToDetect
+				? `(${scoreObject.scoreString})` : scoreObject.scoreString,
+			index: scoreObject.index
 		};})
-		.sort((timeObject1, timeObject2) => timeObject1.index - timeObject2.index)
-		.map(timeObject => timeObject.timeString)
+		.sort((scoreObject1, scoreObject2) => scoreObject1.index - scoreObject2.index)
+		.map(scoreObject => scoreObject.scoreString)
 		.join(", ");
 };
 
 const parseTimeSeconds = time => {
 	let timeSplitByColumn = time.split(":").reverse();
-	return parseFloat(timeSplitByColumn[0]) 
-		+ parseFloat(timeSplitByColumn[1] ?? "0") * 60
-		+ parseFloat(timeSplitByColumn[2] ?? "0") * 3600;
+	return parseFloat(timeSplitByColumn[0]) // seconds
+		+ parseFloat(timeSplitByColumn[1] ?? "0") * 60 // minutes
+		+ parseFloat(timeSplitByColumn[2] ?? "0") * 3600; // hours
+};
+
+const parseScore = score => {
+	if (score.includes("/")) { // multi-blind
+		let scoreSplitBySlash = score.split("/");
+		return 2 * parseFloat(scoreSplitBySlash[0]) - parseFloat(scoreSplitBySlash[1])
+	} else { // FMC
+		return parseFloat(score);
+	}
 };
 
 /* Closing the modal */

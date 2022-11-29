@@ -137,7 +137,7 @@ const records = {
 	},
 	"3x3x3 Multi-Blindfolded": {
 		single: {name: "William Phommaha", score: "37/37", time: "54:50.00", date: "2020-04-16", memoTime: "34:52.00", otherLink: "https://www.speedcubingfrance.org/online_competitions/ConfinementOpen9"},
-		mo3: {name: "William Phommaha", score: "33", date: "2020-04-06", scoreList: "33/35, 33/35, 37/37", discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/700410469973754007"},
+		mo3: {name: "William Phommaha", score: "33", date: "2020-04-06", scoreList: ["33/35", "33/35", "37/37"], discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/700410469973754007"},
 		avg5: {name: "William Phommaha", score: "29", date: "2020-02-09", scoreList: ["29/33", "31/33", "32/33", "30/33", "33/33"]}
 	},
 	"Relay WCA 17 events": {

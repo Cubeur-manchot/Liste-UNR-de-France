@@ -36,6 +36,7 @@ const standardTranslations = {
 	"div#recordDetailsModal div#recordMemorizationTime label#recordMemorizationTimeLabel": {en: "Including memorization :", fr: "Dont mémorisation :"},
 	"div#recordDetailsModal div#recordScramble label#recordScrambleLabel": {en: "Scramble :", fr: "Mélange :"},
 	"div#recordDetailsModal div#recordTimeList label#recordTimeListLabel": {en: "Time list :", fr: "Liste des temps :"},
+	"div#recordDetailsModal div#recordScoreList label#recordScoreListLabel": {en: "Score list :", fr: "Liste des scores :"},
 	"div#recordDetailsModal h2#personsInfoTitle": {en: "Established by :", fr: "Établi par :"},
 	"div#recordDetailsModal h2#recordPostsTitle": {en: "Posted on :", fr: "Posté sur :"}
 };
