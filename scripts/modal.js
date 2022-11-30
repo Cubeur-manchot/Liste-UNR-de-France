@@ -12,11 +12,14 @@ const openRecordDetailsModal = (eventName, avgType) => {
 	document.querySelector("div#recordDetailsModal div#recordMemorizationTimeValue").textContent = record.memoTime ?? "";
 	// Scramble
 	document.querySelector("div#recordDetailsModal div#recordScrambleValue").textContent = record.scramble ?? "";
+	// Reconstruction
+	document.querySelector("div#recordDetailsModal div#recordReconstructionValue").innerHTML =
+		record.reconstruction?.map(reconstructionStep => `<br>${reconstructionStep}`).join("") ?? "";
 	// Time list
 	document.querySelector("div#recordDetailsModal div#recordTimeListValue").textContent = record.timeList ? formatScoreList(record.timeList, parseTimeSeconds) : "";
 	// Score list
 	document.querySelector("div#recordDetailsModal div#recordScoreListValue").textContent = record.scoreList ? formatScoreList(record.scoreList, parseScore) : "";
-	// todo add other details (split, time/score list for avg, scramble(s), reconstruction, ...)
+	// todo add other details (split, multi-field for avg)
 	// Date
 	document.querySelector("div#recordDetailsModal div#recordDateValue").textContent = record.date;
 	// Youtube video embed
