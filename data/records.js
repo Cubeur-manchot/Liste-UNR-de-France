@@ -52,7 +52,7 @@ const records = {
 	},
 	"3x3x3 Virtual cube": {
 		single: {name: "Charles Daloz-Baltenberger", time: "5.66", date: "2022-11-24", scramble: "U' B' R2 B U2 B L2 F' U2 L2 F R2 L U L D L' B' D' L2", reconstruction: ["x2 F' L D R' D' // cross", "U' R' U R L' U L // 1st pair", "y U' R' U R // 2nd pair", "y' U2' R U2' R2' U' R // 3rd pair", "y' R' U2' R U' R' U R // 4th pair", "R U R' U R U2' R' F R U R' U' F' // LL"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1045335885757026414"},
-		mo3: {name: "Charles Daloz-Baltenberger", time: "7.84", date: "2022-11-30", timeList: ["9.24" ,"6.89", "7.38"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1047565289761550407"},
+		mo3: {name: "Charles Daloz-Baltenberger", time: "7.78", date: "2022-12-01", timeList: ["9.01", "7.58", "6.75"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1047988483374977067"},
 		avg5: {name: "Charles Daloz-Baltenberger", time: "8.20", date: "2022-11-30", timeList: ["11.39", "7.98", "9.24" ,"6.89", "7.38"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1047565289761550407"},
 		avg12: {name: "Charles Daloz-Baltenberger", time: "9.18", date: "2022-11-28", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1046825292108410970"},
 		avg50: {name: "Charles Daloz-Baltenberger", time: "10.11", date: "2022-11-30", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1047565289761550407"},
@@ -118,8 +118,8 @@ const records = {
 	},
 	"Relay 2-5 Blindfolded": {
 		single: {name: "William Phommaha", time: "10:58.82", date: "2020-03-14", memoTime: "5:44.19", discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/688504038496403611"},
-		mo3: {name: "William Phommaha", time: "13:00.63", date: "2020-06-08", memotimeList: ["12:20.00", "12:53.00", "13:47.00"], discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/719662250276946020"},
-		avg5: {name: "William Phommaha", time: "13:00.63", date: "2020-06-08", memotimeList: ["10:58.00", "DNF", "12:20.00", "12:53.00", "13:47.00"], discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/719662250276946020"}
+		mo3: {name: "William Phommaha", time: "13:00.63", date: "2020-06-08", memoTimeList: ["12:20.00", "12:53.00", "13:47.00"], discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/719662250276946020"},
+		avg5: {name: "William Phommaha", time: "13:00.63", date: "2020-06-08", memoTimeList: ["10:58.00", "DNF", "12:20.00", "12:53.00", "13:47.00"], discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/719662250276946020"}
 	},
 	"Relay 2-6 Blindfolded": {
 		single: {name: "William Phommaha", time: "31:38:86", date: "2020-03-15", memoTime: "17:34.85", discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/688718045128032261"}
