@@ -136,6 +136,7 @@ div#recordDetailsModal div#modalBody div#recordTime,
 div#recordDetailsModal div#modalBody div#recordMemorizationTime,
 div#recordDetailsModal div#modalBody div#recordScramble,
 div#recordDetailsModal div#modalBody div#recordReconstruction,
+div#recordDetailsModal div#modalBody div#recordSplits,
 div#recordDetailsModal div#modalBody div#recordTimeList,
 div#recordDetailsModal div#modalBody div#recordScoreList {
 	display: none;
@@ -146,6 +147,7 @@ div#recordDetailsModal div#modalBody div#recordTime:has(div#recordTimeValue:not(
 div#recordDetailsModal div#modalBody div#recordMemorizationTime:has(div#recordMemorizationTimeValue:not(:empty)),
 div#recordDetailsModal div#modalBody div#recordScramble:has(div#recordScrambleValue:not(:empty)),
 div#recordDetailsModal div#modalBody div#recordReconstruction:has(div#recordReconstructionValue:not(:empty)),
+div#recordDetailsModal div#modalBody div#recordSplits:has(div#recordSplitsValue:not(:empty)),
 div#recordDetailsModal div#modalBody div#recordTimeList:has(div#recordTimeListValue:not(:empty)),
 div#recordDetailsModal div#modalBody div#recordScoreList:has(div#recordScoreListValue:not(:empty)) {
 	display: block;
