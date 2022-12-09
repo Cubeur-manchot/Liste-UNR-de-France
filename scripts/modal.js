@@ -17,11 +17,10 @@ const openRecordDetailsModal = (eventName, avgType) => {
 		record.reconstruction?.map(reconstructionStep => `<br>${reconstructionStep}`).join("") ?? "";
 	// Splits
 	document.querySelector("div#recordDetailsModal div#recordSplitsValue").innerHTML = record.splits?.join(", ") ?? "";
-	// Time list
-	document.querySelector("div#recordDetailsModal div#recordTimeListValue").textContent = record.timeList ? formatScoreList(record.timeList, parseTimeSeconds) : "";
+	// Time list and memo time list
+	document.querySelector("div#recordDetailsModal div#recordTimeListValue").textContent = record.timeList ? formatScoreList(record.timeList, parseTimeSeconds, record.memoTimeList) : "";
 	// Score list
 	document.querySelector("div#recordDetailsModal div#recordScoreListValue").textContent = record.scoreList ? formatScoreList(record.scoreList, parseScore) : "";
-	// todo add other details (multi-field for avg)
 	// Date
 	document.querySelector("div#recordDetailsModal div#recordDateValue").textContent = record.date;
 	// Youtube video embed
@@ -45,7 +44,7 @@ const openRecordDetailsModal = (eventName, avgType) => {
 		personInfoTag.appendChild(createHtmlTag("div", {
 			class: "personRecordCountAndRank personInfoItem",
 			textContent: `${countForName.totalCount} UNR${countForName.totalCount > 1 ? "s" : ""} (top ${countForName.rank})`
-		})); // todo add tooltip with list of UNRs ?
+		}));
 		// WCA profile
 		let personWcaProfileLinkTag = createHtmlTag("a", {class: "personWcaProfileLink infoLink personInfoItem"});
 		personWcaProfileLinkTag.appendChild(createHtmlTag("img", {src: "./images/icons/wcaIcon.svg", class: "icon"}));
@@ -104,15 +103,20 @@ const openRecordDetailsModal = (eventName, avgType) => {
 	document.querySelector("div#recordDetailsModal").setAttribute("data-activated", "true");
 };
 
-const formatScoreList = (scoreList, scoreParser) => {
+const formatScoreList = (scoreList, scoreParser, memoTimeList) => {
 	let nbElementsToDetect = {3: 0, 5: 1, 12: 1, 50: 3, 100: 5}[scoreList.length];
 	return scoreList
 		.map((scoreString, index) => {return {
 			scoreString: scoreString,
 			scoreValue: scoreParser(scoreString),
-			index: index
+			index: index,
+			memoTimeString: memoTimeList ? memoTimeList[index] : null
 		};})
 		.sort((scoreObject1, scoreObject2) => scoreObject1.scoreValue - scoreObject2.scoreValue)
+		.map(scoreObject => {return {
+			scoreString: scoreObject.scoreString + (scoreObject.memoTimeString ? " [" + scoreObject.memoTimeString + "]" : ""),
+			index: scoreObject.index
+		}})
 		.map((scoreObject, index) => {return {
 			scoreString: index < nbElementsToDetect || index > scoreList.length - 1 - nbElementsToDetect
 				? `(${scoreObject.scoreString})` : scoreObject.scoreString,
@@ -124,14 +128,20 @@ const formatScoreList = (scoreList, scoreParser) => {
 };
 
 const parseTimeSeconds = time => {
-	let timeSplitByColumn = time.split(":").reverse();
-	return parseFloat(timeSplitByColumn[0]) // seconds
-		+ parseFloat(timeSplitByColumn[1] ?? "0") * 60 // minutes
-		+ parseFloat(timeSplitByColumn[2] ?? "0") * 3600; // hours
+	if (time === "DNF") {
+		return Infinity;
+	} else {
+		let timeSplitByColumn = time.split(":").reverse();
+		return parseFloat(timeSplitByColumn[0]) // seconds
+			+ parseFloat(timeSplitByColumn[1] ?? "0") * 60 // minutes
+			+ parseFloat(timeSplitByColumn[2] ?? "0") * 3600; // hours
+	}
 };
 
 const parseScore = score => {
-	if (score.includes("/")) { // multi-blind
+	if (score === "DNF") {
+		return Infinity;
+	} else if (score.includes("/")) { // multi-blind
 		let scoreSplitBySlash = score.split("/");
 		return 2 * parseFloat(scoreSplitBySlash[0]) - parseFloat(scoreSplitBySlash[1])
 	} else { // FMC

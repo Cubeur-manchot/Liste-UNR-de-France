@@ -58,7 +58,7 @@ const getFormattedRecord = record => {
 	}
 };
 
-const checkRefactorMessageVisibility = () => {
+const checkRefactorMessageVisibility = () => { // todo remove when obsolete
 	let refactorMessageSection = document.querySelector("section#refactorMessage");
 	let endDate = new Date(2022, 9, 7);
 	endDate.setMonth(endDate.getMonth() + 6);
