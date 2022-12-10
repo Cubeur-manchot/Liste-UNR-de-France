@@ -17,10 +17,10 @@ const records = {
 		avg50: {name: "Axel Brisse", time: "6:44.04", date: "2022-11-05", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1038514618055786496"}
 	},
 	"10x10x10": {
-		single: {name: "Matthieu Aubert", time: "14:25.19", date: "2020-05-29", discordLink: "https://discordapp.com/channels/329175643877015553/330974462239309824/715945183329517649"},
-		mo3: {name: "Matthieu Aubert", time: "14:50.72", date: "2020-05-29", timeList: ["14:49.66", "15:17.32", "14:25.19"], discordLink: "https://discordapp.com/channels/329175643877015553/330974462239309824/715945183329517649"},
-		avg5: {name: "Matthieu Aubert", time: "14:54.64", date: "2020-05-29", timeList: ["15:27.07", "14:36.95", "14:49.66", "15:17.32", "14:25.19"], discordLink: "https://discordapp.com/channels/329175643877015553/330974462239309824/715945183329517649"},
-		avg12: {name: "Matthieu Aubert", time: "15:15.37", date: "2020-05-29", timeList: ["15:39.77", "16:16.19", "15:16.53", "15:17.82", "14:26.61", "15:25.83", "17:26.51", "15:27.07", "14:36.95", "14:49.66", "15:17.32", "14:25.19"], discordLink: "https://discordapp.com/channels/329175643877015553/330974462239309824/715945183329517649"}
+		single: {name: "Matthieu Aubert", time: "10:33.17", date: "2022-12-06", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1049674767885672549"},
+		mo3: {name: "Matthieu Aubert", time: "11:01.76", date: "2022-12-06", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1049674767885672549"},
+		avg5: {name: "Matthieu Aubert", time: "11:16.96", date: "2022-12-06", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1049674767885672549"},
+		avg12: {name: "Matthieu Aubert", time: "11:50.31", date: "2022-12-06", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1049674767885672549"}
 	},
 	"11x11x11": {
 		single: {name: "Matthieu Aubert", time: "13:46.61", date: "2022-11-15", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1042067658629185596"},
