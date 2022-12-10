@@ -203,7 +203,7 @@ const records = {
 	},
 	"Mastermorphix": {
 		single: {name: "Maxime Dotto", time: "11.56", date: "2022-12-02", scramble: "R2 D' R2 D2 U B2 D' B L' F2 R' B F2 D F' R2 F' R'", youtubeVideoId: "p8AtvxIi0Jc", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1048296956646137987"},
-		mo3: {name: "Maxime Dotto", time: "25.59", date: "2022-09-13", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1019207803321208882"},
+		mo3: {name: "Maxime Dotto", time: "23.20", date: "2022-12-09", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1050781109157384264"},
 		avg5: {name: "Maxime Dotto", time: "26.62", date: "2022-09-27", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"},
 		avg12: {name: "Maxime Dotto", time: "28.51", date: "2022-09-27", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1024258456972177468"},
 		avg50: {name: "Maxime Dotto", time: "29.83", date: "2022-10-30", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"},
