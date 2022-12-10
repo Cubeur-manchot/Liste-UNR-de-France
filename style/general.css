@@ -2,6 +2,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	background-color: rgb(230, 243, 255);
+	font-size: 12px;
 	font-family: "Muli", sans-serif;
 }
 
@@ -39,4 +40,15 @@ section#refactorMessage {
 
 section#refactorMessage p {
 	margin: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+	section#refactorMessage {
+		font-size: 10px;
+	}
+}
+@media screen and (max-width: 700px) {
+	section#refactorMessage {
+		font-size: 8px;
+	}
 }

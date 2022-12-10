@@ -3,7 +3,7 @@
 section#records table {
 	margin: 10px auto 0px auto;
 	border-collapse: collapse;
-	font: 12px "Verdana", sans-serif;
+	font-family: "Verdana", sans-serif;
 }
 
 section#records tr {
@@ -14,7 +14,6 @@ section#records th, section#records td {
 	text-align: center;
 	border: 1px solid rgb(200, 200, 200);
 	height: 100%;
-	padding: auto 5px;
 	position: relative;
 }
 
