@@ -97,6 +97,7 @@ div#recordDetailsModal div#modalBody {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	font-size: 1rem;
 }
 
 div#recordDetailsModal div#modalBody div.col-2:first-child {
