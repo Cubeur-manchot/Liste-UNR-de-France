@@ -105,6 +105,7 @@ const openRecordDetailsModal = (eventName, avgType) => {
 
 const formatScoreList = (scoreList, scoreParser, memoTimeList) => {
 	let nbElementsToDetect = {3: 0, 5: 1, 12: 1, 50: 3, 100: 5}[scoreList.length];
+	console.log(nbElementsToDetect)
 	return scoreList
 		.map((scoreString, index) => {return {
 			scoreString: scoreString,
