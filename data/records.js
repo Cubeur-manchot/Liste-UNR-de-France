@@ -52,7 +52,7 @@ const records = {
 	},
 	"3x3x3 Virtual cube": {
 		single: {name: "Charles Daloz-Baltenberger", time: "5.66", date: "2022-11-24", scramble: "U' B' R2 B U2 B L2 F' U2 L2 F R2 L U L D L' B' D' L2", reconstruction: ["x2 F' L D R' D' // cross", "U' R' U R L' U L // 1st pair", "y U' R' U R // 2nd pair", "y' U2' R U2' R2' U' R // 3rd pair", "y' R' U2' R U' R' U R // 4th pair", "R U R' U R U2' R' F R U R' U' F' // LL"], splits: ["Cross 0.42", "F2L 3.54", "OLL 1.53", "PLL 0.16"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1045335885757026414"},
-		mo3: {name: "Charles Daloz-Baltenberger", time: "7.78", date: "2022-12-01", timeList: ["9.01", "7.58", "6.75"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1047988483374977067"},
+		mo3: {name: "Charles Daloz-Baltenberger", time: "7.65", date: "2022-12-22", timeList: ["9.25", "6.08", "7.61"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1055261263443284049"},
 		avg5: {name: "Charles Daloz-Baltenberger", time: "8.01", date: "2022-12-13", timeList: ["8.84", "7.55", "10.06", "7.62", "7.58"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1052232319043391498"},
 		avg12: {name: "Charles Daloz-Baltenberger", time: "8.72", date: "2022-12-19", timeList: ["7.71", "9.46", "8.79", "8.37", "9.64", "11.34", "8.98", "9.19", "7.49", "9.03", "7.40", "8.53"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1054386411089973320"},
 		avg50: {name: "Charles Daloz-Baltenberger", time: "10.11", date: "2022-11-30", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1047565289761550407"},
