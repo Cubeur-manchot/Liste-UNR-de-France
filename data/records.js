@@ -204,10 +204,10 @@ const records = {
 	"Mastermorphix": {
 		single: {name: "Maxime Dotto", time: "11.56", date: "2022-12-02", scramble: "R2 D' R2 D2 U B2 D' B L' F2 R' B F2 D F' R2 F' R'", youtubeVideoId: "p8AtvxIi0Jc", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1048296956646137987"},
 		mo3: {name: "Maxime Dotto", time: "20.55", date: "2022-12-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1051642894567604265"},
-		avg5: {name: "Maxime Dotto", time: "25.23", date: "2022-12-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1056197968807604254"},
-		avg12: {name: "Maxime Dotto", time: "26.21", date: "2022-12-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1056197968807604254"},
-		avg50: {name: "Maxime Dotto", time: "27.15", date: "2022-12-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1056197968807604254"},
-		avg100: {name: "Maxime Dotto", time: "27.70", date: "2022-12-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1056197968807604254"}
+		avg5: {name: "Maxime Dotto", time: "22.93", date: "2022-12-28", timeList: ["17.32", "24.33", "23.30", "23.17", "22.34"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1057459648355119104"},
+		avg12: {name: "Maxime Dotto", time: "25.49", date: "2022-12-28", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1057459648355119104"},
+		avg50: {name: "Maxime Dotto", time: "26.62", date: "2022-12-28", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1057459648355119104"},
+		avg100: {name: "Maxime Dotto", time: "27.02", date: "2022-12-28", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1057459648355119104"}
 	},
 	"Megamorphix": {
 		single: {name: "Maxime Dotto", time: "1:44.90", date: "2022-10-30", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320", youtubeVideoId: "4mdgtR5ljI8"},
