@@ -10,6 +10,7 @@ const persons = {
 	"Juliette Sébastien": {wcaId: "2014SEBA01", youtubeChannel: "https://www.youtube.com/@JujuSeb444"},
 	"Louis Fertier": {wcaId: "2013FERT01", youtubeChannel: "https://www.youtube.com/channel/UCOdf9cbm9gSOd8xFh1wBA5A"},
 	"Lucas Déglise": {wcaId: "2015DEGL01", youtubeChannel: "https://www.youtube.com/@Lucas_Deglise"},
+	"Ludovic Gonzalez--Panozzo": {wcaId: "", pbSheet: "https://docs.google.com/document/d/17_XkTtfKFLar90ClqiCY93XvSlAkn2QsgMy-ZsS1Q0A/edit?usp=sharing"},
 	"Matteo Chancerel": {wcaId: "2017CHAN16", youtubeChannel: "https://www.youtube.com/@matteochancerel9332"},
 	"Matthieu Aubert": {wcaId: "2016AUBE01", youtubeChannel: "https://www.youtube.com/@MatthieuAubert", pbSheet: "https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html"},
 	"Maxime Dotto": {wcaId: "2022DOTT02", youtubeChannel: "https://www.youtube.com/@MaximeDMorphix", pbSheet: "https://bit.ly/Thenemex-PBList"},
