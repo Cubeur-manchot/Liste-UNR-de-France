@@ -207,8 +207,8 @@ const records = {
 		mo3: {name: "Maxime Dotto", time: "20.06", date: "2022-12-31", timeList: ["23.60", "19.10", "17.32"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1058566387523653633"},
 		avg5: {name: "Maxime Dotto", time: "21.85", date: "2022-12-31", timeList: ["19.10", "17.32", "24.33", "23.30", "23.17"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1058566387523653633"},
 		avg12: {name: "Maxime Dotto", time: "23.92", date: "2022-12-31", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1058566387523653633"},
-		avg50: {name: "Maxime Dotto", time: "25.85", date: "2023-01-08", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1061521528749043753"},
-		avg100: {name: "Maxime Dotto", time: "26.38", date: "2023-01-08", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1061521528749043753"}
+		avg50: {name: "Maxime Dotto", time: "25.75", date: "2023-01-17", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1064807324952309760"},
+		avg100: {name: "Maxime Dotto", time: "26.13", date: "2023-01-17", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1064807324952309760"}
 	},
 	"Megamorphix": {
 		single: {name: "Maxime Dotto", time: "1:44.90", date: "2022-10-30", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320", youtubeVideoId: "4mdgtR5ljI8"},
