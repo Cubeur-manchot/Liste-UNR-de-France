@@ -215,8 +215,8 @@ const records = {
 		mo3: {name: "Maxime Dotto", time: "1:57.28", date: "2022-10-30", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"},
 		avg5: {name: "Maxime Dotto", time: "2:02.76", date: "2022-10-30", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"},
 		avg12: {name: "Maxime Dotto", time: "2:04.60", date: "2022-10-30", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"},
-		avg50: {name: "Maxime Dotto", time: "2:14.45", date: "2022-12-09", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1050781109157384264"},
-		avg100: {name: "Maxime Dotto", time: "2:28.45", date: "2022-12-09", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1050781109157384264"}
+		avg50: {name: "Maxime Dotto", time: "2:13.13", date: "2023-01-17", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1064807324952309760"},
+		avg100: {name: "Maxime Dotto", time: "2:24.15", date: "2023-01-17", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1064807324952309760"}
 	}
 };
 
