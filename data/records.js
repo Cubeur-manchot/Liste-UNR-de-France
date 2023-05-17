@@ -219,6 +219,14 @@ const records = {
 		avg12: {name: "Maxime Dotto", time: "2:04.60", date: "2022-10-30", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"},
 		avg50: {name: "Maxime Dotto", time: "2:10.83", date: "2023-01-20", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1065901881815224370"},
 		avg100: {name: "Maxime Dotto", time: "2:19.18", date: "2023-03-08", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1083075702351470752"}
+	},
+	"Molecube": {
+		single: {name: "Balthazar Maignan", time: "7.35", date: "2023-05-04", scramble: "F2 U' F2 U F2 D2 F2 D' B L2 U2 L' D' F2 U F' L' R", youtubeVideoId: "sW3SeJj9gK0"},
+		mo3: {name: "Balthazar Maignan", time: "10.22", date: "2023-05-04", timeList: ["11.95", "7.35", "11.37"], youtubeVideoId: "sW3SeJj9gK0"},
+		avg5: {name: "Balthazar Maignan", time: "10.88", date: "2023-05-04", timeList: ["8.57", "10.93", "12.20", "13.68", "9.51"], youtubeVideoId: "sW3SeJj9gK0"},
+		avg12: {name: "Balthazar Maignan", time: "11.08", date: "2023-05-04", timeList: ["11.65", "8.57", "10.93", "12.20", "13.68", "9.51", "11.00", "12.05", "11.64", "11.95", "7.351", "11.37"], youtubeVideoId: "sW3SeJj9gK0"},
+		avg50: {name: "Balthazar Maignan", time: "12.69", date: "2023-05-04"},
+		avg100: {name: "Balthazar Maignan", time: "13.52", date: "2023-05-04"}
 	}
 };
 

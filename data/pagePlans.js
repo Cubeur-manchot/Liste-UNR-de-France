@@ -23,7 +23,7 @@ const pagePlans = {
 		{
 			id: "shapeMods",
 			fr: "Shape Mods de cubes NxNxN", en: "NxNxN cubes Shape Mods",
-			events: ["Mirror", "Inequilateral", "Penrose", "Ghost", "Mastermorphix", "Megamorphix"]
+			events: ["Mirror", "Inequilateral", "Penrose", "Ghost", "Mastermorphix", "Megamorphix", "Molecube"]
 		},
 		{
 			id: "cubeVariations",

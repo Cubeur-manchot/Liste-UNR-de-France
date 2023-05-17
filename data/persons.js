@@ -4,6 +4,7 @@ const persons = {
 	"Alix Jack": {wcaId: "2016JACK05", youtubeChannel: "https://www.youtube.com/@AlixJack"},
 	"Arthur Garcin": {wcaId: "2014GARC27", youtubeChannel: "https://www.youtube.com/@arthurgarcin3717"},
 	"Axel Brisse": {wcaId: "2016BRIS01", youtubeChannel: "https://www.youtube.com/@haksell", pbSheet: "https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing"},
+	"Balthazar Maignan": {wcaId: "2019MAIG01", youtubeChannel: "https://www.youtube.com/@cubefile"},
 	"Charles Daloz-Baltenberger": {wcaId: "2018DALO01", youtubeChannel: "https://youtube.com/@charlesdaloz2547", pbSheet: "https://docs.google.com/spreadsheets/d/1cpiEQtcvm8o8hDIGwIK_HWygD1mX664OH2ClzRwELWE/edit?usp=drivesdk"},
 	"Clément Cherblanc": {wcaId: "2014CHER05", youtubeChannel: "https://www.youtube.com/@ClementCherblanc"},
 	"Emma Cadet": {},
