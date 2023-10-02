@@ -61,7 +61,7 @@ const records = {
 		avg100: {name: "Charles Daloz-Baltenberger", time: "9.48", date: "2022-12-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1056383292699574343"}
 	},
 	"4x4x4 Fewest Moves": {
-		single: {name: "Patrick Jamet", score: "69", date: "2021-03-31", discordLink: "https://discord.com/channels/329175643877015553/340029021884514316/826907931240824912"},
+		single: {name: "Louis-Marie Ratto", score: "64", date: "2023-06-23", scramble: "F' U L' D2 R2 B2 D B2 U' B2 F2 U2 R2 U' L' U2 R B' F D' R' Rw2 F L2 U' Rw2 B D Rw2 U F' U2 L2 Rw U R2 Rw' F Rw U' L Uw F2 L' Uw2 R", reconstruction: ["R' Uw2 L F2 Uw' // 2c (5)", "Rw // 3c (6)", "D' Rw2 U2 Rw2 // 4c (10)", "R D Rw D' Rw' // centers + 1e (15)", "L' D' Rw D' L2 D B R L' B' Rw' // 6e (26)", "R2 Fw2 D B' D' Fw' U' B U Fw' // 9e (36)", "R Uw2 R B' R' B Uw2 // redux + partial eo (43)", "F2 D U2 F' // EO (47)", "L R2 F2 B2 D' R2 D' // DR (54)", "R' B2 L' R' F2 U2 B2 D2 B2 R // solved (64)"], discordLink: "https://discord.com/channels/329175643877015553/340029021884514316/826907931240824912"},
 		mo3: {name: "Patrick Jamet", score: "72.33", date: "2021-03-31"},
 		avg5: {name: "Patrick Jamet", score: "75", date: "2021-03-31"}
 	},

@@ -10,6 +10,7 @@ const persons = {
 	"Emma Cadet": {},
 	"Juliette Sébastien": {wcaId: "2014SEBA01", youtubeChannel: "https://www.youtube.com/@JujuSeb444"},
 	"Louis Fertier": {wcaId: "2013FERT01", youtubeChannel: "https://www.youtube.com/channel/UCOdf9cbm9gSOd8xFh1wBA5A"},
+	"Louis-Marie Ratto": {wcaId: "2019RATT02", youtubeChannel: "https://www.youtube.com/@louis-marieratto3825"},
 	"Lucas Déglise": {wcaId: "2015DEGL01", youtubeChannel: "https://www.youtube.com/@Lucas_Deglise"},
 	"Ludovic Gonzalez--Panozzo": {wcaId: "", pbSheet: "https://docs.google.com/document/d/17_XkTtfKFLar90ClqiCY93XvSlAkn2QsgMy-ZsS1Q0A/edit?usp=sharing"},
 	"Matteo Chancerel": {wcaId: "2017CHAN16", youtubeChannel: "https://www.youtube.com/@matteochancerel9332"},
