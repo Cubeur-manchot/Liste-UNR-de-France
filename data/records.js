@@ -100,9 +100,9 @@ const records = {
 		avg12: {name: "William Phommaha", time: "2:11.24", date: "2023-09-14", timeList: ["1:55.96", "2:11.73", "DNF", "1:55.74", "2:15.64", "2:15.97", "2:02.88", "1:59.52", "2:10.75", "2:23.55", "2:21.83", "2:14.52"], discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1151942562047864983"}
 	},
 	"5x5x5 Blindfolded": {
-		single: {name: "William Phommaha", time: "3:48.24", date: "2020-02-02"},
-		mo3: {name: "William Phommaha", time: "3:59.20", date: "2019-11-10"},
-		avg5: {name: "William Phommaha", time: "4:05.95", date: "2019-11-10"},
+		single: {name: "William Phommaha", time: "3:25.91", date: "2023-04-19", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1106261407705616434"},
+		mo3: {name: "William Phommaha", time: "3:39.98", date: "2023-04-20", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1106261407705616434"},
+		avg5: {name: "William Phommaha", time: "3:53.82", date: "2023-04-19", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1106261407705616434"},
 		avg12: {name: "William Phommaha", time: "4:17.48", date: "2020-05-25", discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/714539887138963486"}
 	},
 	"6x6x6 Blindfolded": {
