@@ -97,7 +97,7 @@ const records = {
 		single: {name: "William Phommaha", time: "1:35.70", date: "2020-07-31", memoTime: "37.00", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/738859907457089597"},
 		mo3: {name: "William Phommaha", time: "1:57.14", date: "2020-04-17", timeList: ["1:46.13", "2:01.27", "2:04.01"], memoTimeList: ["46.64", "1:02.41", "57.30"], discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/700728861939466291", otherLink: "https://www.speedcubingfrance.org/online_competitions/ConfinementOpen10"},
 		avg5: {name: "William Phommaha", time: "1:52.85", date: "2020-07-31", timeList: ["1:51.50", "1:47.34", "DNF", "1:59.71", "1:35.70"], memoTimeList: ["39.31", "36.35", "46.40", "54.20", "37.00"], discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/738859907457089597"},
-		avg12: {name: "William Phommaha", time: "2:17.79", date: "2020-02-16"}
+		avg12: {name: "William Phommaha", time: "2:11.24", date: "2023-09-14", timeList: ["1:55.96", "2:11.73", "DNF", "1:55.74", "2:15.64", "2:15.97", "2:02.88", "1:59.52", "2:10.75", "2:23.55", "2:21.83", "2:14.52"], discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1151942562047864983"}
 	},
 	"5x5x5 Blindfolded": {
 		single: {name: "William Phommaha", time: "3:48.24", date: "2020-02-02"},
