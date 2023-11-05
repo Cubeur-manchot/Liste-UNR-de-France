@@ -28,7 +28,7 @@ const pagePlans = {
 		{
 			id: "cubeVariations",
 			fr: "Variations de cubes NxNxN", en: "NxNxN cubes Variations",
-			events: ["3x3x3 Virtual cube", "4x4x4 One-Handed", "4x4x4 Fewest Moves"]
+			events: ["3x3x3 Virtual cube", "4x4x4 One-Handed", "4x4x4 Fewest Moves", "5x5x5 One-Handed"]
 		},
 		{
 			id: "teamAndRelays",

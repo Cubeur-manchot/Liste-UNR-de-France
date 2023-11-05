@@ -52,6 +52,12 @@ const records = {
 		avg50: {name: "Axel Brisse", time: "1:14.22", date: "2018-05-13"},
 		avg100: {name: "Axel Brisse", time: "1:16.65", date: "2018-05-13"}
 	},
+	"5x5x5 One-Handed": {
+		single: {name: "Matthieu Aubert", time: "2:11.56", date: "2023-11-01", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1169291037332746332"},
+		mo3: {name: "Matthieu Aubert", time: "2:35.67", date: "2023-11-01", timeList: ["2:52.05", "2:30.14", "2:24.83"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1169291037332746332"},
+		avg5: {name: "Matthieu Aubert", time: "2:33.54", date: "2023-11-01", timeList: ["2:28.47", "2:42.01", "2:52.05", "2:30.14", "2:24.83"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1169291037332746332"},
+		avg12: {name: "Matthieu Aubert", time: "2:42.94", date: "2023-11-01", timeList: ["2:28.47", "2:42.01", "2:52.05", "2:30.14", "2:24.83", "2:50.50", "3:19.91", "2:34.82", "2:47.67", "2:58.03", "3:00.92", "2:11.56"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1169291037332746332"},
+	},
 	"3x3x3 Virtual cube": {
 		single: {name: "Charles Daloz-Baltenberger", time: "5.42", date: "2023-05-31", scramble: "L' F2 R F2 L' B2 U2 R2 F2 D2 L F' D' L' D2 B2 D2 F2 R2", reconstruction: ["z2 y' // inspection", "F D2 R D R' D // cross", "L U2 L' // 1st pair", "y' L U L' // 2nd pair", "y R U R' L' U L // 3rd pair", "U2' R U R' U' R U R' // 4th pair", "U R U R' U' R' F R F' // OLL", "U' R U' R U R U R U' R' U' R2 // PLL"], splits: ["Cross 0.57", "F2L 2.35", "OLL 1.11", "PLL 1.37"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1113403691068837888"},
 		mo3: {name: "Charles Daloz-Baltenberger", time: "6.72", date: "2023-03-30", timeList: ["5.55", "7.30", "7.31"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1091012498611777627"},
