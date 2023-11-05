@@ -149,6 +149,9 @@ const records = {
 		avg5: {name: "William Phommaha", score: "29", date: "2020-02-09", scoreList: ["29/33", "31/33", "32/33", "30/33", "33/33"]},
 		avg12: {name: "Maxime Madrzyk", score: 27.7, date: "2022-01-17", scoreList: ["33/37", "33/37", "29/37", "33/37", "27/37", "33/37", "31/37", "33/37", "36/37", "33/37", "32/37", "33/37"], discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1065026880794804378"}
 	},
+	"3x3x3 Blindfolded One-Handed": {
+		single: {name: "Charles Daloz-Baltenberger", time: "47.66", date: "2023-08-20", scramble: "D F L' U' D2 F2 U' D2 R B' D2 F U2 F' D2 B' L2 F L2 F", discordLink: "https://discord.com/channels/329175643877015553/329175643877015553/1142931686338855085"},
+	},
 	"Relay WCA 17 events": {
 		single: {name: "William Phommaha", time: "34:13.57", date: "2020-01-16", discordLink: "https://discordapp.com/channels/329175643877015553/344073328744464384/667414979116531732"}
 	},
