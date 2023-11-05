@@ -222,11 +222,11 @@ const records = {
 	},
 	"Molecube": {
 		single: {name: "Balthazar Maignan", time: "7.35", date: "2023-05-04", scramble: "F2 U' F2 U F2 D2 F2 D' B L2 U2 L' D' F2 U F' L' R", youtubeVideoId: "sW3SeJj9gK0"},
-		mo3: {name: "Balthazar Maignan", time: "10.22", date: "2023-05-04", timeList: ["11.95", "7.35", "11.37"], youtubeVideoId: "sW3SeJj9gK0"},
-		avg5: {name: "Balthazar Maignan", time: "10.88", date: "2023-05-04", timeList: ["8.57", "10.93", "12.20", "13.68", "9.51"], youtubeVideoId: "sW3SeJj9gK0"},
-		avg12: {name: "Balthazar Maignan", time: "11.08", date: "2023-05-04", timeList: ["11.65", "8.57", "10.93", "12.20", "13.68", "9.51", "11.00", "12.05", "11.64", "11.95", "7.351", "11.37"], youtubeVideoId: "sW3SeJj9gK0"},
-		avg50: {name: "Balthazar Maignan", time: "12.69", date: "2023-05-04"},
-		avg100: {name: "Balthazar Maignan", time: "13.52", date: "2023-05-04"}
+		mo3: {name: "Balthazar Maignan", time: "9.11", date: "2023-06-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1122481676883345438"},
+		avg5: {name: "Balthazar Maignan", time: "10.11", date: "2023-06-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1122481676883345438"},
+		avg12: {name: "Balthazar Maignan", time: "11.05", date: "2023-06-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1122481676883345438"},
+		avg50: {name: "Balthazar Maignan", time: "11.89", date: "2023-06-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1122481676883345438"},
+		avg100: {name: "Balthazar Maignan", time: "12.48", date: "2023-06-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1122481676883345438"}
 	}
 };
 
