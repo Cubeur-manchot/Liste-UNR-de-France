@@ -22,7 +22,7 @@ const persons = {
 	"Paul Ducruet": {wcaId: "2023DUCR01", youtubeChannel: "https://www.youtube.com/@paulducruet2007", pbSheet: "https://docs.google.com/spreadsheets/d/11DIrNoPLiwOD_sGz2TR-b3ex3bpCqdLppyaGcdw5_uY/edit#gid=0"},
 	"Quentin Rivault": {wcaId: "2017RIVA09"},
 	"Théo Paris": {wcaId: "2016PARI08"},
-	"Tiago Eche": {wcaId: "2022ECHE01"},
+	"Tiago Eche": {wcaId: "2022ECHE01", pbSheet: "https://docs.google.com/spreadsheets/d/1-dk1jkDJ1nd3iMqF9yhHlDgIyn_9BFvqmvAppgiud4E/edit#gid=0"},
 	"Victor Wijsman": {wcaId: "2016WIJS01"},
 	"Wilfrid Py": {wcaId: "2016PYWI01", youtubeChannel: "https://www.youtube.com/@TheWil31240", pbSheet: "https://bit.ly/2Ak2pyR"},
 	"William Phommaha": {wcaId: "2015PHOM01"}
