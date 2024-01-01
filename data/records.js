@@ -162,10 +162,10 @@ const records = {
 		avg5: {name: "Lucas Déglise", time: "3:31.35", date: "2023-10-02", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1158507714129969254"}
 	},
 	"Mini-Guilford Duo": {
-		single: {names: ["Clément Cherblanc", "Lucas Déglise"], time: "1:52.53", date: "2019-05-06", youtubeVideoId: "7jgfZIpjr3A"},
-		mo3: {names: ["Louis Fertier", "Victor Wijsman"], time: "2:23.63", date: "2017-10-26", francocubePostId: "271420"},
-		avg5: {names: ["Louis Fertier", "Victor Wijsman"], time: "2:25.69", date: "2017-10-26", francocubePostId: "271420"},
-		avg12: {names: ["Louis Fertier", "Victor Wijsman"], time: "2:28.24", date: "2017-10-26", francocubePostId: "271420"}
+		single: {names: ["Clément Cherblanc", "Juliette Sébastien"], time: "1:34.32", date: "2023-11-28", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1178927173449556059"},
+		mo3: {names: ["Clément Cherblanc", "Juliette Sébastien"], time: "1:40.08", date: "2023-11-28", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1178927173449556059"},
+		avg5: {names: ["Clément Cherblanc", "Juliette Sébastien"], time: "1:43.14", date: "2023-11-28", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1178927173449556059"},
+		avg12: {names: ["Clément Cherblanc", "Juliette Sébastien"], time: "1:49.20", date: "2023-11-28", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1178927173449556059"}
 	},
 	"Team Blind": {
 		single: {names: ["Axel Brisse", "Wilfrid Py"], time: "11.79", date: "2021-08-25", scramble: "B F2 U2 L2 F2 R2 B2 F R D' B L2 U R' B D2 R2 D2 U", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/880048593879302214"},
