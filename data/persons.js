@@ -20,6 +20,7 @@ const persons = {
 	"Nicolas Gertner": {wcaId: "2013GERT01", youtubeChannel: "https://www.youtube.com/@SpeedCuber225"},
 	"Patrick Jamet": {wcaId: "2012JAME02"},
 	"Paul Ducruet": {wcaId: "2023DUCR01", youtubeChannel: "https://www.youtube.com/@paulducruet2007", pbSheet: "https://docs.google.com/spreadsheets/d/11DIrNoPLiwOD_sGz2TR-b3ex3bpCqdLppyaGcdw5_uY/edit#gid=0"},
+	"Quentin Rivault": {wcaId: "2017RIVA09"},
 	"Théo Paris": {wcaId: "2016PARI08"},
 	"Victor Wijsman": {wcaId: "2016WIJS01"},
 	"Wilfrid Py": {wcaId: "2016PYWI01", youtubeChannel: "https://www.youtube.com/@TheWil31240", pbSheet: "https://bit.ly/2Ak2pyR"},
