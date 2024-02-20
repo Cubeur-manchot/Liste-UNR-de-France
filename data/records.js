@@ -54,8 +54,8 @@ const records = {
 	},
 	"5x5x5 One-Handed": {
 		single: {name: "Matthieu Aubert", time: "2:08.92", date: "2023-12-30", discordLink: "https://discord.com/channels/329175643877015553/394571064224514048/1190432616797700116"},
-		mo3: {name: "Matthieu Aubert", time: "2:25.13", date: "2024-01-01", timeList: ["2:35.09", "2:20.95", "2:19.35"], discordLink: "https://discord.com/channels/329175643877015553/394571064224514048/1191326673916919859"},
-		avg5: {name: "Matthieu Aubert", time: "2:29.62", date: "2024-01-01", timeList: ["2:20.95", "2:19.35", "2:40.09", "2:45.18", "2:27.81"], discordLink: "https://discord.com/channels/329175643877015553/394571064224514048/1191326673916919859"},
+		mo3: {name: "Matthieu Aubert", time: "2:24.21", date: "2024-02-17", timeList: ["2:20.38", "2:23.52", "2:28.73"], discordLink: "https://discord.com/channels/329175643877015553/394571064224514048/1208375011077918730"},
+		avg5: {name: "Matthieu Aubert", time: "2:27.83", date: "2024-02-17", timeList: ["2:31.23", "2:33.02", "2:20.38", "2:23.52", "2:28.73"], discordLink: "https://discord.com/channels/329175643877015553/394571064224514048/1208375011077918730"},
 		avg12: {name: "Matthieu Aubert", time: "2:37.33", date: "2023-11-19", timeList: ["2:40.13", "2:43.79", "2:47.63", "2:43.58", "2:26.32", "2:46.06", "2:37.25", "2:41.84", "2:32.64", "2:29.07", "2:30.70", "2:28.25"], discordLink: "https://discord.com/channels/329175643877015553/394571064224514048/1175792430583390218"},
 		avg50: {name: "Paul Ducruet", time: "3:09.41", date: "2023-10-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1160215689114697819"},
 		avg100: {name: "Paul Ducruet", time: "3:01.94", date: "2024-01-12", discordLink: "https://discord.com/channels/329175643877015553/394571064224514048/1195400029159051357"}
