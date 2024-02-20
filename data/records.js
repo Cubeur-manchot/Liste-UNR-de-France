@@ -40,9 +40,9 @@ const records = {
 	},
 	"13x13x13": {
 		single: {name: "Paul Ducruet", time: "27:06.84", date: "2022-10-24", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1034094729245237348"},
-		mo3: {name: "Paul Ducruet", time: "29:50.62", date: "2022-08-31", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1014525776714023046"},
-		avg5: {name: "Paul Ducruet", time: "30:00.34", date: "2022-10-24", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1034094729245237348"},
-		avg12: {name: "Paul Ducruet", time: "31:11.89", date: "2022-08-31", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1014525776714023046"}
+		mo3: {name: "Paul Ducruet", time: "28:50.94", date: "2022-08-31", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1193324100416974950"},
+		avg5: {name: "Paul Ducruet", time: "29:41.96", date: "2022-10-24", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1193324100416974950"},
+		avg12: {name: "Paul Ducruet", time: "30:21.12", date: "2022-08-31", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1193324100416974950"}
 	},
 	"4x4x4 One-Handed": {
 		single: {name: "Charles Daloz-Baltenberger", time: "57.60", date: "2020-06-01", scramble: "L' F2 L2 F' R' D' F' U B' D' L2 U L2 B2 D' L2 U2 R2 D B2 R2 Rw2 Fw2 L Fw2 B' L' Uw2 R F2 B2 Rw2 U R Uw F2 Uw R' Fw' D' L F' Uw' Rw'", discordLink: "https://discordapp.com/channels/329175643877015553/344073328744464384/717109928468414504"},
