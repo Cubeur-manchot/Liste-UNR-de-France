@@ -45,7 +45,7 @@ const records = {
 		avg12: {name: "Paul Ducruet", time: "30:21.12", date: "2024-01-06", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1193324100416974950"}
 	},
 	"4x4x4 One-Handed": {
-		single: {name: "Charles Daloz-Baltenberger", time: "57.60", date: "2020-06-01", scramble: "L' F2 L2 F' R' D' F' U B' D' L2 U L2 B2 D' L2 U2 R2 D B2 R2 Rw2 Fw2 L Fw2 B' L' Uw2 R F2 B2 Rw2 U R Uw F2 Uw R' Fw' D' L F' Uw' Rw'", discordLink: "https://discordapp.com/channels/329175643877015553/344073328744464384/717109928468414504"},
+		single: {name: "Baptiste Bery", time: "47.47", date: "2024-06-01", scramble: "U' B2 U D' F2 D2 L2 U' F2 L2 B' L F U B R' F' D L' B Fw2 L' U Fw2 D2 L' Fw2 R Rw2 B2 Fw2 U L2 Fw' U R2 F Rw' U F Rw' Uw F' Uw' L'", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1246528456607400137"},
 		mo3: {name: "Axel Brisse", time: "1:04.39", date: "2018-05-13"},
 		avg5: {name: "Axel Brisse", time: "1:03.88", date: "2018-05-13"},
 		avg12: {name: "Axel Brisse", time: "1:10.64", date: "2018-05-13"},
