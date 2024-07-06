@@ -22,6 +22,7 @@ const persons = {
 	"Patrick Jamet": {wcaId: "2012JAME02"},
 	"Paul Ducruet": {wcaId: "2023DUCR01", youtubeChannel: "https://www.youtube.com/@paulducruet2007", pbSheet: "https://docs.google.com/spreadsheets/d/11DIrNoPLiwOD_sGz2TR-b3ex3bpCqdLppyaGcdw5_uY/edit#gid=0"},
 	"Quentin Rivault": {wcaId: "2017RIVA09"},
+	"Rémi Perrin": {wcaId: "2018PERR04", youtubeChannel: "https://www.youtube.com/@remiscube-themegaminxer1165"},
 	"Romain Velcin": {wcaId: "2023VELC01", youtubeChannel: "https://www.youtube.com/@user-jm2lb9uv4b"},
 	"Théo Paris": {wcaId: "2016PARI08"},
 	"Tiago Eche": {wcaId: "2022ECHE01", pbSheet: "https://docs.google.com/spreadsheets/d/1-dk1jkDJ1nd3iMqF9yhHlDgIyn_9BFvqmvAppgiud4E/edit#gid=0"},
