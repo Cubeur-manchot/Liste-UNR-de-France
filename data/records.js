@@ -143,7 +143,10 @@ const records = {
 		avg5: {name: "Emma Cadet", time: "5:02.37", date: "2020-06-01", discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/717124541540991100"}
 	},
 	"Clock Blindfolded": {
-		single: {name: "Maxime Madrzyk", time: "1:50.10", date: "2022-07-13", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/996827561877319770"}
+		single: {name: "Romain Velcin", time: "30.82", date: "2024-06-07", scramble: "UR6+ DR1- DL5- UL3- U1- R3- D3- L4- ALL2+ y2 U2+ R5- D1+ L6+ ALL5-", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1248726571712380999"},
+		mo3: {name: "Romain Velcin", time: "31.28", date: "2024-06-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1248726571712380999"},
+		avg5: {name: "Romain Velcin", time: "33.34", date: "2024-06-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1248726571712380999"},
+		avg12: {name: "Romain Velcin", time: "38.97", date: "2024-06-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1248731007465820160"}
 	},
 	"3x3x3 Multi-Blindfolded": {
 		single: {name: "William Phommaha", score: "37/37", time: "54:50.00", date: "2020-04-16", memoTime: "34:52.00", otherLink: "https://www.speedcubingfrance.org/online_competitions/ConfinementOpen9"},
