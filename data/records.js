@@ -75,11 +75,11 @@ const records = {
 	},
 	"Kilominx": {
 		single: {name: "Rémi Perrin", time: "10.59", date: "2024-05-07", scramble: "R++ D-- R++ D++ R-- D-- R++ D-- R-- D-- U' R++ D-- R-- D-- R++ D-- R-- D-- R++ D++ U R-- D++ R-- D++ R++ D-- R-- D++ R++ D++ U", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1237502691773780020"},
-		mo3: {name: "Rémi Perrin", time: "14.17", date: "2024-05-02", timeList: ["12.36", "16.95", "13.21"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1235640849124298874"},
-		avg5: {name: "Rémi Perrin", time: "14.69", date: "2024-05-02", timeList: ["13.90", "19.64", "12.36", "16.95", "13.21"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1235640849124298874"},
-		avg12: {name: "Théo Paris", time: "15.93", date: "2018-02-17"},
-		avg50: {name: "Rémi Perrin", time: "16.82", date: "2024-05-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1237422278720098314"},
-		avg100: {name: "Rémi Perrin", time: "17.52", date: "2024-05-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1237422278720098314"}
+		mo3: {name: "Rémi Perrin", time: "12.87", date: "2024-09-16", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1285264250138394766"},
+		avg5: {name: "Rémi Perrin", time: "13.35", date: "2024-09-16", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1285264250138394766"},
+		avg12: {name: "Rémi Perrin", time: "14.86", date: "2024-09-16", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1285264250138394766"},
+		avg50: {name: "Rémi Perrin", time: "15.64", date: "2024-09-16", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1285264250138394766"},
+		avg100: {name: "Rémi Perrin", time: "15.88", date: "2024-09-16", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1285264250138394766"}
 	},
 	"Masterkilominx": {
 		single: {name: "Axel Brisse", time: "3:22.09", date: "2020-07-10", youtubeVideoId: "4ppRIoSbNkg", discordLink: "https://discord.com/channels/329175643877015553/332432847908634644/731197865812295690"},
