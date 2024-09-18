@@ -127,7 +127,7 @@ const records = {
 		single: {name: "Matteo Chancerel", time: "2:41:00.00", date: "2019-07-15", memoTime: "1:24:00.00", discordLink: "https://youtu.be/IBJ4KsB8gqY"}
 	},
 	"Relay 2-5 Blindfolded": {
-		single: {name: "William Phommaha", time: "10:58.82", date: "2020-03-14", memoTime: "5:44.19", discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/688504038496403611"},
+		single: {name: "William Phommaha", time: "09:14.86", date: "2023-05-27", memoTime: "4:38.10", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1112111413964570645"},
 		mo3: {name: "William Phommaha", time: "13:00.63", date: "2020-06-08", timeList: ["12:20.00", "12:53.00", "13:47.00"], discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/719662250276946020"},
 		avg5: {name: "William Phommaha", time: "13:00.63", date: "2020-06-08", timeList: ["10:58.00", "DNF", "12:20.00", "12:53.00", "13:47.00"], discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/719662250276946020"}
 	},
