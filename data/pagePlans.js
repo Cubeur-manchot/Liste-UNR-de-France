@@ -36,7 +36,7 @@ const pagePlans = {
 			id: "teamAndRelays",
 			fr: "Team, Relais", en: "Team, Relays",
 			events: ["Mini-Guilford Solo", "Mini-Guilford Duo", "Relay WCA 17 events",
-				"Team Blind", "Team Solve Duo", "2-man 3x3x3 Blindfolded relay"]
+				"Team Blind", "2-man 3x3x3 Blindfolded relay"]
 		}
 	]
 };
