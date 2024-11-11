@@ -53,7 +53,7 @@ const records = {
 		avg100: {name: "Baptiste Bery", time: "1:09.89", date: "2024-08-05", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1270049186628505723"}
 	},
 	"5x5x5 One-Handed": {
-		single: {name: "Baptiste Bery", time: "1:47.68", date: "2024-06-01", scramble: "F' Bw2 R' Dw' F' Bw2 D' F D' Bw' B2 Dw2 Rw Bw2 R2 Dw' L2 Bw2 U2 F' U2 Rw' Dw' R' Rw' U2 D' F' D Dw F Lw2 Bw L' Dw' Lw2 Bw Fw' L' Fw2 Uw' F' D2 Rw2 B' L2 B' U2 Uw2 Rw' R F2 B2 Rw Bw' U D2 R Uw' U'", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1246505561038655598"},
+		single: {name: "Baptiste Bery", time: "1:33.77", date: "2024-10-13", youtubeVideoId: "A2Ytuum1uRc", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1295115687823409222"},
 		mo3: {name: "Baptiste Bery", time: "2:06.67", date: "2024-06-10", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1259178864060399789"},
 		avg5: {name: "Baptiste Bery", time: "2:08.28", date: "2024-06-01", timeList: ["2:02.57", "2:11.69", "2:09.62", "2:33.92", "2:03.52"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1246504077953863690"},
 		avg12: {name: "Baptiste Bery", time: "2:11.65", date: "2024-06-10", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1259178864060399789"},
