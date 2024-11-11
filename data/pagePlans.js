@@ -23,9 +23,9 @@ const pagePlans = {
 			events: ["Kilominx", "Masterkilominx", "Gigaminx"]
 		},
 		{
-			id: "shapeMods",
-			fr: "Shape Mods de cubes NxNxN", en: "NxNxN cubes Shape Mods",
-			events: ["Mirror", "Inequilateral", "Penrose", "Ghost", "Mastermorphix", "Megamorphix", "Molecube"]
+			id: "otherPuzzles",
+			fr: "Autres puzzles", en: "Other puzzles",
+			events: ["Mirror", "Inequilateral", "Penrose", "Ghost", "Mastermorphix", "Megamorphix", "Molecube", "Face Turning Octahedron"]
 		},
 		{
 			id: "cubeVariations",

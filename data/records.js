@@ -243,6 +243,14 @@ const records = {
 		avg12: {name: "Balthazar Maignan", time: "11.05", date: "2023-06-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1122481676883345438"},
 		avg50: {name: "Balthazar Maignan", time: "11.89", date: "2023-06-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1122481676883345438"},
 		avg100: {name: "Balthazar Maignan", time: "12.48", date: "2023-06-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1122481676883345438"}
+	},
+	"Face Turning Octahedron": {
+		single: {name: "Alix Jack", time: "22.72", date: "2024-11-11", scramble: "D' B D B D' L R U L' R U' R U' B' D R' B' R' L' U' F BR' U' BL B' BR", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1305478627135197224"},
+		mo3: {name: "Paul Luciw", time: "47.86", date: "2024-07-31", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1268223711627182244"},
+		avg5: {name: "Paul Luciw", time: "49.16", date: "2024-07-31", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1268223711627182244"},
+		avg12: {name: "Paul Luciw", time: "51.97", date: "2024-07-31", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1268223711627182244"},
+		avg50: {name: "Paul Luciw", time: "54.87", date: "2024-07-31", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1268223711627182244"},
+		avg100: {name: "Paul Luciw", time: "59.96", date: "2024-07-31", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1268223711627182244"}
 	}
 };
 

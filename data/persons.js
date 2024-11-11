@@ -21,6 +21,7 @@ const persons = {
 	"Nicolas Gertner": {wcaId: "2013GERT01", youtubeChannel: "https://www.youtube.com/@SpeedCuber225"},
 	"Patrick Jamet": {wcaId: "2012JAME02"},
 	"Paul Ducruet": {wcaId: "2023DUCR01", youtubeChannel: "https://www.youtube.com/@paulducruet2007", pbSheet: "https://docs.google.com/spreadsheets/d/11DIrNoPLiwOD_sGz2TR-b3ex3bpCqdLppyaGcdw5_uY/edit#gid=0"},
+	"Paul Luciw": {wcaId: "2015LUCI02", youtubeChannel: "https://www.youtube.com/@pauLcw"},
 	"Quentin Rivault": {wcaId: "2017RIVA09"},
 	"Rémi Perrin": {wcaId: "2018PERR04", youtubeChannel: "https://www.youtube.com/@remiscube-themegaminxer1165"},
 	"Romain Velcin": {wcaId: "2023VELC01", youtubeChannel: "https://www.youtube.com/@user-jm2lb9uv4b"},
