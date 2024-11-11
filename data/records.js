@@ -190,14 +190,6 @@ const records = {
 		avg50: {name: "Axel Brisse", time: "22.91", date: "2021-09-06", discordLink: "https://discordapp.com/channels/329175643877015553/344073328744464384/884382012956352552"},
 		avg100: {name: "Axel Brisse", time: "23.39", date: "2021-09-06", discordLink: "https://discordapp.com/channels/329175643877015553/344073328744464384/884382012956352552"}
 	},
-	"Inequilateral": {
-		single: {name: "Wilfrid Py", time: "23.76", date: "2017-04-08", francocubePostId: "265434"},
-		mo3: {name: "Wilfrid Py", time: "32.46", date: "2020-02-12", discordLink: "https://discordapp.com/channels/329175643877015553/344073328744464384/677161207341514792"},
-		avg5: {name: "Wilfrid Py", time: "32.89", date: "2020-02-12", discordLink: "https://discordapp.com/channels/329175643877015553/344073328744464384/677161207341514792"},
-		avg12: {name: "Wilfrid Py", time: "35.90", date: "2020-02-12", discordLink: "https://discordapp.com/channels/329175643877015553/344073328744464384/677161207341514792"},
-		avg50: {name: "Wilfrid Py", time: "37.56", date: "2020-02-12", discordLink: "https://discordapp.com/channels/329175643877015553/344073328744464384/677161207341514792"},
-		avg100: {name: "Wilfrid Py", time: "38.72", date: "2020-02-12", discordLink: "https://discordapp.com/channels/329175643877015553/344073328744464384/677161207341514792"}
-	},
 	"Ghost": {
 		single: {name: "Matthieu Aubert", time: "1:41.42", date: "2020-08-25"},
 		mo3: {name: "Matthieu Aubert", time: "1:51.99", date: "2020-08-25", timeList: ["1:41.42", "1:55.03", "1:59.54"]},
