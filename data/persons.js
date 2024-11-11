@@ -25,7 +25,6 @@ const persons = {
 	"Quentin Rivault": {wcaId: "2017RIVA09"},
 	"Rémi Perrin": {wcaId: "2018PERR04", youtubeChannel: "https://www.youtube.com/@remiscube-themegaminxer1165"},
 	"Romain Velcin": {wcaId: "2023VELC01", youtubeChannel: "https://www.youtube.com/@user-jm2lb9uv4b"},
-	"Théo Paris": {wcaId: "2016PARI08"},
 	"Tiago Eche": {wcaId: "2022ECHE01", pbSheet: "https://docs.google.com/spreadsheets/d/1-dk1jkDJ1nd3iMqF9yhHlDgIyn_9BFvqmvAppgiud4E/edit#gid=0"},
 	"Victor Wijsman": {wcaId: "2016WIJS01"},
 	"Wilfrid Py": {wcaId: "2016PYWI01", youtubeChannel: "https://www.youtube.com/@TheWil31240", pbSheet: "https://bit.ly/2Ak2pyR"},
