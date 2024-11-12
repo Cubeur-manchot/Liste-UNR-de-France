@@ -205,6 +205,9 @@ const records = {
 		avg50: {name: "Maxime Dotto", time: "1:57.45", date: "2024-10-27", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1300220837277995008"},
 		avg100: {name: "Maxime Dotto", time: "2:00.36", date: "2024-10-27", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1300220837277995008"}
 	},
+	"Gigamorphix": {
+		single: {name: "Paul Ducruet", time: "3:50.44", date: "2024-11-01", youtubeVideoId: "qxLBefC5BDU", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1301844562511265794"}
+	},
 	"Molecube": {
 		single: {name: "Balthazar Maignan", time: "7.35", date: "2023-05-04", scramble: "F2 U' F2 U F2 D2 F2 D' B L2 U2 L' D' F2 U F' L' R", youtubeVideoId: "sW3SeJj9gK0"},
 		mo3: {name: "Balthazar Maignan", time: "9.11", date: "2023-06-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1122481676883345438"},
