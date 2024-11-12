@@ -157,9 +157,6 @@ const records = {
 	"3x3x3 Blindfolded One-Handed": {
 		single: {name: "Charles Daloz-Baltenberger", time: "47.66", date: "2023-08-20", scramble: "D F L' U' D2 F2 U' D2 R B' D2 F U2 F' D2 B' L2 F L2 F", discordLink: "https://discord.com/channels/329175643877015553/329175643877015553/1142931686338855085"},
 	},
-	"Relay WCA 17 events": {
-		single: {name: "William Phommaha", time: "34:13.57", date: "2020-01-16", discordLink: "https://discordapp.com/channels/329175643877015553/344073328744464384/667414979116531732"}
-	},
 	"Mini-Guilford Solo": {
 		single: {name: "Lucas Déglise", time: "3:27.18", date: "2023-10-02", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1158507714129969254"},
 		mo3: {name: "Lucas Déglise", time: "3:32.71", date: "2023-10-02", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1158507714129969254"},
