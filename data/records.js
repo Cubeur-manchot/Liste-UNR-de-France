@@ -198,12 +198,12 @@ const records = {
 		avg100: {name: "Maxime Dotto", time: "25.93", date: "2023-03-08", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1083075702351470752"}
 	},
 	"Megamorphix": {
-		single: {name: "Maxime Dotto", time: "1:36.79", date: "2023-05-04", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1103697869036343468"},
-		mo3: {name: "Maxime Dotto", time: "1:56.43", date: "2023-01-20", timeList: ["1:56.24", "2:05.33", "1:47.74"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1065901881815224370"},
-		avg5: {name: "Maxime Dotto", time: "2:00.87", date: "2023-01-20", timeList: ["1:56.24", "2:05.33", "1:47.74", "2:01.06", "2:15.03"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1065901881815224370"},
-		avg12: {name: "Maxime Dotto", time: "2:04.60", date: "2022-10-30", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1036356089568051320"},
-		avg50: {name: "Maxime Dotto", time: "2:10.83", date: "2023-01-20", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1065901881815224370"},
-		avg100: {name: "Maxime Dotto", time: "2:19.18", date: "2023-03-08", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1083075702351470752"}
+		single: {name: "Maxime Dotto", time: "1:30.61", date: "2024-10-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1299406405672894465"},
+		mo3: {name: "Maxime Dotto", time: "1:36.61", date: "2024-10-25", timeList: ["1:30.61", "1:51.15", "1:32.13"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1299406405672894465"},
+		avg5: {name: "Maxime Dotto", time: "1:42.55", date: "2024-10-27", timeList: ["1:48.19", "1:30.61", "1:47.33", "1:32.12", "1:51.15"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1300220837277995008"},
+		avg12: {name: "Maxime Dotto", time: "1:49.72", date: "2024-10-27", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1300220837277995008"},
+		avg50: {name: "Maxime Dotto", time: "1:57.45", date: "2024-10-27", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1300220837277995008"},
+		avg100: {name: "Maxime Dotto", time: "2:00.36", date: "2024-10-27", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1300220837277995008"}
 	},
 	"Molecube": {
 		single: {name: "Balthazar Maignan", time: "7.35", date: "2023-05-04", scramble: "F2 U' F2 U F2 D2 F2 D' B L2 U2 L' D' F2 U F' L' R", youtubeVideoId: "sW3SeJj9gK0"},
