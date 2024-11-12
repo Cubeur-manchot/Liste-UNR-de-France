@@ -88,10 +88,12 @@ const records = {
 		avg12: {name: "Matthieu Aubert", time: "3:49.93", date: "2020-08-02", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/739281133941948526"}
 	},
 	"Gigaminx": {
-		single: {name: "Rémi Perrin", time: "5:50.42", date: "2024-06-04", youtubeVideoId: "luh7_gJepxg", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1247626572035260436"},
-		mo3: {name: "Matthieu Aubert", time: "6:14.75", date: "2020-08-09", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/742062237086253096"},
-		avg5: {name: "Axel Brisse", time: "6:12.10", date: "2022-11-06"},
-		avg12: {name: "Matthieu Aubert", time: "6:27.80", date: "2020-08-09", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/742062237086253096"}
+		single: {name: "Rémi Perrin", time: "5:32.15", date: "2024-09-04", youtubeVideoId: "UkOrc1B5UZk", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1280867065057771532"},
+		mo3: {name: "Rémi Perrin", time: "5:45.95", date: "2024-09-04", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1280883091644219402"},
+		avg5: {name: "Rémi Perrin", time: "5:50.90", date: "2024-09-04", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1280883091644219402"},
+		avg12: {name: "Rémi Perrin", time: "6:00.67", date: "2024-09-04", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1280883091644219402"},
+		avg50: {name: "Rémi Perrin", time: "6:17.49", date: "2024-09-04", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1280883091644219402"},
+		avg100: {name: "Rémi Perrin", time: "6:20.77", date: "2024-09-04", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1280883091644219402"}
 	},
 	"3x3x3 Blindfolded": {
 		single: {name: "Charles Daloz-Baltenberger", time: "12.11", date: "2024-07-17", scramble: "U' B R F2 R D2 B2 F2 R U2 B2 R' U2 L' U F D' R' D F' L2 Rw Uw", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1262921285634228255"},
