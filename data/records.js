@@ -53,12 +53,12 @@ const records = {
 		avg100: {name: "Baptiste Bery", time: "1:09.89", date: "2024-08-05", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1270049186628505723"}
 	},
 	"5x5x5 One-Handed": {
-		single: {name: "Baptiste Bery", time: "1:33.77", date: "2024-10-13", youtubeVideoId: "A2Ytuum1uRc", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1295115687823409222"},
-		mo3: {name: "Baptiste Bery", time: "2:06.67", date: "2024-06-10", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1259178864060399789"},
-		avg5: {name: "Baptiste Bery", time: "2:08.28", date: "2024-06-01", timeList: ["2:02.57", "2:11.69", "2:09.62", "2:33.92", "2:03.52"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1246504077953863690"},
-		avg12: {name: "Baptiste Bery", time: "2:11.65", date: "2024-06-10", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1259178864060399789"},
-		avg50: {name: "Baptiste Bery", time: "2:19.57", date: "2024-06-10", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1259178864060399789"},
-		avg100: {name: "Baptiste Bery", time: "2:23.03", date: "2024-06-10", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1259178864060399789"}
+		single: {name: "Baptiste Bery", time: "1:25:00", date: "2024-11-12", youtubeVideoId: "A2Ytuum1uRc", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"},
+		mo3: {name: "Baptiste Bery", time: "1:36.75", date: "2024-11-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"},
+		avg5: {name: "Baptiste Bery", time: "1:39.49", date: "2024-11-12", timeList: ["2:02.57", "2:11.69", "2:09.62", "2:33.92", "2:03.52"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"},
+		avg12: {name: "Baptiste Bery", time: "1:44.51", date: "2024-11-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"},
+		avg50: {name: "Baptiste Bery", time: "1:47.90", date: "2024-11-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"},
+		avg100: {name: "Baptiste Bery", time: "1:49.97", date: "2024-11-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"}
 	},
 	"3x3x3 Virtual cube": {
 		single: {name: "Charles Daloz-Baltenberger", time: "5.42", date: "2023-05-31", scramble: "L' F2 R F2 L' B2 U2 R2 F2 D2 L F' D' L' D2 B2 D2 F2 R2", reconstruction: ["z2 y' // inspection", "F D2 R D R' D // cross", "L U2 L' // 1st pair", "y' L U L' // 2nd pair", "y R U R' L' U L // 3rd pair", "U2' R U R' U' R U R' // 4th pair", "U R U R' U' R' F R F' // OLL", "U' R U' R U R U R U' R' U' R2 // PLL"], splits: ["Cross 0.57", "F2L 2.35", "OLL 1.11", "PLL 1.37"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1113403691068837888"},
