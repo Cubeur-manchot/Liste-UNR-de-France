@@ -193,9 +193,9 @@ const records = {
 		single: {name: "Maxime Dotto", time: "10.35", date: "2023-07-08", scramble: "B2 D' L2 D2 R2 F2 D' L D U2 R' B L2 U2 B2 L D' F' R'", reconstruction: ["y2 x // Inspection", "L U' L' x' z' U2 R U' R' U R U' R' // FB", "U' R' U R U (x') L' U' L2 U L' // SB + FS", "U2 R U R' U R U' R' // LS + Counter EO", "U' R U2 R' U' R U' R' // ELL EO antisune", "U R UU R' U' R U' R' U2 R' UU R U R' U R U2 // CPLL skip + ACOLL"], youtubeVideoId: "92B1d3HDiAM", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1127244255908331742"},
 		mo3: {name: "Maxime Dotto", time: "17.87", date: "2023-05-10", timeList: ["12.63", "22.51", "18.48"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1105873941156859975"},
 		avg5: {name: "Maxime Dotto", time: "19.41", date: "2023-03-08", timeList: ["17.81", "17.89", "20.89", "21.61", "19.46"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1083075702351470752"},
-		avg12: {name: "Maxime Dotto", time: "23.92", date: "2022-12-31", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1058566387523653633"},
-		avg50: {name: "Maxime Dotto", time: "25.71", date: "2023-03-08", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1083075702351470752"},
-		avg100: {name: "Maxime Dotto", time: "25.93", date: "2023-03-08", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1083075702351470752"}
+		avg12: {name: "Maxime Dotto", time: "22.63", date: "2024-10-17", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1296456292080029706"},
+		avg50: {name: "Maxime Dotto", time: "24.43", date: "2024-10-21", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1297935339515674624"},
+		avg100: {name: "Maxime Dotto", time: "25.20", date: "2024-10-21", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1297935339515674624"}
 	},
 	"Megamorphix": {
 		single: {name: "Maxime Dotto", time: "1:30.61", date: "2024-10-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1299406405672894465"},
