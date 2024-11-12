@@ -25,7 +25,7 @@ const pagePlans = {
 		{
 			id: "otherPuzzles",
 			fr: "Autres puzzles", en: "Other puzzles",
-			events: ["Mirror", "Ghost", "Mastermorphix", "Megamorphix", "Molecube", "Face Turning Octahedron"]
+			events: ["Mirror", "Mastermorphix", "Megamorphix", "Molecube", "Face Turning Octahedron"]
 		},
 		{
 			id: "cubeVariations",
