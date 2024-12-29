@@ -206,7 +206,10 @@ const records = {
 		avg100: {name: "Maxime Dotto", time: "2:00.36", date: "2024-10-27", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1300220837277995008"}
 	},
 	"Gigamorphix": {
-		single: {name: "Paul Ducruet", time: "3:50.44", date: "2024-11-01", youtubeVideoId: "qxLBefC5BDU", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1301844562511265794"}
+		single: {name: "Maxime Dotto", time: "3:49.36", date: "2024-11-15", scramble: "Rw2 R F' B' D2 U2 Fw2 D2 F U Bw' Rw2 Dw2 Bw2 Lw2 R' B' Rw' L Fw' Uw2 D' L F D Bw2 R2 B2 Rw' L2 Dw F2 Rw2 U2 F Bw' B Rw' Bw Lw2 Uw Lw' Uw' D2 U2 Dw' Rw2 U2 B' L' Rw Fw B Bw2 U' Uw2 Dw D' R2 Lw'", youtubeVideoId: "lPkfPNOs5zo", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1307034205439529071"},
+		mo3: {name: "Maxime Dotto", time: "4:05.54", date: "2024-11-14", timeList: ["4:10.08", "3:57.71", "4:08.82"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1306536145013702698"},
+		avg5: {name: "Maxime Dotto", time: "4:07.72", date: "2024-11-14", timeList: ["4:10.08", "3:57.71", "4:08.82", "4:49.13", "4:04.26"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1306536145013702698"},
+		avg12: {name: "Paul Ducruet", time: "4:34.89", date: "2024-11-14", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1306515426657832980"}
 	},
 	"Molecube": {
 		single: {name: "Balthazar Maignan", time: "7.35", date: "2023-05-04", scramble: "F2 U' F2 U F2 D2 F2 D' B L2 U2 L' D' F2 U F' L' R", youtubeVideoId: "sW3SeJj9gK0"},
