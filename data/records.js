@@ -119,31 +119,6 @@ const records = {
 		single: {name: "William Phommaha", time: "12:14.81", date: "2019-03-24", memoTime: "5:40.64", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/559373208457838593"},
 		mo3: {name: "Wilfrid Py", time: "1:38:49", date: "2021-07-02", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/860326277754781716"}
 	},
-	"7x7x7 Blindfolded": {
-		single: {name: "William Phommaha", time: "31:00.08", date: "2019-05-03", memoTime: "14:17.81"}
-	},
-	"8x8x8 Blindfolded": {
-		single: {name: "Wilfrid Py", time: "5:15:30.00", date: "2018-09-21", memoTime: "2:37:20.00", youtubeVideoId: "rYMUp5gfbZ4"}
-	},
-	"9x9x9 Blindfolded": {
-		single: {name: "Matteo Chancerel", time: "2:41:00.00", date: "2019-07-15", memoTime: "1:24:00.00", discordLink: "https://youtu.be/IBJ4KsB8gqY"}
-	},
-	"Relay 2-5 Blindfolded": {
-		single: {name: "William Phommaha", time: "09:14.86", date: "2023-05-27", memoTime: "4:38.10", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1112111413964570645"},
-		mo3: {name: "William Phommaha", time: "13:00.63", date: "2020-06-08", timeList: ["12:20.00", "12:53.00", "13:47.00"], discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/719662250276946020"},
-		avg5: {name: "William Phommaha", time: "13:00.63", date: "2020-06-08", timeList: ["10:58.00", "DNF", "12:20.00", "12:53.00", "13:47.00"], discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/719662250276946020"}
-	},
-	"Relay 2-6 Blindfolded": {
-		single: {name: "William Phommaha", time: "31:38:86", date: "2020-03-15", memoTime: "17:34.85", discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/688718045128032261"}
-	},
-	"Megaminx Blindfolded": {
-		single: {name: "William Phommaha", time: "23:38.69", date: "2020-05-03", memoTime: "12:55.93", discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/706481971169067078"}
-	},
-	"Square One Blindfolded": {
-		single: {name: "Emma Cadet", time: "3:59.47", date: "2020-06-01", discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/717124541540991100"},
-		mo3: {name: "Emma Cadet", time: "4:27.42", date: "2020-06-01", discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/717124541540991100"},
-		avg5: {name: "Emma Cadet", time: "5:02.37", date: "2020-06-01", discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/717124541540991100"}
-	},
 	"Clock Blindfolded": {
 		single: {name: "Romain Velcin", time: "22.55", date: "2024-11-07", scramble: "UR1+ DR2- DL4+ UL2- U1- R3- D2- L5- ALL0+ y2 U2+ R2+ D1- L2+ ALL5-", youtubeVideoId: "fuC0mS1dwgo", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1304192010244194305"},
 		mo3: {name: "Romain Velcin", time: "31.28", date: "2024-06-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1248726571712380999"},
