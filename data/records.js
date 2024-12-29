@@ -145,7 +145,7 @@ const records = {
 		avg5: {name: "Emma Cadet", time: "5:02.37", date: "2020-06-01", discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/717124541540991100"}
 	},
 	"Clock Blindfolded": {
-		single: {name: "Romain Velcin", time: "30.82", date: "2024-06-07", scramble: "UR6+ DR1- DL5- UL3- U1- R3- D3- L4- ALL2+ y2 U2+ R5- D1+ L6+ ALL5-", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1248726571712380999"},
+		single: {name: "Romain Velcin", time: "22.55", date: "2024-11-07", scramble: "UR1+ DR2- DL4+ UL2- U1- R3- D2- L5- ALL0+ y2 U2+ R2+ D1- L2+ ALL5-", youtubeVideoId: "fuC0mS1dwgo", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1304192010244194305"},
 		mo3: {name: "Romain Velcin", time: "31.28", date: "2024-06-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1248726571712380999"},
 		avg5: {name: "Romain Velcin", time: "33.34", date: "2024-06-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1248726571712380999"},
 		avg12: {name: "Romain Velcin", time: "38.97", date: "2024-06-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1248731007465820160"}
