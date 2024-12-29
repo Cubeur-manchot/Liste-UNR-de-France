@@ -217,12 +217,12 @@ const records = {
 		avg100: {name: "Balthazar Maignan", time: "12.48", date: "2023-06-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1122481676883345438"}
 	},
 	"Face Turning Octahedron": {
-		single: {name: "Alix Jack", time: "22.72", date: "2024-11-11", scramble: "D' B D B D' L R U L' R U' R U' B' D R' B' R' L' U' F BR' U' BL B' BR", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1305478627135197224"},
-		mo3: {name: "Paul Luciw", time: "47.86", date: "2024-07-31", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1268223711627182244"},
-		avg5: {name: "Paul Luciw", time: "49.16", date: "2024-07-31", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1268223711627182244"},
-		avg12: {name: "Paul Luciw", time: "51.97", date: "2024-07-31", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1268223711627182244"},
-		avg50: {name: "Paul Luciw", time: "54.87", date: "2024-07-31", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1268223711627182244"},
-		avg100: {name: "Paul Luciw", time: "59.96", date: "2024-07-31", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1268223711627182244"}
+		single: {name: "Alix Jack", time: "16.29", date: "2024-12-05", scramble: "L D' L D' B L D B BR D' R' B BR' B L' R D BR B' R L F D' F U' L BL", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1314245435883393085"},
+		mo3: {name: "Alix Jack", time: "20.25", date: "2024-12-17", timeList: ["18.76", "20.15", "21.85"], scrambleList: ["D R' B' L R' L D B' U B' U R D' B' U' B U L D' L R F' R' B' BL B BR F", "B' L D' L B' L R' D' L' BR D R' BR' B D' L R BR R' B BL' L U B F' R BR'", "B' D' R L' R' L' BR B' BR D L' BR' R' D BR' B BR D R F R' L B' R' F"], discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1318655102910730271"},
+		avg5: {name: "Alix Jack", time: "22.67", date: "2024-12-03", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1313516066395132064"},
+		avg12: {name: "Alix Jack", time: "25.11", date: "2024-12-03", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1313516066395132064"},
+		avg50: {name: "Alix Jack", time: "26.08", date: "2024-12-03", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1313516066395132064"},
+		avg100: {name: "Alix Jack", time: "26.35", date: "2024-12-03", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1313516066395132064"}
 	}
 };
 
