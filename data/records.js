@@ -195,7 +195,7 @@ const records = {
 		avg100: {name: "Balthazar Maignan", time: "12.48", date: "2023-06-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1122481676883345438"}
 	},
 	"Face Turning Octahedron": {
-		single: {name: "Alix Jack", time: "16.29", date: "2024-12-05", scramble: "L D' L D' B L D B BR D' R' B BR' B L' R D BR B' R L F D' F U' L BL", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1314245435883393085"},
+		single: {name: "Alix Jack", time: "15.92", date: "2024-01-23", scramble: "R L B' L R' L B BL' D R' BL D R D BL' B' BL' B' BL' L F L B' BR BL' L BR", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1331986632852766750"},
 		mo3: {name: "Alix Jack", time: "19.67", date: "2025-01-10", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1327263231605211198"},
 		avg5: {name: "Alix Jack", time: "20.41", date: "2025-01-10", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1327263231605211198"},
 		avg12: {name: "Alix Jack", time: "22.03", date: "2025-01-10", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1327263231605211198"},
