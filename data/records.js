@@ -88,7 +88,7 @@ const records = {
 		avg12: {name: "Matthieu Aubert", time: "3:49.93", date: "2020-08-02", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/739281133941948526"}
 	},
 	"Gigaminx": {
-		single: {name: "Rémi Perrin", time: "5:32.15", date: "2024-09-04", youtubeVideoId: "UkOrc1B5UZk", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1280867065057771532"},
+		single: {name: "Baptiste Bery", time: "5:31.36", date: "2025-01-29", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1334080803684089926"},
 		mo3: {name: "Baptiste Bery", time: "5:45.77", date: "2025-01-06", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1325865677118242929"},
 		avg5: {name: "Rémi Perrin", time: "5:50.90", date: "2024-09-04", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1280883091644219402"},
 		avg12: {name: "Rémi Perrin", time: "6:00.67", date: "2024-09-04", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1280883091644219402"},
