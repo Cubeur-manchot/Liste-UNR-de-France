@@ -45,12 +45,12 @@ const records = {
 		avg12: {name: "Paul Ducruet", time: "30:21.12", date: "2024-01-06", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1193324100416974950"}
 	},
 	"4x4x4 One-Handed": {
-		single: {name: "Baptiste Bery", time: "44.54", date: "2025-02-22", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1342909101415333969"},
-		mo3: {name: "Baptiste Bery", time: "1:02.46", date: "2024-08-05", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1270049186628505723"},
-		avg5: {name: "Baptiste Bery", time: "1:03.30", date: "2024-08-04", scrambles: ["L D' F2 R B' R2 F' U' F2 U F2 B2 R2 U D2 B2 U' F2 B Rw2 Fw2 R Rw2 F Uw2 F U2 R' F' R F' L' Uw' B' Rw2 U R2 F2 B' Fw' R Uw B2 Rw' Fw'", "F2 U2 L' D' R' U2 F D' R U' R2 L2 U2 F2 D' L2 U2 F2 L2 B2 Uw2 L Rw2 D2 B' U2 R Uw2 R L' F2 U Uw R F U2 B2 D' Fw D' Fw U Rw F' U2", "F' U2 L2 B D F2 R B' R F2 D2 R D2 L' B2 U2 L' B2 U2 F' Rw2 Uw2 R Fw2 L2 F' Uw2 F Fw2 Rw2 B2 D2 R' U R' B Uw B Rw2 Fw Uw' Rw B2 Uw'", "U2 R' D' R U' B L D' F D2 F2 D2 F2 R F2 D2 L2 U2 R D2 B2 Uw2 F' Fw2 Rw2 B' R' B L2 Uw2 R L U2 Uw B' D' F2 B' Fw U2 Uw B2 Rw2 U F Fw'", "D2 L2 D2 L B2 L U2 B2 R F2 R D2 F D' B' L2 U R L F' D2 Fw2 R2 Rw2 D L Fw2 L' Fw2 U R2 F2 U R2 B' Fw' U' D' R2 Fw Rw Uw F' Fw2 U D2"], youtubeVideoId: "wNnoUGNFSJQ", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1269637284748197929"},
-		avg12: {name: "Baptiste Bery", time: "1:05.89", date: "2024-08-05", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1270049186628505723"},
-		avg50: {name: "Baptiste Bery", time: "1:09.21", date: "2024-08-05", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1270049186628505723"},
-		avg100: {name: "Baptiste Bery", time: "1:09.89", date: "2024-08-05", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1270049186628505723"}
+		single: {name: "Baptiste Bery", time: "41.23", date: "2025-02-24", scramble: "D' L2 F2 L U2 B2 R' B2 R2 F2 U2 L2 D' B' R2 D' R' F' U' B' L2 Uw2 F2 L U Rw2 D' Uw2 Rw2 B2 R' D2 Uw2 Fw R' D2 B2 D R' Uw Rw F L D' Fw' L'", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343248816727392386"},
+		mo3: {name: "Baptiste Bery", time: "48.11", date: "2025-02-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343239407351890081"},
+		avg5: {name: "Baptiste Bery", time: "52.30", date: "2025-02-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343239407351890081"},
+		avg12: {name: "Baptiste Bery", time: "55.18", date: "2025-02-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343239407351890081"},
+		avg50: {name: "Baptiste Bery", time: "58.26", date: "2025-02-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343239407351890081"},
+		avg100: {name: "Baptiste Bery", time: "59.81", date: "2025-02-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343239407351890081"}
 	},
 	"5x5x5 One-Handed": {
 		single: {name: "Baptiste Bery", time: "1:25:00", date: "2024-11-12", scramble: "Bw2 Lw F' B2 D2 B U Lw2 R' F' D2 B2 F2 L D2 Bw Rw2 R L2 Dw' D F2 Lw' Dw Fw R Dw' D Fw' L2 Bw' B U F2 U2 L R U' Rw2 Uw' L' R2 Lw' Rw Bw2 U Bw2 D L2 D' R L Fw B U2 Dw Rw R Bw2 L'", youtubeVideoId: "A2Ytuum1uRc", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"},
