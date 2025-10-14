@@ -117,7 +117,8 @@ const records = {
 	},
 	"6x6x6 Blindfolded": {
 		single: {name: "William Phommaha", time: "12:14.81", date: "2019-03-24", memoTime: "5:40.64", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/559373208457838593"},
-		mo3: {name: "Wilfrid Py", time: "1:38:49", date: "2021-07-02", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/860326277754781716"}
+		mo3: {name: "William Phommaha", time: "16:59.79", date: "2025-08-26", timeList: ["16:05.08", "17:51.84", "17:02.46"],  memoTimeList: ["8:51.74", "9:45.30", "9:17.38"], discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1410014078797217864"},
+		avg5: {name: "William Phommaha", time: "17:41.60", date: "2025-08-27", timeList: ["DNF", "16:05.08", "17:51.84", "17:02.46", "18:10.49"],  memoTimeList: ["6:53.10", "8:51.74", "9:45.30", "9:17.38", "10:03.28"], discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1410354265595318282"}
 	},
 	"Clock Blindfolded": {
 		single: {name: "Romain Velcin", time: "22.55", date: "2024-11-07", scramble: "UR1+ DR2- DL4+ UL2- U1- R3- D2- L5- ALL0+ y2 U2+ R2+ D1- L2+ ALL5-", youtubeVideoId: "fuC0mS1dwgo", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1304192010244194305"},
