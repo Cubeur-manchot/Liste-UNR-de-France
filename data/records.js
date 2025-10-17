@@ -53,9 +53,9 @@ const records = {
 		avg100: {name: "Baptiste Bery", time: "59.81", date: "2025-02-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343239407351890081"}
 	},
 	"5x5x5 One-Handed": {
-		single: {name: "Baptiste Bery", time: "1:25:00", date: "2024-11-12", scramble: "Bw2 Lw F' B2 D2 B U Lw2 R' F' D2 B2 F2 L D2 Bw Rw2 R L2 Dw' D F2 Lw' Dw Fw R Dw' D Fw' L2 Bw' B U F2 U2 L R U' Rw2 Uw' L' R2 Lw' Rw Bw2 U Bw2 D L2 D' R L Fw B U2 Dw Rw R Bw2 L'", youtubeVideoId: "A2Ytuum1uRc", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"},
-		mo3: {name: "Baptiste Bery", time: "1:36.75", date: "2024-11-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"},
-		avg5: {name: "Baptiste Bery", time: "1:39.49", date: "2024-11-12", timeList: ["2:02.57", "2:11.69", "2:09.62", "2:33.92", "2:03.52"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"},
+		single: {name: "Baptiste Bery", time: "1:22.76", date: "2025-05-03", scramble: "Uw' U2 F U' B' D' F2 Dw' B Bw2 R2 F' Dw2 F2 Rw' U F R' U D Bw D Lw2 Uw2 Bw' B Fw2 D Dw R2 Dw2 F' U' Bw' L2 F2 U' Lw' Uw' Rw Dw2 Rw F2 U2 Rw2 F' Bw Rw D F2 Dw' Fw L2 Rw B2 Uw U' Lw L2 Fw'", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1368167778694987809"},
+		mo3: {name: "Baptiste Bery", time: "1:33.26", date: "2025-05-03", timeList: ["1:35.35", "1:31.50", "1:32.94"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1368218393072762950"},
+		avg5: {name: "Baptiste Bery", time: "1:33.77", date: "2025-05-03", timeList: ["1:47.03", "1:33.01", "1:35.35", "1:31.50", "1:32.94"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1368218393072762950"},
 		avg12: {name: "Baptiste Bery", time: "1:44.51", date: "2024-11-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"},
 		avg50: {name: "Baptiste Bery", time: "1:47.90", date: "2024-11-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"},
 		avg100: {name: "Baptiste Bery", time: "1:49.97", date: "2024-11-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1305966761916498120"}
