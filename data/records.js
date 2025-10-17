@@ -128,10 +128,8 @@ const records = {
 	},
 	"3x3x3 Multi-Blindfolded": {
 		single: {name: "William Phommaha", score: "37/37", time: "54:50.00", date: "2020-04-16", memoTime: "34:52.00", otherLink: "https://www.speedcubingfrance.org/online_competitions/ConfinementOpen9"},
-		mo3: {name: "Maxime Madrzyk", score: "33.33", date: "2025-03-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1349468528490840094"},
-		avg5: {name: "Maxime Madrzyk", score: "31.67", date: "2025-03-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1349468528490840094"},
-		avg12: {name: "Maxime Madrzyk", score: "29.80", date: "2025-03-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1349468528490840094"},
-		avg50: {name: "Maxime Madrzyk", score: "27.86", date: "2025-03-12", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1349468528490840094"}
+		mo3: {name: "William Phommaha", score: "33", date: "2020-04-06", scoreList: ["33/35", "33/35", "37/37"], discordLink: "https://discordapp.com/channels/329175643877015553/353504450867888128/700410469973754007"},
+		avg5: {name: "William Phommaha", score: "29", date: "2020-02-09", scoreList: ["29/33", "31/33", "32/33", "30/33", "33/33"]}
 	},
 	"3x3x3 Blindfolded One-Handed": {
 		single: {name: "Charles Daloz-Baltenberger", time: "36.38", date: "2025-06-21", scramble: "F' D F L' U B' L U2 F R2 U B2 L2 D2 B2 L2 U' F2 B2 U' D' Rw' Uw'", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1385958251929141328"},

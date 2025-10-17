@@ -17,7 +17,6 @@ const persons = {
 	"Matteo Chancerel": {wcaId: "2017CHAN16", youtubeChannel: "https://www.youtube.com/@matteochancerel9332"},
 	"Matthieu Aubert": {wcaId: "2016AUBE01", youtubeChannel: "https://www.youtube.com/@MatthieuAubert", pbSheet: "https://cubeur-manchot.github.io/Les-Algos-d-un-Manchot/records.html"},
 	"Maxime Dotto": {wcaId: "2022DOTT02", youtubeChannel: "https://www.youtube.com/@MaximeDMorphix", pbSheet: "https://bit.ly/Thenemex-PBList"},
-	"Maxime Madrzyk": {wcaId: "2018MADR02", youtubeChannel: "https://www.youtube.com/@lecubeuranophtalme6447"},
 	"Nicolas Gertner": {wcaId: "2013GERT01", youtubeChannel: "https://www.youtube.com/@SpeedCuber225"},
 	"Patrick Jamet": {wcaId: "2012JAME02"},
 	"Paul Ducruet": {wcaId: "2023DUCR01", youtubeChannel: "https://www.youtube.com/@paulducruet2007", pbSheet: "https://docs.google.com/spreadsheets/d/11DIrNoPLiwOD_sGz2TR-b3ex3bpCqdLppyaGcdw5_uY/edit#gid=0"},
