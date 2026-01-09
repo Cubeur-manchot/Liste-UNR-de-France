@@ -11,7 +11,7 @@ const pagePlans = {
 			id: "blindfolded",
 			fr: "Blindfolded", en: "Blindfolded",
 			events: ["3x3x3 Blindfolded", "4x4x4 Blindfolded", "5x5x5 Blindfolded", "6x6x6 Blindfolded", 
-				"Clock Blindfolded", "3x3x3 Multi-Blindfolded", "3x3x3 Blindfolded One-Handed"
+				"Clock Blindfolded", "3x3x3 Blindfolded One-Handed"
 			]
 		},
 		{
