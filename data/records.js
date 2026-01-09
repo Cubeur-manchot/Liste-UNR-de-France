@@ -97,7 +97,7 @@ const records = {
 		avg100: {name: "Rémi Perrin", time: "6:20.77", date: "2024-09-04", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1280883091644219402"}
 	},
 	"3x3x3 Blindfolded": {
-		single: {name: "Charles Daloz-Baltenberger", time: "10.65", date: "2025-09-29", scramble: "L' F2 U2 L2 B2 F' R2 B2 D2 R2 D2 F R U2 F' D R2 B D L' Rw2 Uw'", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1422252511397416980"},
+		single: {name: "Charles Daloz-Baltenberger", time: "9.30", date: "2025-12-21", scramble: "U F U' F2 L2 D' F2 B2 L2 D F2 B2 R2 F B2 D' B' L' B U' F", discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1452341338229047337"},
 		mo3: {name: "Charles Daloz-Baltenberger", time: "13.67", date: "2025-08-24", timeList: ["13.53", "14.87", "12.62"], scrambleList: ["D R2 D' F U R' U B D2 R2 D2 F2 D2 L' F2 D2 L D2 R2 D2 Fw Uw'", "D L2 R2 F2 U' B2 D F2 U2 R' B L2 D2 B2 F' L2 D B2 F' Rw2 Uw2", "R B R2 D' B2 U2 R' D' L F' U2 B' R2 F R2 D2 B R2 F' D2 B' Fw Uw'"], discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1409211002574209164"},
 		avg5: {name: "Charles Daloz-Baltenberger", time: "14.04", date: "2025-11-01", timeList: ["14.70", "14.48", "12.65", "18.51", "12.95"], discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1409211430942539920"},
 		avg12: {name: "Charles Daloz-Baltenberger", time: "15.63", date: "2025-11-01", timeList: ["18.00", "14.66", "16.60", "15.68", "17.52", "14.70", "14.48", "12.65", "18.51", "12.95", "15.16", "16.51"], discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1434181115798880378"},
