@@ -6,7 +6,7 @@ const persons = {
 	"Axel Brisse": {wcaId: "2016BRIS01", youtubeChannel: "https://www.youtube.com/@haksell", pbSheet: "https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing"},
 	"Balthazar Maignan": {wcaId: "2019MAIG01", youtubeChannel: "https://www.youtube.com/@cubefile"},
 	"Baptiste Bery": {wcaId: "2021BERY01", youtubeChannel: "https://www.youtube.com/@BaptisteBery"},
-	"Charles Daloz-Baltenberger": {wcaId: "2018DALO01", youtubeChannel: "https://youtube.com/@charlesdaloz2547", pbSheet: "https://docs.google.com/spreadsheets/d/1cpiEQtcvm8o8hDIGwIK_HWygD1mX664OH2ClzRwELWE/edit?usp=drivesdk"},
+	"Charles Daloz-Baltenberger": {wcaId: "2018DALO01", youtubeChannel: "https://youtube.com/@charlesdaloz2547"},
 	"Clément Cherblanc": {wcaId: "2014CHER05", youtubeChannel: "https://www.youtube.com/@ClementCherblanc"},
 	"Emma Cadet": {wcaId: "2022CADE03"},
 	"Juliette Sébastien": {wcaId: "2014SEBA01", youtubeChannel: "https://www.youtube.com/@JujuSeb444"},
