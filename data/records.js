@@ -122,7 +122,7 @@ const records = {
 		avg5: {name: "William Phommaha", time: "17:41.60", date: "2025-08-27", timeList: ["DNF", "16:05.08", "17:51.84", "17:02.46", "18:10.49"],  memoTimeList: ["6:53.10", "8:51.74", "9:45.30", "9:17.38", "10:03.28"], discordLink: "https://discord.com/channels/329175643877015553/353504450867888128/1410354265595318282"}
 	},
 	"Clock Blindfolded": {
-		single: {name: "Romain Velcin", time: "22.55", date: "2024-11-07", scramble: "UR1+ DR2- DL4+ UL2- U1- R3- D2- L5- ALL0+ y2 U2+ R2+ D1- L2+ ALL5-", youtubeVideoId: "fuC0mS1dwgo", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1304192010244194305"},
+		single: {name: "Romain Velcin", time: "20.00", date: "2026-02-09", youtubeVideoId: "HM1ujiywxoY", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1470470485606142188"},
 		mo3: {name: "Romain Velcin", time: "31.28", date: "2024-06-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1248726571712380999"},
 		avg5: {name: "Romain Velcin", time: "33.34", date: "2024-06-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1248726571712380999"},
 		avg12: {name: "Romain Velcin", time: "38.97", date: "2024-06-07", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1248731007465820160"}
