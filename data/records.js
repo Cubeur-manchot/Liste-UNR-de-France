@@ -46,8 +46,8 @@ const records = {
 	},
 	"4x4x4 One-Handed": {
 		single: {name: "Baptiste Bery", time: "40.09", date: "2026-04-09", scramble: "R2 U' L2 F' D2 L' D' R U2 L2 U2 B R2 F' R2 U2 B L2 B R2 D Rw2 U' Rw2 D2 B R2 L2 D' Uw2 B D' Rw2 U R U' Rw Fw2 R2 Rw2 Uw F' Rw B2 U2 D Rw", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1491839213006622872"},
-		mo3: {name: "Baptiste Bery", time: "48.11", date: "2025-02-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343239407351890081"},
-		avg5: {name: "Baptiste Bery", time: "52.30", date: "2025-02-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343239407351890081"},
+		mo3: {name: "Baptiste Bery", time: "47.61", date: "2026-05-07", timeList: ["48.34", "45.63", "46.99"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1502045737863614575"},
+		avg5: {name: "Baptiste Bery", time: "47.61", date: "2026-05-07", timeList: ["48.34", "45.63", "46.99", "49.98", "47.49"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1502045737863614575"},
 		avg12: {name: "Baptiste Bery", time: "55.18", date: "2025-02-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343239407351890081"},
 		avg50: {name: "Baptiste Bery", time: "58.26", date: "2025-02-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343239407351890081"},
 		avg100: {name: "Baptiste Bery", time: "59.81", date: "2025-02-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343239407351890081"}
