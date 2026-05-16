@@ -70,7 +70,7 @@ const records = {
 	},
 	"4x4x4 Fewest Moves": {
 		single: {name: "Paul Ducruet", score: "63", date: "2025-07-18", scramble: "R D2 L F2 R' U2 R2 D2 R2 F2 U2 F R U D B' D' F L2 B Fw2 U2 Rw2 Uw2 R2 Rw2 F' Uw2 B D' F B' Rw B2 R Rw' Fw2 Uw' Fw L2 Fw' U B' D", reconstruction: ["Fw B L Fw' Uw // F2C HTR (5/5)", "F2 U Fw2 Rw' B2 Rw' // HTR centers + 3 edges (6/11)", "y F D2 Rw2 // 1 slice from redux + 4 edges (3/14)", "y2 B2 U2 L' U Rw D' R2 D Rw // centers + 9 edges (9/23)", "D2 Fw2 F R F' R' Fw2 // Redux (7/30)", "y' z2 L' B // EO (2/32)", "R' L' B2 U  F2 D // 2x2x2 (6/38)", "F2 L U2 // 2x2x3 (3/41)", "z F2 U' F2 // F2L-1 (3/44)", "U R' D' R U2 R' D R // F2L + OLL (8/52)", "F2 D' L2 D F2 R2 D B2 D' R2 U // T-Perm (11/63)"], discordLink: "https://discord.com/channels/329175643877015553/340029021884514316/1395830470083870791"},
-		mo3: {name: "Patrick Jamet", score: "72.33", date: "2021-03-31"},
+		mo3: {name: "Paul Ducruet", score: "68.33", date: "2026-05-13", discordLink: "https://discord.com/channels/329175643877015553/340029021884514316/1504168543892144390"},
 		avg5: {name: "Paul Ducruet", score: "72.67", date: "2025-10-17", scoreList: ["74", "70", "84", "68", "74"], discordLink: "https://discord.com/channels/329175643877015553/340029021884514316/1428861226016047290"},
 		avg12: {name: "Paul Ducruet", score: "79.4", date: "2025-10-17", scoreList: ["70", "84", "68", "74", "79", "86", "94", "DNF", "63", "88", "80", "71"], discordLink: "https://discord.com/channels/329175643877015553/340029021884514316/1428863856477737022"}
 	},
