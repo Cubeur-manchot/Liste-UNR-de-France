@@ -133,7 +133,8 @@ const records = {
 	"Mini-Guilford Solo": {
 		single: {name: "Lucas Déglise", time: "3:27.18", date: "2023-10-02", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1158507714129969254"},
 		mo3: {name: "Lucas Déglise", time: "3:32.71", date: "2023-10-02", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1158507714129969254"},
-		avg5: {name: "Lucas Déglise", time: "3:31.35", date: "2023-10-02", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1158507714129969254"}
+		avg5: {name: "Lucas Déglise", time: "3:31.35", date: "2023-10-02", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1158507714129969254"},
+		avg12: {name: "Nathan Vogel-Brustolin", time: "8:44.77", date: "2026-06-25"}
 	},
 	"Mini-Guilford Duo": {
 		single: {names: ["Clément Cherblanc", "Juliette Sébastien"], time: "1:34.32", date: "2023-11-28", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1178927173449556059"},
