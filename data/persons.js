@@ -3,6 +3,7 @@
 const persons = {
 	"Alix Jack": {wcaId: "2016JACK05", youtubeChannel: "https://www.youtube.com/@AlixJack"},
 	"Arthur Garcin": {wcaId: "2014GARC27", youtubeChannel: "https://www.youtube.com/@arthurgarcin3717"},
+	"Ashtonn Villain": {wcaId: "2024VILL45", youtubeChannel: "https://www.youtube.com/@AVCubingFrance"},
 	"Axel Brisse": {wcaId: "2016BRIS01", youtubeChannel: "https://www.youtube.com/@haksell", pbSheet: "https://docs.google.com/spreadsheets/d/1N8c0F8YpcSD2gFjSTJggfuZRNBRDPwtqfF_779px8IQ/edit?usp=sharing"},
 	"Balthazar Maignan": {wcaId: "2019MAIG01", youtubeChannel: "https://www.youtube.com/@cubefile"},
 	"Baptiste Bery": {wcaId: "2021BERY01", youtubeChannel: "https://www.youtube.com/@BaptisteBery"},

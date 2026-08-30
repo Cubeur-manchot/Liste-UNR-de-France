@@ -189,7 +189,7 @@ const records = {
 		avg100: {name: "Balthazar Maignan", time: "12.48", date: "2023-06-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1122481676883345438"}
 	},
 	"Face Turning Octahedron": {
-		single: {name: "Alix Jack", time: "15.14", date: "2025-03-16", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1350801861631938573"},
+		single: {name: "Ashtonn Villain", time: "13.39", date: "2026-08-17", scramble: "R' B' R' L R' D' L D' F D F' D L F' L B' D' F' R' B' F BR D' U BL' U BR", reconstruction: ["Fv // inspection", "U L Uv F' BL' U' R' BL D' R' U R' Rv' BL' U // first block (13/13)", "BL R' U' R' U' R U R U R' r U r' // second center (13/26)", "r' U' BL F R' F' R F' BL' // L2C (9/35)", "T' U' R B' R' B U Uv' R L R' L' // LBT (10/45)", "U' L' B L B' U B' R B R' // L3T (10/55)"], youtubeVideoId: "NC927vd4-Z4", discordLink: "https://discord.com/channels/329175643877015553/1522161055776641134/1538901710674731081"},
 		mo3: {name: "Alix Jack", time: "18.36", date: "2025-02-07", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1337398499297329244"},
 		avg5: {name: "Alix Jack", time: "19.11", date: "2025-03-16", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1350801861631938573"},
 		avg12: {name: "Alix Jack", time: "20.14", date: "2025-03-16", discordLink: "https://discord.com/channels/329175643877015553/1271960586405548093/1350801861631938573"},
