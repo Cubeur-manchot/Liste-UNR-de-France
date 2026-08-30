@@ -10,6 +10,7 @@ const persons = {
 	"Charles Daloz-Baltenberger": {wcaId: "2018DALO01", youtubeChannel: "https://youtube.com/@charlesdaloz2547"},
 	"Clément Cherblanc": {wcaId: "2014CHER05", youtubeChannel: "https://www.youtube.com/@ClementCherblanc"},
 	"Emma Cadet": {wcaId: "2022CADE03"},
+	"Jonathan Dammann": {wcaId: "2021DAMM01", youtubeChannel: "https://www.youtube.com/@jonathanleprenom"},
 	"Juliette Sébastien": {wcaId: "2014SEBA01", youtubeChannel: "https://www.youtube.com/@JujuSeb444"},
 	"Louis Fertier": {wcaId: "2013FERT01", youtubeChannel: "https://www.youtube.com/channel/UCOdf9cbm9gSOd8xFh1wBA5A"},
 	"Louis-Marie Ratto": {wcaId: "2019RATT02", youtubeChannel: "https://www.youtube.com/@louis-marieratto3825"},

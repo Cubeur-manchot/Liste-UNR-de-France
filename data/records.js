@@ -145,9 +145,9 @@ const records = {
 	"Team Blind": {
 		single: {names: ["Axel Brisse", "Wilfrid Py"], time: "11.79", date: "2021-08-25", scramble: "B F2 U2 L2 F2 R2 B2 F R D' B L2 U R' B D2 R2 D2 U", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/880048593879302214"},
 		mo3: {names: ["Axel Brisse", "Wilfrid Py"], time: "16.42", date: "2021-08-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"},
-		avg5: {names: ["Axel Brisse", "Wilfrid Py"], time: "17.55", date: "2021-08-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"},
-		avg12: {names: ["Axel Brisse", "Wilfrid Py"], time: "18.65", date: "2021-08-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"},
-		avg50: {names: ["Axel Brisse", "Wilfrid Py"], time: "20.73", date: "2021-08-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"},
+		avg5: {names: ["Jonathan Dammann", "Juliette Sébastien"], time: "17.25", date: "2026-07-27", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1531327720905113710"},
+		avg12: {names: ["Jonathan Dammann", "Juliette Sébastien"], time: "18.54", date: "2026-07-27", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1531327720905113710"},
+		avg50: {names: ["Jonathan Dammann", "Juliette Sébastien"], time: "20.71", date: "2026-06-23", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1519014228642631690"},
 		avg100: {names: ["Axel Brisse", "Wilfrid Py"], time: "21.14", date: "2021-08-25", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/880091791238508634"}
 	},
 	"Mirror": {
