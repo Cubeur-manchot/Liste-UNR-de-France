@@ -45,7 +45,7 @@ const records = {
 		avg12: {name: "Paul Ducruet", time: "30:21.12", date: "2024-01-06", discordLink: "https://discord.com/channels/329175643877015553/330974462239309824/1193324100416974950"}
 	},
 	"4x4x4 One-Handed": {
-		single: {name: "Baptiste Bery", time: "40.09", date: "2026-04-09", scramble: "R2 U' L2 F' D2 L' D' R U2 L2 U2 B R2 F' R2 U2 B L2 B R2 D Rw2 U' Rw2 D2 B R2 L2 D' Uw2 B D' Rw2 U R U' Rw Fw2 R2 Rw2 Uw F' Rw B2 U2 D Rw", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1491839213006622872"},
+		single: {name: "Baptiste Bery", time: "36.68", date: "2026-07-23", scramble: "F' B2 U2 F2 R U2 R2 B2 L F2 R2 U F2 L D R U2 L F' R2 Fw2 L2 Uw2 F' Uw2 L F2 R2 Rw2 Uw2 F' R' F U' L2 B Uw B' Uw2 Fw Rw' Fw' Uw' F2 U'", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1529930299495026788"},
 		mo3: {name: "Baptiste Bery", time: "47.61", date: "2026-05-07", timeList: ["48.34", "45.63", "46.99"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1502045737863614575"},
 		avg5: {name: "Baptiste Bery", time: "47.61", date: "2026-05-07", timeList: ["48.34", "45.63", "46.99", "49.98", "47.49"], discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1502045737863614575"},
 		avg12: {name: "Baptiste Bery", time: "55.18", date: "2025-02-24", discordLink: "https://discord.com/channels/329175643877015553/344073328744464384/1343239407351890081"},
